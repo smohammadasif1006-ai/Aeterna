@@ -1,0 +1,1899 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Inspection, NDT, Welding, QA/QC | AETERNA</title>
+    <meta name="description" content="Explore AETERNA's comprehensive inspection services: third-party verification, NDT, welding inspection, construction QC, corrosion & coating inspection, expediting, vendor assessment, and API/COMPEX inspector supply."
+    <link rel="canonical" href="https://aeterna-inspection.com/pages/services.html">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #0A1628;
+            --surface: #0C1020;
+            --surface-2: #141A2E;
+            --navy: #1B2A4A;
+            --blue: #4A90D9;
+            --blue-light: #6BA3E8;
+            --gold: #C8A96E;
+            --gold-light: #E0C98A;
+            --gold-dark: #A8894E;
+            --text: #F8FAFC;
+            --text-muted: #8B95A8;
+            --text-dim: #5A6478;
+            --glass: rgba(255,255,255,0.03);
+            --glass-border: rgba(255,255,255,0.06);
+            --glass-hover: rgba(255,255,255,0.05);
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6;
+            overflow: hidden; background: var(--bg); height: 100vh;
+        }
+
+        /* DYNAMIC BACKGROUND */
+        .dynamic-bg {
+            position: fixed; inset: 0; z-index: 0; transition: all 1.2s cubic-bezier(0.4,0,0.2,1);
+        }
+        .dynamic-bg .gradient-orb {
+            position: absolute; border-radius: 50%; filter: blur(120px);
+            transition: all 1.5s cubic-bezier(0.4,0,0.2,1);
+        }
+        .dynamic-bg .orb-1 {
+            width: 600px; height: 600px; top: -200px; left: -200px;
+            background: radial-gradient(circle, rgba(200,169,110,0.08) 0%, transparent 70%);
+        }
+        .dynamic-bg .orb-2 {
+            width: 500px; height: 500px; bottom: -150px; right: -100px;
+            background: radial-gradient(circle, rgba(74,144,217,0.06) 0%, transparent 70%);
+        }
+        .dynamic-bg .orb-3 {
+            width: 400px; height: 400px; top: 50%; left: 50%; transform: translate(-50%,-50%);
+            background: radial-gradient(circle, rgba(200,169,110,0.04) 0%, transparent 70%);
+        }
+        .dynamic-bg .mesh-line {
+            position: absolute; background: linear-gradient(90deg, transparent, rgba(200,169,110,0.03), transparent);
+            height: 1px; width: 100%; animation: meshSweep 20s linear infinite;
+        }
+        .dynamic-bg .mesh-line:nth-child(4) { top: 30%; animation-delay: 0s; }
+        .dynamic-bg .mesh-line:nth-child(5) { top: 60%; animation-delay: -7s; }
+        .dynamic-bg .mesh-line:nth-child(6) { top: 80%; animation-delay: -14s; }
+        @keyframes meshSweep { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+        .dynamic-bg::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(10,22,40,0.3) 0%, rgba(10,22,40,0.8) 100%);
+            pointer-events: none;
+        }
+
+        /* NOISE TEXTURE */
+        .noise {
+            position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.015;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-repeat: repeat; background-size: 256px;
+        }
+
+        /* SPLIT LAYOUT */
+        .split-layout {
+            position: relative; z-index: 2; display: flex; height: 100vh; padding-top: 100px;
+        }
+
+        /* LEFT PANEL — SERVICE DIRECTORY */
+        .left-panel {
+            flex: 0 0 520px; min-width: 520px; height: 100%; position: sticky; top: 100px;
+            display: flex; flex-direction: column; padding: 24px 12px 24px 76px;
+            border-right: 1px solid rgba(255,255,255,0.03); margin-top: 0px;
+        }
+        .left-header {
+            margin-bottom: 24px; padding-bottom: 14px; padding-left: 20px;
+        }
+        .left-header .eyebrow {
+            font-size: 10px; font-weight: 700; color: var(--gold); text-transform: uppercase;
+            letter-spacing: 3px; margin-bottom: 8px;
+        }
+        .left-header h2 {
+            font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600;
+            color: var(--text); line-height: 1.3;
+        }
+        .title-section {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+        .service-list {
+            flex: 1; overflow-y: auto; overflow-x: hidden; display: flex; flex-direction: column; gap: 4px;
+            scrollbar-width: none;
+        }
+        .service-list::-webkit-scrollbar { display: none; }
+        .service-item {
+            display: flex; align-items: center; gap: 10px; padding: 8px 12px 8px 20px;
+            border-radius: 12px; cursor: pointer; transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+            position: relative; overflow: hidden; border: 1px solid transparent;
+        }
+        .service-item::before {
+            content: ''; position: absolute; inset: 0; border-radius: 12px;
+            background: linear-gradient(135deg, rgba(200,169,110,0.06) 0%, transparent 100%);
+            opacity: 0; transition: opacity 0.4s;
+        }
+        .service-item:hover { transform: translateX(4px); border-color: rgba(255,255,255,0.04); }
+        .service-item:hover::before { opacity: 1; }
+        .service-item.active {
+            background: rgba(200,169,110,0.04); border-color: rgba(200,169,110,0.12);
+            transform: translateX(6px);
+        }
+        .service-item.active::before { opacity: 1; }
+        .service-item .item-icon {
+            width: 30px; height: 30px; border-radius: 8px; display: flex;
+            align-items: center; justify-content: center; transition: all 0.3s;
+            background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04);
+        }
+        .service-item.active .item-icon {
+            background: rgba(200,169,110,0.08); border-color: rgba(200,169,110,0.15);
+        }
+        .service-item .item-icon svg { width: 16px; height: 16px; opacity: 0.5; transition: opacity 0.3s; }
+        .service-item.active .item-icon svg { opacity: 1; }
+        .service-item .item-icon { display: none; }
+        .service-item .item-text {
+            flex: 1; min-width: 0;
+        }
+        .service-item .item-title {
+            font-size: 17px; font-weight: 600; color: rgba(255,255,255,0.4);
+            line-height: 1.4; transition: color 0.3s; white-space: nowrap;
+        }
+        .service-item.active .item-title { color: var(--text); }
+        .service-item:hover .item-title { color: rgba(255,255,255,0.8); }
+        .service-item .item-arrow {
+            opacity: 0; transform: translateX(-8px); transition: all 0.3s;
+            color: var(--gold); font-size: 14px;
+        }
+        .service-item.active .item-arrow { opacity: 1; transform: translateX(0); }
+
+        /* RIGHT PANEL — IMMERSIVE CONTENT */
+        .right-panel {
+            flex: 1; min-width: 0; height: 100%; overflow-y: auto; padding: 0;
+            scrollbar-width: thin; scrollbar-color: rgba(200,169,110,0.15) transparent;
+        }
+        .right-panel::-webkit-scrollbar { width: 3px; }
+        .right-panel::-webkit-scrollbar-thumb { background: rgba(200,169,110,0.15); border-radius: 3px; }
+
+        /* CONTENT WRAPPER */
+        .content-wrapper {
+            min-height: 100%; padding: 48px 60px 80px 0px;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .content-wrapper.transitioning {
+            opacity: 0; transform: translateY(12px);
+        }
+
+        /* SERVICE HERO */
+        .service-hero {
+            position: relative; padding: 80px 0 64px; text-align: center;
+            overflow: hidden; margin-bottom: 48px; min-height: 520px;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        }
+        .service-hero-bg {
+            position: absolute; inset: 0;
+            background-size: cover; background-position: center; background-repeat: no-repeat;
+            opacity: 0; transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1);
+            pointer-events: none; z-index: 0;
+        }
+        .service-hero-bg.active { opacity: 1; }
+        .service-hero-bg::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(12,16,32,0.55) 0%, rgba(12,16,32,0.85) 100%);
+        }
+        .service-hero > :not(.service-hero-bg) { position: relative; z-index: 1; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px;
+            background: rgba(200,169,110,0.06); border: 1px solid rgba(200,169,110,0.12);
+            border-radius: 100px; margin-bottom: 28px;
+        }
+        .hero-badge .badge-dot {
+            width: 6px; height: 6px; border-radius: 50%; background: var(--gold);
+            animation: badgePulse 2s ease-in-out infinite;
+        }
+        @keyframes badgePulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .hero-badge span {
+            font-size: 10px; font-weight: 700; color: var(--gold); text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .hero-icon-container {
+            width: 160px; height: 160px; margin: 0 auto 36px; position: relative;
+        }
+        .hero-icon-ring {
+            position: absolute; inset: 0; border-radius: 50%;
+            border: 1px solid rgba(200,169,110,0.08);
+            animation: ringRotate 20s linear infinite;
+        }
+        .hero-icon-ring::before {
+            content: ''; position: absolute; top: -3px; left: 50%; width: 6px; height: 6px;
+            border-radius: 50%; background: var(--gold); transform: translateX(-50%);
+        }
+        @keyframes ringRotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .hero-icon-ring-2 {
+            position: absolute; inset: 12px; border-radius: 50%;
+            border: 1px dashed rgba(200,169,110,0.05);
+            animation: ringRotate 15s linear infinite reverse;
+        }
+        .hero-icon-glow {
+            position: absolute; inset: -40px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(200,169,110,0.08) 0%, transparent 70%);
+            animation: glowPulse 4s ease-in-out infinite;
+        }
+        @keyframes glowPulse { 0%,100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.1); opacity: 1; } }
+        .hero-icon-main {
+            position: absolute; inset: 24px; display: flex; align-items: center; justify-content: center;
+            background: rgba(200,169,110,0.04); border: 1px solid rgba(200,169,110,0.1);
+            border-radius: 50%; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        }
+        .hero-icon-main svg { width: 48px; height: 48px; }
+        .service-hero h1 {
+            font-family: 'Inter', sans-serif; font-size: 40px; font-weight: 800;
+            color: var(--text); line-height: 1.15; margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--text) 0%, rgba(255,255,255,0.7) 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .service-hero .hero-desc {
+            font-size: 18px; color: var(--text-muted); line-height: 1.8;
+            max-width: 640px; margin: 0 auto;
+        }
+
+        /* GLASS SECTION */
+        .glass-section {
+            background: var(--glass); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+            border: 1px solid var(--glass-border); border-radius: 20px; padding: 40px;
+            margin-bottom: 24px; position: relative; overflow: hidden;
+            transition: border-color 0.4s;
+        }
+        .glass-section:hover { border-color: rgba(255,255,255,0.08); }
+        .glass-section::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200,169,110,0.15), transparent);
+        }
+        .section-header {
+            display: flex; align-items: center; gap: 14px; margin-bottom: 28px;
+        }
+        .section-icon {
+            width: 40px; height: 40px; border-radius: 10px; display: flex;
+            align-items: center; justify-content: center;
+            background: rgba(200,169,110,0.06); border: 1px solid rgba(200,169,110,0.1);
+        }
+        .section-icon svg { width: 18px; height: 18px; }
+        .section-header h3 {
+            font-size: 16px; font-weight: 700; color: var(--text); letter-spacing: -0.3px;
+        }
+        .section-header .section-tag {
+            margin-left: auto; font-size: 10px; font-weight: 700; color: var(--gold);
+            text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;
+        }
+
+        /* CAPABILITIES GRID */
+        .capabilities-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+        }
+        .capability-card {
+            padding: 28px; border-radius: 14px; position: relative; overflow: hidden;
+            background: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.04);
+            transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+        }
+        .capability-card::after {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+            opacity: 0; transition: opacity 0.4s;
+        }
+        .capability-card:hover {
+            border-color: rgba(200,169,110,0.15); transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+        }
+        .capability-card:hover::after { opacity: 1; }
+        .capability-card .cap-num {
+            font-size: 32px; font-weight: 900; color: rgba(200,169,110,0.08);
+            font-variant-numeric: tabular-nums; margin-bottom: 12px; line-height: 1;
+        }
+        .capability-card h4 {
+            font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px;
+        }
+        .capability-card p {
+            font-size: 15px; color: var(--text-muted); line-height: 1.7;
+        }
+        .capability-card.conv { border-left: 2px solid rgba(74,144,217,0.3); }
+        .capability-card.adv { border-left: 2px solid rgba(200,169,110,0.3); }
+        .cap-cat {
+            display: inline-block; font-size: 9px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1.5px; padding: 3px 8px; border-radius: 4px; margin-bottom: 10px;
+        }
+        .conv .cap-cat { background: rgba(74,144,217,0.12); color: #6BA3E0; }
+        .adv .cap-cat { background: rgba(200,169,110,0.12); color: var(--gold); }
+
+        /* INDUSTRY STRIP */
+        .industry-strip {
+            display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px;
+            scrollbar-width: none;
+        }
+        .industry-strip::-webkit-scrollbar { display: none; }
+        .industry-pill {
+            display: flex; align-items: center; gap: 8px; padding: 10px 18px;
+            background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 100px; white-space: nowrap; flex-shrink: 0;
+            transition: all 0.3s; cursor: default;
+        }
+        .industry-pill:hover {
+            border-color: rgba(200,169,110,0.2); background: rgba(200,169,110,0.04);
+        }
+        .industry-pill svg { width: 14px; height: 14px; opacity: 0.6; }
+        .industry-pill span { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.7); }
+
+        /* METRICS ROW */
+        .metrics-row {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+        }
+        .metric-card {
+            text-align: center; padding: 32px 16px; border-radius: 14px;
+            background: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.04);
+            position: relative; overflow: hidden;
+        }
+        .metric-card::before {
+            content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0.3;
+        }
+        .metric-value {
+            font-size: 40px; font-weight: 900; color: var(--gold); line-height: 1;
+            font-variant-numeric: tabular-nums; margin-bottom: 8px;
+            background: linear-gradient(180deg, var(--gold-light), var(--gold-dark));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .metric-label {
+            font-size: 13px; font-weight: 600; color: var(--text-dim);
+            text-transform: uppercase; letter-spacing: 1.5px;
+        }
+
+        /* OUTCOMES */
+        .outcomes-list {
+            display: flex; flex-direction: column; gap: 12px;
+        }
+        .outcome-item {
+            display: flex; align-items: flex-start; gap: 16px; padding: 20px 24px;
+            border-radius: 12px; background: rgba(255,255,255,0.015);
+            border: 1px solid rgba(255,255,255,0.03); transition: all 0.3s;
+        }
+        .outcome-item:hover {
+            border-color: rgba(200,169,110,0.1); transform: translateX(4px);
+        }
+        .outcome-check {
+            width: 28px; height: 28px; border-radius: 8px; display: flex;
+            align-items: center; justify-content: center; flex-shrink: 0;
+            background: rgba(200,169,110,0.08); border: 1px solid rgba(200,169,110,0.15);
+        }
+        .outcome-check svg { width: 14px; height: 14px; }
+        .outcome-text h4 {
+            font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 4px;
+        }
+        .outcome-text p {
+            font-size: 15px; color: var(--text-muted); line-height: 1.6;
+        }
+
+        /* TESTIMONIAL */
+        .testimonial-card {
+            padding: 40px; border-radius: 16px; position: relative;
+            background: linear-gradient(135deg, rgba(200,169,110,0.04) 0%, rgba(74,144,217,0.02) 100%);
+            border: 1px solid rgba(200,169,110,0.08);
+        }
+        .testimonial-card .quote-mark {
+            font-family: 'Inter', sans-serif; font-size: 72px; font-weight: 900; color: rgba(200,169,110,0.12);
+            line-height: 1; margin-bottom: -20px;
+        }
+        .testimonial-card blockquote {
+            font-size: 18px; font-style: italic; color: rgba(255,255,255,0.8); line-height: 1.8;
+            margin-bottom: 24px;
+        }
+        .testimonial-author {
+            display: flex; align-items: center; gap: 16px;
+        }
+        .testimonial-avatar {
+            width: 48px; height: 48px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center;
+            background: rgba(200,169,110,0.08); border: 1px solid rgba(200,169,110,0.15);
+            font-size: 18px; font-weight: 700; color: var(--gold);
+        }
+        .testimonial-info .name { font-size: 16px; font-weight: 700; color: var(--text); }
+        .testimonial-info .role { font-size: 14px; color: var(--text-muted); }
+        .testimonial-stars {
+            margin-left: auto; display: flex; gap: 2px;
+        }
+        .testimonial-stars svg { width: 14px; height: 14px; color: var(--gold); }
+
+        /* PARTNERS */
+        .partners-row {
+            display: flex; align-items: center; justify-content: center; gap: 40px;
+            padding: 20px 0;
+        }
+        .partner-logo {
+            font-size: 13px; font-weight: 700; color: var(--text-dim);
+            letter-spacing: 2px; text-transform: uppercase; opacity: 0.4;
+            transition: opacity 0.3s;
+        }
+        .partner-logo:hover { opacity: 0.8; }
+
+        /* PROJECT PORTFOLIO */
+        .portfolio-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+        }
+        .portfolio-card {
+            padding: 28px; border-radius: 14px; position: relative; overflow: hidden;
+            background: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.04);
+            transition: all 0.4s;
+        }
+        .portfolio-card:hover {
+            border-color: rgba(200,169,110,0.12); transform: translateY(-2px);
+        }
+        .portfolio-card .port-tag {
+            font-size: 10px; font-weight: 700; color: var(--gold); text-transform: uppercase;
+            letter-spacing: 1.5px; margin-bottom: 12px;
+        }
+        .portfolio-card h4 {
+            font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px;
+        }
+        .portfolio-card p {
+            font-size: 15px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;
+        }
+        .portfolio-card .port-metric {
+            display: inline-block; padding: 6px 14px; border-radius: 6px;
+            background: rgba(200,169,110,0.06); border: 1px solid rgba(200,169,110,0.1);
+            font-size: 14px; font-weight: 700; color: var(--gold);
+        }
+
+        /* STANDARDS ROW */
+        .standards-grid {
+            display: flex; flex-wrap: wrap; gap: 10px;
+        }
+        .standard-chip {
+            padding: 10px 20px; border-radius: 8px;
+            background: rgba(74,144,217,0.05); border: 1px solid rgba(74,144,217,0.12);
+            font-size: 14px; font-weight: 600; color: var(--blue-light);
+            letter-spacing: 0.3px; transition: all 0.3s;
+        }
+        .standard-chip:hover {
+            background: rgba(74,144,217,0.08); border-color: rgba(74,144,217,0.2);
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            text-align: center; padding: 60px 0 0;
+        }
+        .cta-section h3 {
+            font-family: 'Inter', sans-serif; font-size: 25px; font-weight: 800;
+            color: var(--text); margin-bottom: 12px;
+        }
+        .cta-section p {
+            font-size: 14px; color: var(--text-muted); margin-bottom: 32px;
+        }
+        .cta-buttons { display: flex; gap: 16px; justify-content: center; }
+        .cta-btn {
+            display: inline-flex; align-items: center; gap: 10px; padding: 16px 36px;
+            text-decoration: none; font-weight: 700; font-size: 13px; border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.4,0,0.2,1); text-transform: uppercase;
+            letter-spacing: 1px; border: none; cursor: pointer;
+        }
+        .cta-btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--bg); box-shadow: 0 4px 24px rgba(200,169,110,0.2);
+        }
+        .cta-btn-primary:hover {
+            transform: translateY(-3px); box-shadow: 0 8px 40px rgba(200,169,110,0.3);
+        }
+        .cta-btn-secondary {
+            background: transparent; color: var(--text);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .cta-btn-secondary:hover {
+            border-color: rgba(200,169,110,0.3); background: rgba(200,169,110,0.04);
+        }
+        .cta-btn .arrow { transition: transform 0.3s; }
+        .cta-btn:hover .arrow { transform: translateX(4px); }
+
+        /* FOOTER */
+        .footer {
+            padding: 30px 60px 30px;
+            background: var(--navy);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+        }
+
+        .footer-brand { display: flex; align-items: flex-start; gap: 30px; }
+        .footer-brand img { height: 235px; margin-bottom: 16px; }
+        .footer-brand-text { flex: 1; }
+        .footer-brand-text p { font-size: 14px; color: rgba(255, 255, 255, 0.5); line-height: 1.8; }
+        .footer-contact { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+        .footer-contact a { font-size: 13px; color: rgba(255, 255, 255, 0.5); text-decoration: none; transition: color 0.3s; }
+        .footer-contact a:hover { color: var(--gold); }
+
+        .footer-col h5 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover { color: var(--gold); }
+
+        .footer-divider {
+            max-width: 1200px; margin: 0 auto 30px; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200, 169, 110, 0.3), transparent);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        .footer-policies { display: flex; gap: 16px; flex-wrap: wrap; }
+        .footer-policies a { font-size: 12px; color: rgba(255, 255, 255, 0.35); text-decoration: none; transition: color 0.3s; }
+        .footer-policies a:hover { color: var(--gold); }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* NATIVE MOBILE DROPDOWN NAV */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 100px;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(12, 16, 32, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 12px 16px;
+        }
+        .service-dropdown-container {
+            position: relative;
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        .service-dropdown-trigger {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 14px 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .service-dropdown-trigger:active, .service-dropdown-trigger.open {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(200, 169, 110, 0.3);
+        }
+        .service-dropdown-trigger .arrow-icon {
+            width: 16px;
+            height: 16px;
+            stroke: var(--gold);
+            transition: transform 0.3s ease;
+        }
+        .service-dropdown-trigger.open .arrow-icon {
+            transform: rotate(180deg);
+        }
+        .service-dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            right: 0;
+            background: rgba(12, 16, 32, 0.98);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 8px;
+            z-index: 110;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(255, 255, 255, 0.05);
+            max-height: 380px;
+            overflow-y: auto;
+            transform: translateY(-10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.25s;
+            scrollbar-width: thin;
+        }
+        .service-dropdown-menu.show {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+        .service-dropdown-item {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 12px 16px;
+            background: transparent;
+            border: none;
+            border-radius: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            gap: 12px;
+        }
+        .service-dropdown-item:hover {
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text);
+        }
+        .service-dropdown-item.active {
+            background: rgba(200, 169, 110, 0.08);
+            border: 1px solid rgba(200, 169, 110, 0.15);
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+
+        /* FLOATING PARTICLES */
+        .floating-particles { position: fixed; inset: 0; z-index: 1; pointer-events: none; }
+        .fp-dot {
+            position: absolute; width: 2px; height: 2px; border-radius: 50%;
+            background: rgba(200,169,110,0.15); animation: fpFloat linear infinite;
+        }
+        @keyframes fpFloat {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) scale(1); opacity: 0; }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1200px) {
+            .left-panel { flex: 0 0 386px; min-width: 386px; }
+            .content-wrapper { padding: 36px 40px 60px; }
+        }
+        /* Responsive certifications */
+        @media (max-width: 1024px) {
+            .certifications-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        }
+        @media (max-width: 768px) {
+            .certifications-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+            .cert-card { padding: 12px 10px; }
+            .cert-card .cert-icon { width: 36px; height: 36px; }
+            .cert-card .cert-icon svg { width: 18px; height: 18px; }
+            .cert-card h4 { font-size: 11px; margin-bottom: 4px; }
+            .cert-card p { font-size: 10px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+            .cert-card .cert-badge { font-size: 9px; padding: 2px 6px; margin-top: 8px; }
+        }
+        @media (max-width: 480px) {
+            .certifications-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+            .cert-card { padding: 10px 8px; }
+            .cert-card .cert-icon { width: 32px; height: 32px; }
+            .cert-card .cert-icon svg { width: 16px; height: 16px; }
+            .cert-card h4 { font-size: 10px; margin-bottom: 3px; }
+            .cert-card p { font-size: 9px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+            .cert-card .cert-badge { font-size: 8px; padding: 2px 5px; margin-top: 6px; }
+        }
+        @media (max-width: 1024px) {
+            .left-panel { display: none !important; }
+            .mobile-nav { display: block; }
+            .split-layout { flex-direction: column; padding-top: 160px; }
+            .right-panel { height: calc(100vh - 160px); }
+            .content-wrapper { padding: 32px 28px 60px; }
+            .service-hero h1 { font-size: 29px; }
+            .capabilities-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .metrics-row { grid-template-columns: 1fr 1fr; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .glass-section { padding: 28px; }
+        }
+        @media (max-width: 1024px) {
+            .footer { padding: 60px 40px 30px; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        }
+        @media (max-width: 768px) {
+            .nav-logo img { height: 60px; }
+            .nav-links {
+                display: none; position: fixed; top: 0; left: 0;
+                width: 80%; max-width: 320px; height: 100vh; z-index: 1100;
+                background: linear-gradient(180deg, #0F1A2E 0%, #1B2A4A 100%);
+                flex-direction: column; padding: 100px 24px 32px; gap: 8px;
+                transform: translateX(-100%); transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+                border-right: 3px solid var(--gold);
+            }
+            .nav-links.open { display: flex; transform: translateX(0); }
+            .nav-toggle { display: flex; }
+            .mobile-nav { top: 130px; z-index: 1050; }
+            .split-layout { padding-top: 200px; }
+            .right-panel { height: calc(100vh - 200px); }
+            .content-wrapper { padding: 24px 16px 48px; }
+            .service-hero { padding: 40px 0 32px; }
+            .service-hero h1 { font-size: 23px; }
+            .hero-desc { font-size: 14px; }
+            .glass-section { padding: 20px; border-radius: 14px; }
+            .metrics-row { grid-template-columns: 1fr; }
+            .metric-value { font-size: 32px; }
+            .cta-buttons { flex-direction: column; }
+            .cta-btn { width: 100%; justify-content: center; }
+            .capabilities-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+            .capability-card { padding: 16px 14px; }
+            .capability-card .cap-num { font-size: 26px; margin-bottom: 8px; }
+            .capability-card h4 { font-size: 14px; margin-bottom: 6px; }
+            .capability-card p { font-size: 11px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+            .service-dropdown-menu { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 6px; max-height: 420px; }
+            .service-dropdown-item { font-size: 11px; padding: 10px 10px; gap: 6px; }
+            .footer { padding: 18px 15px 10px; }
+            .footer-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; padding-bottom: 20px; }
+            .footer-brand { grid-column: 1 / -1; align-items: center; gap: 12px; }
+            .footer-brand img { height: 122px; margin-bottom: 0; }
+            .footer-brand-text p { font-size: 11px; line-height: 1.5; }
+            .footer-contact { margin-top: 4px; }
+            .footer-contact a { font-size: 10px; }
+            .footer-col h5 { font-size: 10px; margin-bottom: 8px; }
+            .footer-col ul li { margin-bottom: 4px; }
+            .footer-col ul li a { font-size: 11px; }
+            .footer-divider { margin: 8px 0; }
+            .footer-bottom { flex-direction: column; gap: 6px; text-align: center; padding-top: 6px; }
+            .footer-bottom p { font-size: 10px; }
+            .footer-policies a { font-size: 9px; }
+            .footer-social a { width: 30px; height: 30px; font-size: 11px; }
+            .testimonial-card { padding: 24px 20px; }
+            .testimonial-card .quote-mark { font-size: 48px; margin-bottom: -12px; }
+            .testimonial-card blockquote { font-size: 14px; line-height: 1.6; margin-bottom: 16px; }
+            .testimonial-avatar { width: 40px; height: 40px; font-size: 16px; }
+            .testimonial-info .name { font-size: 14px; }
+            .testimonial-info .role { font-size: 12px; }
+        }
+        @media (max-width: 480px) {
+            .mobile-nav { top: 130px; }
+            .split-layout { padding-top: 200px; }
+            .right-panel { height: calc(100vh - 200px); }
+            .mobile-nav-btn { padding: 6px 12px; font-size: 10px; }
+
+            .service-dropdown-menu { grid-template-columns: 1fr 1fr; max-height: 360px; }
+            .service-hero h1 { font-size: 20px; }
+            .hero-icon-container { width: 84px; height: 84px; }
+            .hero-icon-main svg { width: 25px; height: 25px; }
+            .capabilities-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+            .capability-card { padding: 14px 12px; }
+            .capability-card .cap-num { font-size: 22px; margin-bottom: 7px; }
+            .capability-card h4 { font-size: 12px; margin-bottom: 5px; }
+            .capability-card p { font-size: 10px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+            .testimonial-card { padding: 20px 16px; }
+            .testimonial-card .quote-mark { font-size: 40px; margin-bottom: -10px; }
+            .testimonial-card blockquote { font-size: 13px; line-height: 1.5; margin-bottom: 12px; }
+            .testimonial-avatar { width: 36px; height: 36px; font-size: 14px; }
+            .testimonial-info .name { font-size: 13px; }
+            .testimonial-info .role { font-size: 11px; }
+        }
+.lang-toggle { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; color: var(--white); text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.3s; background: transparent; cursor: pointer; white-space: nowrap; margin-left: 16px; }
+.lang-toggle:hover { border-color: var(--gold); color: var(--gold); background: rgba(200,169,110,0.1); }
+    /* CERTIFICATIONS GRID */
+        .certifications-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+        }
+        .cert-card {
+            padding: 28px; border-radius: 14px; position: relative; overflow: hidden;
+            background: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.04);
+            transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+        }
+        .cert-card::after {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+            opacity: 0; transition: opacity 0.4s;
+        }
+        .cert-card:hover {
+            border-color: rgba(200,169,110,0.15); transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+        }
+        .cert-card:hover::after { opacity: 1; }
+        .cert-card .cert-icon {
+            width: 48px; height: 48px; border-radius: 12px; display: flex;
+            align-items: center; justify-content: center; margin-bottom: 16px;
+            background: rgba(200,169,110,0.08); border: 1px solid rgba(200,169,110,0.15);
+        }
+        .cert-card .cert-icon svg { width: 24px; height: 24px; }
+        .cert-card h4 {
+            font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px;
+        }
+        .cert-card p {
+            font-size: 14px; color: var(--text-muted); line-height: 1.6;
+        }
+        .cert-card .cert-badge {
+            display: inline-block; padding: 4px 10px; border-radius: 4px;
+            background: rgba(74,144,217,0.08); border: 1px solid rgba(74,144,217,0.15);
+            font-size: 11px; font-weight: 600; color: var(--blue-light);
+            margin-top: 12px; letter-spacing: 0.5px;
+        }
+    </style>
+    <meta property="og:title" content="Our Services | Inspection, NDT, Welding, QA/QC | AETERNA">
+    <meta property="og:description" content="Explore AETERNA's comprehensive inspection services: third-party verification, NDT, welding inspection, construction QC, corrosion & coating inspection, expediting, vendor assessment, and API/COMPEX inspector supply.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aeterna-inspection.com/pages/services.html">
+    <meta property="og:site_name" content="AETERNA Inspection & Technical Services">
+    <meta property="og:image" content="https://aeterna-inspection.com/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Services | Inspection, NDT, Welding, QA/QC | AETERNA">
+    <meta name="twitter:description" content="Explore AETERNA's comprehensive inspection services: third-party verification, NDT, welding inspection, construction QC, corrosion & coating inspection, expediting, vendor assessment, and API/COMPEX inspector supply.">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Our Services | Inspection, NDT, Welding, QA/QC | AETERNA",
+    "description": "Explore AETERNA's comprehensive inspection services: third-party verification, NDT, welding inspection, construction QC, corrosion & coating inspection, expediting, vendor assessment, and API/COMPEX inspector supply.",
+    "url": "https://aeterna-inspection.com/pages/services.html",
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "AETERNA Inspection & Technical Services",
+        "url": "https://aeterna-inspection.com"
+    },
+    "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aeterna-inspection.com"},
+            {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://aeterna-inspection.com/pages/services.html"}
+        ]
+    }
+}
+</script>
+    <link rel="alternate" hreflang="ar" href="https://aeterna-inspection.com/ar/services.html">
+    <link rel="alternate" hreflang="en" href="https://aeterna-inspection.com/pages/services.html">
+</head>
+<body>
+
+<!-- DYNAMIC BACKGROUND -->
+<div class="dynamic-bg" id="dynamicBg">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="mesh-line"></div>
+    <div class="mesh-line"></div>
+    <div class="mesh-line"></div>
+</div>
+
+<!-- NOISE TEXTURE -->
+<div class="noise"></div>
+
+<!-- FLOATING PARTICLES -->
+<div class="floating-particles" id="floatingParticles"></div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="mailto:info@aeterna-inspection.com" class="top-bar-item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+            info@aeterna-inspection.com
+        </a>
+        <a href="tel:+971555727153" class="top-bar-item top-bar-phone">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            +971 555 727 153
+        </a>
+    </div>
+</div>
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+        <img src="../images/logo-header.svg" alt="AETERNA Inspection & Technical Services Logo">
+    </a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">Profile</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <a href="../ar/services.html" class="lang-toggle">AR &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+
+<!-- MOBILE DRAWER OVERLAY -->
+<div class="nav-overlay" id="navOverlay"></div>
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+    <div class="service-dropdown-container">
+        <button class="service-dropdown-trigger" id="serviceDropdownTrigger">
+            <span id="selectedServiceLabel">Select Service</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </button>
+        <div class="service-dropdown-menu" id="serviceDropdownMenu"></div>
+    </div>
+</div>
+
+<!-- SPLIT LAYOUT -->
+<div class="split-layout">
+    <!-- LEFT PANEL  SERVICE DIRECTORY -->
+    <aside class="left-panel">
+        <div class="left-header">
+        </div>
+        <div class="service-list" id="serviceList"></div>
+    </aside>
+
+    <!-- RIGHT PANEL — IMMERSIVE CONTENT -->
+    <main class="right-panel" id="rightPanel">
+        <div class="content-wrapper" id="contentWrapper"></div>
+    </main>
+</div>
+
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="../images/logo.svg" alt="AETERNA Inspection & Technical Services Logo">
+            <div class="footer-brand-text">
+                <p>AETERNA — setting the benchmark in oil and gas inspection, integrity, and technical excellence.</p>
+                <div class="footer-contact">
+                    <a href="mailto:info@aeterna-inspection.com">info@aeterna-inspection.com</a>
+                    <a href="contact.html">Sharjah Media City, UAE</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h5>Services</h5>
+            <ul>
+                <li><a href="services.html">Third-Party Inspection</a></li>
+                <li><a href="services.html">Welding Inspection</a></li>
+                <li><a href="services.html">NDT Services</a></li>
+                <li><a href="services.html">Construction QC</a></li>
+                <li><a href="services.html">Pipeline Integrity</a></li>
+                <li><a href="services.html">Marine Inspection</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>Industries</h5>
+            <ul>
+                <li><a href="../index.html#industries">Oil & Gas</a></li>
+                <li><a href="../index.html#industries">Construction</a></li>
+                <li><a href="../index.html#industries">Petrochemical</a></li>
+                <li><a href="../index.html#industries">Power Generation</a></li>
+                <li><a href="../index.html#industries">Marine & Offshore</a></li>
+                <li><a href="../index.html#industries">Infrastructure</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>Company</h5>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="../index.html#quality">Quality & Certifications</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">Profile</a></li>
+                <li><a href="policies.html">Policies</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 AETERNA Inspection & Technical Services LLC. All rights reserved.</p>
+        <div class="footer-policies">
+            <a href="policies.html#terms">Terms of Use</a>
+            <a href="policies.html#privacy">Privacy</a>
+            <a href="policies.html#quality">Quality</a>
+            <a href="policies.html#hse">HSE</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+const services = [
+    {
+        id:2, number:'02', short:'TPI',
+        title:'Inspection Services',
+        tagline:'Third-Party & Second-Party Inspection Excellence',
+        bgGradient:'radial-gradient(ellipse at 30% 20%, rgba(200,169,110,0.08) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><circle cx="44" cy="44" r="28"/><path d="M64 64l20 20" stroke-width="2.5"/><path d="M34 44l7 7 13-13" stroke-width="2"/></svg>`,
+        heroBg:'../images/services/Inspection & Verification.jpg',
+        description:'Comprehensive third-party and second-party inspection services covering Mechanical, Electrical & Instrumentation, and Civil disciplines. Our certified inspectors verify compliance against purchase orders, specifications, and international codes — delivering unbiased quality assurance across the entire supply chain.',
+        capabilities:[
+            {title:'Vendor Inspection',desc:'Independent inspection of vendor-supplied materials, equipment, and components against purchase order requirements, specifications, and applicable codes before dispatch.'},
+            {title:'Shop Inspection',desc:'On-site inspection at fabrication and manufacturing shops covering welding, assembly, dimensional checks, pressure testing, and quality control compliance.'},
+            {title:'Factory Acceptance Testing (FAT)',desc:'Witnessing and verification of factory acceptance tests for rotating equipment, pressure vessels, valves, and packaged systems per approved test procedures.'},
+            {title:'Site Acceptance Testing (SAT)',desc:'Post-installation site acceptance testing verifying equipment performance, integrity, and functionality under actual operating conditions.'},
+            {title:'Manufacturing Surveillance',desc:'Continuous monitoring of manufacturing progress, quality control activities, material traceability, and delivery schedules throughout the production cycle.'}
+        ],
+        industries:['Oil & Gas','Petrochemical','Power Generation','Construction','Marine & Offshore','Infrastructure'],
+            metrics:[{value:'100',suffix:'+',label:'Projects Completed'},{value:'30',suffix:'+',label:'Certified Inspectors'},{value:'70',suffix:'+',label:'Clients'},{value:'20',suffix:'+',label:'Contracts'}],
+        outcomes:[
+            {title:'Zero Non-Conformances',desc:'Achieving zero NCRs during final audits through rigorous hold-point inspection and proactive quality surveillance.'},
+            {title:'Regulatory Certainty',desc:'Full compliance documentation packages that satisfy regulators, clients, and stakeholders on the first submission.'},
+            {title:'Risk Mitigation',desc:'Early detection of material and workmanship defects preventing costly rework and schedule delays.'}
+        ],
+        projects:[
+            {tag:'Oil & Gas',title:'Refinery Expansion QC',desc:'Reviewed and certified over 15,000 material reports for a major refinery expansion in the Middle East.',metric:'15,000+ Reports'},
+            {tag:'Petrochemical',title:'Plant Modernization',desc:'Provided third-party inspection for equipment procurement and installation across 8 work packages.',metric:'$400M Value'}
+        ],
+        standards:['ISO 17020','API Standards','ASME Codes','EN Standards'],
+        testimonial:{quote:'AETERNA\'s independent verification gave our board complete confidence in the quality of every component. Their reports were thorough, professional, and delivered on schedule.',name:'Ahmad Al-Rashid',role:'VP Engineering, National Oil Company'},
+            certifications:[
+            {title:'ISO 17020',desc:'Inspection Body Accreditation - Competence requirements for inspection bodies.'},
+            {title:'API Monogram',desc:'Quality Program - Manufacturing quality assurance per API specifications.'},
+            {title:'ASME Codes',desc:'Boiler & Pressure Vessel Code - Design and manufacturing standards for pressure equipment.'}
+    ],
+cta:'Request Inspection'
+    },
+
+    {
+        id:4, number:'04', short:'WLD',
+        title:'Welding Inspection & Metallurgy',
+        tagline:'Welding Quality Excellence',
+        bgGradient:'radial-gradient(ellipse at 40% 60%, rgba(200,169,110,0.06) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><path d="M20 70l30-50 10 10 15-20" stroke-width="2"/><circle cx="55" cy="35" r="4" fill="var(--gold)" stroke="none"/><circle cx="65" cy="22" r="3" fill="var(--gold)" stroke="none"/><rect x="10" y="75" width="60" height="6" rx="3"/></svg>`,
+        heroBg:'../images/services/Welding Inspection & Metallurgy.jpg',
+        description:'Expert welding inspection and metallurgical analysis covering WPS/PQR qualification, welder performance testing, in-process inspection, and metallurgical laboratory analysis for structural integrity verification.',
+        capabilities:[
+            {title:'WPS/PQR Qualification',desc:'Development, review, and qualification of welding procedure specifications and procedure qualification records.'},
+            {title:'Welder Performance Testing',desc:'Administration and witnessing of welder qualification tests per ASME IX, API 1104, and AWS D1.1 standards.'},
+            {title:'In-Process Weld Inspection',desc:'Real-time monitoring of preheat, interpass temperatures, consumable control, and environmental conditions.'},
+            {title:'Metallurgical Analysis',desc:'Microstructural examination, hardness mapping, and corrosion assessment for weld integrity verification.'}
+        ],
+        industries:['Oil & Gas','Petrochemical','Power Generation','Construction','Marine & Offshore','Infrastructure'],
+            metrics:[{value:'100',suffix:'+',label:'Projects Completed'},{value:'30',suffix:'+',label:'Certified Inspectors'},{value:'70',suffix:'+',label:'Clients'},{value:'20',suffix:'+',label:'Contracts'}],
+        outcomes:[
+            {title:'Defect Prevention',desc:'Catching weld defects during production through real-time monitoring, preventing costly repairs after completion.'},
+            {title:'Quality Assurance',desc:'Ensuring every weld meets applicable codes and project specifications through systematic procedure verification.'},
+            {title:'Performance Validation',desc:'Confirming welder competency through rigorous qualification testing before production work begins.'}
+        ],
+        projects:[
+            {tag:'Pipeline',title:'Cross-Country Pipeline',desc:'Full-time welding inspection for 350 km pipeline project, achieving 97% first-run acceptance rate.',metric:'12,000+ Welds'},
+            {tag:'Construction',title:'High-Rise Structural',desc:'Welding inspection program for 45-story structural steel building including moment connections.',metric:'99.5% Acceptance'}
+        ],
+        standards:['CSWIP 3.1/3.2','AWS CWI','ASME IX','API 1104'],
+        testimonial:{quote:'AETERNA\'s welding inspectors caught a critical WPS deviation that would have resulted in rejectable welds across an entire production run. Their expertise saved us millions.',name:'Mohammed Al-Farsi',role:'Construction Director, Samsung C&T'},
+            certifications:[
+            {title:'CSWIP 3.1/3.2',desc:'Welding Inspector Certification - Qualification for welding inspection personnel.'},
+            {title:'AWS CWI',desc:'Certified Welding Inspector - American Welding Society certification.'},
+            {title:'ASME IX',desc:'Welding Qualification - Welding procedure and welder performance qualification.'}
+    ],
+cta:'Get a Quote'
+    },
+    {
+        id:5, number:'05', short:'CQC',
+        title:'Construction Quality Control',
+        tagline:'Build Quality Oversight',
+        bgGradient:'radial-gradient(ellipse at 60% 40%, rgba(74,144,217,0.06) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><rect x="20" y="45" width="60" height="40" rx="2"/><path d="M20 45l30-25 30 25"/><rect x="38" y="55" width="24" height="30" rx="1"/><path d="M16 55h68"/><rect x="45" y="25" width="10" height="10" rx="1"/></svg>`,
+        heroBg:'../images/services/Construction Quality Control.jpg',
+        description:'We run quality control on construction projects — period. From petrochemical facilities to high-rise towers, our inspectors track material receipt, installation compliance, dimensional checks, and testing protocols against approved drawings and international codes. No deviation slips past us. If it doesn\'t meet spec, it doesn\'t get built. That\'s not negotiable. That\'s AETERNA.',
+        capabilities:[
+            {title:'ITP Development & Management',desc:'Comprehensive Inspection and Test Plans aligned with project specifications, codes, and quality requirements.'},
+            {title:'Material Verification & Traceability',desc:'Full traceability verification from receipt through installation, including mill certificates and heat numbers.'},
+            {title:'Dimensional Control Surveys',desc:'Precision dimensional verification of structural, piping, and equipment installations against approved drawings.'},
+            {title:'Mechanical Completion',desc:'Systematic mechanical completion and pre-commissioning documentation packages ensuring smooth handover.'}
+        ],
+        industries:['Oil & Gas','Petrochemical','Power Generation','Construction','Marine & Offshore','Infrastructure'],
+            metrics:[{value:'100',suffix:'+',label:'Projects Completed'},{value:'30',suffix:'+',label:'Certified Inspectors'},{value:'70',suffix:'+',label:'Clients'},{value:'20',suffix:'+',label:'Contracts'}],
+        outcomes:[
+            {title:'Zero Safety Incidents',desc:'Maintaining impeccable safety records across large-scale construction projects through rigorous QC oversight.'},
+            {title:'Schedule Adherence',desc:'Preventing rework and delays through proactive quality surveillance at every construction milestone.'},
+            {title:'Seamless Handover',desc:'Complete MC documentation packages that enable smooth transition from construction to operations.'}
+        ],
+        projects:[
+            {tag:'Petrochemical',title:'Complex QC Program',desc:'Managed complete QC program for $2.8B petrochemical complex, overseeing 500+ inspectors.',metric:'$2.8B Value'},
+            {tag:'Infrastructure',title:'Bridge Construction',desc:'Quality control for major bridge construction including foundation, pier, and deck inspection.',metric:'100% Compliance'}
+        ],
+        standards:['ISO 9001','ACI Standards','ASTM','BS/EN Standards'],
+        testimonial:{quote:'Managing QC across 12 work packages for our petrochemical complex was an enormous challenge. AETERNA\'s team delivered flawlessly with zero safety incidents.',name:'James Chen',role:'Project Manager, Bechtel'},
+            certifications:[
+            {title:'ISO 9001',desc:'Quality Management System - Framework for quality management processes.'},
+            {title:'ACI Standards',desc:'American Concrete Institute - Standards for concrete construction.'},
+            {title:'ASTM',desc:'American Society for Testing Materials - Material testing standards.'}
+    ],
+cta:'Discuss Your Project'
+    },
+
+    {
+        id:7, number:'07', short:'QAQ',
+        title:'QA/QC Auditing & Documentation',
+        tagline:'Quality Management Systems',
+        bgGradient:'radial-gradient(ellipse at 30% 70%, rgba(74,144,217,0.06) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><rect x="20" y="15" width="60" height="70" rx="4"/><line x1="32" y1="35" x2="68" y2="35"/><line x1="32" y1="47" x2="68" y2="47"/><line x1="32" y1="59" x2="56" y2="59"/><rect x="44" y="15" width="12" height="12" rx="2" fill="var(--gold)" stroke="none"/><path d="M38 78l8 8 16-16"/></svg>`,
+        heroBg:'../images/services/QAQC Auditing & Documentation.jpg',
+        description:'We own QA/QC auditing and documentation. Our specialists build, review, and audit ITPs, weld maps, material traceability, and NCRs against ISO standards. Internal audits, external audits, supplier audits — we do them all and we do them better than anyone. If your quality system has gaps, we\'ll find them. If you want certification, we\'ll get you there on the first attempt. Simple.',
+        capabilities:[
+            {title:'ISO Management System Audits',desc:'Internal and external audits per ISO 9001, ISO 14001, and ISO 45001 with detailed findings and corrective actions.'},
+            {title:'ITP Development',desc:'Creation of comprehensive Inspection and Test Plans tailored to project-specific requirements and codes.'},
+            {title:'Supplier Quality Audits',desc:'Thorough evaluation of supplier capabilities, quality systems, and manufacturing processes.'},
+            {title:'NCR Management & RCA',desc:'Systematic non-conformance reporting, root cause analysis, and corrective/preventive action management.'}
+        ],
+        industries:['Oil & Gas','Petrochemical','Power Generation','Construction','Marine & Offshore','Infrastructure'],
+            metrics:[{value:'100',suffix:'+',label:'Projects Completed'},{value:'30',suffix:'+',label:'Certified Inspectors'},{value:'70',suffix:'+',label:'Clients'},{value:'20',suffix:'+',label:'Contracts'}],
+        outcomes:[
+            {title:'First-Attempt Certification',desc:'Achieving ISO certification on the first attempt through thorough pre-certification readiness audits.'},
+            {title:'Continuous Improvement',desc:'Driving ongoing quality improvements through systematic audit findings and corrective action tracking.'},
+            {title:'Supply Chain Reliability',desc:'Ensuring supplier quality through comprehensive evaluation and ongoing surveillance programs.'}
+        ],
+        projects:[
+            {tag:'EPC',title:'Contractor Certification',desc:'Pre-certification readiness audit for major EPC contractor, achieving ISO 9001:2015 on first attempt.',metric:'First-Attempt'},
+            {tag:'Manufacturing',title:'Supplier Audit Program',desc:'Ongoing supplier quality audit program covering 200+ vendors across 12 countries.',metric:'200+ Vendors'}
+        ],
+        standards:['ISO 9001:2015','ISO 14001','ISO 45001','API Q1/Q2'],
+        testimonial:{quote:'AETERNA\'s audit team identified 12 critical gaps in our quality system that previous auditors had missed. Their thoroughness is unmatched in the industry.',name:'Robert Williams',role:'Quality Director, Fluor Corporation'},
+            certifications:[
+            {title:'ISO 9001:2015',desc:'Quality Management System - Requirements for quality management systems.'},
+            {title:'ISO 14001',desc:'Environmental Management - Environmental responsibility framework.'},
+            {title:'ISO 45001',desc:'Occupational Health & Safety - Workplace safety management standard.'}
+    ],
+cta:'Improve Quality'
+    },
+
+    {
+        id:9, number:'09', short:'PME',
+        title:'Expediting Services',
+        tagline:'Multi-Site Coordination & Delivery',
+        bgGradient:'radial-gradient(ellipse at 40% 30%, rgba(74,144,217,0.07) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><circle cx="50" cy="25" r="10"/><circle cx="25" cy="70" r="10"/><circle cx="75" cy="70" r="10"/><line x1="40" y1="30" x2="35" y2="63"/><line x1="60" y1="30" x2="65" y2="63"/><line x1="35" y1="70" x2="65" y2="70"/><rect x="44" y="40" width="12" height="8" rx="1" fill="var(--gold)" stroke="none"/></svg>`,
+        heroBg:'../images/services/Project management and expediting.jpg',
+        description:'We coordinate multi-site projects so you don\'t have to. Schedule management, resource allocation, vendor surveillance, FAT witness, and progress expediting — all handled. Our people are stationed at fabrication yards worldwide making sure your project delivers on time, on budget, and on spec. If you want someone who actually follows through, that\'s us.',
+        capabilities:[
+            {title:'Multi-Site Coordination',desc:'Seamless coordination across multiple fabrication yards, construction sites, and supplier locations.'},
+            {title:'Schedule & Resource Management',desc:'Advanced scheduling, resource allocation, and critical path management to optimize project timelines.'},
+            {title:'Vendor Surveillance & FAT',desc:'Factory surveillance and witness testing at vendor premises worldwide, verifying quality milestones.'},
+            {title:'Progress Reporting & Expediting',desc:'Real-time progress tracking with photographic documentation and proactive expediting.'}
+        ],
+        industries:['Oil & Gas','Petrochemical','Power Generation','Construction','Marine & Offshore','Infrastructure'],
+            metrics:[{value:'100',suffix:'+',label:'Projects Completed'},{value:'30',suffix:'+',label:'Certified Inspectors'},{value:'70',suffix:'+',label:'Clients'},{value:'20',suffix:'+',label:'Contracts'}],
+        outcomes:[
+            {title:'On-Time Delivery',desc:'Ensuring 98% on-time delivery through proactive expediting and real-time progress monitoring.'},
+            {title:'Cost Control',desc:'Preventing cost overruns through effective schedule management and resource optimization.'},
+            {title:'Quality Assurance',desc:'Verifying quality milestones at vendor premises before shipment to prevent field rework.'}
+        ],
+        projects:[
+            {tag:'EPC',title:'Cross-Border Expediting',desc:'Coordinated inspection across 4 countries for $500M EPC project, ensuring all equipment met quality requirements.',metric:'2,000+ Items'},
+            {tag:'Oil & Gas',title:'Offshore Platform',desc:'Multi-site coordination for offshore platform fabrication across 3 yards in 2 countries.',metric:'98% On-Time'}
+        ],
+        standards:['PMI/PMBOK','ISO 10006','API Specifications','EN 10204'],
+        testimonial:{quote:'AETERNA\'s expediting team ensured all 2,000+ critical equipment items arrived on-site meeting quality requirements and schedule milestones. Exceptional coordination.',name:'Lee Min-Jun',role:'Project Director, Hyundai Engineering'},
+            certifications:[
+            {title:'PMI/PMBOK',desc:'Project Management Body of Knowledge - Project management standards.'},
+            {title:'ISO 10006',desc:'Quality Management in Projects - Quality management guidance.'},
+            {title:'EN 10204',desc:'Metallic Products Inspection Documents - Material certification types.'}
+    ],
+cta:'Start Expediting'
+    },
+
+
+
+
+    {
+        id:14, number:'14', short:'CRR',
+        title:'Corrosion & Coating Inspection',
+        tagline:'Protective Coating & CUI Management',
+        bgGradient:'radial-gradient(ellipse at 30% 50%, rgba(200,169,110,0.06) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><path d="M20 50c0-16.6 13.4-30 30-30s30 13.4 30 30-13.4 30-30 30" stroke-width="2"/><path d="M50 20v60" stroke-dasharray="3 4"/><path d="M35 50c0-8.3 6.7-15 15-15s15 6.7 15 15" fill="none"/><rect x="20" y="55" width="60" height="35" rx="3"/><path d="M20 70h60" stroke-width="1"/></svg>`,
+        heroBg:'../images/services/Corrosion & Coating Inspection.jpg',
+        description:'Comprehensive corrosion and coating inspection services including CUI detection, coating thickness measurement, cathodic protection survey, and remaining life assessment for asset integrity management.',
+        capabilities:[
+            {title:'Corrosion Under Insulation (CUI)',desc:'Detection and assessment of CUI through insulation removal, visual inspection, UT scanning, and pulsed eddy current techniques for insulated piping and vessels.'},
+            {title:'Protective Coating Inspection',desc:'NACE-certified inspection of protective coating systems including surface preparation verification, environmental monitoring, wet-film/dry-film thickness, and adhesion testing.'},
+            {title:'Cathodic Protection Survey',desc:'Comprehensive CP system surveys including potential measurements, rectifier diagnostics, interference testing, and anode bed performance assessment per NACE standards.'},
+            {title:'Paint & Coating Assessment',desc:'Condition assessment of existing paint and coating systems including adhesion pull-off, DFT measurement, holiday detection, and failure analysis.'}
+        ],
+        industries:['Oil & Gas','Petrochemical','Power Generation','Marine & Offshore','Infrastructure','Water & Wastewater'],
+            metrics:[{value:'500',suffix:'+',label:'CUI Surveys'},{value:'25',suffix:'+',label:'NACE Inspectors'},{value:'15K',suffix:'+',label:'KM Pipeline Coated'},{value:'99',suffix:'%',label:'Coating Compliance'}],
+        outcomes:[
+            {title:'Corrosion Risk Reduction',desc:'Reducing corrosion-related failures by 80% through systematic coating inspection and cathodic protection management programmes.'},
+            {title:'Asset Life Extension',desc:'Protecting assets from environmental and process corrosion extending operational life by 10-15 years.'},
+            {title:'Regulatory Compliance',desc:'Ensuring compliance with NACE, ISO, and environmental regulations for corrosion management and coating standards.'}
+        ],
+        projects:[
+            {tag:'Refinery',title:'CUI Inspection Programme',desc:'Comprehensive CUI inspection programme covering 15 km of insulated piping using pulsed eddy current and targeted insulation removal.',metric:'15 km Inspected'},
+            {tag:'Offshore',title:'Coating & CP Assessment',desc:'Protective coating and CP system assessment for an offshore platform topside and subsea structures.',metric:'1 Platform'}
+        ],
+        standards:['NACE SP0198','NACE SP0173','NACE SP0169','ISO 12944','SSPC-PA2','API RP571'],
+        testimonial:{quote:'AETERNA\'s CUI detection programme saved us from a major corrosion failure. Their pulsed eddy current screening identified hidden corrosion that conventional methods would have missed until it was too late.',name:'Eng. Khalid Al-Otaibi',role:'Inspection Manager, SABIC'},
+            certifications:[
+            {title:'NACE SP0198',desc:'CUI Management - Control of corrosion under thermal insulation.'},
+            {title:'ISO 12944',desc:'Protective Coatings - Corrosion protection by protective paint systems.'},
+            {title:'SSPC-PA2',desc:'Coating Thickness - Measurement of dry film thickness.'}
+    ],
+cta:'Assess Corrosion Risk'
+    },
+    {
+        id:15, number:'15', short:'STD',
+        title:'Shutdown & Turnaround Inspection',
+        tagline:'Planned Maintenance Excellence',
+        bgGradient:'radial-gradient(ellipse at 60% 30%, rgba(200,169,110,0.06) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><circle cx="50" cy="50" r="35" stroke-dasharray="4 4"/><path d="M50 20v30l20 20" stroke-width="2.5"/><rect x="35" y="55" width="30" height="10" rx="2"/><path d="M25 70h50M35 80h30"/></svg>`,
+        heroBg:'../images/services/Shutdown & Turnaround Inspection.jpg',
+        description:'Turnarounds are high-pressure, high-stakes. We handle them. Pre-shutdown scoping, in-service inspection, turnaround execution, startup verification — our teams integrate with yours and deliver. We\'ve supported 200+ turnarounds across refineries, petrochemical plants, and power stations. Scope completed on schedule, every time. If you\'re planning a shutdown, don\'t plan it without us.',
+        capabilities:[
+            {title:'Pre-Shutdown Inspection',desc:'Pre-turnaround scoping inspections to identify inspection requirements, prioritise critical equipment openings, and develop detailed inspection work packs.'},
+            {title:'Turnaround Inspection',desc:'Full-scope turnaround inspection execution including vessel entry, UT scanning, MPI, DPI, RT, and thickness gauging coordinated with shutdown schedules.'},
+            {title:'Commissioning Support',desc:'Pre-commissioning inspection services including equipment verification, punch list closeout, pressure testing witness, and system integrity checks before startup.'},
+            {title:'Startup Inspection',desc:'Post-maintenance startup inspection monitoring equipment condition during initial operation and verifying proper reassembly and alignment.'}
+        ],
+        industries:['Oil & Gas','Petrochemical','Power Generation','Refining','Fertiliser','Infrastructure'],
+            metrics:[{value:'200',suffix:'+',label:'Turnarounds Supported'},{value:'50',suffix:'+',label:'Inspectors Deployed'},{value:'98',suffix:'%',label:'On-Schedule Delivery'},{value:'0',suffix:'',label:'Lost Time Incidents'}],
+        outcomes:[
+            {title:'Shutdown Optimisation',desc:'Reducing turnaround duration by 20% through efficient inspection planning and resource optimisation strategies.'},
+            {title:'Scope Completion',desc:'100% completion of identified inspection scope within planned shutdown windows eliminating unplanned extensions.'},
+            {title:'Documented Integrity',desc:'Complete inspection documentation packages delivered on schedule enabling smooth re-commissioning and regulatory sign-off.'}
+        ],
+        projects:[
+            {tag:'Refinery',title:'Major TAR Inspection',desc:'Provided 35 inspectors for a 45-day refinery turnaround covering 500+ equipment inspections including vessels, exchangers, piping, and relief devices.',metric:'500+ Inspections'},
+            {tag:'Petrochemical',title:'Plant Shutdown',desc:'Full inspection scope for a 30-day petrochemical plant shutdown with 250+ pressure vessels and 1,500+ piping circuits.',metric:'1,750+ Items'}
+        ],
+        standards:['API 510','API 570','API 653','ASME Section VIII','ASME B31.3','NBIC'],
+        testimonial:{quote:'AETERNA\'s turnaround inspection team delivered exceptional results during our refinery shutdown. Their pre-shutdown scoping and execution efficiency helped us complete the turnaround two days ahead of schedule.',name:'Eng. Faisal Al-Harbi',role:'Turnaround Manager, Saudi Aramco'},
+        cta:'Plan Your Turnaround'
+    },
+
+    {
+        id:16, number:'16', short:'VAS', menuTitle:'Vendor Assessment',
+        title:'Vendor Assessment',
+        tagline:'Vendor Qualification & Inspection Personnel Supply',
+        bgGradient:'radial-gradient(ellipse at 50% 40%, rgba(200,169,110,0.06) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><rect x="15" y="20" width="70" height="60" rx="5"/><circle cx="50" cy="40" r="10"/><path d="M35 65c0-8 6.7-15 15-15s15 6.7 15 15"/><path d="M15 45l12 8 8-12M73 45l-12 8-8-12"/></svg>`,
+        heroBg:'../images/services/Supply of API Inspectors.jpg',
+        description:'We deliver comprehensive vendor assessment services and specialised inspection personnel across the oil & gas, petrochemical, and power sectors. From vendor qualification audits to supplying API-certified and COMPEX E&I-certified inspectors, we ensure your supply chain meets the highest quality and safety standards.',
+        capabilities:[
+            {title:'Vendor Assessment',desc:'Comprehensive vendor capability assessment including facility evaluation, quality system review, past performance analysis, and technical competency verification.'},
+            {title:'Vendor Audit',desc:'Third-party vendor audits against ISO 9001, API Q1/Q2, and project-specific technical requirements with detailed audit reports and corrective action tracking.'},
+            {title:'Vendor Evaluation',desc:'Systematic vendor evaluation and rating based on quality metrics, delivery performance, technical capability, and HSE compliance using weighted scoring models.'},
+            {title:'Supply of API Inspectors',desc:'Qualified API 510, API 570, API 653, and API 580 inspectors for vessel inspection, piping inspection, tank inspection, and risk-based assessment assignments worldwide.'},
+            {title:'Supply of COMPEX E&I Inspectors',desc:'COMPEX-certified Electrical & Instrumentation inspectors with hazardous area competency for ATEX, IECEx, and NEC compliance verification and inspection.'}
+        ],
+        industries:['Oil & Gas','Petrochemical','Power Generation','Refining','Marine & Offshore','Infrastructure'],
+            metrics:[{value:'200',suffix:'+',label:'Vendor Audits'},{value:'50',suffix:'+',label:'Certified Inspectors Supplied'},{value:'30',suffix:'+',label:'API Inspectors'},{value:'20',suffix:'+',label:'COMPEX Inspectors'}],
+        outcomes:[
+            {title:'Supply Chain Confidence',desc:'Reducing vendor-related quality risks through systematic assessment, audit, and performance monitoring programmes.'},
+            {title:'Qualified Personnel',desc:'Access to a pool of pre-qualified API and COMPEX certified inspectors deployed at short notice globally.'},
+            {title:'Regulatory Compliance',desc:'Ensuring vendor compliance with industry standards, project specifications, and international quality management requirements.'}
+        ],
+        projects:[
+            {tag:'Oil & Gas',title:'Vendor Qualification Programme',desc:'Conducted 50+ vendor audits across 12 countries for a major LNG project, qualifying fabrication yards and equipment suppliers.',metric:'50+ Audits'},
+            {tag:'Refining',title:'Inspector Supply',desc:'Supplied 15 API and 10 COMPEX inspectors for a refinery expansion project covering structural, piping, electrical, and instrumentation disciplines.',metric:'25 Inspectors'}
+        ],
+        standards:['API Q1','API Q2','ISO 9001','ISO 17020','ATEX 2014/34/EU','IECEx Scheme'],
+        testimonial:{quote:'AETERNA\'s vendor assessment team helped us qualify critical suppliers across our global supply chain. Their thorough audits and inspector supply service were instrumental to our project success.',name:'Ahmed Al-Sayed',role:'Supply Chain Manager, ADNOC'},
+            certifications:[
+            {title:'API Q1/Q2',desc:'Quality Management System for Manufacturing and Service Organizations.'},
+            {title:'ISO 17020',desc:'Conformity Assessment - Requirements for inspection bodies.'},
+            {title:'ATEX/IECEx',desc:'Hazardous Area Equipment and Personnel Certification Standards.'}
+    ],
+cta:'Assess Your Vendors'
+    },
+
+    {
+        id:17, number:'17', short:'API',
+        title:'Supply of API Inspectors',
+        tagline:'Certified API Inspection Personnel',
+        bgGradient:'radial-gradient(ellipse at 40% 50%, rgba(200,169,110,0.06) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><circle cx="50" cy="30" r="15"/><path d="M25 80c0-13.8 11.2-25 25-25s25 11.2 25 25"/><rect x="30" y="55" width="40" height="5" rx="2"/></svg>`,
+        heroBg:'../images/services/Vendor Assessment.jpg',
+        description:'We supply certified API inspectors for pressure vessels, piping, tanks, and risk-based inspection projects worldwide. Our inspectors hold current API 510, API 570, API 653, and API 580/581 certifications with extensive field experience across oil & gas, petrochemical, and power generation facilities.',
+        capabilities:[
+            {title:'API 510 Inspectors',desc:'Certified pressure vessel inspectors for in-service inspection, fitness-for-service evaluation, and integrity assessment per API 510.'},
+            {title:'API 570 Inspectors',desc:'Certified piping inspectors covering in-service inspection, corrosion monitoring, and piping integrity management per API 570.'},
+            {title:'API 653 Inspectors',desc:'Certified tank inspectors for above-ground storage tank inspection, repair, alteration, and dismantlement per API 653.'},
+            {title:'API 580/581 Inspectors',desc:'Risk-based inspection practitioners for RBI programme development, implementation, and inspection planning per API 580/581.'}
+        ],
+        industries:['Oil & Gas','Petrochemical','Power Generation','Refining','Marine & Offshore','Infrastructure'],
+            metrics:[{value:'30',suffix:'+',label:'API Inspectors'},{value:'100',suffix:'+',label:'Assignments Completed'},{value:'15',suffix:'+',label:'Countries Deployed'},{value:'98',suffix:'%',label:'Client Satisfaction'}],
+        outcomes:[
+            {title:'Rapid Deployment',desc:'Certified API inspectors mobilised within 48-72 hours for urgent inspection requirements worldwide.'},
+            {title:'Quality Assurance',desc:'Pre-verified inspectors with current certifications, site-specific inductions, and proven track records.'},
+            {title:'Global Coverage',desc:'Network of API-certified inspectors available across Middle East, Asia, Europe, and Americas.'}
+        ],
+        projects:[
+            {tag:'Refinery',title:'API Inspector Supply',desc:'Supplied 8 API 510/570 inspectors for a 45-day refinery turnaround covering 300+ pressure vessels and 50 piping circuits.',metric:'8 Inspectors'},
+            {tag:'Oil & Gas',title:'RBI Programme',desc:'Deployed 5 API 580/581 inspectors for risk-based inspection programme covering 2,000+ equipment items.',metric:'2,000+ Items'}
+        ],
+        standards:['API 510','API 570','API 653','API 580','API 581','API RP 574'],
+        testimonial:{quote:'AETERNA supplied 8 API-certified inspectors at short notice for our turnaround. Their inspectors were experienced, professional, and required minimal supervision.',name:'Eng. Mohammed Al-Rashid',role:'Inspection Manager, Aramco'},
+            certifications:[
+            {title:'API 510',desc:'Pressure Vessel Inspector Certification'},
+            {title:'API 570',desc:'Piping Inspector Certification'},
+            {title:'API 653',desc:'Tank Inspector Certification'}
+    ],
+cta:'Hire API Inspectors'
+    },
+
+    {
+        id:18, number:'18', short:'CPX',
+        title:'Supply of COMPEX Inspectors',
+        tagline:'Hazardous Area E&I Inspection Personnel',
+        bgGradient:'radial-gradient(ellipse at 60% 40%, rgba(200,169,110,0.06) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><path d="M30 20h40v60H30z" rx="3"/><path d="M40 40l10 15 20-30" stroke-width="2.5"/><path d="M30 55h-10M30 70h-10M70 55h10M70 70h10"/><circle cx="20" cy="55" r="3" fill="var(--gold)"/><circle cx="20" cy="70" r="3" fill="var(--gold)"/><circle cx="80" cy="55" r="3" fill="var(--gold)"/><circle cx="80" cy="70" r="3" fill="var(--gold)"/></svg>`,
+        heroBg:'../images/services/Supply of COMPEX Inspectors.jpg',
+        description:'We supply COMPEX-certified electrical and instrumentation inspectors for hazardous area installations, inspections, and compliance verification. Our COMPEX inspectors hold Ex01-Ex04 certifications and are experienced in ATEX, IECEx, and NEC hazardous area requirements across oil & gas, petrochemical, and chemical facilities.',
+        capabilities:[
+            {title:'COMPEX E&I Inspectors',desc:'Fully qualified COMPEX E&I inspectors with Ex01-Ex04 certification for inspection of electrical and instrumentation installations in hazardous areas.'},
+            {title:'Hazardous Area Classification',desc:'Verification of area classification drawings, equipment selection, and installation practices against ATEX Directive and IEC 60079 standards.'},
+            {title:'Ex Equipment Inspection',desc:'Inspection of explosion-proof, increased safety, and intrinsic safety equipment including documentation review and visual/installed inspection.'},
+            {title:'Compliance Verification',desc:'Complete compliance verification for new installations, modifications, and periodic re-inspection of hazardous area electrical and instrumentation systems.'}
+        ],
+        industries:['Oil & Gas','Petrochemical','Power Generation','Chemical','Mining','Pharmaceutical'],
+            metrics:[{value:'20',suffix:'+',label:'COMPEX Inspectors'},{value:'80',suffix:'+',label:'Inspections Completed'},{value:'10',suffix:'+',label:'Countries Deployed'},{value:'100',suffix:'%',label:'Compliance Rate'}],
+        outcomes:[
+            {title:'Safety Compliance',desc:'Ensuring hazardous area installations meet ATEX, IECEx, and local regulatory requirements for personnel and asset safety.'},
+            {title:'Expert Personnel',desc:'COMPEX-certified inspectors with practical field experience in Ex equipment installation, inspection, and maintenance.'},
+            {title:'Risk Mitigation',desc:'Identifying and documenting hazardous area non-conformities before they become safety incidents or regulatory violations.'}
+        ],
+        projects:[
+            {tag:'Petrochemical',title:'Hazardous Area Audit',desc:'Deployed 6 COMPEX inspectors for comprehensive hazardous area compliance audit across 3 process units.',metric:'6 Inspectors'},
+            {tag:'Oil & Gas',title:'Ex Equipment Inspection',desc:'COMPEX inspection of 500+ Ex-rated electrical and instrumentation equipment items on an offshore platform.',metric:'500+ Items'}
+        ],
+        standards:['ATEX 2014/34/EU','IEC 60079 Series','IECEx Scheme','NFPA 70 (NEC)','BS 60079','EN 60079'],
+        testimonial:{quote:'AETERNA supplied COMPEX inspectors who identified critical hazardous area non-conformities that our internal team had missed. Their expertise in Ex equipment is outstanding.',name:'Eng. Sarah Mitchell',role:'HSE Manager, Shell'},
+            certifications:[
+            {title:'COMPEX Ex01-Ex04',desc:'Hazardous Area Electrical & Instrumentation Competency'},
+            {title:'IECEx CoPC',desc:'International Personnel Competency Certification'},
+            {title:'ATEX Directive',desc:'European Hazardous Area Equipment Compliance'}
+    ],
+cta:'Hire COMPEX Inspectors'
+    }
+];
+
+// DOM Elements
+const serviceList = document.getElementById('serviceList');
+const serviceDropdownTrigger = document.getElementById('serviceDropdownTrigger');
+const serviceDropdownMenu = document.getElementById('serviceDropdownMenu');
+const selectedServiceLabel = document.getElementById('selectedServiceLabel');
+const contentWrapper = document.getElementById('contentWrapper');
+const dynamicBg = document.getElementById('dynamicBg');
+const rightPanel = document.getElementById('rightPanel');
+let currentIndex = 0;
+
+// Build left nav
+services.forEach((s, i) => {
+    const item = document.createElement('div');
+    item.className = 'service-item' + (i === 0 ? ' active' : '');
+    item.dataset.index = i;
+    item.innerHTML = `
+        <div class="item-icon">${s.icon}</div>
+        <div class="item-text"><div class="item-title">${s.menuTitle || s.title}</div></div>
+        <span class="item-arrow">&rarr;</span>
+    `;
+    item.addEventListener('click', () => selectService(i));
+    serviceList.appendChild(item);
+});
+
+// Build mobile dropdown nav
+services.forEach((s, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'service-dropdown-item' + (i === 0 ? ' active' : '');
+    btn.innerHTML = `<span>${s.menuTitle || s.title}</span>`;
+    btn.addEventListener('click', () => {
+        selectService(i);
+        closeDropdown();
+    });
+    serviceDropdownMenu.appendChild(btn);
+});
+
+// Initialize trigger label
+if (selectedServiceLabel && services[0]) {
+    selectedServiceLabel.textContent = services[0].title;
+}
+
+// Toggle dropdown
+if (serviceDropdownTrigger) {
+    serviceDropdownTrigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = serviceDropdownTrigger.classList.contains('open');
+        if (isOpen) {
+            closeDropdown();
+        } else {
+            openDropdown();
+        }
+    });
+}
+
+function openDropdown() {
+    serviceDropdownTrigger.classList.add('open');
+    serviceDropdownMenu.classList.add('show');
+}
+
+function closeDropdown() {
+    serviceDropdownTrigger.classList.remove('open');
+    serviceDropdownMenu.classList.remove('show');
+}
+
+// Close dropdown on tap outside
+document.addEventListener('click', () => {
+    closeDropdown();
+});
+
+// Select service
+function selectService(index) {
+    if (index === currentIndex) return;
+    currentIndex = index;
+
+    // Update left nav
+    document.querySelectorAll('.service-item').forEach((el, i) => {
+        el.classList.toggle('active', i === index);
+    });
+
+    // Update mobile dropdown active state
+    document.querySelectorAll('.service-dropdown-item').forEach((el, i) => {
+        el.classList.toggle('active', i === index);
+    });
+
+    // Update trigger text
+    if (selectedServiceLabel) {
+        selectedServiceLabel.textContent = services[index].title;
+    }
+
+    // Transition content
+    contentWrapper.classList.add('transitioning');
+
+    // Update background
+    const s = services[index];
+    const orbs = dynamicBg.querySelectorAll('.gradient-orb');
+    orbs[0].style.background = s.bgGradient;
+
+    setTimeout(() => {
+        renderService(index);
+        contentWrapper.classList.remove('transitioning');
+        rightPanel.scrollTop = 0;
+        animateMetrics();
+    }, 400);
+}
+
+// Render service
+function renderService(index) {
+    const s = services[index];
+
+    const capabilityCards = s.capabilities.map((c, i) => `
+        <div class="capability-card${i < 7 && s.id === 3 ? ' conv' : i >= 7 && s.id === 3 ? ' adv' : ''}">
+            ${c.cat ? `<div class="cap-cat">${c.cat}</div>` : ''}
+            <div class="cap-num">${String(i + 1).padStart(2, '0')}</div>
+            <h4>${c.title}</h4>
+            <p>${c.desc}</p>
+        </div>
+    `).join('');
+
+    const industryPills = s.industries.map(ind => `
+        <div class="industry-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span>${ind}</span>
+        </div>
+    `).join('');
+
+    const metricCards = s.metrics.map(m => `
+        <div class="metric-card">
+            <div class="metric-value" data-target="${m.value}" data-suffix="${m.suffix}">0${m.suffix}</div>
+            <div class="metric-label">${m.label}</div>
+        </div>
+    `).join('');
+
+    const outcomeItems = s.outcomes.map(o => `
+        <div class="outcome-item">
+            <div class="outcome-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div class="outcome-text">
+                <h4>${o.title}</h4>
+                <p>${o.desc}</p>
+            </div>
+        </div>
+    `).join('');
+
+    const projectCards = s.projects.map(p => `
+        <div class="portfolio-card">
+            <div class="port-tag">${p.tag}</div>
+            <h4>${p.title}</h4>
+            <p>${p.desc}</p>
+            <span class="port-metric">${p.metric}</span>
+        </div>
+    `).join('');
+
+    const standardChips = s.standards.map(st => `
+        <div class="standard-chip">${st}</div>
+    `).join('');
+
+    contentWrapper.innerHTML = `
+        <!-- SERVICE HERO -->
+        <div class="service-hero">
+            ${s.heroBg ? `<div class="service-hero-bg active" style="background-image:url('${s.heroBg}')"></div>` : ''}
+            <div class="hero-icon-container">
+                <div class="hero-icon-ring"></div>
+                <div class="hero-icon-ring-2"></div>
+                <div class="hero-icon-glow"></div>
+                <div class="hero-icon-main">${s.icon}</div>
+            </div>
+            <h1>${s.title}</h1>
+            <p class="hero-desc">${s.description}</p>
+        </div>
+
+        <!-- CAPABILITIES -->
+        <div class="glass-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                </div>
+                <h3>Core Capabilities</h3>
+                <span class="section-tag">Solutions</span>
+            </div>
+            <div class="capabilities-grid">${capabilityCards}</div>
+        </div>
+
+        <!-- INDUSTRIES -->
+        <div class="glass-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                </div>
+                <h3>Industries Served</h3>
+                <span class="section-tag">Sectors</span>
+            </div>
+            <div class="industry-strip">${industryPills}</div>
+        </div>
+
+        <!-- METRICS -->
+        <div class="glass-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                </div>
+                <h3>Performance Metrics</h3>
+                <span class="section-tag">Results</span>
+            </div>
+            <div class="metrics-row">${metricCards}</div>
+        </div>
+
+        <!-- OUTCOMES -->
+        <div class="glass-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                </div>
+                <h3>Business Outcomes</h3>
+                <span class="section-tag">Impact</span>
+            </div>
+            <div class="outcomes-list">${outcomeItems}</div>
+        </div>
+
+        <!-- PROJECTS -->
+        <div class="glass-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                </div>
+                <h3>Project Portfolio</h3>
+                <span class="section-tag">Featured</span>
+            </div>
+            <div class="portfolio-grid">${projectCards}</div>
+        </div>
+
+        <!-- TESTIMONIAL -->
+        <div class="glass-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                </div>
+                <h3>Client Testimonial</h3>
+                <span class="section-tag">Feedback</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-mark">"</div>
+                <blockquote>${s.testimonial.quote}</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">${s.testimonial.name.charAt(0)}</div>
+                    <div class="testimonial-info">
+                        <div class="name">${s.testimonial.name}</div>
+                        <div class="role">${s.testimonial.role}</div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- QUALITY & CERTIFICATIONS -->
+        ${s.certifications && s.certifications.length > 0 ? `
+        <div class="glass-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <h3>Quality & Certifications</h3>
+                <span class="section-tag">Standards</span>
+            </div>
+            <div class="certifications-grid">
+                ${s.certifications.map(c => `
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                    </div>
+                    <h4>${c.title}</h4>
+                    <p>${c.desc}</p>
+                </div>
+                `).join('')}
+            </div>
+        </div>
+        ` : ''}
+
+        <!-- STANDARDS -->
+        <div class="glass-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                </div>
+                <h3>Technical Standards</h3>
+                <span class="section-tag">Compliance</span>
+            </div>
+            <div class="standards-grid">${standardChips}</div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h3>Ready to Get Started?</h3>
+            <p>Contact our team to discuss how ${s.title.toLowerCase()} can benefit your project.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta-btn cta-btn-primary">${s.cta}<span class="arrow">&rarr;</span></a>
+                <a href="tel:+971555727153" class="cta-btn cta-btn-secondary">Call +971 555 727 153</a>
+            </div>
+        </div>
+    `;
+}
+
+// Animate metrics
+function animateMetrics() {
+    document.querySelectorAll('.metric-value[data-target]').forEach(el => {
+        const target = parseFloat(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const isDecimal = String(target).includes('.');
+        const duration = 1000;
+        const start = performance.now();
+        function tick(now) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 4);
+            const current = isDecimal ? (eased * target).toFixed(1) : Math.floor(eased * target);
+            el.textContent = current + suffix;
+            if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+    });
+}
+
+// Floating particles
+(function() {
+    const container = document.getElementById('floatingParticles');
+    for (let i = 0; i < 30; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'fp-dot';
+        const size = Math.random() * 2 + 1;
+        dot.style.cssText = `
+            width: ${size}px; height: ${size}px;
+            left: ${Math.random() * 100}%;
+            animation-duration: ${Math.random() * 25 + 15}s;
+            animation-delay: ${Math.random() * 20}s;
+        `;
+        container.appendChild(dot);
+    }
+})();
+
+// Init
+renderService(0);
+setTimeout(animateMetrics, 500);
+</script>
+<script src="../js/script.js"></script>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/971555727153" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" id="whatsappBtn" aria-label="Chat on WhatsApp">
+    <img src="../images/whatsapp.svg" alt="WhatsApp" width="60" height="60">
+</a>
+<div class="whatsapp-typing" id="whatsappTyping">
+    <span class="whatsapp-typing-text" id="whatsappTypingText"></span><span class="whatsapp-typing-cursor">|</span>
+</div>
+
+<style>
+.whatsapp-btn {
+    position: fixed;
+    bottom: calc(30px + 5%);
+    right: calc(30px + 5%);
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    background: #25D366;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    animation: whatsappPulse 2s infinite;
+}
+@keyframes whatsappPulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    animation: none;
+}
+.whatsapp-btn img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+.whatsapp-typing {
+    position: fixed;
+    bottom: calc(99px + 5%);
+    right: calc(30px + 5% + 29px);
+    z-index: 998;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(50%) translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transform-origin: bottom center;
+}
+.whatsapp-typing::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(0, 0, 0, 0.65);
+}
+.whatsapp-typing.visible {
+    opacity: 1;
+    transform: translateX(50%) translateY(0);
+}
+.whatsapp-typing-text {
+    color: #ffffff;
+}
+.whatsapp-typing-cursor {
+    color: #25D366;
+    animation: whatsappBlink 0.7s infinite;
+}
+@keyframes whatsappBlink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+@media (max-width: 1024px) {
+    .whatsapp-btn { bottom: calc(25px + 5%); right: calc(25px + 5%); width: 55px; height: 55px; }
+    .whatsapp-btn img { width: 35px; height: 35px; }
+    .whatsapp-typing { bottom: calc(90px + 5%); right: calc(25px + 5% + 27px); font-size: 13px; padding: 10px 18px; transform: translateX(50%) translateY(10px); }
+    .whatsapp-typing.visible { transform: translateX(50%) translateY(0); }
+}
+@media (max-width: 768px) {
+    .whatsapp-btn { bottom: calc(20px + 15%); right: calc(20px + 5%); width: 50px; height: 50px; }
+    .whatsapp-btn img { width: 27px; height: 27px; }
+    .whatsapp-typing { bottom: calc(80px + 15%); right: calc(20px + 5% + 25px); font-size: 12px; padding: 10px 16px; transform: translateX(50%) translateY(10px); }
+    .whatsapp-typing.visible { transform: translateX(50%) translateY(0); }
+}
+</style>
+
+<script>
+(function() {
+    var typingEl = document.getElementById('whatsappTypingText');
+    var bubble = document.getElementById('whatsappTyping');
+    if (!typingEl || !bubble) return;
+
+    var phrases = ['Quick Assistance', 'Chat with us', 'We are here to help 24/7'];
+    var phraseIdx = 0;
+    var charIdx = 0;
+    var isDeleting = false;
+    var typingSpeed = 100;
+
+    setTimeout(function() {
+        bubble.classList.add('visible');
+        typeWA();
+    }, 2000);
+
+    function typeWA() {
+        var current = phrases[phraseIdx];
+        if (isDeleting) {
+            typingEl.textContent = current.substring(0, charIdx - 1);
+            charIdx--;
+            typingSpeed = 50;
+        } else {
+            typingEl.textContent = current.substring(0, charIdx + 1);
+            charIdx++;
+            typingSpeed = 100;
+        }
+        if (!isDeleting && charIdx === current.length) {
+            typingSpeed = 2500;
+            isDeleting = true;
+        } else if (isDeleting && charIdx === 0) {
+            isDeleting = false;
+            phraseIdx = (phraseIdx + 1) % phrases.length;
+            typingSpeed = 500;
+        }
+        setTimeout(typeWA, typingSpeed);
+    }
+})();
+</script>
+</body>
+</html>

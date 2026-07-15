@@ -1,0 +1,576 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study - Pipeline Integrity Management Program | AETERNA</title>
+    <meta name="description" content="ILI verification digs and direct assessment for a hydrocarbon transmission pipeline by AETERNA.">
+    <link rel="icon" type="image/svg+xml" href="../../images/logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --navy: #1B2A4A; --blue: #4A90D9; --gold: #C8A96E; --white: #FFFFFF; --light: #F4F6F9; --gray: #6B7280; --dark: #0F1A2E; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: #333; line-height: 1.6; overflow-x: hidden; }
+
+        .cs-hero { min-height: 65vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; }
+        .cs-hero-bg { position: absolute; inset: 0; opacity: 0.4; z-index: 0; background-size: cover; background-position: center; background-image: url('../../images/case-studies/Pipeline Integrity.jpg'); }
+        .cs-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,22,40,0.88) 0%, rgba(27,42,74,0.65) 100%); z-index: 1; }
+        .cs-hero-content { position: relative; z-index: 2; max-width: 900px; padding: 0 24px; }
+        .cs-hero-tags { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+        .cs-hero-tags span { padding: 6px 18px; border: 1px solid var(--gold); color: var(--gold); font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; border-radius: 4px; }
+        .cs-hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; color: var(--white); line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.5px; }
+        .cs-hero p { font-size: 17px; color: rgba(255,255,255,0.75); line-height: 1.7; max-width: 720px; margin: 0 auto; }
+
+        .breadcrumb { padding: 14px 60px; background: var(--light); font-size: 13px; margin-top: 127px; }
+        .breadcrumb-inner { max-width: 1200px; margin: 0 auto; }
+        .breadcrumb a { color: var(--gray); text-decoration: none; transition: color 0.3s; }
+        .breadcrumb a:hover { color: var(--navy); }
+        .breadcrumb span { color: var(--gray); margin: 0 8px; }
+        .breadcrumb .current { color: var(--navy); font-weight: 600; }
+
+        .section { padding: 80px 60px; }
+        .section-alt { padding: 80px 60px; background: var(--light); }
+        .section-dark { padding: 80px 60px; background: var(--navy); }
+        .section-inner { max-width: 1200px; margin: 0 auto; }
+        .section-badge { display: inline-block; padding: 6px 20px; border: 1px solid var(--gold); color: var(--gold); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; margin-bottom: 16px; }
+        .section h2 { font-size: clamp(1.6rem, 2.8vw, 2.4rem); font-weight: 800; color: var(--navy); margin-bottom: 12px; line-height: 1.25; }
+        .section-alt h2 { color: var(--navy); }
+        .section-dark h2 { color: var(--white); }
+        .section-desc { font-size: 15px; color: var(--gray); line-height: 1.9; max-width: 640px; }
+        .section p, .section-alt p { font-size: 15px; color: var(--gray); line-height: 1.9; max-width: 860px; }
+        .section-dark p { color: rgba(255,255,255,0.75); max-width: 860px; }
+
+        .highlights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1200px; margin: 32px auto 0; }
+        .highlight-item { display: flex; gap: 16px; align-items: flex-start; padding: 24px; background: var(--white); border-radius: 12px; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+        .highlight-icon { font-size: 28px; line-height: 1; flex-shrink: 0; }
+        .highlight-item strong { display: block; font-size: 14px; color: var(--navy); margin-bottom: 4px; }
+        .highlight-item p { font-size: 13px; color: var(--gray); line-height: 1.6; max-width: none; }
+
+        .challenge-block { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; max-width: 1200px; margin: 28px auto 0; }
+        .challenge-block p { font-size: 15px; color: var(--gray); line-height: 1.9; }
+        .challenge-highlight { padding: 32px; background: var(--white); border-radius: 16px; border-left: 4px solid var(--gold); box-shadow: 0 4px 20px rgba(0,0,0,0.04); font-size: 15px; color: var(--navy); line-height: 1.8; font-weight: 500; }
+
+        .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1200px; margin: 32px auto 0; }
+        .step-card { padding: 32px 24px; background: rgba(255,255,255,0.06); border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); text-align: center; transition: all 0.4s ease; }
+        .step-card:hover { transform: translateY(-6px); background: rgba(255,255,255,0.1); }
+        .step-number { width: 48px; height: 48px; border-radius: 50%; background: var(--gold); color: var(--navy); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; margin: 0 auto 16px; }
+        .step-card h4 { font-size: 16px; color: var(--white); margin-bottom: 8px; font-weight: 700; }
+        .step-card p { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.7; max-width: none; }
+
+        .results-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1200px; margin: 32px auto 0; }
+        .stat-card { padding: 40px 24px; background: var(--white); border-radius: 16px; text-align: center; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 20px rgba(0,0,0,0.04); transition: all 0.4s ease; }
+        .stat-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+        .stat-number { font-size: 2.6rem; font-weight: 900; color: var(--navy); margin-bottom: 6px; letter-spacing: -1px; }
+        .stat-label { font-size: 13px; color: var(--gray); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
+
+        .cta-section { padding: 100px 60px; background: url('../../images/case-studies/Pipeline Integrity.jpg') center/cover no-repeat fixed; text-align: center; position: relative; }
+        .cta-section::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(27,42,74,0.92) 0%, rgba(15,26,46,0.85) 100%); }
+        .cta-section h2, .cta-section p, .cta-section a { position: relative; z-index: 1; }
+        .cta-section h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); color: var(--white); font-weight: 800; margin-bottom: 12px; }
+        .cta-section p { color: rgba(255,255,255,0.65); font-size: 15px; margin-bottom: 28px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-btn { display: inline-block; padding: 14px 40px; background: var(--gold); color: var(--navy); text-decoration: none; font-weight: 700; font-size: 14px; border-radius: 8px; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s; }
+        .cta-btn:hover { background: var(--white); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
+
+        
+        
+        
+
+
+
+                        /* FOOTER */
+        .lang-toggle{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border:1px solid rgba(255,255,255,0.3);border-radius:6px;color:var(--white);text-decoration:none;font-size:13px;font-weight:600;transition:all 0.3s;background:transparent;cursor:pointer;white-space:nowrap;font-family:'Inter',sans-serif}.lang-toggle:hover{border-color:var(--gold);color:var(--gold);background:rgba(200,169,110,0.1)}
+.footer {
+            padding: 30px 60px 30px;
+            background: var(--navy);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+        }
+        .footer-brand { display: flex; align-items: flex-start; gap: 30px; }
+        .footer-brand img { height: 235px; margin-bottom: 16px; }
+        .footer-brand-text { flex: 1; }
+        .footer-brand-text p { font-size: 14px; color: rgba(255, 255, 255, 0.5); line-height: 1.8; }
+        .footer-contact { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+        .footer-contact a { font-size: 13px; color: rgba(255, 255, 255, 0.5); text-decoration: none; transition: color 0.3s; }
+        .footer-contact a:hover { color: var(--gold); }
+        .footer-col h5 { font-size: 13px; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col ul li a { color: rgba(255, 255, 255, 0.5); text-decoration: none; font-size: 14px; transition: color 0.3s; }
+        .footer-col ul li a:hover { color: var(--gold); }
+        .footer-divider { max-width: 1200px; margin: 0 auto 30px; height: 1px; background: linear-gradient(90deg, transparent, rgba(200, 169, 110, 0.3), transparent); }
+        .footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .footer-bottom p { font-size: 13px; color: rgba(255, 255, 255, 0.35); }
+        .footer-policies { display: flex; gap: 16px; flex-wrap: wrap; }
+        .footer-policies a { font-size: 12px; color: rgba(255, 255, 255, 0.35); text-decoration: none; transition: color 0.3s; }
+        .footer-policies a:hover { color: var(--gold); }
+        .footer-social { display: flex; gap: 12px; }
+        .footer-social a { width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 14px; transition: 0.3s; }
+        .footer-social a:hover { background: var(--gold); color: var(--navy); }
+#results { padding: 72px 54px; }
+
+        .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+                @media (max-width: 1024px) {
+            .breadcrumb { padding: 14px 40px; margin-top: 127px; }
+            .cs-hero { min-height: 60vh; }
+            .section, .section-alt, .section-dark { padding: 70px 40px; }
+            .highlights-grid { grid-template-columns: repeat(2, 1fr); }
+            .steps-grid { grid-template-columns: repeat(2, 1fr); }
+            .results-grid { grid-template-columns: repeat(3, 1fr); }
+            .cta-section { padding: 70px 40px; }
+            .footer { padding: 60px 40px 30px; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        }
+@media (max-width: 768px) {
+.breadcrumb { padding: 14px 20px; margin-top: 127px; }
+            .cs-hero { min-height: 50vh; }
+            .section, .section-alt, .section-dark { padding: 50px 20px; }
+            .highlights-grid, .steps-grid { grid-template-columns: 1fr; }
+            .challenge-block { grid-template-columns: 1fr; }
+            .results-grid { grid-template-columns: repeat(2, 1fr); }
+            .cta-section { padding: 50px 20px; }
+            .footer { padding: 18px 15px 10px; }
+            .footer-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; padding-bottom: 20px; }
+            .footer-brand { grid-column: 1 / -1; align-items: center; gap: 12px; }
+            .footer-brand img { height: 122px; margin-bottom: 0; }
+            .footer-brand-text p { font-size: 11px; line-height: 1.5; }
+            .footer-contact { margin-top: 4px; }
+            .footer-contact a { font-size: 10px; color: rgba(255, 255, 255, 0.5); }
+            .footer-col h5 { font-size: 10px; margin-bottom: 8px; }
+            .footer-col ul li { margin-bottom: 4px; }
+            .footer-col ul li a { font-size: 11px; }
+            .footer-divider { margin: 8px 0; }
+            .footer-bottom { flex-direction: column; gap: 6px; text-align: center; padding-top: 6px; }
+            .footer-bottom p { font-size: 10px; }
+            .footer-policies a { font-size: 9px; color: rgba(255, 255, 255, 0.35); }
+            .footer-social a { width: 30px; height: 30px; font-size: 11px; }
+}
+        @media (max-width: 480px) {
+            .breadcrumb { padding: 12px 16px; margin-top: 127px; font-size: 12px; }
+            .cs-hero { min-height: 45vh; }
+            .section, .section-alt, .section-dark { padding: 40px 16px; }
+            .results-grid { grid-template-columns: 1fr; }
+            .cta-section { padding: 40px 16px; }
+            .footer { padding: 18px 15px 10px; }
+        }
+    </style>
+
+    <meta property="og:title" content="Case Study - Pipeline Integrity Management Program | AETERNA">
+    <meta property="og:description" content="ILI verification digs and direct assessment for a hydrocarbon transmission pipeline by AETERNA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aeterna-inspection.com/pages/case-studies/case-study-pipeline-integrity.html">
+    <meta property="og:site_name" content="AETERNA Inspection & Technical Services">
+    <meta property="og:image" content="https://aeterna-inspection.com/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Case Study - Pipeline Integrity Management Program | AETERNA">
+    <meta name="twitter:description" content="ILI verification digs and direct assessment for a hydrocarbon transmission pipeline by AETERNA.">
+    <link rel="canonical" href="https://aeterna-inspection.com/pages/case-studies/case-study-pipeline-integrity.html">
+    <link rel="alternate" hreflang="en" href="https://aeterna-inspection.com/pages/case-studies/case-study-pipeline-integrity.html">
+    <link rel="alternate" hreflang="ar" href="https://aeterna-inspection.com/ar/case-studies/case-study-pipeline-integrity.html">
+    <link rel="alternate" hreflang="x-default" href="https://aeterna-inspection.com/pages/case-studies/case-study-pipeline-integrity.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Case Study - Pipeline Integrity Management Program | AETERNA",
+      "description": "ILI verification digs and direct assessment for a hydrocarbon transmission pipeline by AETERNA.",
+      "url": "https://aeterna-inspection.com/pages/case-studies/case-study-pipeline-integrity.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "AETERNA Inspection & Technical Services",
+        "url": "https://aeterna-inspection.com"
+      }
+    }
+    </script>
+</head>
+<body>
+
+
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="mailto:info@aeterna-inspection.com" class="top-bar-item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+            info@aeterna-inspection.com
+        </a>
+        <a href="tel:+971555727153" class="top-bar-item top-bar-phone">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            +971 555 727 153
+        </a>
+    </div>
+</div>
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+    <a href="../../index.html" class="nav-logo">
+        <img src="../../images/logo-header.svg" alt="AETERNA Inspection & Technical Services Logo">
+    </a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../../index.html#projects">Projects</a></li>
+        <li><a href="../../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">Profile</a></li>
+        <li><a href="../resources.html">Resources</a></li>
+        <li><a href="../careers.html">Careers</a></li>
+        <li><a href="../contact.html">Contact Us</a></li>
+    </ul>
+    <a href="../../ar/case-studies/case-study-pipeline-integrity.html" class="lang-toggle">AR &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+</nav>
+
+
+
+
+<!-- MOBILE DRAWER OVERLAY -->
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="breadcrumb">
+    <div class="breadcrumb-inner">
+        <a href="../../index.html">Home</a>
+        <span>/</span>
+        <a href="../../index.html#projects">Projects</a>
+        <span>/</span>
+        <span class="current">Pipeline Integrity Management Program</span>
+    </div>
+</div>
+
+<section class="cs-hero">
+    <div class="cs-hero-bg"></div>
+    <div class="cs-hero-content reveal">
+        <div class="cs-hero-tags">
+            <span>Integrity</span>
+            <span>ILI</span>
+            <span>Direct Assessment</span>
+            <span>Pipeline</span>
+        </div>
+        <h1>Pipeline Integrity Management Program</h1>
+        <p>ILI verification digs and direct assessment for a hydrocarbon transmission pipeline</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-inner reveal">
+        <div class="section-badge">Overview</div>
+        <h2>Project Overview</h2>
+        <p>AETERNA provided integrity management support for a hydrocarbon transmission pipeline operator. The program included in-line inspection (ILI) data review, excavation verification digs, and direct assessment to ensure continued safe operation and regulatory compliance of the pipeline system.</p>
+    </div>
+    <div class="highlights-grid reveal">
+                <div class="highlight-item">
+                    <span class="highlight-icon">01</span>
+                    <div>
+                        <strong>ILI Data Reviewed</strong>
+                        <p>1,200+ anomaly features analyzed and prioritized</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">02</span>
+                    <div>
+                        <strong>Verification Digs</strong>
+                        <p>15 excavation sites managed across varied terrain</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">03</span>
+                    <div>
+                        <strong>Regulatory Compliance</strong>
+                        <p>100% alignment with 49 CFR 192/195 and API 1160</p>
+                    </div>
+                </div>
+    </div>
+</section>
+
+<section class="section-alt">
+    <div class="section-inner reveal">
+        <div class="section-badge">Challenge</div>
+        <h2>The Challenge</h2>
+    </div>
+    <div class="challenge-block reveal">
+        <p>ILI data identified multiple anomaly features requiring field verification. Excavation locations were in sensitive areas requiring environmental protection measures. Accurate correlation between ILI-reported and field-measured features was critical to ensure the integrity management program was based on reliable data.</p>
+        <div class="challenge-highlight">The primary challenge was achieving precise spatial correlation between ILI-reported anomaly locations and field measurements - a mismatch of even a few feet could mean excavating the wrong section of pipe entirely.</div>
+    </div>
+</section>
+
+<section class="section-dark">
+    <div class="section-inner reveal">
+        <div class="section-badge">Solution</div>
+        <h2>Our Solution</h2>
+        <p>Our integrity engineers reviewed ILI data to prioritize excavation locations based on feature severity and risk. We managed 15 verification digs with field NDT to characterize anomalies. Each dig included ultrasonic thickness measurements, MPI of girth welds, and coating condition assessment, with full correlation analysis between ILI predictions and field measurements.</p>
+    </div>
+    <div class="steps-grid reveal">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h4>Data Review</h4>
+                    <p>ILI data analyzed to rank anomalies by severity, type, and operational risk factors</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h4>Field Verification</h4>
+                    <p>Systematic excavation program with GPS locating, NDT inspection, and coating assessment</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h4>Correlation</h4>
+                    <p>ILI-to-field correlation analysis with defect growth modeling and re-inspection intervals</p>
+                </div>
+    </div>
+</section>
+
+<section class="section-alt" id="results">
+    <div class="section-inner reveal">
+        <div class="section-badge">Results</div>
+        <h2>Key Results</h2>
+        <p class="section-desc">Measurable outcomes delivered through our technical expertise and commitment to quality.</p>
+    </div>
+    <div class="results-grid reveal">
+            <div class="stat-card">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Digs Verified</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">ILI Match Accuracy</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3-Month</div>
+                <div class="stat-label">Program</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Regulatory Compliant</div>
+            </div>
+    </div>
+</section>
+
+<section class="cta-section reveal">
+    <h2>Ready to Discuss Your Project?</h2>
+    <p>Contact our integrity engineering team to discuss how we can support your pipeline integrity management program.</p>
+    <a href="../contact.html" class="cta-btn">Contact Us Today</a>
+</section>
+
+
+
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="../../images/logo.svg" alt="AETERNA Inspection &amp; Technical Services Logo">
+            <div class="footer-brand-text">
+                <p>AETERNA &mdash; setting the benchmark in oil and gas inspection, integrity, and technical excellence.</p>
+                <div class="footer-contact">
+                    <a href="mailto:info@aeterna-inspection.com">info@aeterna-inspection.com</a>
+                    <a href="../contact.html">Sharjah Media City, UAE</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h5>Services</h5>
+            <ul>
+                <li><a href="../services.html">Third-Party Inspection</a></li>
+                <li><a href="../services.html">Welding Inspection</a></li>
+                <li><a href="../services.html">NDT Services</a></li>
+                <li><a href="../services.html">Construction QC</a></li>
+                <li><a href="../services.html">Pipeline Integrity</a></li>
+                <li><a href="../services.html">Marine Inspection</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>Industries</h5>
+            <ul>
+                <li><a href="../../index.html#industries">Oil &amp; Gas</a></li>
+                <li><a href="../../index.html#industries">Construction</a></li>
+                <li><a href="../../index.html#industries">Petrochemical</a></li>
+                <li><a href="../../index.html#industries">Power Generation</a></li>
+                <li><a href="../../index.html#industries">Marine &amp; Offshore</a></li>
+                <li><a href="../../index.html#industries">Infrastructure</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>Company</h5>
+            <ul>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../../index.html#quality">Quality &amp; Certifications</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+        <li><a href="../../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">Profile</a></li>
+                <li><a href="../policies.html">Policies</a></li>
+                <li><a href="../careers.html">Careers</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 AETERNA Inspection &amp; Technical Services LLC. All rights reserved.</p>
+        <div class="footer-policies">
+            <a href="../policies.html#terms">Terms of Use</a>
+            <a href="../policies.html#privacy">Privacy</a>
+            <a href="../policies.html#quality">Quality</a>
+            <a href="../policies.html#hse">HSE</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); } }); }, { threshold: 0.1 });
+    revealElements.forEach(el => observer.observe(el));
+</script>
+<script src="../../js/script.js"></script>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/971555727153" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" id="whatsappBtn" aria-label="Chat on WhatsApp">
+    <img src="../../images/whatsapp.svg" alt="WhatsApp" width="60" height="60">
+</a>
+<div class="whatsapp-typing" id="whatsappTyping">
+    <span class="whatsapp-typing-text" id="whatsappTypingText"></span><span class="whatsapp-typing-cursor">|</span>
+</div>
+
+<style>
+.whatsapp-btn {
+    position: fixed;
+    bottom: calc(30px + 5%);
+    right: calc(30px + 5%);
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    background: #25D366;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    animation: whatsappPulse 2s infinite;
+}
+@keyframes whatsappPulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    animation: none;
+}
+.whatsapp-btn img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+.whatsapp-typing {
+    position: fixed;
+    bottom: calc(99px + 5%);
+    right: calc(30px + 5% + 29px);
+    z-index: 998;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(50%) translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transform-origin: bottom center;
+}
+.whatsapp-typing::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(0, 0, 0, 0.65);
+}
+.whatsapp-typing.visible {
+    opacity: 1;
+    transform: translateX(50%) translateY(0);
+}
+.whatsapp-typing-text {
+    color: #ffffff;
+}
+.whatsapp-typing-cursor {
+    color: #25D366;
+    animation: whatsappBlink 0.7s infinite;
+}
+@keyframes whatsappBlink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+@media (max-width: 1024px) {
+    .whatsapp-btn { bottom: calc(25px + 5%); right: calc(25px + 5%); width: 55px; height: 55px; }
+    .whatsapp-btn img { width: 35px; height: 35px; }
+    .whatsapp-typing { bottom: calc(90px + 5%); right: calc(25px + 5% + 27px); font-size: 13px; padding: 10px 18px; transform: translateX(50%) translateY(10px); }
+    .whatsapp-typing.visible { transform: translateX(50%) translateY(0); }
+}
+@media (max-width: 768px) {
+    .whatsapp-btn { bottom: calc(20px + 15%); right: calc(20px + 5%); width: 50px; height: 50px; }
+    .whatsapp-btn img { width: 27px; height: 27px; }
+    .whatsapp-typing { bottom: calc(80px + 15%); right: calc(20px + 5% + 25px); font-size: 12px; padding: 10px 16px; transform: translateX(50%) translateY(10px); }
+    .whatsapp-typing.visible { transform: translateX(50%) translateY(0); }
+}
+</style>
+
+<script>
+(function() {
+    var typingEl = document.getElementById('whatsappTypingText');
+    var bubble = document.getElementById('whatsappTyping');
+    if (!typingEl || !bubble) return;
+
+    var phrases = ['Quick Assistance', 'Chat with us', 'We are here to help 24/7'];
+    var phraseIdx = 0;
+    var charIdx = 0;
+    var isDeleting = false;
+    var typingSpeed = 100;
+
+    setTimeout(function() {
+        bubble.classList.add('visible');
+        typeWA();
+    }, 2000);
+
+    function typeWA() {
+        var current = phrases[phraseIdx];
+        if (isDeleting) {
+            typingEl.textContent = current.substring(0, charIdx - 1);
+            charIdx--;
+            typingSpeed = 50;
+        } else {
+            typingEl.textContent = current.substring(0, charIdx + 1);
+            charIdx++;
+            typingSpeed = 100;
+        }
+        if (!isDeleting && charIdx === current.length) {
+            typingSpeed = 2500;
+            isDeleting = true;
+        } else if (isDeleting && charIdx === 0) {
+            isDeleting = false;
+            phraseIdx = (phraseIdx + 1) % phrases.length;
+            typingSpeed = 500;
+        }
+        setTimeout(typeWA, typingSpeed);
+    }
+})();
+</script>
+</body>
+</html>

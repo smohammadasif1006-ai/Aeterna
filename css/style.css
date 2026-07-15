@@ -1,0 +1,145 @@
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+    --navy: #1B2A4A;
+    --blue: #4A90D9;
+    --gold: #C8A96E;
+    --white: #FFFFFF;
+    --light: #F4F6F9;
+    --gray: #6B7280;
+    --dark: #0F1A2E;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; color: #333; line-height: 1.6; overflow-x: hidden; }
+html[dir="rtl"] body { font-family: 'Cairo', sans-serif; }
+
+/* RTL SUPPORT */
+html[dir="rtl"] body,
+html[dir="rtl"] { direction: rtl; text-align: right; }
+html[dir="rtl"] .top-bar-inner { margin-left: 0; margin-right: 10%; }
+html[dir="rtl"] .top-bar-phone { margin-left: 0; margin-right: 15vw; }
+html[dir="rtl"] .nav-logo { margin-left: 0; margin-right: 15%; }
+html[dir="rtl"] .nav-links { margin-left: 0; margin-right: 15%; }
+html[dir="rtl"] .nav-links a::after { left: auto; right: 0; }
+html[dir="rtl"] @media (max-width: 768px) {
+    html[dir="rtl"] .top-bar-inner { margin-right: 0; }
+    html[dir="rtl"] .top-bar-phone { margin-right: 12px; }
+    html[dir="rtl"] .nav-links { left: auto; right: 0; transform: translateX(100%); border-right: none; border-left: 3px solid var(--gold); text-align: right; }
+    html[dir="rtl"] .nav-links.open { transform: translateX(0); }
+    html[dir="rtl"] .nav-links a { text-align: right; }
+}
+
+/* LANGUAGE TOGGLE */
+.lang-toggle {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px;
+    color: var(--white); text-decoration: none; font-size: 13px; font-weight: 600;
+    letter-spacing: 0.5px; transition: all 0.3s; background: transparent; cursor: pointer;
+    white-space: nowrap;
+}
+.lang-toggle:hover { border-color: var(--gold); color: var(--gold); background: rgba(200,169,110,0.1); }
+.lang-toggle svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* TOP BAR */
+.top-bar {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 1003;
+    background: #2a2a2a; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.4s ease;
+}
+.top-bar.hidden { transform: translateY(-100%); }
+.top-bar-inner {
+    display: flex; align-items: center; gap: 32px; margin-left: 10%;
+}
+.top-bar-item {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--gold); text-decoration: none;
+    font-size: 13px; font-weight: 500; letter-spacing: 0.3px;
+    transition: color 0.3s;
+}
+.top-bar-item:hover { color: var(--gold); }
+.top-bar-item svg { flex-shrink: 0; }
+.top-bar-phone { margin-left: 15vw; }
+
+/* NAVBAR */
+.navbar {
+    position: fixed; top: 40px; left: 0; width: 100%; z-index: 1002;
+    padding: 0 60px; height: 87px;
+    display: flex; align-items: center; gap: 40px;
+    transition: all 0.4s ease; background: rgba(27, 42, 74, 0.95); backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+.navbar.scrolled { padding: 0 60px; height: 87px; }
+.navbar.hidden { transform: translateY(-100%); }
+.top-bar.hidden ~ .navbar { top: 0; }
+.nav-logo { display: flex; align-items: center; text-decoration: none; margin-left: 15%; }
+.nav-logo img { height: 43px; transition: height 0.4s ease; }
+.navbar.scrolled .nav-logo img { height: 43px; }
+.nav-links { display: flex; gap: 32px; list-style: none; margin: 0; margin-left: 0; }
+.nav-links a {
+    color: var(--white); text-decoration: none; font-size: 14px; font-weight: 500;
+    letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.3s; position: relative;
+}
+.nav-links a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
+    background: var(--gold); transition: width 0.3s;
+}
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active::after { width: 100%; }
+.nav-links a:hover { color: var(--gold); }
+.nav-links a.active { color: var(--gold); }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
+.nav-toggle span { width: 28px; height: 2px; background: var(--white); transition: 0.3s; }
+
+@media (max-width: 768px) {
+    .top-bar { height: 40px; }
+    .top-bar-inner { gap: 12px; margin-left: 0; }
+    .top-bar-item { font-size: 11px; gap: 5px; }
+    .top-bar-phone { margin-left: 12px; }
+    .navbar { padding: 16px 24px; top: 40px; }
+    .navbar.scrolled { padding: 12px 24px; }
+
+    /* MOBILE DRAWER MENU - below navbar, above overlay */
+    .nav-links {
+        position: fixed; top: 0; left: 0; z-index: 1001;
+        width: 55%; height: 100vh;
+        background: linear-gradient(180deg, #0F1A2E 0%, #1B2A4A 100%);
+        flex-direction: column; justify-content: center; padding: 0 32px; gap: 4px;
+        transform: translateX(-100%);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        list-style: none; margin: 0;
+        border-right: 3px solid var(--gold);
+    }
+    .nav-links.open {
+        transform: translateX(0);
+    }
+    .nav-links li { width: 100%; }
+    .nav-links a {
+        display: block; padding: 14px 16px;
+        font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.85);
+        text-decoration: none; letter-spacing: 0.5px; text-transform: uppercase;
+        border-radius: 8px; transition: all 0.25s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: var(--gold); background: rgba(200, 169, 110, 0.1);
+    }
+    .nav-links a::after { display: none; }
+
+    /* DRAWER OVERLAY */
+    .nav-overlay {
+        position: fixed; inset: 0; z-index: 1000;
+        background: rgba(0,0,0,0.6); backdrop-filter: blur(4px);
+        opacity: 0; visibility: hidden;
+        transition: opacity 0.3s ease;
+    }
+    .nav-overlay.open {
+        opacity: 1; visibility: visible;
+    }
+
+    /* HAMBURGER → X ANIMATION */
+    .nav-toggle { display: flex; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; position: relative; z-index: 2001; }
+    .nav-toggle span { display: block; }
+    .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+}

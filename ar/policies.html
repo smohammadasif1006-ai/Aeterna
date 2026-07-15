@@ -1,0 +1,1000 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السياسات والامتثال - AETERNA Inspection & Technical Services</title>
+    <meta name="description" content="AETERNA's commitment to operational integrity, data protection, and regulatory compliance. Review our Terms of Use, Privacy Policy, Quality Policy, HSE Policy, and more.">
+    <meta name="keywords" content="AETERNA policies, compliance, privacy policy, quality policy, HSE policy, terms of use, anti-bribery, whistleblower">
+    <meta name="author" content="AETERNA Inspection & Technical Services LLC">
+    <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy: #1B2A4A;
+            --blue: #4A90D9;
+            --gold: #C8A96E;
+            --white: #FFFFFF;
+            --light: #F4F6F9;
+            --gray: #6B7280;
+            --bg: #0A1628;
+            --glass: rgba(255,255,255,0.03);
+            --glass-border: rgba(255,255,255,0.06);
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Cairo', sans-serif; color: #e0e0e0; line-height: 1.6;
+            overflow-x: hidden; background: var(--bg);
+            direction: rtl; text-align: right;
+        }
+
+        /* FLOATING PARTICLES */
+        .particles { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+        .particle {
+            position: absolute; border-radius: 50%; background: rgba(200, 169, 110, 0.08);
+            animation: floatParticle linear infinite;
+        }
+        @keyframes floatParticle {
+            0% { transform: translate(0, 0) scale(1); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translate(var(--dx), var(--dy)) scale(0.5); opacity: 0; }
+        }
+
+        /* HERO */
+        .hero {
+            position: relative; z-index: 1; padding: 160px 40px 80px; text-align: center;
+            background: radial-gradient(ellipse at center, rgba(200,169,110,0.06) 0%, transparent 60%);
+        }
+        .hero-badge {
+            display: inline-block; padding: 8px 28px; border: 1px solid var(--gold);
+            color: var(--gold); font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+            font-weight: 600; margin-bottom: 24px; border-radius: 24px;
+        }
+        .hero h1 {
+            font-size: clamp(2.2rem, 4vw, 3.6rem); font-weight: 900; color: var(--white);
+            line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.5px;
+        }
+        .hero h1 span { color: var(--gold); }
+        .hero p {
+            font-size: 17px; color: rgba(255,255,255,0.65); max-width: 680px; margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* POLICIES SECTION */
+        .policies-section {
+            position: relative; z-index: 1; padding: 0 40px 80px;
+            max-width: 960px; margin: 0 auto;
+        }
+
+        /* ACCORDION */
+        .accordion-item {
+            background: var(--glass); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border); border-radius: 14px;
+            margin-bottom: 16px; overflow: hidden; transition: all 0.3s ease;
+        }
+        .accordion-item:hover { border-color: rgba(200,169,110,0.2); }
+        .accordion-item[open] { border-color: rgba(200,169,110,0.3); box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
+
+        .accordion-item summary {
+            display: flex; align-items: center; gap: 16px; padding: 22px 28px;
+            cursor: pointer; list-style: none; user-select: none; transition: background 0.3s;
+        }
+        .accordion-item summary::-webkit-details-marker { display: none; }
+        .accordion-item summary::marker { display: none; content: ''; }
+
+        .accordion-item summary:hover { background: rgba(255,255,255,0.03); }
+
+        .accordion-icon {
+            width: 44px; height: 44px; min-width: 44px; border-radius: 10px;
+            background: rgba(200,169,110,0.1); border: 1px solid rgba(200,169,110,0.2);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .accordion-icon svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+        .accordion-title { flex: 1; }
+        .accordion-title h3 { font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+        .accordion-title p { font-size: 13px; color: rgba(255,255,255,0.45); }
+
+        .accordion-chevron {
+            width: 24px; height: 24px; min-width: 24px; transition: transform 0.3s ease;
+        }
+        .accordion-item[open] summary .accordion-chevron { transform: rotate(180deg); }
+
+        .accordion-body {
+            padding: 0 28px 28px 88px; font-size: 15px; color: rgba(255,255,255,0.7);
+            line-height: 1.85;
+        }
+        .accordion-body h4 {
+            font-size: 16px; font-weight: 700; color: var(--gold); margin: 24px 0 10px;
+        }
+        .accordion-body h4:first-child { margin-top: 0; }
+        .accordion-body p { margin-bottom: 14px; }
+        .accordion-body ul { margin: 10px 0 14px 20px; }
+        .accordion-body ul li { margin-bottom: 8px; color: rgba(255,255,255,0.65); }
+        .accordion-body .policy-date { font-size: 13px; color: var(--gold); font-weight: 600; margin-bottom: 16px; display: block; }
+        .accordion-body .policy-subtitle {
+            font-size: 14px; font-weight: 700; color: var(--white); margin: 20px 0 8px;
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .accordion-body .contact-email {
+            display: inline-block; padding: 6px 16px; background: rgba(74,144,217,0.1);
+            border: 1px solid rgba(74,144,217,0.25); color: var(--blue);
+            font-size: 13px; font-weight: 600; border-radius: 6px; text-decoration: none;
+            transition: all 0.3s;
+        }
+        .accordion-body .contact-email:hover { background: rgba(74,144,217,0.2); }
+
+        /* FOOTER */
+        .footer {
+            padding: 30px 60px 30px;
+            background: var(--navy);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+        }
+
+        .footer-brand { display: flex; align-items: flex-start; gap: 30px; }
+        .footer-brand img { height: 235px; margin-bottom: 16px; }
+        .footer-brand-text { flex: 1; }
+        .footer-brand-text p { font-size: 14px; color: rgba(255, 255, 255, 0.5); line-height: 1.8; word-spacing: normal; }
+        .footer-contact { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+        .footer-contact a { font-size: 13px; color: rgba(255, 255, 255, 0.5); text-decoration: none; transition: color 0.3s; word-spacing: normal; }
+        .footer-contact a:hover { color: var(--gold); }
+
+        .footer-col h5 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+            word-spacing: normal;
+        }
+
+        .footer-col ul li a:hover { color: var(--gold); }
+
+        .footer-divider {
+            max-width: 1200px; margin: 0 auto 30px; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200, 169, 110, 0.3), transparent);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.35);
+            word-spacing: normal;
+        }
+
+        .footer-policies { display: flex; gap: 16px; flex-wrap: wrap; }
+        .footer-policies a { font-size: 12px; color: rgba(255, 255, 255, 0.35); text-decoration: none; transition: color 0.3s; word-spacing: normal; }
+        .footer-policies a:hover { color: var(--gold); }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* REVEAL */
+        .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* RESPONSIVE 768px */
+                @media (max-width: 1024px) {
+            .hero { padding: 150px 40px 60px; }
+            .policies-section { padding: 0 24px 70px; }
+            .footer { padding: 60px 40px 30px; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        }
+@media (max-width: 768px) {
+            .hero { padding: 140px 20px 50px; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 15px; }
+            .policies-section { padding: 0 16px 60px; }
+            .accordion-item summary { padding: 18px 20px; gap: 12px; }
+            .accordion-icon { width: 38px; height: 38px; min-width: 38px; }
+            .accordion-icon svg { width: 18px; height: 18px; }
+            .accordion-title h3 { font-size: 15px; }
+            .accordion-body { padding: 0 20px 24px 20px; font-size: 14px; }
+            .footer { padding: 18px 15px 10px; }
+            .footer-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; padding-bottom: 20px; }
+            .footer-brand { grid-column: 1 / -1; align-items: center; gap: 12px; }
+            .footer-brand img { height: 122px; margin-bottom: 0; }
+            .footer-brand-text p { font-size: 11px; line-height: 1.5; }
+            .footer-contact { margin-top: 4px; }
+            .footer-contact a { font-size: 10px; }
+            .footer-col h5 { font-size: 10px; margin-bottom: 8px; }
+            .footer-col ul li { margin-bottom: 4px; }
+            .footer-col ul li a { font-size: 11px; }
+            .footer-divider { margin: 8px 0; }
+            .footer-bottom { flex-direction: column; gap: 6px; text-align: center; padding-top: 6px; }
+            .footer-bottom p { font-size: 10px; }
+            .footer-policies a { font-size: 9px; }
+            .footer-social a { width: 30px; height: 30px; font-size: 11px; }
+        }
+
+        /* RESPONSIVE 480px */
+        @media (max-width: 480px) {
+            .hero { padding: 120px 16px 40px; }
+            .hero h1 { font-size: 1.6rem; }
+            .hero-badge { font-size: 11px; padding: 6px 20px; }
+            .policies-section { padding: 0 12px 50px; }
+            .accordion-item summary { padding: 16px 16px; }
+            .accordion-title h3 { font-size: 14px; }
+            .accordion-title p { font-size: 12px; }
+            .accordion-body { padding: 0 16px 20px 16px; font-size: 13px; }
+        }
+.lang-toggle { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; color: var(--white); text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.3s; background: transparent; cursor: pointer; white-space: nowrap; margin-left: 16px; }
+.lang-toggle:hover { border-color: var(--gold); color: var(--gold); background: rgba(200,169,110,0.1); }
+    </style>
+
+    <meta property="og:title" content="السياسات والامتثال - AETERNA Inspection & Technical Services">
+    <meta property="og:description" content="AETERNA">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aeterna-inspection.com/ar/policies.html">
+    <meta property="og:site_name" content="AETERNA Inspection & Technical Services">
+    <meta property="og:image" content="https://aeterna-inspection.com/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="السياسات والامتثال - AETERNA Inspection & Technical Services">
+    <meta name="twitter:description" content="AETERNA">
+    <link rel="canonical" href="https://aeterna-inspection.com/ar/policies.html">
+    <link rel="alternate" hreflang="en" href="https://aeterna-inspection.com/pages/policies.html">
+    <link rel="alternate" hreflang="ar" href="https://aeterna-inspection.com/ar/policies.html">
+    <link rel="alternate" hreflang="x-default" href="https://aeterna-inspection.com/pages/policies.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "السياسات والامتثال - AETERNA Inspection & Technical Services",
+      "description": "AETERNA",
+      "url": "https://aeterna-inspection.com/ar/policies.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "AETERNA Inspection & Technical Services",
+        "url": "https://aeterna-inspection.com"
+      }
+    }
+    </script>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="mailto:info@aeterna-inspection.com" class="top-bar-item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+            info@aeterna-inspection.com
+        </a>
+        <a href="tel:+971555727153" class="top-bar-item top-bar-phone">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            +971 555 727 153
+        </a>
+    </div>
+</div>
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+        <img src="../images/logo-header.svg" alt="AETERNA Inspection & Technical Services Logo">
+    </a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="index.html#projects">المشاريع</a></li>
+        <li><a href="../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">الملف التعريفي</a></li>
+        <li><a href="resources.html">الموارد</a></li>
+        <li><a href="careers.html">الوظائف</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+    </ul>
+    <a href="../pages/policies.html" class="lang-toggle">EN English</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+
+<!-- MOBILE DRAWER OVERLAY -->
+<div class="nav-overlay" id="navOverlay"></div>
+<!-- FLOATING PARTICLES -->
+<div class="particles" id="particles"></div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="reveal">
+        <div class="hero-badge">السياسات والامتثال</div>
+        <h1>السياسات <span>والامتثال</span></h1>
+        <p>التزام AETERNA بالنزاهة التشغيلية وحماية البيانات والامتثال التنظيمي.</p>
+    </div>
+</section>
+
+<!-- POLICIES ACCORDION -->
+<section class="policies-section">
+
+    <!-- 1. TERMS OF USE -->
+    <details class="accordion-item reveal" id="terms">
+        <summary>
+            <div class="accordion-icon">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <div class="accordion-title">
+                <h3>شروط الاستخدام</h3>
+                <p>شروط وأحكام استخدام الموقع</p>
+            </div>
+            <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="accordion-body">
+            <strong>AETERNA — TERMS OF USE</strong>
+            <span class="policy-date">Last updated: October 12, 2023</span>
+
+            <h4>STANDARD #27: SECURE USE FOR USERS</h4>
+
+            <h4>1. Website Protection</h4>
+            <p>Aeterna actively monitors all data transfers to and from its digital platforms to ensure the highest standards of cybersecurity. This includes safeguarding submitted information, detecting unauthorized access attempts, preventing malicious alterations, and protecting the integrity of all website content.</p>
+            <p>Aeterna reserves the right to take any necessary action to protect its systems and to pursue legal measures against individuals or entities involved in cyber-misuse, in accordance with applicable cybercrime laws and regulations.</p>
+
+            <h4>2. Intellectual Property Rights</h4>
+            <p>All content, data, visuals, and materials published on Aeterna's websites are the exclusive property of Aeterna.</p>
+            <p>Copying, distributing, republishing, or using this content for any purpose beyond its intended use is strictly prohibited without prior written authorization from Aeterna.</p>
+            <p>In cases of permitted use, Aeterna must be clearly cited as the source.</p>
+
+            <h4>3. External Websites</h4>
+            <p>Aeterna's website may include links to third-party platforms for user convenience.</p>
+            <p>Aeterna is not responsible for the privacy practices, security standards, or content accuracy of external websites.</p>
+            <p>Users are encouraged to review the privacy policies of any external site before engaging with it.</p>
+
+            <h4>4. Aeterna's Official Digital Channels</h4>
+            <p>Aeterna maintains official online channels to provide accurate corporate information and updates.</p>
+            <p>Only the following platforms represent Aeterna's verified digital presence:</p>
+            <p><strong>Official Websites:</strong><br>www.aeterna-inspection.com</p>
+            <p>Aeterna is not responsible for comments, opinions, or content posted by non-official accounts on any social media platform.</p>
+
+            <h4>5. Protection of Personal Information</h4>
+            <p>Aeterna is committed to safeguarding personal data.</p>
+            <p>Personal information voluntarily provided by users will not be shared or disclosed without explicit consent, except where required by law or regulatory authority.</p>
+
+            <h4>6. Terms of Use</h4>
+            <p>Aeterna encourages users to review these Terms of Use periodically, as updates may occur without prior announcement.</p>
+            <p>By accessing Aeterna's websites, users acknowledge that they have read, understood, and agreed to comply with these terms and all applicable laws and regulations.</p>
+
+            <h4>7. Limitation of Liability</h4>
+            <p>All browsing, downloading, and submission of information on Aeterna's websites are performed at the user's own risk.</p>
+            <p>Aeterna is not liable for any damages resulting from the use of its digital platforms, including loss of data, system issues, or unauthorized access.</p>
+            <p>For secure browsing, Aeterna recommends:</p>
+            <ul>
+                <li>Never share confidential information unless the recipient's identity is verified and communication channels are formally agreed upon.</li>
+                <li>Use secure browsers, close unused applications, and ensure antivirus software is up to date.</li>
+            </ul>
+            <p>For inquiries regarding privacy or cybersecurity, please contact Aeterna's Cybersecurity & Data Governance Department through the corporate communications channel.</p>
+        </div>
+    </details>
+
+    <!-- 2. PRIVACY POLICY -->
+    <details class="accordion-item reveal" id="privacy">
+        <summary>
+            <div class="accordion-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="accordion-title">
+                <h3>سياسة الخصوصية</h3>
+                <p>كيفية جمع بياناتك واستخدامها وحمايتها</p>
+            </div>
+            <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="accordion-body">
+            <strong>AETERNA — PRIVACY POLICY</strong>
+            <span class="policy-date">Last updated: October 12, 2023</span>
+
+            <p>AETERNA Inspection & Technical Services LLC ("Aeterna," "we," "us," or "our") is committed to protecting the privacy and security of your personal information. This Privacy Policy outlines how we collect, use, store, and disclose data when you interact with our website, services, and business operations.</p>
+
+            <h4>1. Information We Collect</h4>
+            <p>We may collect the following categories of information:</p>
+            <ul>
+                <li><strong>Personal Data:</strong> Name, email address, phone number, job title, company name, and national identification details when provided through contact forms, business inquiries, or employment applications.</li>
+                <li><strong>Business Inquiries:</strong> Project details, specifications, and requirements submitted through our inquiry or consultation forms.</li>
+                <li><strong>Employment Applications:</strong> Resume and curriculum vitae data, educational background, professional certifications, employment history, and references submitted for job opportunities.</li>
+                <li><strong>Technical Data:</strong> IP address, browser type, operating system, referring URLs, and pages visited, collected automatically through cookies and server logs.</li>
+                <li><strong>Communication Records:</strong> Email correspondence, chat transcripts, and call records related to our business interactions.</li>
+            </ul>
+
+            <h4>2. How We Use Your Information</h4>
+            <p>Your information is used for the following purposes:</p>
+            <ul>
+                <li>Responding to business inquiries and providing requested technical consultation or inspection proposals.</li>
+                <li>Processing employment applications and managing recruitment activities.</li>
+                <li>Performing contractual obligations including inspection services, reporting, and project coordination.</li>
+                <li>Sending service updates, regulatory notices, or corporate communications relevant to our business relationship.</li>
+                <li>Improving our website functionality, user experience, and service offerings.</li>
+                <li>Complying with legal obligations, regulatory requirements, and contractual commitments.</li>
+            </ul>
+
+            <h4>3. Data Retention</h4>
+            <p>We retain personal information only for as long as necessary to fulfill the purposes outlined in this policy, or as required by applicable law. Business inquiry data is retained for a minimum of three (3) years from the date of last interaction. Employment application data is retained for up to two (2) years unless consent is extended by the applicant.</p>
+
+            <h4>4. Data Security Measures</h4>
+            <p>Aeterna implements robust technical and organizational safeguards to protect your data, including:</p>
+            <ul>
+                <li>SSL/TLS encryption for all data transmitted through our digital platforms.</li>
+                <li>Firewall protection and intrusion detection systems across our network infrastructure.</li>
+                <li>Role-based access controls ensuring only authorized personnel can access personal data.</li>
+                <li>Regular security audits and vulnerability assessments.</li>
+                <li>Secure data backup and disaster recovery procedures.</li>
+            </ul>
+
+            <h4>5. Third-Party Disclosure</h4>
+            <p>Aeterna does not sell, trade, or rent personal information to third parties. We may share data with:</p>
+            <ul>
+                <li>Authorized service providers who assist in our operations under strict data processing agreements.</li>
+                <li>Regulatory authorities or government bodies when legally required.</li>
+                <li>Professional advisors including legal counsel and auditors in the course of business governance.</li>
+            </ul>
+
+            <h4>6. Cookie Usage</h4>
+            <p>Our website uses cookies to enhance user experience and collect analytical data. Types of cookies include:</p>
+            <ul>
+                <li><strong>Essential Cookies:</strong> Required for basic website functionality and session management.</li>
+                <li><strong>Analytics Cookies:</strong> Used to understand visitor behavior and improve site performance.</li>
+                <li><strong>Preference Cookies:</strong> Remember your settings and preferences for future visits.</li>
+            </ul>
+            <p>You may manage cookie preferences through your browser settings. Disabling essential cookies may impair website functionality.</p>
+
+            <h4>7. Your Rights</h4>
+            <p>You have the right to:</p>
+            <ul>
+                <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
+                <li><strong>Correction:</strong> Request correction of inaccurate or incomplete data.</li>
+                <li><strong>Deletion:</strong> Request deletion of your personal data, subject to legal retention requirements.</li>
+                <li><strong>Objection:</strong> Object to the processing of your data for specific purposes.</li>
+                <li><strong>Portability:</strong> Request transfer of your data in a structured, machine-readable format.</li>
+            </ul>
+            <p>To exercise any of these rights, contact our Data Governance team through the corporate communications channel.</p>
+        </div>
+    </details>
+
+    <!-- 3. QUALITY POLICY -->
+    <details class="accordion-item reveal" id="quality">
+        <summary>
+            <div class="accordion-icon">
+                <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="accordion-title">
+                <h3>سياسة الجودة</h3>
+                <p>التزامنا بالتميز في الفحص والامتثال لمعايير ISO</p>
+            </div>
+            <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="accordion-body">
+            <strong>AETERNA — QUALITY POLICY</strong>
+            <span class="policy-date">Effective: January 1, 2024</span>
+
+            <p>AETERNA Inspection & Technical Services LLC is unwavering in its commitment to delivering inspection, testing, and technical consulting services of the highest caliber. Quality is not a department — it is embedded in every decision, every inspection, and every report we produce.</p>
+
+            <h4>Commitment to Impartiality and Independence</h4>
+            <p>As a fully independent third-party inspection body, Aeterna maintains complete impartiality in all engagements. Our inspection findings, reports, and recommendations are free from conflicts of interest, commercial pressure, or undue influence. We operate with absolute integrity, ensuring that every assessment reflects objective, evidence-based conclusions.</p>
+
+            <h4>Compliance with ISO 17020 and ISO 17025</h4>
+            <p>Aeterna's quality management system is designed to meet and exceed the requirements of ISO/IEC 17020 (General requirements for the competence of inspection bodies) and ISO/IEC 17025 (General requirements for the competence of testing and calibration laboratories). These internationally recognized standards govern our operational processes, personnel competence, impartiality, and management system effectiveness.</p>
+
+            <h4>Continuous Improvement</h4>
+            <p>We are committed to the continual improvement of our quality management system through:</p>
+            <ul>
+                <li>Regular internal audits and management reviews aligned with ISO standards.</li>
+                <li>Systematic analysis of non-conformances, corrective actions, and preventive measures.</li>
+                <li>Monitoring of client feedback and satisfaction indicators.</li>
+                <li>Investment in advanced inspection technologies and digital reporting platforms.</li>
+            </ul>
+
+            <h4>Client Satisfaction</h4>
+            <p>Client satisfaction is the ultimate measure of our performance. We actively seek client feedback on every engagement, analyzing results to identify opportunities for service enhancement. Our objective is to consistently exceed client expectations through technical precision, responsiveness, and transparent communication.</p>
+
+            <h4>Competence of Personnel</h4>
+            <p>Our inspectors and technical specialists hold internationally recognized certifications including CSWIP, AWS CWI, API, PCN, and ASNT credentials. Aeterna maintains a rigorous personnel qualification and competency management program, ensuring:</p>
+            <ul>
+                <li>Verified technical qualifications matching project requirements.</li>
+                <li>Ongoing professional development and recertification.</li>
+                <li>Regular proficiency testing and skills assessment.</li>
+                <li>Clear roles, responsibilities, and reporting lines.</li>
+            </ul>
+
+            <h4>Confidentiality of Client Information</h4>
+            <p>All client information, project data, inspection findings, and proprietary documentation are treated with the utmost confidentiality. Aeterna enforces strict information security protocols, including non-disclosure agreements, role-based access controls, and secure data handling procedures, to protect client interests at all times.</p>
+        </div>
+    </details>
+
+    <!-- 4. HSE POLICY -->
+    <details class="accordion-item reveal" id="hse">
+        <summary>
+            <div class="accordion-icon">
+                <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div class="accordion-title">
+                <h3>سياسة الصحة والسلامة والبيئة</h3>
+                <p>الالتزام بالصحة والسلامة والبيئة</p>
+            </div>
+            <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="accordion-body">
+            <strong>AETERNA — HEALTH, SAFETY & ENVIRONMENT POLICY</strong>
+            <span class="policy-date">Effective: January 1, 2024</span>
+
+            <p>AETERNA Inspection & Technical Services LLC recognizes that the health and safety of our employees, clients, subcontractors, and the communities in which we operate is a non-negotiable priority. Every inspection, audit, and technical engagement must be executed without incident and in full alignment with applicable HSE regulations.</p>
+
+            <h4>Zero Harm Commitment</h4>
+            <p>Aeterna is committed to achieving zero harm across all operations. This means:</p>
+            <ul>
+                <li>No injuries or occupational illnesses to any person as a result of our operations.</li>
+                <li>No damage to equipment, property, or the environment.</li>
+                <li>A culture where every individual has the authority and responsibility to stop work if conditions are unsafe.</li>
+            </ul>
+            <p>Zero harm is not aspirational — it is the minimum standard we demand from ourselves and our partners.</p>
+
+            <h4>Risk Assessment and Mitigation</h4>
+            <p>All Aeterna operations are preceded by thorough hazard identification and risk assessment. We apply the hierarchy of controls — elimination, substitution, engineering controls, administrative controls, and personal protective equipment — to minimize risk to As Low As Reasonably Practicable (ALARP).</p>
+            <ul>
+                <li>Pre-job safety assessments for every field assignment.</li>
+                <li>Job Safety Analysis (JSA) for complex or high-risk inspection activities.</li>
+                <li>Regular workplace inspections and hazard reporting.</li>
+                <li>Stop Work Authority (SWA) granted to all personnel.</li>
+            </ul>
+
+            <h4>Environmental Responsibility</h4>
+            <p>Aeterna is committed to minimizing the environmental impact of our operations. We comply with all applicable environmental legislation and implement measures to:</p>
+            <ul>
+                <li>Reduce waste generation and promote recycling across project sites.</li>
+                <li>Minimize emissions and energy consumption in our operational activities.</li>
+                <li>Prevent contamination of soil, water, and air through proper handling of materials and equipment.</li>
+                <li>Support clients in achieving their environmental compliance objectives.</li>
+            </ul>
+
+            <h4>Regulatory Compliance</h4>
+            <p>Aeterna complies with all applicable occupational health, safety, and environmental legislation in every jurisdiction where we operate, including but not limited to UAE Federal Law, OSHA standards, and international HSE frameworks. We monitor regulatory changes and update our practices accordingly.</p>
+
+            <h4>Emergency Preparedness</h4>
+            <p>Aeterna maintains emergency response procedures for all operational locations. These include:</p>
+            <ul>
+                <li>Defined emergency evacuation routes and assembly points for project sites.</li>
+                <li>Trained first aiders and emergency response personnel on all active projects.</li>
+                <li>Accessible fire extinguishers, first aid kits, and spill response equipment.</li>
+                <li>Regular emergency drills and response exercises.</li>
+            </ul>
+
+            <h4>Incident Reporting and Investigation</h4>
+            <p>All incidents, near-misses, and unsafe conditions must be reported immediately. Aeterna conducts thorough incident investigations to determine root causes and implement corrective actions that prevent recurrence. Findings are shared across the organization to promote learning and continuous safety improvement.</p>
+
+        </div>
+    </details>
+
+    <!-- 5. ANTI-BRIBERY & CORRUPTION POLICY -->
+    <details class="accordion-item reveal" id="anti-bribery">
+        <summary>
+            <div class="accordion-icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+            </div>
+            <div class="accordion-title">
+                <h3>سياسة مكافحة الرشوة والفساد</h3>
+                <p>عدم التسامح مطلقاً مع السلوك غير الأخلاقي</p>
+            </div>
+            <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="accordion-body">
+            <strong>AETERNA — ANTI-BRIBERY & CORRUPTION POLICY</strong>
+            <span class="policy-date">Effective: January 1, 2024</span>
+
+            <p>AETERNA Inspection & Technical Services LLC maintains an absolute zero-tolerance stance on bribery, corruption, and any form of unethical business conduct. This policy applies to all employees, directors, officers, agents, subcontractors, and representatives acting on behalf of Aeterna.</p>
+
+            <h4>Zero Tolerance for Bribery and Corruption</h4>
+            <p>Aeterna prohibits:</p>
+            <ul>
+                <li>Offering, promising, giving, or accepting bribes or kickbacks in any form.</li>
+                <li>Making facilitation payments to expedite routine governmental or administrative actions.</li>
+                <li>Engaging in any form of corruption, extortion, embezzlement, or money laundering.</li>
+                <li>Indirect bribery through intermediaries, agents, or third parties.</li>
+            </ul>
+            <p>Violations of this policy will result in disciplinary action, including termination of employment and referral to the appropriate legal authorities.</p>
+
+            <h4>Compliance with UAE Anti-Corruption Laws</h4>
+            <p>Aeterna operates in full compliance with the United Arab Emirates Federal Penal Code provisions on bribery and corruption, UAE Federal Decree-Law No. 20 of 2018 on Anti-Money Laundering, and all applicable international anti-corruption frameworks including the UK Bribery Act and the U.S. Foreign Corrupt Practices Act (FCPA) where applicable to our operations.</p>
+
+            <h4>Gift and Hospitality Guidelines</h4>
+            <p>Aeterna personnel must observe the following guidelines regarding gifts and hospitality:</p>
+            <ul>
+                <li>No gift, entertainment, or hospitality may be offered or accepted if it could reasonably be perceived as an attempt to influence a business decision.</li>
+                <li>Modest gifts of nominal value (not exceeding USD 100) are permissible provided they are transparent, documented, and approved by a line manager.</li>
+                <li>Gifts exceeding this threshold require written approval from the Compliance Officer.</li>
+                <li>All received gifts and hospitality must be recorded in the company gift register.</li>
+                <li>Cash or cash equivalents are strictly prohibited.</li>
+            </ul>
+
+            <h4>Due Diligence on Third Parties</h4>
+            <p>Aeterna conducts proportionate due diligence on all third parties including agents, consultants, subcontractors, and business partners before engagement. This includes:</p>
+            <ul>
+                <li>Verification of business credentials and reputation.</li>
+                <li>Screening against sanctions and watch lists.</li>
+                <li>Assessment of anti-bribery and corruption controls.</li>
+                <li>Inclusion of anti-corruption clauses in all contractual agreements.</li>
+            </ul>
+
+            <h4>Reporting Mechanisms</h4>
+            <p>Any person who becomes aware of a suspected breach of this policy must report it immediately through one of the following channels:</p>
+            <ul>
+                <li>Direct reporting to the Compliance Officer.</li>
+                <li>Anonymous reporting through the Aeterna Whistleblower Channel.</li>
+            </ul>
+            <p>All reports are treated with the strictest confidentiality. Aeterna will not tolerate any form of retaliation against individuals who report concerns in good faith.</p>
+        </div>
+    </details>
+
+    <!-- 6. WHISTLEBLOWER POLICY -->
+    <details class="accordion-item reveal" id="whistleblower">
+        <summary>
+            <div class="accordion-icon">
+                <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="accordion-title">
+                <h3>سياسة الإبلاغ عن المخالفات</h3>
+                <p>قنوات إبلاغ آمنة وسرية</p>
+            </div>
+            <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="accordion-body">
+            <strong>AETERNA — WHISTLEBLOWER POLICY</strong>
+            <span class="policy-date">Effective: January 1, 2024</span>
+
+            <p>AETERNA Inspection & Technical Services LLC is committed to maintaining the highest standards of ethical conduct and corporate governance. This Whistleblower Policy establishes a framework for individuals to report concerns about misconduct, fraud, or violations of law without fear of reprisal.</p>
+
+            <h4>Scope</h4>
+            <p>This policy applies to all employees, contractors, subcontractors, and third parties who become aware of conduct that may constitute:</p>
+            <ul>
+                <li>Fraud, embezzlement, or financial misconduct.</li>
+                <li>Bribery or corruption (refer to Anti-Bribery & Corruption Policy).</li>
+                <li>Violations of health, safety, or environmental regulations.</li>
+                <li>Breaches of Aeterna's code of conduct or internal policies.</li>
+                <li>Misuse of company assets or confidential information.</li>
+                <li>Any activity that is illegal, unethical, or harmful to the company or its stakeholders.</li>
+            </ul>
+
+            <h4>Safe Reporting Channels</h4>
+            <p>Aeterna provides multiple channels for confidential reporting:</p>
+            <ul>
+                <li><strong>Direct Report:</strong> Speak with your immediate supervisor, department head, or any member of senior management.</li>
+                <li><strong>Compliance Officer:</strong> Report directly to the designated Compliance Officer.</li>
+
+                <li><strong>Written Report:</strong> Submit a sealed written report to the Compliance Officer's office, clearly marked "Confidential — Whistleblower Report."</li>
+            </ul>
+
+            <h4>Protection Against Retaliation</h4>
+            <p>Aeterna strictly prohibits retaliation of any kind against individuals who report concerns in good faith. This includes but is not limited to:</p>
+            <ul>
+                <li>Termination, demotion, or suspension of employment.</li>
+                <li>Harassment, intimidation, or threats.</li>
+                <li>Adverse changes to job duties, compensation, or working conditions.</li>
+                <li>Any other form of discrimination or disadvantage.</li>
+            </ul>
+            <p>Individuals who engage in retaliation will be subject to disciplinary action, up to and including termination. If you believe you have experienced retaliation, report it immediately using any of the channels listed above.</p>
+
+            <h4>Confidential Investigation Process</h4>
+            <p>Upon receipt of a whistleblower report, Aeterna will:</p>
+            <ul>
+                <li>Acknowledge receipt of the report within five (5) business days.</li>
+                <li>Conduct a preliminary assessment to determine the nature and scope of the allegation.</li>
+                <li>Appoint an impartial investigator or investigation team with no conflict of interest.</li>
+                <li>Conduct a thorough, fair, and confidential investigation.</li>
+                <li>Take appropriate corrective or disciplinary action based on investigation findings.</li>
+                <li>Provide feedback to the reporter where legally permissible and operationally appropriate.</li>
+            </ul>
+            <p>All investigation records are maintained securely and disclosed only on a need-to-know basis. The identity of the whistleblower will be protected to the fullest extent possible under applicable law.</p>
+
+            <h4>Obligations of the Reporter</h4>
+            <p>Reports should be made in good faith with a reasonable belief that the information is accurate. Deliberately false or malicious reports are a violation of this policy and may result in disciplinary action. However, the absence of sufficient evidence will not be held against a reporter who acted in good faith.</p>
+
+
+        </div>
+    </details>
+
+</section>
+
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="../images/logo.svg" alt="AETERNA Inspection & Technical Services Logo">
+            <div class="footer-brand-text">
+                <p>AETERNA — تضع المعيار في معاينة النفط والغاز والنزاهة والتميز الفني.</p>
+                <div class="footer-contact">
+                    <a href="mailto:info@aeterna-inspection.com">info@aeterna-inspection.com</a>
+                    <a href="contact.html">الشارقة لمدينة الإعلام، الإمارات</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h5>الخدمات</h5>
+            <ul>
+                <li><a href="services.html">الفحص الثالث</a></li>
+                <li><a href="services.html">فحص اللحام</a></li>
+                <li><a href="services.html">خدمات الفحص غير المدمر</a></li>
+                <li><a href="services.html">مراقبة جودة البناء</a></li>
+                <li><a href="services.html">سلامة خطوط الأنابيب</a></li>
+                <li><a href="services.html">الفحص البحري</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>القطاعات</h5>
+            <ul>
+                <li><a href="index.html#industries">النفط والغاز</a></li>
+                <li><a href="index.html#industries">الإنشاءات</a></li>
+                <li><a href="index.html#industries">البتروكيماويات</a></li>
+                <li><a href="index.html#industries">توليد الطاقة</a></li>
+                <li><a href="index.html#industries">البحري والبحرية</a></li>
+                <li><a href="index.html#industries">البنية التحتية</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>الشركة</h5>
+            <ul>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="index.html#quality">الجودة والشهادات</a></li>
+                <li><a href="index.html#projects">المشاريع</a></li>
+        <li><a href="../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">الملف التعريفي</a></li>
+                <li><a href="policies.html">السياسات</a></li>
+                <li><a href="careers.html">الوظائف</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 AETERNA Inspection & Technical Services LLC. جميع الحقوق محفوظة.</p>
+        <div class="footer-policies">
+            <a href="policies.html#terms">شروط الاستخدام</a>
+            <a href="policies.html#privacy">الخصوصية</a>
+            <a href="policies.html#quality">الجودة</a>
+            <a href="policies.html#hse">الصحة والسلامة</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Scroll reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+    revealElements.forEach(el => observer.observe(el));
+
+    // Particles
+    function createParticles() {
+        const container = document.getElementById('particles');
+        for (let i = 0; i < 20; i++) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            const size = Math.random() * 6 + 2;
+            p.style.cssText = `
+                width: ${size}px; height: ${size}px;
+                left: ${Math.random() * 100}%;
+                top: ${Math.random() * 100}%;
+                --dx: ${(Math.random() - 0.5) * 200}px;
+                --dy: ${(Math.random() - 0.5) * 200}px;
+                animation-duration: ${Math.random() * 20 + 15}s;
+                animation-delay: ${Math.random() * 15}s;
+            `;
+            container.appendChild(p);
+        }
+    }
+    createParticles();
+
+    // Footer policy links - open accordion and scroll
+    document.querySelectorAll('.footer-policies a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.open = true;
+                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    });
+</script>
+
+<script src="../js/script.js"></script>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/971555727153" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" id="whatsappBtn" aria-label="Chat on WhatsApp">
+    <img src="../images/whatsapp.svg" alt="WhatsApp" width="60" height="60">
+</a>
+<div class="whatsapp-typing" id="whatsappTyping">
+    <span class="whatsapp-typing-text" id="whatsappTypingText"></span><span class="whatsapp-typing-cursor">|</span>
+</div>
+
+<style>
+.whatsapp-btn {
+    position: fixed;
+    bottom: calc(30px + 5%);
+    right: calc(30px + 5%);
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    background: #25D366;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    animation: whatsappPulse 2s infinite;
+}
+@keyframes whatsappPulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    animation: none;
+}
+.whatsapp-btn img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+.whatsapp-typing {
+    position: fixed;
+    bottom: calc(99px + 5%);
+    right: calc(30px + 5% + 29px);
+    z-index: 998;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(50%) translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transform-origin: bottom center;
+}
+.whatsapp-typing::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(0, 0, 0, 0.65);
+}
+.whatsapp-typing.visible {
+    opacity: 1;
+    transform: translateX(50%) translateY(0);
+}
+.whatsapp-typing-text {
+    color: #ffffff;
+}
+.whatsapp-typing-cursor {
+    color: #25D366;
+    animation: whatsappBlink 0.7s infinite;
+}
+@keyframes whatsappBlink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+@media (max-width: 1024px) {
+    .whatsapp-btn { bottom: calc(25px + 5%); right: calc(25px + 5%); width: 55px; height: 55px; }
+    .whatsapp-btn img { width: 35px; height: 35px; }
+    .whatsapp-typing { bottom: calc(90px + 5%); right: calc(25px + 5% + 27px); font-size: 13px; padding: 10px 18px; transform: translateX(50%) translateY(10px); }
+    .whatsapp-typing.visible { transform: translateX(50%) translateY(0); }
+}
+@media (max-width: 768px) {
+    .whatsapp-btn { bottom: calc(20px + 15%); right: calc(20px + 5%); width: 50px; height: 50px; }
+    .whatsapp-btn img { width: 27px; height: 27px; }
+    .whatsapp-typing { bottom: calc(80px + 15%); right: calc(20px + 5% + 25px); font-size: 12px; padding: 10px 16px; transform: translateX(50%) translateY(10px); }
+    .whatsapp-typing.visible { transform: translateX(50%) translateY(0); }
+}
+</style>
+
+<script>
+(function() {
+    var typingEl = document.getElementById('whatsappTypingText');
+    var bubble = document.getElementById('whatsappTyping');
+    if (!typingEl || !bubble) return;
+
+    var phrases = ['مساعدة سريعة', 'تحدث معنا', 'نحن هنا لمساعدتك'];
+    var phraseIdx = 0;
+    var charIdx = 0;
+    var isDeleting = false;
+    var typingSpeed = 100;
+
+    setTimeout(function() {
+        bubble.classList.add('visible');
+        typeWA();
+    }, 2000);
+
+    function typeWA() {
+        var current = phrases[phraseIdx];
+        if (isDeleting) {
+            typingEl.textContent = current.substring(0, charIdx - 1);
+            charIdx--;
+            typingSpeed = 50;
+        } else {
+            typingEl.textContent = current.substring(0, charIdx + 1);
+            charIdx++;
+            typingSpeed = 100;
+        }
+        if (!isDeleting && charIdx === current.length) {
+            typingSpeed = 2500;
+            isDeleting = true;
+        } else if (isDeleting && charIdx === 0) {
+            isDeleting = false;
+            phraseIdx = (phraseIdx + 1) % phrases.length;
+            typingSpeed = 500;
+        }
+        setTimeout(typeWA, typingSpeed);
+    }
+})();
+</script>
+</body>
+</html>

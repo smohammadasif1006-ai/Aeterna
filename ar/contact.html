@@ -1,0 +1,787 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا | خدمات فحص وQA/QC | الإمارات وسنغافورة</title>
+    <meta name="description" content="تواصل مع AETERNA للفحص والخدمات الفنية. مكاتب في مدينة الشارقة للإعلام، الإمارات وسنغافورة. متاحون 24/7 لاستفسارات الفحص والتحكم في الجودة."
+    <link rel="canonical" href="https://aeterna-inspection.com/ar/contact.html">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="تواصل مع AETERNA, اتصل بشركة فحص, خدمات QA/QC, مكتب الإمارات, مكتب سنغافورة">
+    <meta name="author" content="AETERNA Inspection & Technical Services LLC">
+    <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy: #1B2A4A;
+            --blue: #4A90D9;
+            --gold: #C8A96E;
+            --white: #FFFFFF;
+            --light: #F4F6F9;
+            --gray: #6B7280;
+            --dark: #0F1A2E;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Cairo', sans-serif; direction: rtl; text-align: right; color: #333; line-height: 1.6; overflow-x: hidden; }
+
+        /* PAGE HERO */
+        .page-hero {
+            padding: 160px 60px 80px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--dark) 100%);
+            text-align: center;
+        }
+        .page-hero .badge {
+            display: inline-block; padding: 8px 24px; border: 1px solid var(--gold);
+            color: var(--gold); font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+            font-weight: 600; margin-bottom: 24px;
+        }
+        .page-hero h1 {
+            font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 800; color: var(--white);
+            margin-bottom: 16px;
+        }
+        .page-hero h1 span { color: var(--gold); }
+        .page-hero p {
+            font-size: 18px; color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto;
+        }
+
+        /* BREADCRUMB */
+        .breadcrumb {
+            padding: 14px 60px; background: var(--light); font-size: 13px;
+        }
+        .breadcrumb-inner {
+            max-width: 1200px; margin: 0 auto;
+        }
+        .breadcrumb a { color: var(--gray); text-decoration: none; transition: color 0.3s; }
+        .breadcrumb a:hover { color: var(--navy); }
+        .breadcrumb span { color: var(--gray); margin: 0 8px; }
+        .breadcrumb .current { color: var(--navy); font-weight: 600; }
+
+        /* CONTACT SECTION */
+        .contact-section {
+            padding: 100px 60px; background: var(--white);
+        }
+        .contact-inner {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+            max-width: 1200px; margin: 0 auto;
+        }
+        .contact-info h3 {
+            font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 800; color: var(--navy);
+            margin-bottom: 16px;
+        }
+        .contact-info > p {
+            font-size: 16px; color: var(--gray); line-height: 1.8; margin-bottom: 36px;
+        }
+        .contact-items { display: flex; flex-direction: column; gap: 24px; }
+        .contact-item { display: flex; gap: 16px; align-items: flex-start; }
+        .contact-item .icon {
+            width: 48px; height: 48px; min-width: 48px;
+            background: rgba(74, 144, 217, 0.1); border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .contact-item .icon svg { width: 22px; height: 22px; stroke: var(--blue); stroke-width: 1.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+        .contact-item .detail { flex: 1; }
+        .contact-item .detail h5 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+        .contact-item .detail p, .contact-item .detail a {
+            font-size: 14px; color: var(--gray); text-decoration: none; transition: color 0.3s;
+        }
+        .contact-item .detail a:hover { color: var(--blue); }
+
+        /* FORM */
+        .contact-form { padding: 40px; background: var(--light); border-radius: 16px; }
+        .contact-form h4 {
+            font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 8px;
+        }
+        .contact-form > p {
+            font-size: 14px; color: var(--gray); margin-bottom: 28px;
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block; font-size: 12px; font-weight: 700; color: var(--navy);
+            margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%; padding: 14px 16px;
+            border: 1.5px solid rgba(0,0,0,0.08); border-radius: 8px;
+            font-family: 'Cairo', sans-serif; font-size: 14px;
+            transition: all 0.3s; background: var(--white); color: #333;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(74,144,217,0.1);
+        }
+        .form-group textarea { resize: vertical; min-height: 130px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .btn-submit {
+            width: 100%; padding: 16px 40px; background: var(--gold); color: var(--navy);
+            font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;
+            border: 2px solid var(--gold); border-radius: 8px; cursor: pointer;
+            transition: all 0.3s; font-family: 'Cairo', sans-serif;
+        }
+        .btn-submit:hover { background: var(--navy); border-color: var(--navy); color: var(--white); transform: translateY(-2px); }
+
+        /* MAP SECTION */
+        .map-section {
+            position: relative; width: 100%;
+        }
+        .map-placeholder {
+            width: 100%; height: 450px; display: block;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--dark) 100%);
+            position: relative; overflow: hidden;
+        }
+        .map-placeholder iframe {
+            width: 100%; height: 100%; border: 0;
+        }
+        .map-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(27,42,74,0.85), rgba(15,26,46,0.7));
+            display: flex; align-items: center; justify-content: center;
+            pointer-events: none;
+        }
+        .map-overlay .map-info {
+            text-align: center; color: var(--white);
+        }
+        .map-overlay .map-info h3 {
+            font-size: 28px; font-weight: 800; margin-bottom: 12px;
+        }
+        .map-overlay .map-info p {
+            font-size: 15px; color: rgba(255,255,255,0.8); margin-bottom: 4px;
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 30px 60px 30px;
+            background: var(--navy);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+        }
+
+        .footer-brand { display: flex; align-items: flex-start; gap: 30px; }
+        .footer-brand img { height: 235px; margin-bottom: 16px; }
+        .footer-brand-text { flex: 1; }
+        .footer-brand-text p { font-size: 14px; color: rgba(255, 255, 255, 0.5); line-height: 1.8; word-spacing: normal; }
+        .footer-contact { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+        .footer-contact a { font-size: 13px; color: rgba(255, 255, 255, 0.5); text-decoration: none; transition: color 0.3s; word-spacing: normal; }
+        .footer-contact a:hover { color: var(--gold); }
+
+        .footer-col h5 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+            word-spacing: normal;
+        }
+
+        .footer-col ul li a:hover { color: var(--gold); }
+
+        .footer-divider {
+            max-width: 1200px; margin: 0 auto 30px; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200, 169, 110, 0.3), transparent);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.35);
+            word-spacing: normal;
+        }
+
+        .footer-policies { display: flex; gap: 16px; flex-wrap: wrap; }
+        .footer-policies a { font-size: 12px; color: rgba(255, 255, 255, 0.35); text-decoration: none; transition: color 0.3s; word-spacing: normal; }
+        .footer-policies a:hover { color: var(--gold); }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* REVEAL */
+        .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* RESPONSIVE */
+                @media (max-width: 1024px) {
+            .page-hero { padding: 150px 40px 70px; }
+            .breadcrumb { padding: 14px 40px; }
+            .contact-section { padding: 70px 40px; }
+            .contact-inner { gap: 50px; }
+            .footer { padding: 60px 40px 30px; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        }
+@media (max-width: 768px) {
+            .page-hero { padding: 145px 17px 51px; }
+            .page-hero h1 { font-size: 1.8rem; }
+            .page-hero p { font-size: 13px; }
+            .breadcrumb { padding: 14px 20px; }
+            .contact-section { padding: 51px 17px; }
+            .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+            .contact-info h3 { font-size: 1.4rem; }
+            .contact-info > p { font-size: 13px; }
+            .contact-item .icon { width: 40px; height: 40px; min-width: 40px; }
+            .contact-item .icon svg { width: 20px; height: 20px; }
+            .contact-item .detail h5 { font-size: 13px; }
+            .contact-item .detail p, .contact-item .detail a { font-size: 12px; }
+            .contact-form { padding: 20px; }
+            .contact-form h4 { font-size: 16px; }
+            .contact-form > p { font-size: 13px; }
+            .form-group { margin-bottom: 17px; }
+            .form-group label { font-size: 12px; }
+            .form-group input, .form-group textarea, .form-group select { padding: 12px 14px; font-size: 13px; }
+            .btn-submit { padding: 14px 32px; font-size: 13px; }
+            .form-row { grid-template-columns: 1fr; }
+            .map-placeholder { height: 300px; }
+            .footer { padding: 18px 15px 10px; }
+            .footer-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; padding-bottom: 20px; }
+            .footer-brand { grid-column: 1 / -1; align-items: center; gap: 12px; }
+            .footer-brand img { height: 122px; margin-bottom: 0; }
+            .footer-brand-text p { font-size: 11px; line-height: 1.5; }
+            .footer-contact { margin-top: 4px; }
+            .footer-contact a { font-size: 10px; }
+            .footer-col h5 { font-size: 10px; margin-bottom: 8px; }
+            .footer-col ul li { margin-bottom: 4px; }
+            .footer-col ul li a { font-size: 11px; }
+            .footer-divider { margin: 8px 0; }
+            .footer-bottom { flex-direction: column; gap: 6px; text-align: center; padding-top: 6px; }
+            .footer-bottom p { font-size: 10px; }
+            .footer-policies a { font-size: 9px; }
+            .footer-social a { width: 30px; height: 30px; font-size: 11px; }
+        }
+        @media (max-width: 480px) {
+            .page-hero { padding: 130px 16px 40px; }
+            .page-hero h1 { font-size: 1.5rem; }
+            .page-hero p { font-size: 12px; }
+            .breadcrumb { padding: 12px 16px; margin-top: 130px; font-size: 12px; }
+            .contact-section { padding: 40px 16px; }
+            .contact-inner { gap: 30px; }
+            .contact-info h3 { font-size: 1.2rem; }
+            .contact-info > p { font-size: 12px; }
+            .contact-item { gap: 12px; }
+            .contact-item .icon { width: 36px; height: 36px; min-width: 36px; }
+            .contact-item .icon svg { width: 18px; height: 18px; }
+            .contact-item .detail h5 { font-size: 12px; }
+            .contact-item .detail p, .contact-item .detail a { font-size: 11px; }
+            .contact-form { padding: 16px; }
+            .contact-form h4 { font-size: 14px; }
+            .contact-form > p { font-size: 12px; }
+            .form-group { margin-bottom: 14px; }
+            .form-group label { font-size: 11px; }
+            .form-group input, .form-group textarea, .form-group select { padding: 10px 12px; font-size: 12px; }
+            .btn-submit { padding: 12px 24px; font-size: 12px; }
+            .map-placeholder { height: 200px; }
+            .footer { padding: 14px 12px 8px; }
+        }
+.lang-toggle { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; color: var(--white); text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.3s; background: transparent; cursor: pointer; white-space: nowrap; margin-left: 16px; }
+.lang-toggle:hover { border-color: var(--gold); color: var(--gold); background: rgba(200,169,110,0.1); }
+    </style>
+    <meta property="og:title" content="تواصل معنا | خدمات فحص وQA/QC | الإمارات وسنغافورة">
+    <meta property="og:description" content="تواصل مع AETERNA للفحص والخدمات الفنية. مكاتب في مدينة الشارقة للإعلام، الإمارات وسنغافورة. متاحون 24/7 لاستفسارات الفحص والتحكم في الجودة.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aeterna-inspection.com/ar/contact.html">
+    <meta property="og:site_name" content="AETERNA Inspection & Technical Services">
+    <meta property="og:image" content="https://aeterna-inspection.com/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="تواصل معنا | خدمات فحص وQA/QC | الإمارات وسنغافورة">
+    <meta name="twitter:description" content="تواصل مع AETERNA للفحص والخدمات الفنية. مكاتب في مدينة الشارقة للإعلام، الإمارات وسنغافورة. متاحون 24/7 لاستفسارات الفحص والتحكم في الجودة.">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "تواصل معنا | خدمات فحص وQA/QC | الإمارات وسنغافورة",
+    "description": "تواصل مع AETERNA للفحص والخدمات الفنية. مكاتب في مدينة الشارقة للإعلام، الإمارات وسنغافورة. متاحون 24/7 لاستفسارات الفحص والتحكم في الجودة.",
+    "url": "https://aeterna-inspection.com/ar/contact.html",
+    "mainEntity": {
+        "@type": "Organization",
+        "name": "AETERNA Inspection & Technical Services LLC",
+        "telephone": "+971555727153",
+        "address": [
+            {
+                "@type": "PostalAddress",
+                "streetAddress": "Sharjah Media City",
+                "addressLocality": "Sharjah",
+                "addressCountry": "AE"
+            },
+            {
+                "@type": "PostalAddress",
+                "streetAddress": "Compassvale Drive, Sengkang",
+                "addressLocality": "Singapore",
+                "postalCode": "540254",
+                "addressCountry": "SG"
+            }
+        ]
+    }
+}
+</script>
+    <link rel="alternate" hreflang="en" href="https://aeterna-inspection.com/pages/contact.html">
+    <link rel="alternate" hreflang="ar" href="https://aeterna-inspection.com/ar/contact.html">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="mailto:info@aeterna-inspection.com" class="top-bar-item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+            info@aeterna-inspection.com
+        </a>
+        <a href="tel:+971555727153" class="top-bar-item top-bar-phone">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            +971 555 727 153
+        </a>
+    </div>
+</div>
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+        <img src="../images/logo-header.svg" alt="AETERNA Inspection & Technical Services Logo">
+    </a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="index.html#projects">المشاريع</a></li>
+        <li><a href="../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">الملف التعريفي</a></li>
+        <li><a href="resources.html">الموارد</a></li>
+        <li><a href="careers.html">الوظائف</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+    </ul>
+    <a href="../pages/contact.html" class="lang-toggle">EN English</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+
+<!-- MOBILE DRAWER OVERLAY -->
+<div class="nav-overlay" id="navOverlay"></div>
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="badge">تواصل معنا</div>
+    <h1>اتصل <span>بنا</span></h1>
+    <p>مستعد لبدء مشروع أو تحتاج مزيداً من المعلومات؟ تواصل مع فريقنا — نحن هنا لتقديم حلول الفحص وضمان الجودة التي تحتاجها.</p>
+</section>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <div class="breadcrumb-inner">
+        <a href="index.html">الرئيسية</a>
+        <span>/</span>
+        <span class="current">اتصل بنا</span>
+    </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+    <div class="contact-inner">
+        <div class="contact-info reveal">
+            <h3>لنبدأ المحادثة</h3>
+            <p>تواصل معنا — نحن هنا ومستعدون لخدمتك 24/7</p>
+            <div class="contact-items">
+                <div class="contact-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                    </div>
+                    <div class="detail">
+                        <h5>المكتب الرئيسي</h5>
+                        <p>مدينة الشارقة الإعلامية، الإمارات العربية المتحدة</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <div class="detail">
+                        <h5>سنغافورة (قاعدة الشركة)</h5>
+                        <p>كومباسفيل درايف، سينغكانغ، سنغافورة 540254</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                    </div>
+                    <div class="detail">
+                        <h5>الهاتف</h5>
+<a href="tel:+971555727153">+971 555 727 153</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <div class="detail">
+                        <h5>الاستفسارات العامة</h5>
+                        <a href="mailto:info@aeterna-inspection.com">info@aeterna-inspection.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+                        </svg>
+                    </div>
+                    <div class="detail">
+                        <h5>المبيعات</h5>
+                        <a href="mailto:sales@aeterna-inspection.com">sales@aeterna-inspection.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="detail">
+                        <h5>التوظيف / الموارد البشرية</h5>
+                        <a href="mailto:hr@aeterna-inspection.com">hr@aeterna-inspection.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                        </svg>
+                    </div>
+                    <div class="detail">
+                        <h5>ساعات العمل</h5>
+                        <p>الإثنين - السبت: 8:00 صباحاً - 5:00 مساءً (بتوقيت الخليج)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form reveal">
+            <h4>أرسل لنا رسالة</h4>
+            <p>املأ النموذج أدناه وسيرد فريقنا عليك خلال 24 ساعة.</p>
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="bac8f5ce-bde6-45a6-8e21-e93e8ca761dc">
+                <input type="hidden" name="to" value="info@aeterna-inspection.com">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">الاسم الأول</label>
+                        <input type="text" id="firstName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">اسم العائلة</label>
+                        <input type="text" id="lastName" name="last_name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">الهاتف</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">الموضوع</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>اختر موضوعاً</option>
+                        <option value="General Inquiry">استفسار عام</option>
+                        <option value="Service Request">طلب خدمة</option>
+                        <option value="Partnership">شراكة</option>
+                        <option value="Other">أخرى</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">الرسالة</label>
+                    <textarea id="message" name="message" placeholder="أخبرنا عن مشروعك أو استفسارك..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">إرسال الرسالة</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="../images/logo.svg" alt="AETERNA Inspection & Technical Services Logo">
+            <div class="footer-brand-text">
+                <p>AETERNA — وضع المعيار في فحص النفط والغاز والسلامة والتميز الفني.</p>
+                <div class="footer-contact">
+                    <a href="mailto:info@aeterna-inspection.com">info@aeterna-inspection.com</a>
+                    <a href="contact.html">مدينة الشارقة الإعلامية، الإمارات العربية المتحدة</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h5>الخدمات</h5>
+            <ul>
+                <li><a href="services.html">فحص الطرف الثالث</a></li>
+                <li><a href="services.html">فحص اللحام</a></li>
+                <li><a href="services.html">خدمات NDT</a></li>
+                <li><a href="services.html">التحكم في جودة البناء</a></li>
+                <li><a href="services.html">سلامة خطوط الأنابيب</a></li>
+                <li><a href="services.html">الفحص البحري</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>القطاعات</h5>
+            <ul>
+                <li><a href="index.html#industries">نفط وغاز</a></li>
+                <li><a href="index.html#industries">بناء</a></li>
+                <li><a href="index.html#industries">بتروكيماويات</a></li>
+                <li><a href="index.html#industries">توليد الطاقة</a></li>
+                <li><a href="index.html#industries">بحري و_offshore</a></li>
+                <li><a href="index.html#industries">بنية تحتية</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>الشركة</h5>
+            <ul>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="index.html#quality">الجودة والشهادات</a></li>
+                <li><a href="index.html#projects">المشاريع</a></li>
+        <li><a href="../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">الملف التعريفي</a></li>
+                <li><a href="policies.html">السياسات</a></li>
+                <li><a href="careers.html">الوظائف</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 AETERNA Inspection & Technical Services LLC. جميع الحقوق محفوظة.</p>
+        <div class="footer-policies">
+            <a href="policies.html#terms">شروط الاستخدام</a>
+            <a href="policies.html#privacy">الخصوصية</a>
+            <a href="policies.html#quality">الجودة</a>
+            <a href="policies.html#hse">HSE</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+    revealElements.forEach(el => observer.observe(el));
+</script>
+
+<script src="../js/script.js"></script>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/971555727153" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" id="whatsappBtn" aria-label="Chat on WhatsApp">
+    <img src="../images/whatsapp.svg" alt="WhatsApp" width="60" height="60">
+</a>
+<div class="whatsapp-typing" id="whatsappTyping">
+    <span class="whatsapp-typing-text" id="whatsappTypingText"></span><span class="whatsapp-typing-cursor">|</span>
+</div>
+
+<style>
+.whatsapp-btn {
+    position: fixed;
+    bottom: calc(30px + 5%);
+    right: calc(30px + 5%);
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    background: #25D366;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    animation: whatsappPulse 2s infinite;
+}
+@keyframes whatsappPulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    animation: none;
+}
+.whatsapp-btn img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+.whatsapp-typing {
+    position: fixed;
+    bottom: calc(99px + 5%);
+    right: calc(30px + 5% + 29px);
+    z-index: 998;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(50%) translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transform-origin: bottom center;
+}
+.whatsapp-typing::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(0, 0, 0, 0.65);
+}
+.whatsapp-typing.visible {
+    opacity: 1;
+    transform: translateX(50%) translateY(0);
+}
+.whatsapp-typing-text {
+    color: #ffffff;
+}
+.whatsapp-typing-cursor {
+    color: #25D366;
+    animation: whatsappBlink 0.7s infinite;
+}
+@keyframes whatsappBlink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+@media (max-width: 1024px) {
+    .whatsapp-btn { bottom: calc(25px + 5%); right: calc(25px + 5%); width: 55px; height: 55px; }
+    .whatsapp-btn img { width: 35px; height: 35px; }
+    .whatsapp-typing { bottom: calc(90px + 5%); right: calc(25px + 5% + 27px); font-size: 13px; padding: 10px 18px; transform: translateX(50%) translateY(10px); }
+    .whatsapp-typing.visible { transform: translateX(50%) translateY(0); }
+}
+@media (max-width: 768px) {
+    .whatsapp-btn { bottom: calc(20px + 15%); right: calc(20px + 5%); width: 50px; height: 50px; }
+    .whatsapp-btn img { width: 27px; height: 27px; }
+    .whatsapp-typing { bottom: calc(80px + 15%); right: calc(20px + 5% + 25px); font-size: 12px; padding: 10px 16px; transform: translateX(50%) translateY(10px); }
+    .whatsapp-typing.visible { transform: translateX(50%) translateY(0); }
+}
+</style>
+
+<script>
+(function() {
+    var typingEl = document.getElementById('whatsappTypingText');
+    var bubble = document.getElementById('whatsappTyping');
+    if (!typingEl || !bubble) return;
+
+    var phrases = ['مساعدة سريعة', 'تحدث معنا', 'نحن هنا لمساعدتك'];
+    var phraseIdx = 0;
+    var charIdx = 0;
+    var isDeleting = false;
+    var typingSpeed = 100;
+
+    setTimeout(function() {
+        bubble.classList.add('visible');
+        typeWA();
+    }, 2000);
+
+    function typeWA() {
+        var current = phrases[phraseIdx];
+        if (isDeleting) {
+            typingEl.textContent = current.substring(0, charIdx - 1);
+            charIdx--;
+            typingSpeed = 50;
+        } else {
+            typingEl.textContent = current.substring(0, charIdx + 1);
+            charIdx++;
+            typingSpeed = 100;
+        }
+        if (!isDeleting && charIdx === current.length) {
+            typingSpeed = 2500;
+            isDeleting = true;
+        } else if (isDeleting && charIdx === 0) {
+            isDeleting = false;
+            phraseIdx = (phraseIdx + 1) % phrases.length;
+            typingSpeed = 500;
+        }
+        setTimeout(typeWA, typingSpeed);
+    }
+})();
+</script>
+</body>
+</html>

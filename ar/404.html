@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - الصفحة غير موجودة | AETERNA</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy: #1B2A4A;
+            --blue: #4A90D9;
+            --gold: #C8A96E;
+            --white: #FFFFFF;
+            --light: #F4F6F9;
+            --gray: #6B7280;
+            --dark: #0F1A2E;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl; text-align: right;
+            color: #333; line-height: 1.6; overflow-x: hidden;
+        }
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: var(--navy);
+        }
+        .error-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 140px 20px 80px;
+        }
+        .error-inner {
+            text-align: center;
+            max-width: 600px;
+        }
+        .error-logo {
+            height: 60px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        .error-code {
+            font-size: clamp(6rem, 15vw, 10rem);
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 16px;
+            letter-spacing: 4px;
+        }
+        .error-title {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+        .error-message {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+        .error-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            padding: 14px 36px;
+            background: var(--gold);
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border: 2px solid var(--gold);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--gold);
+        }
+        .btn-secondary {
+            padding: 14px 36px;
+            background: transparent;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .btn-secondary:hover {
+            border-color: var(--white);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        @media (max-width: 768px) {
+            .navbar { padding: 16px 24px; top: 40px; }
+            .nav-links {
+                position: fixed; top: 0; left: 0; z-index: 1001;
+                width: 55%; height: 100vh;
+                background: linear-gradient(180deg, #0F1A2E 0%, #1B2A4A 100%);
+                flex-direction: column; padding: 100px 32px 32px; gap: 4px;
+                transform: translateX(-100%);
+                transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+                list-style: none; margin: 0;
+                border-right: 3px solid var(--gold);
+            }
+            .nav-links.open { transform: translateX(0); }
+            .nav-links li { width: 100%; }
+            .nav-links a {
+                display: block; padding: 14px 16px;
+                font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.85);
+                text-decoration: none; letter-spacing: 0.5px; text-transform: uppercase;
+                border-radius: 8px; transition: all 0.25s;
+            }
+            .nav-links a:hover { color: var(--gold); background: rgba(200, 169, 110, 0.1); }
+            .nav-links a::after { display: none; }
+            .nav-toggle { display: flex; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; position: relative; z-index: 2001; }
+            .nav-toggle span { width: 28px; height: 2px; background: var(--white); transition: all 0.3s; display: block; }
+            .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+            .nav-toggle.open span:nth-child(2) { opacity: 0; }
+            .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+            .error-content { padding: 120px 20px 60px; }
+            .error-code { font-size: 6rem; }
+        }
+        @media (max-width: 480px) {
+            .error-code { font-size: 5rem; }
+            .error-title { font-size: 1.2rem; }
+            .error-btns { flex-direction: column; align-items: center; }
+        }
+    </style>
+
+    <meta property="og:title" content="404 - الصفحة غير موجودة | AETERNA">
+    <meta property="og:description" content="Page not found - AETERNA Inspection & Technical Services. Please navigate to our homepage or contact us for assistance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aeterna-inspection.com/ar/404.html">
+    <meta property="og:site_name" content="AETERNA Inspection & Technical Services">
+    <meta property="og:image" content="https://aeterna-inspection.com/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="404 - الصفحة غير موجودة | AETERNA">
+    <meta name="twitter:description" content="Page not found - AETERNA Inspection & Technical Services. Please navigate to our homepage or contact us for assistance.">
+    <link rel="canonical" href="https://aeterna-inspection.com/ar/404.html">
+    <link rel="alternate" hreflang="en" href="https://aeterna-inspection.com/404.html">
+    <link rel="alternate" hreflang="ar" href="https://aeterna-inspection.com/ar/404.html">
+    <link rel="alternate" hreflang="x-default" href="https://aeterna-inspection.com/404.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "404 - الصفحة غير موجودة | AETERNA",
+      "description": "Page not found - AETERNA Inspection & Technical Services. Please navigate to our homepage or contact us for assistance.",
+      "url": "https://aeterna-inspection.com/ar/404.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "AETERNA Inspection & Technical Services",
+        "url": "https://aeterna-inspection.com"
+      }
+    }
+    </script>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="mailto:info@aeterna-inspection.com" class="top-bar-item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+            info@aeterna-inspection.com
+        </a>
+        <a href="tel:+971555727153" class="top-bar-item top-bar-phone">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            +971 555 727 153
+        </a>
+    </div>
+</div>
+
+<nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+        <img src="../images/logo-header.svg" alt="AETERNA">
+    </a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="index.html#projects">المشاريع</a></li>
+        <li><a href="../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">الملف التعريفي</a></li>
+        <li><a href="resources.html">الموارد</a></li>
+        <li><a href="careers.html">الوظائف</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+    </ul>
+    <a href="../404.html" class="lang-toggle">EN English</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<div class="error-page">
+    <div class="error-content">
+        <div class="error-inner">
+            <img src="../images/logo.svg" alt="AETERNA" class="error-logo">
+            <div class="error-code">404</div>
+            <h1 class="error-title">الصفحة غير موجودة</h1>
+            <p class="error-message">الصفحة التي تبحث عنها غير موجودة أو تم نقلها.</p>
+            <div class="error-btns">
+                <a href="index.html" class="btn-primary">الصفحة الرئيسية</a>
+                <a href="contact.html" class="btn-secondary">اتصل بنا</a>
+            </div>
+        </div>
+    </div>
+
+<footer class="footer" style="padding:30px 60px;background:var(--navy);">
+    <div class="footer-grid" style="display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:40px;max-width:1200px;margin:0 auto;padding-bottom:40px;">
+        <div class="footer-brand" style="display:flex;align-items:flex-start;gap:30px;">
+            <img src="../images/logo.svg" alt="AETERNA" style="height:235px;margin-bottom:16px;">
+            <div class="footer-brand-text">
+                <p style="font-size:14px;color:rgba(255,255,255,0.5);line-height:1.8;">AETERNA — وضع المعيار في فحص النفط والغاز والنزاهة والتميز التقني.</p>
+                <div class="footer-contact" style="margin-top:16px;display:flex;flex-direction:column;gap:8px;">
+                    <a href="mailto:info@aeterna-inspection.com" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;">info@aeterna-inspection.com</a>
+                    <a href="contact.html" style="font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;">مدينة الشارقة الإعلامية، الإمارات</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-col"><h5 style="font-size:13px;font-weight:700;color:var(--white);text-transform:uppercase;letter-spacing:2px;margin-bottom:20px;">الخدمات</h5><ul style="list-style:none;"><li style="margin-bottom:12px;"><a href="services.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">الفحص الثالث</a></li><li style="margin-bottom:12px;"><a href="services.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">فحص اللحام</a></li><li style="margin-bottom:12px;"><a href="services.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">خدمات NDT</a></li><li style="margin-bottom:12px;"><a href="services.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">QC الإنشاءات</a></li><li style="margin-bottom:12px;"><a href="services.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">سلامة الأنابيب</a></li><li style="margin-bottom:12px;"><a href="services.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">الفحص البحري</a></li></ul></div>
+        <div class="footer-col"><h5 style="font-size:13px;font-weight:700;color:var(--white);text-transform:uppercase;letter-spacing:2px;margin-bottom:20px;">القطاعات</h5><ul style="list-style:none;"><li style="margin-bottom:12px;"><a href="services.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">النفط والغاز</a></li><li style="margin-bottom:12px;"><a href="services.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">الإنشاءات</a></li><li style="margin-bottom:12px;"><a href="services.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">البتروكيماويات</a></li><li style="margin-bottom:12px;"><a href="services.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">توليد الطاقة</a></li><li style="margin-bottom:12px;"><a href="services.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">البحري والبري</a></li><li style="margin-bottom:12px;"><a href="services.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">البنية التحتية</a></li></ul></div>
+        <div class="footer-col"><h5 style="font-size:13px;font-weight:700;color:var(--white);text-transform:uppercase;letter-spacing:2px;margin-bottom:20px;">الشركة</h5><ul style="list-style:none;"><li style="margin-bottom:12px;"><a href="about.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">من نحن</a></li><li style="margin-bottom:12px;"><a href="services.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">الجودة والشهادات</a></li><li style="margin-bottom:12px;"><a href="resources.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">المشاريع</a></li><li style="margin-bottom:12px;"><a href="policies.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">السياسات</a></li><li style="margin-bottom:12px;"><a href="careers.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">الوظائف</a></li><li style="margin-bottom:12px;"><a href="contact.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">اتصل بنا</a></li></ul></div>
+    </div>
+    <div style="max-width:1200px;margin:0 auto 30px;height:1px;background:linear-gradient(90deg,transparent,rgba(200,169,110,0.3),transparent);"></div>
+    <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;">
+        <p style="font-size:13px;color:rgba(255,255,255,0.35);">&copy; 2026 AETERNA Inspection & Technical Services LLC. جميع الحقوق محفوظة.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+            <a href="policies.html#terms" style="font-size:12px;color:rgba(255,255,255,0.35);text-decoration:none;">شروط الاستخدام</a>
+            <a href="policies.html#privacy" style="font-size:12px;color:rgba(255,255,255,0.35);text-decoration:none;">الخصوصية</a>
+            <a href="policies.html#quality" style="font-size:12px;color:rgba(255,255,255,0.35);text-decoration:none;">الجودة</a>
+            <a href="policies.html#hse" style="font-size:12px;color:rgba(255,255,255,0.35);text-decoration:none;">HSE</a>
+        </div>
+    </div>
+</footer>
+</div>
+
+<a href="https://wa.me/971555727153" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" id="whatsappBtn" aria-label="Chat on WhatsApp" style="position:fixed;bottom:calc(30px + 5%);right:calc(30px + 5%);z-index:998;display:flex;align-items:center;justify-content:center;width:59px;height:59px;border-radius:50%;background:#25D366;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;animation:whatsappPulse 2s infinite;">
+    <img src="../images/whatsapp.svg" alt="WhatsApp" width="40" height="40" style="filter:brightness(0) invert(1);">
+</a>
+
+<style>
+@keyframes whatsappPulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+@media (max-width:1024px){.whatsapp-btn{bottom:calc(25px + 5%)!important;right:calc(25px + 5%)!important;width:55px!important;height:55px!important}.whatsapp-btn img{width:35px!important;height:35px!important}}
+@media (max-width:768px){.whatsapp-btn{bottom:calc(20px + 15%)!important;right:calc(20px + 5%)!important;width:50px!important;height:50px!important}.whatsapp-btn img{width:27px!important;height:27px!important}}
+</style>
+
+
+</body>
+</html>

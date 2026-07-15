@@ -1,0 +1,1134 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرص العمل - AETERNA Inspection & Technical Services UAE</title>
+    <meta name="description" content="انضم إلى AETERNA Inspection & Technical Services. استكشف فرص العمل في الفحص المستقل وNDT وفحص لحام وQA/QC والاستشارات الفنية في الإمارات وقطر ودول متعددة.">
+    <meta name="keywords" content="وظائف AETERNA, وظائف فحص الإمارات, وظائف NDT, وظائف مفتتش لحام, وظائف مهندس QA/QC, وظائف فحص الطرف الثالث, وظائف أبو ظبي, وظائف دبي, وظائف قطر">
+    <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy: #1B2A4A;
+            --blue: #4A90D9;
+            --gold: #C8A96E;
+            --white: #FFFFFF;
+            --light: #F4F6F9;
+            --gray: #6B7280;
+            --dark: #0F1A2E;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Cairo', sans-serif; direction: rtl; text-align: right; color: #333; line-height: 1.6; overflow-x: hidden; }
+
+        /* PAGE HERO */
+        .page-hero {
+            padding: 160px 60px 80px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--dark) 100%);
+            text-align: center;
+        }
+        .page-hero .badge {
+            display: inline-block; padding: 8px 24px; border: 1px solid var(--gold);
+            color: var(--gold); font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+            font-weight: 600; margin-bottom: 24px;
+        }
+        .page-hero h1 {
+            font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 800; color: var(--white);
+            margin-bottom: 16px;
+        }
+        .page-hero h1 span { color: var(--gold); }
+        .page-hero p {
+            font-size: 18px; color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto;
+        }
+
+        /* FILTER BAR */
+        .filter-bar {
+            padding: 30px 60px; background: var(--white); border-bottom: 1px solid rgba(27,42,74,0.08);
+        }
+        .filter-inner {
+            max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+        }
+        .filter-bar label {
+            font-size: 13px; font-weight: 600; color: var(--navy); text-transform: uppercase; letter-spacing: 1px;
+        }
+        .filter-bar select {
+            padding: 10px 16px; border: 1px solid #ddd; border-radius: 6px; font-family: 'Cairo', sans-serif;
+            font-size: 14px; color: var(--gray); background: var(--light); cursor: pointer; min-width: 150px;
+        }
+        .filter-bar select:focus { outline: none; border-color: var(--blue); }
+        .btn-clear {
+            padding: 10px 20px; background: transparent; border: 1px solid #ddd; border-radius: 6px;
+            font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; color: var(--gray);
+            cursor: pointer; transition: all 0.3s; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .btn-clear:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
+        .job-counter {
+            margin-left: auto; font-size: 14px; color: var(--gray); font-weight: 500;
+        }
+        .job-counter strong { color: var(--navy); }
+
+        /* JOB CARDS GRID */
+        .jobs-section { padding: 60px 60px 100px; max-width: 1200px; margin: 0 auto; }
+        .jobs-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px;
+        }
+        .job-card {
+            padding: 36px 30px; background: var(--white); border-radius: 8px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06); border: 1px solid rgba(27,42,74,0.06);
+            transition: all 0.3s; display: flex; flex-direction: column; position: relative;
+        }
+        .job-card:hover {
+            transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+            border-color: var(--gold);
+        }
+        .job-card .job-location {
+            display: flex; align-items: center; gap: 6px;
+            font-size: 13px; color: var(--blue); font-weight: 600; text-transform: uppercase;
+            letter-spacing: 1px; margin-bottom: 12px;
+        }
+        .job-card h3 {
+            font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 12px; line-height: 1.3;
+        }
+        .job-card .job-desc {
+            font-size: 14px; color: var(--gray); line-height: 1.7; margin-bottom: 20px; flex: 1;
+        }
+        .job-card .btn-apply {
+            display: inline-block; padding: 12px 28px; background: var(--navy); color: var(--white);
+            text-decoration: none; font-weight: 700; font-size: 13px; border-radius: 6px;
+            text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s; text-align: center;
+        }
+        .job-card .btn-apply:hover { background: var(--gold); color: var(--navy); }
+
+        /* CONTENT SECTIONS */
+        .content-section { padding: 80px 60px; max-width: 1200px; margin: 0 auto; }
+        .section-badge {
+            display: inline-block; padding: 8px 24px; border: 1px solid var(--gold);
+            color: var(--gold); font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+            font-weight: 600; margin-bottom: 16px;
+        }
+        .section-title {
+            font-size: 32px; font-weight: 800; color: var(--navy); margin-bottom: 16px;
+        }
+        .section-title span { color: var(--gold); }
+        .section-desc {
+            font-size: 16px; color: var(--gray); line-height: 1.8; max-width: 800px;
+        }
+        .alt-bg { background: var(--light); }
+
+        /* CULTURE */
+        .culture-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
+        .culture-card {
+            padding: 36px 32px; background: var(--white); border-radius: 8px;
+            border: 1px solid rgba(27,42,74,0.06); box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            transition: all 0.3s; text-align: center;
+        }
+        .culture-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+        .culture-card .icon {
+            width: 48px; height: 48px; border-radius: 50%; background: rgba(200,169,110,0.1);
+            display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
+            font-size: 20px;
+        }
+        .culture-card h4 { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+        .culture-card p { font-size: 14px; color: var(--gray); line-height: 1.7; }
+
+        /* ROLES */
+        .roles-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-top: 40px; }
+        .role-card {
+            padding: 32px 28px; background: var(--white); border-radius: 8px;
+            border: 1px solid rgba(27,42,74,0.06); box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            transition: all 0.3s;
+        }
+        .role-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+        .role-card .role-icon {
+            width: 48px; height: 48px; border-radius: 12px; background: var(--navy);
+            display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+            color: var(--white); font-size: 18px; font-weight: 700;
+        }
+        .role-card h4 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+        .role-card p { font-size: 14px; color: var(--gray); line-height: 1.7; }
+
+        /* DEVELOPMENT */
+
+        /* FOOTER (Top Level) */
+        .footer {
+            padding: 30px 60px 30px;
+            background: var(--navy);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+        }
+        .footer-brand { display: flex; align-items: flex-start; gap: 30px; }
+        .footer-brand img { height: 235px; margin-bottom: 16px; }
+        .footer-brand-text { flex: 1; }
+        .footer-brand-text p { font-size: 14px; color: rgba(255, 255, 255, 0.5); line-height: 1.8; }
+        .footer-contact { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+        .footer-contact a { font-size: 13px; color: rgba(255, 255, 255, 0.5); text-decoration: none; transition: color 0.3s; }
+        .footer-contact a:hover { color: var(--gold); }
+        .footer-col h5 { font-size: 13px; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col ul li a { color: rgba(255, 255, 255, 0.5); text-decoration: none; font-size: 14px; transition: color 0.3s; }
+        .footer-col ul li a:hover { color: var(--gold); }
+        .footer-divider { max-width: 1200px; margin: 0 auto 30px; height: 1px; background: linear-gradient(90deg, transparent, rgba(200, 169, 110, 0.3), transparent); }
+        .footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .footer-bottom p { font-size: 13px; color: rgba(255, 255, 255, 0.35); }
+        .footer-policies { display: flex; gap: 16px; flex-wrap: wrap; }
+        .footer-policies a { font-size: 12px; color: rgba(255, 255, 255, 0.35); text-decoration: none; transition: color 0.3s; }
+        .footer-policies a:hover { color: var(--gold); }
+        .footer-social { display: flex; gap: 12px; }
+        .footer-social a { width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 14px; transition: 0.3s; }
+        .footer-social a:hover { background: var(--gold); color: var(--navy); }
+
+        .dev-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-top: 40px; }
+        .dev-card {
+            padding: 32px 28px; background: var(--white); border-radius: 8px;
+            border: 1px solid rgba(27,42,74,0.06); box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            text-align: center;
+        }
+        .dev-card .dev-num { font-size: 40px; font-weight: 900; color: var(--gold); }
+        .dev-card h5 { font-size: 14px; font-weight: 700; color: var(--navy); margin: 8px 0; text-transform: uppercase; letter-spacing: 0.5px; }
+        .dev-card p { font-size: 13px; color: var(--gray); line-height: 1.6; }
+
+        /* INNOVATION */
+        .innovation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
+        .innovation-card {
+            padding: 32px 28px; background: var(--white); border-radius: 8px;
+            border: 1px solid rgba(27,42,74,0.06); box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+        .innovation-card h4 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+        .innovation-card p { font-size: 14px; color: var(--gray); line-height: 1.7; }
+
+        /* OPENINGS HEADER */
+        .openings-header {
+            text-align: center; padding: 60px 60px 0; max-width: 1200px; margin: 0 auto;
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 30px 60px 30px;
+            background: var(--navy);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+        }
+        .footer-brand { display: flex; align-items: flex-start; gap: 30px; }
+        .footer-brand img { height: 235px; margin-bottom: 16px; }
+        .footer-brand-text { flex: 1; }
+        .footer-brand-text p { font-size: 14px; color: rgba(255, 255, 255, 0.5); line-height: 1.8; }
+        .footer-contact { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+        .footer-contact a { font-size: 13px; color: rgba(255, 255, 255, 0.5); text-decoration: none; transition: color 0.3s; }
+        .footer-contact a:hover { color: var(--gold); }
+        .footer-col h5 { font-size: 13px; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col ul li a { color: rgba(255, 255, 255, 0.5); text-decoration: none; font-size: 14px; transition: color 0.3s; }
+        .footer-col ul li a:hover { color: var(--gold); }
+        .footer-divider { max-width: 1200px; margin: 0 auto 30px; height: 1px; background: linear-gradient(90deg, transparent, rgba(200, 169, 110, 0.3), transparent); }
+        .footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .footer-bottom p { font-size: 13px; color: rgba(255, 255, 255, 0.35); }
+        .footer-policies { display: flex; gap: 16px; flex-wrap: wrap; }
+        .footer-policies a { font-size: 12px; color: rgba(255, 255, 255, 0.35); text-decoration: none; transition: color 0.3s; }
+        .footer-policies a:hover { color: var(--gold); }
+        .footer-social { display: flex; gap: 12px; }
+        .footer-social a { width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 14px; transition: 0.3s; }
+        .footer-social a:hover { background: var(--gold); color: var(--navy); }
+
+        /* REVEAL */
+        .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+
+            .roles-grid { grid-template-columns: 1fr 1fr; }
+            .page-hero { padding: 145px 14px 43px; }
+            .page-hero h1 { font-size: 1.5rem; }
+            .page-hero p { font-size: 11px; }
+            .content-section { padding: 36px 14px; }
+            .openings-header { padding: 36px 14px 0; }
+            .culture-grid { grid-template-columns: 1fr; }
+            .roles-grid { grid-template-columns: 1fr; }
+            .dev-grid { grid-template-columns: 1fr; }
+            .dev-grid + div { grid-template-columns: 1fr !important; }
+            .innovation-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 19px; }
+            .culture-card { padding: 17px; }
+            .culture-card .icon { width: 36px; height: 36px; }
+            .culture-card .icon svg { width: 36px; height: 36px; }
+            .culture-card h4 { font-size: 13px; }
+            .culture-card p { font-size: 10px; }
+            .role-card { padding: 17px; }
+            .role-card .role-icon { width: 36px; height: 36px; }
+            .role-card .role-icon svg { width: 36px; height: 36px; }
+            .role-card h4 { font-size: 12px; }
+            .role-card p { font-size: 10px; }
+            .dev-card { padding: 17px; }
+            .dev-card .dev-num { font-size: 29px; }
+            .dev-card h5 { font-size: 10px; }
+            .dev-card p { font-size: 9px; }
+            .innovation-card { padding: 17px; }
+            .innovation-card .icon { width: 36px; height: 36px; }
+            .innovation-card .icon svg { width: 36px; height: 36px; }
+            .innovation-card h4 { font-size: 12px; }
+            .innovation-card p { font-size: 10px; }
+            .filter-bar { padding: 12px 14px; top: 70px; }
+            .filter-inner { flex-direction: column; align-items: stretch; }
+            .filter-bar select, .btn-clear { width: 100%; }
+            .job-counter { margin-left: 0; margin-top: 8px; }
+            .jobs-section { padding: 22px 14px 58px; }
+            .jobs-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+            .job-card { padding: 17px; }
+            .job-card h3 { font-size: 14px; }
+            .job-card .job-desc { font-size: 11px; }
+            .job-card .btn-apply { padding: 8px 16px; font-size: 10px; }
+            .job-card .job-location { font-size: 10px; }
+.lang-toggle { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; color: var(--white); text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.3s; background: transparent; cursor: pointer; white-space: nowrap; margin-left: 16px; }
+.lang-toggle:hover { border-color: var(--gold); color: var(--gold); background: rgba(200,169,110,0.1); }
+            
+            /* Responsive Footer Override inside 1024px */
+            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        }
+
+        @media (max-width: 768px) {
+            /* Responsive Footer Override inside 768px */
+            .footer { padding: 18px 15px 10px; }
+            .footer-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; padding-bottom: 20px; }
+            .footer-brand { grid-column: 1 / -1; align-items: center; gap: 12px; }
+            .footer-brand img { height: 122px; margin-bottom: 0; }
+            .footer-brand-text p { font-size: 11px; line-height: 1.5; }
+            .footer-contact { margin-top: 4px; }
+            .footer-contact a { font-size: 10px; }
+            .footer-col h5 { font-size: 10px; margin-bottom: 8px; }
+            .footer-col ul li { margin-bottom: 4px; }
+            .footer-col ul li a { font-size: 11px; }
+            .footer-divider { margin: 8px 0; }
+            .footer-bottom { flex-direction: column; gap: 6px; text-align: center; padding-top: 6px; }
+            .footer-bottom p { font-size: 10px; }
+            .footer-policies a { font-size: 9px; }
+            .footer-social a { width: 30px; height: 30px; font-size: 11px; }
+        }
+        @media (max-width: 480px) {
+            .page-hero { padding: 130px 16px 50px; }
+            .page-hero h1 { font-size: 1.5rem; }
+            .page-hero p { font-size: 12px; }
+            .breadcrumb { padding: 12px 16px; margin-top: 130px; font-size: 12px; }
+            .filter-bar { padding: 16px; }
+            .filter-inner { flex-direction: column; gap: 10px; }
+            .filter-inner select { width: 100%; }
+            .jobs-section { padding: 40px 16px; }
+            .jobs-grid { grid-template-columns: 1fr; gap: 16px; }
+            .job-card { padding: 20px; }
+            .job-card h3 { font-size: 15px; }
+            .job-card .job-desc { font-size: 12px; }
+            .job-card .btn-apply { padding: 8px 16px; font-size: 10px; }
+            .job-card .job-location { font-size: 10px; }
+            .content-section { padding: 40px 16px; }
+            .openings-header { padding: 0 16px 20px; }
+            .footer { padding: 14px 12px 8px; }
+        }
+    </style>
+
+    <meta property="og:title" content="فرص العمل - AETERNA Inspection & Technical Services UAE">
+    <meta property="og:description" content="انضم إلى AETERNA Inspection & Technical Services. استكشف فرص العمل في الفحص المستقل وNDT وفحص لحام وQA/QC والاستشارات الفنية في الإمارات وقطر ودول متعددة.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aeterna-inspection.com/ar/careers.html">
+    <meta property="og:site_name" content="AETERNA Inspection & Technical Services">
+    <meta property="og:image" content="https://aeterna-inspection.com/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="فرص العمل - AETERNA Inspection & Technical Services UAE">
+    <meta name="twitter:description" content="انضم إلى AETERNA Inspection & Technical Services. استكشف فرص العمل في الفحص المستقل وNDT وفحص لحام وQA/QC والاستشارات الفنية في الإمارات وقطر ودول متعددة.">
+    <link rel="canonical" href="https://aeterna-inspection.com/ar/careers.html">
+    <link rel="alternate" hreflang="en" href="https://aeterna-inspection.com/pages/careers.html">
+    <link rel="alternate" hreflang="ar" href="https://aeterna-inspection.com/ar/careers.html">
+    <link rel="alternate" hreflang="x-default" href="https://aeterna-inspection.com/pages/careers.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "فرص العمل - AETERNA Inspection & Technical Services UAE",
+      "description": "انضم إلى AETERNA Inspection & Technical Services. استكشف فرص العمل في الفحص المستقل وNDT وفحص لحام وQA/QC والاستشارات الفنية في الإمارات وقطر ودول متعددة.",
+      "url": "https://aeterna-inspection.com/ar/careers.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "AETERNA Inspection & Technical Services",
+        "url": "https://aeterna-inspection.com"
+      }
+    }
+    </script>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="mailto:info@aeterna-inspection.com" class="top-bar-item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+            info@aeterna-inspection.com
+        </a>
+        <a href="tel:+971555727153" class="top-bar-item top-bar-phone">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            +971 555 727 153
+        </a>
+    </div>
+</div>
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+        <img src="../images/logo-header.svg" alt="AETERNA Inspection & Technical Services Logo">
+    </a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="index.html#projects">المشاريع</a></li>
+        <li><a href="../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">الملف التعريفي</a></li>
+        <li><a href="resources.html">الموارد</a></li>
+        <li><a href="careers.html">الوظائف</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+    </ul>
+    <a href="../pages/careers.html" class="lang-toggle">EN English</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+
+<!-- MOBILE DRAWER OVERLAY -->
+<div class="nav-overlay" id="navOverlay"></div>
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="badge">انضم إلى فريقنا</div>
+    <h1>فرص <span>العمل</span></h1>
+    <p>انضم إلى فريق من الخبراء الفنون الذين يقدمون حلول فحص حيوية وطاقة وتكييف عبر الشرق الأوسط. في AETERNA، نستثمر في نموك ونعطيك الفرصة للعمل على بعض أكثر المشاريع الصناعية تحدياً في المنطقة.</p>
+</section>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+    <div class="filter-inner">
+        <label>تصفية حسب:</label>
+        <select id="filterLocation">
+            <option value="all">جميع المواقع</option>
+            <option value="uae">الإمارات العربية المتحدة</option>
+            <option value="qatar">قطر</option>
+            <option value="saudi">المملكة العربية السعودية</option>
+            <option value="multi">دول متعددة</option>
+        </select>
+        <select id="filterDepartment">
+            <option value="all">جميع الأقسام</option>
+            <option value="inspection">الفحص</option>
+            <option value="engineering">الهندسة</option>
+            <option value="quality">الجودة</option>
+            <option value="management">الإدارة</option>
+            <option value="technicians">الفنيون</option>
+            <option value="sales">المبيعات</option>
+            <option value="operations">العمليات</option>
+            <option value="support">الوظائف الداعمة</option>
+            <option value="graduate">الخريجون</option>
+        </select>
+        <button class="btn-clear" id="clearFilters">مسح التصفية</button>
+    </div>
+</div>
+
+<!-- JOBS GRID -->
+<section class="jobs-section">
+    <div class="jobs-grid" id="jobsGrid">
+
+        <div class="job-card reveal" data-location="uae" data-department="inspection" data-deadline="2025-01-10">
+            <div class="job-location">&#x1F4CD; أبو ظبي، الإمارات</div>
+            <h3>مفتتش لحام أول</h3>
+            <p class="job-desc">قيادة فحص اللحام في مشاريع خطوط الأنابيب والهياكل الحرجة. ضمان الامتثال لمعايير AWS D1.1 وASME IX وAPI 1104.</p>
+            <a href="jobs/job-senior-welding-inspector.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="inspection" data-deadline="2025-01-25">
+            <div class="job-location">&#x1F4CD; دبي، الإمارات</div>
+            <h3>فني NDT المستوى الثاني</h3>
+            <p class="job-desc">تنفيذ اختبارات الموجات فوق الصوتية والرنين المغناطيسي والاختراق السائل على المعدات الصناعية. مطلوب PCN/ASNT المستوى الثاني.</p>
+            <a href="jobs/job-ndt-technician.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="quality" data-deadline="2025-02-08">
+            <div class="job-location">&#x1F4CD; أبو ظبي، الإمارات</div>
+            <h3>مهندس QA/QC</h3>
+            <p class="job-desc">تطوير خطط الفحص والاختبار، وإدارة التوثيق الخاص بالجودة، وتنفيذ التدقيقات الداخلية وفقاً لمعايير ISO 9001.</p>
+            <a href="jobs/job-qaqc-engineer.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="engineering" data-deadline="2025-02-22">
+            <div class="job-location">&#x1F4CD; أبو ظبي، الإمارات</div>
+            <h3>مفتش سلامة HSE</h3>
+            <p class="job-desc">إجراء فحوصات السلامة وتقييمات المخاطر في المنشآت الصناعية. ضمان الامتثال لأنظمة إدارة السلامة والصحة والمعايير التنظيمية.</p>
+            <a href="jobs/job-hse-safety-inspector.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="qatar" data-department="inspection" data-deadline="2025-03-08">
+            <div class="job-location">&#x1F4CD; الدوحة، قطر</div>
+            <h3>مفتش ميكانيكي</h3>
+            <p class="job-desc">فحص أوعية الضغط وأنظمة الأنابيب والمعدات الدوّارة أثناء مرحلتي التصنيع والتثبيت.</p>
+            <a href="jobs/job-mechanical-inspector.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="multi" data-department="engineering" data-deadline="2025-03-22">
+            <div class="job-location">&#x1F4CD; دول متعددة</div>
+            <h3>مهندس سلامة خطوط الأنابيب</h3>
+            <p class="job-desc">تقييم حالة خطوط الأنابيب من خلال تحليل بيانات ILI والتقييم المباشر ومنهجيات الفحص القائم على المخاطر.</p>
+            <a href="jobs/job-pipeline-integrity.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="quality" data-deadline="2025-04-05">
+            <div class="job-location">&#x1F4CD; دبي، الإمارات</div>
+            <h3>مفتش جودة البناء</h3>
+            <p class="job-desc">مراقبة أنشطة البناء للامتثال للمواصفات والأكواد ومعايير الجودة الخاصة بالمشروع.</p>
+            <a href="jobs/job-construction-qc.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="inspection" data-deadline="2025-04-19">
+            <div class="job-location">&#x1F4CD; دبي، الإمارات</div>
+            <h3>مساح بحري</h3>
+            <p class="job-desc">إجراء مسوحات الضمان البحري وفحوصات الحمولة وتقييمات حالة السفن للعمليات البحرية.</p>
+            <a href="jobs/job-marine-surveyor.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="engineering" data-deadline="2025-05-03">
+            <div class="job-location">&#x1F4CD; أبو ظبي، الإمارات</div>
+            <h3>مفتش الحرائق والسلامة</h3>
+            <p class="job-desc">فحص أنظمة الحماية من الحرائق ومعدات الطوارئ والحواجز السلامة في المنشآت الصناعية والتجارية.</p>
+            <a href="jobs/job-fire-safety.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="inspection" data-deadline="2025-05-17">
+            <div class="job-location">&#x1F4CD; أبو ظبي، الإمارات</div>
+            <h3>فني اختبار المواد</h3>
+            <p class="job-desc">إجراء اختبارات ميكانيماوية وكيميائية لمواد البناء بما في ذلك الخرسانة والحديد والركام.</p>
+            <a href="jobs/job-materials-testing.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="qatar" data-department="engineering" data-deadline="2025-05-31">
+            <div class="job-location">&#x1F4CD; الدوحة، قطر</div>
+            <h3>مهندس أنابيب</h3>
+            <p class="job-desc">مراجعة تصميم الأنابيب وتحليل الإجهاد ومواصفات المواد لمشاريع النفط والغاز.</p>
+            <a href="jobs/job-piping-engineer.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="multi" data-department="inspection" data-deadline="2025-06-14">
+            <div class="job-location">&#x1F4CD; دول متعددة</div>
+            <h3>مفتش هيكلي</h3>
+            <p class="job-desc">فحص الهياكل المعدنية والأساسات الخرسانية والعناصر الحاملة أثناء البناء.</p>
+            <a href="jobs/job-structural-inspector.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="engineering" data-deadline="2025-06-28">
+            <div class="job-location">&#x1F4CD; أبو ظبي، الإمارات</div>
+            <h3>مهندس تشغيل</h3>
+            <p class="job-desc">قيادة أنشطة ما قبل التشغيل والتشغيل للأنظمة الميكانيكية والكهربائية.</p>
+            <a href="jobs/job-commissioning-engineer.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="management" data-deadline="2025-07-12">
+            <div class="job-location">&#x1F4CD; دبي، الإمارات</div>
+            <h3>متخصص في التسريع</h3>
+            <p class="job-desc">تنسيق توريدات الموردين وتتبع تقدم التصنيع وضمان التسليم في الوقت المناسب للمعدات.</p>
+            <a href="jobs/job-expediting-specialist.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="saudi" data-department="quality" data-deadline="2025-07-26">
+            <div class="job-location">&#x1F4CD; الرياض، المملكة العربية السعودية</div>
+            <h3>مدير التحكم في الجودة</h3>
+            <p class="job-desc">إدارة فرق فحص الجودة والإشراف على تنفيذ ITP وضمان التزام تسليمات المشروع بمواصفات العميل والأكواد الدولية.</p>
+            <a href="jobs/job-quality-control-manager.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="quality" data-deadline="2025-08-09">
+            <div class="job-location">&#x1F4CD; دبي، الإمارات</div>
+            <h3>قائد ضمان الجودة</h3>
+            <p class="job-desc">قيادة تطبيق نظام إدارة الجودة وإجراء تدقيقات الموردين ودفع التحسين المستمر عبر جميع عمليات الفحص.</p>
+            <a href="jobs/job-quality-assurance-lead.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="management" data-deadline="2025-08-23">
+            <div class="job-location">&#x1F4CD; أبو ظبي، الإمارات</div>
+            <h3>منسق التدريب</h3>
+            <p class="job-desc">تطوير وتنسيق برامج التدريب الفني ل personnel الفحص والفرق الميدانية.</p>
+            <a href="jobs/job-training-coordinator.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="multi" data-department="management" data-deadline="2025-09-06">
+            <div class="job-location">&#x1F4CD; دول متعددة</div>
+            <h3>مدير المشاريع</h3>
+            <p class="job-desc">قيادة مشاريع الفحص متعددة التخصصات عبر مواقع متعددة. إدارة الجداول الزمنية والموارد والعلاقات مع العملاء.</p>
+            <a href="jobs/job-project-manager.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="inspection" data-deadline="2025-09-20">
+            <div class="job-location">&#x1F4CD; أبو ظبي، الإمارات</div>
+            <h3>مهندس فحص مبتدئ</h3>
+            <p class="job-desc">مساعدة المفتّشين seniors في إجراء الفحوصات البصرية والأبعادية للمعدات الميكانيكية وأنظمة الأنابيب. إعداد تقارير الفحص وتتبع حلول NCR.</p>
+            <a href="jobs/job-junior-inspection-engineer.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="quality" data-deadline="2025-10-04">
+            <div class="job-location">&#x1F4CD; دبي، الإمارات</div>
+            <h3>مهندس تدقيق الجودة</h3>
+            <p class="job-desc">إجراء تدقيقات الجودة الداخلية والموردين وفقاً لISO 9001. مراجعة التوثيق الخاص بالجودة وتحديد عدم المطابقة ودعم تنفيذ الإجراءات التصحيحية.</p>
+            <a href="jobs/job-quality-audit-engineer.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="quality" data-deadline="2025-10-18">
+            <div class="job-location">&#x1F4CD; الشارقة، الإمارات</div>
+            <h3>مفتش QA مبتدئ</h3>
+            <p class="job-desc">دعم فريق QA/QC في فحص استلام المواد والتحكم في التوثيق والمراقبة النوعية الميدانية لمشاريع البناء المستمرة.</p>
+            <a href="jobs/job-junior-qa-inspector.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="engineering" data-deadline="2025-11-01">
+            <div class="job-location">&#x1F4CD; أبو ظبي، الإمارات</div>
+            <h3>مهندس تدقيق - امتثال HSE</h3>
+            <p class="job-desc">إجراء تدقيقات امتثال HSE عبر مواقع المشاريع. التحقق من الالتزام بأنظمة إدارة السلامة والمتطلبات التنظيمية.</p>
+            <a href="jobs/job-audit-hse-compliance.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="inspection" data-deadline="2025-11-15">
+            <div class="job-location">&#x1F4CD; دبي، الإمارات</div>
+            <h3>مهندس فحص - ميكانيكي</h3>
+            <p class="job-desc">فحص أوعية الضغط ومبادلات الحرارة والمعدات الدوّارة أثناء التصنيع والتثبيت الميداني وفقاً لمعايير ASME وAPI.</p>
+            <a href="jobs/job-inspection-mechanical.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="quality" data-deadline="2025-11-29">
+            <div class="job-location">&#x1F4CD; أبو ظبي، الإمارات</div>
+            <h3>مدقق جودة مبتدئ</h3>
+            <p class="job-desc">مساعدة في تخطيط وتنفيذ تدقيقات نظام إدارة الجودة. توثيق النتائج وتتبع إغلاق CARs وmaintaining سجلات التدقيق.</p>
+            <a href="jobs/job-junior-quality-auditor.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="quality" data-deadline="2025-12-13">
+            <div class="job-location">&#x1F4CD; الشارقة، الإمارات</div>
+            <h3>مهندس تديق - التوثيق</h3>
+            <p class="job-desc">مراجعة وتدقيق توثيق جودة المشروع بما في ذلك ITPs وNCRs وشهادات المواد وخرائط اللحام لل completeness والامتثال.</p>
+            <a href="jobs/job-audit-documentation.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="inspection" data-deadline="2025-12-27">
+            <div class="job-location">&#x1F4CD; دبي، الإمارات</div>
+            <h3>مهندس فحص - كهربائي</h3>
+            <p class="job-desc">إجراء فحص المعدات الكهربائية بما في ذلك لوائح التوزيع والمحولات والكابلات واللوحات التحكم وفقاً لمعايير IEC ومواصفات المشروع.</p>
+            <a href="jobs/job-inspection-electrical.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="engineering" data-deadline="2026-01-10">
+            <div class="job-location">&#x1F4CD; أبو ظبي، الإمارات</div>
+            <h3>مدقق العمليات مبتدئ</h3>
+            <p class="job-desc">تدقيق إجراءات التحكم في العمليات والتحقق من الالتزام بتعليمات العمل وتحديد فرص التحسين في عمليات التصنيع والتصنيع.</p>
+            <a href="jobs/job-junior-process-auditor.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="multi" data-department="quality" data-deadline="2026-01-24">
+            <div class="job-location">&#x1F4CD; دول متعددة</div>
+            <h3>مهندس تدقيق - تقييم الموردين</h3>
+            <p class="job-desc">تقييم قدرات الموردين من خلال تدقيقات الموردين الميدانية. تقييم أنظمة الجودة وعمليات التصنيع وقدرات التسليم.</p>
+            <a href="jobs/job-audit-vendor-assessment.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="engineering" data-deadline="2026-02-07">
+            <div class="job-location">&#x1F4CD; دبي، الإمارات</div>
+            <h3>مهندس فحص - أجهزة القياس</h3>
+            <p class="job-desc">فحص أنظمة أجهزة القياس بما في ذلك صمامات التحكم والناقلات وأجهزة قياس التدفق والمحللات للامتثال لمواصفات المشروع ومعايير ISA.</p>
+            <a href="jobs/job-inspection-instrumentation.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="inspection" data-deadline="2026-02-21">
+            <div class="job-location">&#x1F4CD; الشارقة، الإمارات</div>
+            <h3>مفتش مواد مبتدئ</h3>
+            <p class="job-desc">فحص مواد البناء الواردة للامتثال للمواصفات المعتمدة وإجراء الفحوصات البصرية والتحقق من شهادات المواد.</p>
+            <a href="jobs/job-junior-material-inspector.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="management" data-deadline="2026-03-07">
+            <div class="job-location">&#x1F4CD; أبو ظبي، الإمارات</div>
+            <h3>مهندس تدقيق - سلسلة التوريد</h3>
+            <p class="job-desc">تدقيق عمليات سلسلة التوريد بما في ذلك المشتريات واللوجستيات وإدارة المخزون لضمان الامتثال لمتطلبات الجودة ومتطلبات التسليم.</p>
+            <a href="jobs/job-audit-supply-chain.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="inspection" data-deadline="2026-03-21">
+            <div class="job-location">&#x1F4CD; دبي، الإمارات</div>
+            <h3>مهندس فحص - هيكلي</h3>
+            <p class="job-desc">فحص تصنيع وتركيب الهياكل المعدنية للامتثال لمعايير AISC وBS ومواصفات المشروع. مراجعة خرائط اللحام وتقارير NDT.</p>
+            <a href="jobs/job-inspection-structural.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="quality" data-deadline="2026-04-04">
+            <div class="job-location">&#x1F4CD; أبو ظبي، الإمارات</div>
+            <h3>مدقق امتثال مبتدئ</h3>
+            <p class="job-desc">التحقق من امتثال المقاولين والموردين للمتطلبات التعاقدية للجودة. دعم الفحوصات التنظيمية وإدارة سجلات الامتثال.</p>
+            <a href="jobs/job-junior-compliance-auditor.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="multi" data-department="engineering" data-deadline="2026-04-18">
+            <div class="job-location">&#x1F4CD; دول متعددة</div>
+            <h3>مهندس تدقيق - بيئي</h3>
+            <p class="job-desc">إجراء تدقيقات الامتثال البيئي عبر مواقع المشاريع. تقييم إدارة النفايات والتحكم في الانبعاثات وأنظمة الإدارة البيئية.</p>
+            <a href="jobs/job-audit-environmental.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="inspection" data-deadline="2026-05-02">
+            <div class="job-location">&#x1F4CD; أبو ظبي، الإمارات</div>
+            <h3>مهندس فحص - معدات دوّارة</h3>
+            <p class="job-desc">فحص المضخات والضواغط والتروبينات وم gearbox أثناء التصنيع والتثبيت الميداني. التحقق من المحاذاة والتوازن واختبار الأداء.</p>
+            <a href="jobs/job-inspection-rotating-equipment.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="inspection" data-deadline="2026-05-16">
+            <div class="job-location">&#x1F4CD; دبي، الإمارات</div>
+            <h3>مفتش طلاء مبتدئ</h3>
+            <p class="job-desc">مساعدة في فحوصات الطلاء والدهان للهياكل المعدنية والأنابيب. إجراء اختبارات تجهيز السطح و DFT والالتصاق واكتشاف العيوب.</p>
+            <a href="jobs/job-junior-coating-inspector.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="quality" data-deadline="2026-05-30">
+            <div class="job-location">&#x1F4CD; الشارقة، الإمارات</div>
+            <h3>مهندس تدقيق - أنظمة الجودة</h3>
+            <p class="job-desc">تدقيق تنفيذ QMS عبر المشاريع. مراجعة إجراءات الجودة ومراقبة KPIs ودفع مبادرات التحسين المستمر داخل المنظمة.</p>
+            <a href="jobs/job-audit-quality-systems.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="inspection" data-deadline="2026-06-06">
+            <div class="job-location">&#x1F4CD; أبو ظبي، الإمارات</div>
+            <h3>مهندس فحص - لحام</h3>
+            <p class="job-desc">مراجعة إجراءات اللحام والمؤهلات. مراقبة اللحام الإنتاجي للامتثال لمعايير WPS/PQR وASME IX ومواصفات المشروع.</p>
+            <a href="jobs/job-inspection-welding.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="engineering" data-deadline="2026-06-13">
+            <div class="job-location">&#x1F4CD; دبي، الإمارات</div>
+            <h3>مدقق سلامة مبتدئ</h3>
+            <p class="job-desc">دعم فريق HSE في إجراء فحوصات السلامة وتدقيقات السلامة السلوكية. توثيق الملاحظات وتتبع الإجراءات التصحيحية للإغلاق.</p>
+            <a href="jobs/job-junior-safety-auditor.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="uae" data-department="engineering" data-deadline="2026-06-20">
+            <div class="job-location">&#x1F4CD; أبو ظبي، الإمارات</div>
+            <h3>مهندس تدقيق - سلامة العمليات</h3>
+            <p class="job-desc">إجراء تدقيقات سلامة العمليات بما في ذلك PHA وHAZOP ومراجعات LOPA. التحقق من المعدات والإجراءات الحرجة من الناحية الحرجة بالمعايير الصناعية.</p>
+            <a href="jobs/job-audit-process-safety.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+        <div class="job-card reveal" data-location="multi" data-department="inspection" data-deadline="2026-06-24">
+            <div class="job-location">&#x1F4CD; دول متعددة</div>
+            <h3>مهندس فحص - مدني</h3>
+            <p class="job-desc">فحص الأعمال المدنية والهياكل بما في ذلك الأساسات والخرسانة والحديد وال works الأرضية للامتثال لرسومات المشروع والمواصفات.</p>
+            <a href="jobs/job-inspection-civil.html" class="btn-apply">عرض التفاصيل &#8594;</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- OPENINGS HEADER -->
+<section class="openings-header" style="padding-bottom:20px;">
+    <div class="section-badge">الفرص الحالية</div>
+    <h2 class="section-title">استكشف <span>المناصب</span></h2>
+    <p class="section-desc" style="margin:0 auto;">جميع المناصب مشغولة حالياً. يرجى المراجعة للفرص المستقبلية أو إرسال سيرتك الذاتية إلى pool المواهب لدينا على careers@aeterna-inspection.com.</p>
+</section>
+
+<!-- INTRO SECTION -->
+<section class="content-section reveal" style="padding-top:40px;">
+    <div style="text-align:center; margin-bottom:16px;">
+        <div class="section-badge">العمل في AETERNA</div>
+        <h2 class="section-title">ابنِ مسيرتك في <span>التميز الفني</span></h2>
+        <p class="section-desc" style="margin:0 auto;">AETERNA Inspection & Technical Services LLC تبقي الصناعة تعمل. من توليد الطاقة والتكييف إلى الفحص المستقل وNDT، نقدم حلولاً لا تتوقف أبداً. عبر الشرق الأوسط، يعتمد عملاؤنا في النفط والغاز والبتروكيماويات والطاقة والبناء على خبرتنا وأحدث التقنيات للحفاظ على تشغيلهم دون انقطاع.</p>
+        <p class="section-desc" style="margin:16px auto 0;">نحن محللو مشاكل عمليون. نعطي الأولوية للسلامة ونجلب الحماس والسرعة ونضع مصالح عملائنا أولاً. إذا كنت تجلب الطاقة والخبرة، سنمنحك المنصة للنمو.</p>
+    </div>
+</section>
+
+<!-- CULTURE SECTION -->
+<section class="content-section alt-bg reveal">
+    <div style="text-align:center; margin-bottom:16px;">
+        <div class="section-badge">ثقافتنا</div>
+        <h2 class="section-title">كيف <span>نعمل</span></h2>
+        <p class="section-desc" style="margin:0 auto;">ثقافتنا مبنية على حلول المشاكل العملية والتميز الفني والالتزام الصارم بالسلامة.</p>
+    </div>
+    <div class="culture-grid">
+        <div class="culture-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" width="22" height="22"><path d="M12 2l7 4v5c0 5-3.5 9.7-7 11-3.5-1.3-7-6-7-11V6l7-4z"/></svg></div>
+            <h4>السلامة أولاً دائماً</h4>
+            <p>لا شيء أهم من عودة موظفينا بأمان كل يوم. نستثمر بكثافة في ثقافة السلامة حتى يفهم الجميع دورهم في حماية أنفسهم والآخرين.</p>
+        </div>
+        <div class="culture-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" width="22" height="22"><path d="M9 3c-3 2-4 6-4 9s2 7 7 7 7-4 7-7-1-7-4-9"/><path d="M12 3v2m0 14v2m-7-9H3m18 0h-2M5.6 5.6l1.4 1.4m11.4-1.4l-1.4 1.4"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <h4>محللو مشاكل عمليون</h4>
+            <p>نتولى كل تحد. غريزتنا هي جعل حياة عملائنا وأصدقائنا أكثر ذكاءً وبساطة وسهولة. نحن لا نعقدها — بل نجد الحلول ونقدمها بسرعة.</p>
+        </div>
+        <div class="culture-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" width="22" height="22"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M3 21v-2c0-2.5 3-4 6-4s6 1.5 6 4v2"/><path d="M15 17c3 0 6 1.5 6 4v2"/><path d="M9 15c-3 0-6 1.5-6 4v2"/></svg></div>
+            <h4>الشمولية والنزاهة</h4>
+            <p>نوظف من خلفيات متنوعة لأن الخبرة المتنوعة تجعلنا أقوى. نconduct الأعمال بشفافية ونزاهة وأخلاقية صارمة. كل صوت يُسمع ويُحترم.</p>
+        </div>
+        <div class="culture-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" width="22" height="22"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <h4>الحماس والسرعة</h4>
+            <p>نحن مبتكرون ومرنون وقليلو الغرور. نجلب اتجاه إيجابي ونحول التفكير إلى إجراء بسرعة. عملاؤنا يثقون بنا لتسريع أعمالهم.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ROLES SECTION -->
+<section class="content-section reveal">
+    <div style="text-align:center; margin-bottom:16px;">
+        <div class="section-badge">فرص العمل</div>
+        <h2 class="section-title">اعثر على <span>مسارك</span></h2>
+        <p class="section-desc" style="margin:0 auto;">نقدم مجموعة متنوعة من المسارات المهنية في الفحص والهندسة والعمليات والدعم. سواء كنت في البداية أو محترفاً متمرساً، هناك مكان لك في AETERNA.</p>
+    </div>
+    <div class="roles-grid">
+        <div class="role-card">
+            <h4>الفنيون</h4>
+            <p>الصيانة والإصلاح وتشغيل المولدات ووحدات التكييف ومعدات المراقبة. تدريب شامل مع تحديات جديدة كل يوم.</p>
+        </div>
+        <div class="role-card">
+            <h4>المبيعات</h4>
+            <p>دمج الخبرة التجارية والفنية لتصميم حلول طاقة وتكييف وفحص مخصصة تحل مشاكل العملاء المعقدة.</p>
+        </div>
+        <div class="role-card">
+            <h4>الهندسة</h4>
+            <p>تصميم حلول حقيقية عبر الطاقة والتكييف وتقنيات الفحص. العمل مع الطاقة الشمسية وتخزين البطاريات والأنظمة الهجينة وطرق NDT المتقدمة.</p>
+        </div>
+        <div class="role-card">
+            <h4>الدعم التشغيلي</h4>
+            <p>إبقاء عملياتنا تعمل بسلاسة — تخطيط الأسطول واللوجستيات وإدارة المستودعات ومقدمة المنتجات. العمل بسرعة لتلبية احتياجات العملاء.</p>
+        </div>
+        <div class="role-card">
+            <h4>الفحص والجودة</h4>
+            <p>مفتشون معتمدون يقدمون NDT وفحص اللحام وتدقيق QA/QC. CSWIP وAWS وASNT — إذا كنت تحمل الشهادة، لدينا المشروع.</p>
+        </div>
+        <div class="role-card">
+            <h4>برامج الخريجين</h4>
+            <p>تطوير منظم في الهندسة والعمليات للمواهب في بداية مسيرتهم. اكتساب خبرة عبر محفظتنا الكاملة من التقنيات ومواقع المشاريع.</p>
+        </div>
+    </div>
+</section>
+
+<!-- DEVELOPMENT SECTION -->
+<section class="content-section alt-bg reveal">
+    <div style="text-align:center; margin-bottom:16px;">
+        <div class="section-badge">التطوير المهني</div>
+        <h2 class="section-title">نستثمر في <span>نموك</span></h2>
+        <p class="section-desc" style="margin:0 auto;">نأخذ التطوير المهني على محمل الجد. مع بنية مسطحة وانتشار عالمي وثقافة من التعلم المستمر، هناك دائماً فرص للتقدم.</p>
+    </div>
+    <div class="dev-grid">
+        <div class="dev-card">
+            <div class="dev-num">18</div>
+            <h5>ساعة تدريب</h5>
+            <p>يحصل كل موظف على متوسط 18 ساعة تدريب رسمي سنوياً، تشمل المهارات الفنية والسلامة والتطوير المهني.</p>
+        </div>
+        <div class="dev-card">
+            <div class="dev-num">30%</div>
+            <h5>التقدم الداخلي</h5>
+            <p>جزء كبير من فريق القيادة لدينا بدأ في مناصب فنية. نرقّ من الداخل وندعم التحولات الوظيفية عبر الأقسام.</p>
+        </div>
+        <div class="dev-card">
+            <div class="dev-num">100%</div>
+            <h5>التركيز على الشهادات</h5>
+            <p>نشجع وندعم جميع أعضاء الفريق للعمل نحو الشهادات والاعتمادات المهنية.</p>
+        </div>
+    </div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px; margin-top:32px;">
+        <div class="dev-card" style="text-align:right;">
+            <h5 style="text-transform:uppercase; letter-spacing:0.5px; color:var(--navy); margin-bottom:8px;">الدعم للتعليم والشهادات</h5>
+            <p style="font-size:13px; color:var(--gray); line-height:1.6;">الدعم المالي للشهادات المتعلقة بالعمل بما في ذلك CSWIP وAWS CWI وASNT المستوى الثالث وPMP وشهادات Six Sigma.</p>
+        </div>
+        <div class="dev-card" style="text-align:right;">
+            <h5 style="text-transform:uppercase; letter-spacing:0.5px; color:var(--navy); margin-bottom:8px;">التنقل العالمي</h5>
+            <p style="font-size:13px; color:var(--gray); line-height:1.6;">فرص العمل عبر عملياتنا في دول مجلس التعاون الخليجي والدولية. ينتقل أعضاء فريقنا بانتظام بين المناطق لدعم المشاريع الكبرى.</p>
+        </div>
+    </div>
+</section>
+
+<!-- INNOVATION SECTION -->
+<section class="content-section reveal">
+    <div style="text-align:center; margin-bottom:16px;">
+        <div class="section-badge">الابتكار والاستدامة</div>
+        <h2 class="section-title">التكنولوجيا التي <span>تتصدر</span></h2>
+        <p class="section-desc" style="margin:0 auto;">نلتزم بتقديم حلول الطاقة والفحص الفعالة والمسؤولة. يعمل فريقنا مع أحدث التقنيات لتقليل الانبعاثات وتحسين الكفاءة وإطالة عمر الأصول.</p>
+    </div>
+    <div class="innovation-grid">
+        <div class="innovation-card">
+            <h4>أنظمة الطاقة الهجينة</h4>
+            <p>دمج الطاقة الشمسية وتخزين البطاريات والتوليد الحراري الفعال لتقليل استهلاك الوقود وانبعاثات الكربون لعملاء النفط والغاز والبناء.</p>
+        </div>
+        <div class="innovation-card">
+            <h4>المراقبة عن بعد (ARM)</h4>
+            <p>مراقبة أصول ذكية على مدار الساعة مع تحليلات تنبؤية، تقلل من التوقف غير المخطط بنسبة تصل إلى 40% وتحسين استهلاك الوقود عبر أكثر من 1000 أصل.</p>
+        </div>
+        <div class="innovation-card">
+            <h4>الصيانة التنبؤية</h4>
+            <p>اختبار محركات PdMA وتحليل الاهتزاز والتصوير الحراري وتحليل الزيت للكشف عن مشاكل المعدات قبل أن تسبب العطل — مما يطيل عمر الأصول بسنوات.</p>
+        </div>
+        <div class="innovation-card">
+            <h4>الترقيات الخضراء</h4>
+            <p>إعادة تأهيل المعدات الحالية بتقنيات منخفضة الكربون والوقود البديل وتحسينات الكفاءة لمساعدة العملاء على تحقيق أهدافهم في خفض الكربون.</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="../images/logo.svg" alt="AETERNA Inspection & Technical Services Logo">
+            <div class="footer-brand-text">
+                <p>AETERNA — وضع المعيار في فحص النفط والغاز والسلامة والتميز الفني.</p>
+                <div class="footer-contact">
+                    <a href="mailto:info@aeterna-inspection.com">info@aeterna-inspection.com</a>
+                    <a href="contact.html">مدينة الشارقة الإعلامية، الإمارات العربية المتحدة</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h5>الخدمات</h5>
+            <ul>
+                <li><a href="services.html">فحص الطرف الثالث</a></li>
+                <li><a href="services.html">فحص اللحام</a></li>
+                <li><a href="services.html">خدمات NDT</a></li>
+                <li><a href="services.html">التحكم في جودة البناء</a></li>
+                <li><a href="services.html">سلامة خطوط الأنابيب</a></li>
+                <li><a href="services.html">الفحص البحري</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>القطاعات</h5>
+            <ul>
+                <li><a href="index.html#industries">نفط وغاز</a></li>
+                <li><a href="index.html#industries">بناء</a></li>
+                <li><a href="index.html#industries">بتروكيماويات</a></li>
+                <li><a href="index.html#industries">توليد الطاقة</a></li>
+                <li><a href="index.html#industries">بحري و_offshore</a></li>
+                <li><a href="index.html#industries">بنية تحتية</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>الشركة</h5>
+            <ul>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="index.html#quality">الجودة والشهادات</a></li>
+                <li><a href="index.html#projects">المشاريع</a></li>
+        <li><a href="../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">الملف التعريفي</a></li>
+                <li><a href="policies.html">السياسات</a></li>
+                <li><a href="careers.html">الوظائف</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 AETERNA Inspection & Technical Services LLC. جميع الحقوق محفوظة.</p>
+        <div class="footer-policies">
+            <a href="policies.html#terms">شروط الاستخدام</a>
+            <a href="policies.html#privacy">الخصوصية</a>
+            <a href="policies.html#quality">الجودة</a>
+            <a href="policies.html#hse">HSE</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('filterLocation').addEventListener('change', filterJobs);
+    document.getElementById('filterDepartment').addEventListener('change', filterJobs);
+    document.getElementById('clearFilters').addEventListener('click', clearFilters);
+
+    function filterJobs() {
+        const location = document.getElementById('filterLocation').value;
+        const department = document.getElementById('filterDepartment').value;
+        const cards = document.querySelectorAll('.job-card');
+        let count = 0;
+        cards.forEach(card => {
+            const matchLocation = location === 'all' || card.dataset.location === location;
+            const matchDept = department === 'all' || card.dataset.department === department;
+            if (matchLocation && matchDept) {
+                card.style.display = 'flex';
+                count++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    function clearFilters() {
+        document.getElementById('filterLocation').value = 'all';
+        document.getElementById('filterDepartment').value = 'all';
+        filterJobs();
+    }
+
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+    revealElements.forEach(el => observer.observe(el));
+</script>
+
+<script src="../js/script.js"></script>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/971555727153" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" id="whatsappBtn" aria-label="Chat on WhatsApp">
+    <img src="../images/whatsapp.svg" alt="WhatsApp" width="60" height="60">
+</a>
+<div class="whatsapp-typing" id="whatsappTyping">
+    <span class="whatsapp-typing-text" id="whatsappTypingText"></span><span class="whatsapp-typing-cursor">|</span>
+</div>
+
+<style>
+.whatsapp-btn {
+    position: fixed;
+    bottom: calc(30px + 5%);
+    right: calc(30px + 5%);
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    background: #25D366;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    animation: whatsappPulse 2s infinite;
+}
+@keyframes whatsappPulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    animation: none;
+}
+.whatsapp-btn img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+.whatsapp-typing {
+    position: fixed;
+    bottom: calc(99px + 5%);
+    right: calc(30px + 5% + 29px);
+    z-index: 998;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(50%) translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transform-origin: bottom center;
+}
+.whatsapp-typing::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(0, 0, 0, 0.65);
+}
+.whatsapp-typing.visible {
+    opacity: 1;
+    transform: translateX(50%) translateY(0);
+}
+.whatsapp-typing-text {
+    color: #ffffff;
+}
+.whatsapp-typing-cursor {
+    color: #25D366;
+    animation: whatsappBlink 0.7s infinite;
+}
+@keyframes whatsappBlink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+@media (max-width: 1024px) {
+    .whatsapp-btn { bottom: calc(25px + 5%); right: calc(25px + 5%); width: 55px; height: 55px; }
+    .whatsapp-btn img { width: 35px; height: 35px; }
+    .whatsapp-typing { bottom: calc(90px + 5%); right: calc(25px + 5% + 27px); font-size: 13px; padding: 10px 18px; transform: translateX(50%) translateY(10px); }
+    .whatsapp-typing.visible { transform: translateX(50%) translateY(0); }
+}
+@media (max-width: 768px) {
+    .whatsapp-btn { bottom: calc(20px + 15%); right: calc(20px + 5%); width: 50px; height: 50px; }
+    .whatsapp-btn img { width: 27px; height: 27px; }
+    .whatsapp-typing { bottom: calc(80px + 15%); right: calc(20px + 5% + 25px); font-size: 12px; padding: 10px 16px; transform: translateX(50%) translateY(10px); }
+    .whatsapp-typing.visible { transform: translateX(50%) translateY(0); }
+}
+    </style>
+
+<script>
+(function() {
+    var typingEl = document.getElementById('whatsappTypingText');
+    var bubble = document.getElementById('whatsappTyping');
+    if (!typingEl || !bubble) return;
+
+    var phrases = ['مساعدة سريعة', 'تحدث معنا', 'نحن هنا لمساعدتك'];
+    var phraseIdx = 0;
+    var charIdx = 0;
+    var isDeleting = false;
+    var typingSpeed = 100;
+
+    setTimeout(function() {
+        bubble.classList.add('visible');
+        typeWA();
+    }, 2000);
+
+    function typeWA() {
+        var current = phrases[phraseIdx];
+        if (isDeleting) {
+            typingEl.textContent = current.substring(0, charIdx - 1);
+            charIdx--;
+            typingSpeed = 50;
+        } else {
+            typingEl.textContent = current.substring(0, charIdx + 1);
+            charIdx++;
+            typingSpeed = 100;
+        }
+        if (!isDeleting && charIdx === current.length) {
+            typingSpeed = 2500;
+            isDeleting = true;
+        } else if (isDeleting && charIdx === 0) {
+            isDeleting = false;
+            phraseIdx = (phraseIdx + 1) % phrases.length;
+            typingSpeed = 500;
+        }
+        setTimeout(typeWA, typingSpeed);
+    }
+})();
+</script>
+</body>
+</html>

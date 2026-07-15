@@ -1,0 +1,865 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن AETERNA | شركة فحص ثالث | الإمارات وسنغافورة</title>
+    <meta name="description" content="تعرف على AETERNA للفحص والخدمات الفنية - قوة سائدة في مجال الفحص الثالث والهندسة والاستشارات الفنية مع مقرها الرئيسي في الشارقة الإمارات وعمليات في سنغافورة."
+    <link rel="canonical" href="https://aeterna-inspection.com/ar/about.html">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="عن AETERNA, شركة فحص, شركة فحص ثالث, شركة QA/QC الإمارات, استشارات هندسية">
+    <meta name="author" content="AETERNA Inspection & Technical Services LLC">
+    <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy: #1B2A4A;
+            --blue: #4A90D9;
+            --gold: #C8A96E;
+            --white: #FFFFFF;
+            --light: #F4F6F9;
+            --gray: #6B7280;
+            --dark: #0F1A2E;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Cairo', sans-serif; direction: rtl; text-align: right; color: #333; line-height: 1.6; overflow-x: hidden; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* BREADCRUMB */
+        .breadcrumb {
+            padding: 14px 60px; background: var(--light); font-size: 13px; margin-top: 127px;
+        }
+        .breadcrumb-inner { max-width: 1200px; margin: 0 auto; }
+        .breadcrumb a { color: var(--gray); text-decoration: none; transition: color 0.3s; }
+        .breadcrumb a:hover { color: var(--navy); }
+        .breadcrumb span { color: var(--gray); margin: 0 8px; }
+        .breadcrumb .current { color: var(--navy); font-weight: 600; }
+
+        /* HERO TWO-COLUMN */
+        .hero-two { padding: 80px 60px; background: var(--white); }
+        .hero-two-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+            max-width: 1200px; margin: 0 auto;
+        }
+        .hero-two-left h1 {
+            font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 900; color: var(--navy);
+            line-height: 1.15; margin-bottom: 24px; letter-spacing: -0.5px;
+        }
+        .hero-two-left p {
+            font-size: 15px; color: var(--gray); line-height: 1.9; margin-bottom: 16px;
+        }
+        .hero-two-left .support {
+            font-size: 14px; color: var(--gray); margin-bottom: 28px;
+        }
+        .hero-two-left .btn-download {
+            display: inline-block; padding: 14px 36px; background: var(--navy); color: var(--white);
+            font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px;
+            text-decoration: none; border-radius: 8px; transition: all 0.3s;
+        }
+        .hero-two-left .btn-download:hover { background: var(--gold); color: var(--navy); transform: translateY(-3px); box-shadow: 0 15px 40px rgba(200,169,110,0.3); }
+        .btn-download-mobile { display: none; }
+        .hero-two-right img {
+            width: 100%; border-radius: 16px; box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        /* CORE IDENTITY */
+        .identity-section {
+            padding: 80px 60px; background: var(--navy); position: relative; overflow: hidden;
+        }
+        .identity-section::before {
+            content: ''; position: absolute; top: -120px; right: -120px;
+            width: 400px; height: 400px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(200,169,110,0.08) 0%, transparent 70%);
+        }
+        .identity-section::after {
+            content: ''; position: absolute; bottom: -80px; left: -80px;
+            width: 300px; height: 300px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(74,144,217,0.06) 0%, transparent 70%);
+        }
+        .identity-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+            max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;
+        }
+        .identity-content .section-badge {
+            display: inline-block; padding: 6px 20px; border: 1px solid var(--gold);
+            color: var(--gold); font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+            font-weight: 600; margin-bottom: 20px;
+        }
+        .identity-content h2 {
+            font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; color: var(--white);
+            line-height: 1.25; margin-bottom: 20px;
+        }
+        .identity-content p {
+            font-size: 15px; color: rgba(255,255,255,0.7); line-height: 1.9;
+        }
+        .identity-image img {
+            width: 85%; border-radius: 16px; box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+        }
+
+        /* PILLARS SECTION */
+        .pillars-section { padding: 80px 60px; background: var(--light); }
+        .pillars-header { text-align: center; margin-bottom: 48px; }
+        .pillars-header .section-badge {
+            display: inline-block; padding: 6px 20px; border: 1px solid var(--gold);
+            color: var(--gold); font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+            font-weight: 600; margin-bottom: 12px;
+        }
+        .pillars-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; color: var(--navy); }
+        .pillars-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+            max-width: 1200px; margin: 0 auto;
+        }
+        .pillar-card {
+            padding: 40px 32px; background: var(--white); border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.04);
+            transition: all 0.4s ease; position: relative; overflow: hidden;
+        }
+        .pillar-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+            background: linear-gradient(90deg, var(--navy), var(--blue), var(--gold));
+            transform: scaleX(0); transform-origin: left; transition: transform 0.5s ease;
+        }
+        .pillar-card:hover::before { transform: scaleX(1); }
+        .pillar-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); border-color: transparent; }
+        .pillar-card .picon { width: 56px; height: 56px; margin: 0 auto 20px; }
+        .pillar-card .picon svg { width: 56px; height: 56px; stroke: var(--blue); stroke-width: 1.5; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.3s; }
+        .pillar-card:hover .picon svg { stroke: var(--gold); }
+        .pillar-card h4 { font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 10px; text-align: center; }
+        .pillar-card p { font-size: 14px; color: var(--gray); line-height: 1.7; text-align: center; }
+
+        /* TRUST SECTION */
+        .trust-section { padding: 80px 60px; background: var(--white); }
+        .trust-header { text-align: center; margin-bottom: 48px; }
+        .trust-header .section-badge {
+            display: inline-block; padding: 6px 20px; border: 1px solid var(--gold);
+            color: var(--gold); font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+            font-weight: 600; margin-bottom: 12px;
+        }
+        .trust-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; color: var(--navy); margin-bottom: 12px; }
+        .trust-header p { font-size: 15px; color: var(--gray); max-width: 720px; margin: 0 auto; line-height: 1.7; }
+        .trust-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+            max-width: 1200px; margin: 0 auto 40px;
+        }
+        .trust-card {
+            padding: 36px 28px; background: var(--light); border-radius: 16px;
+            border: 1px solid rgba(0,0,0,0.04); transition: all 0.4s ease; text-align: center;
+        }
+        .trust-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); border-color: transparent; background: var(--white); }
+        .trust-card .ticon { width: 52px; height: 52px; margin: 0 auto 16px; }
+        .trust-card .ticon svg { width: 52px; height: 52px; stroke: var(--blue); stroke-width: 1.5; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.3s; }
+        .trust-card:hover .ticon svg { stroke: var(--gold); }
+        .trust-card h4 { font-size: 18px; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+        .trust-card p { font-size: 14px; color: var(--gray); line-height: 1.7; }
+
+        /* WHY CHOOSE AETERNA */
+        .why-section {
+            padding: 80px 60px;
+            background: var(--dark);
+        }
+        .why-header { text-align: center; margin-bottom: 48px; }
+        .why-header .section-badge {
+            display: inline-block; padding: 6px 20px; border: 1px solid var(--gold);
+            color: var(--gold); font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+            font-weight: 600; margin-bottom: 12px;
+        }
+        .why-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; color: var(--white); }
+        .why-header p { font-size: 15px; color: rgba(255, 255, 255, 0.7); max-width: 720px; margin: 0 auto; line-height: 1.7; }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .why-card {
+            padding: 36px 28px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.4s ease;
+        }
+        .why-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-6px);
+            border-color: rgba(200, 169, 110, 0.2);
+        }
+        .why-card .icon { width: 52px; height: 52px; margin: 0 auto 16px; }
+        .why-card .icon svg { width: 52px; height: 52px; stroke: var(--gold); stroke-width: 1.5; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.3s; }
+        .why-card:hover .icon svg { stroke: var(--blue); }
+        .why-card h4 { font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+        .why-card p { font-size: 14px; color: rgba(255, 255, 255, 0.6); line-height: 1.7; }
+
+        /* FOOTER */
+        .footer {
+            padding: 30px 60px 30px;
+            background: var(--navy);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+        }
+
+        .footer-brand { display: flex; align-items: flex-start; gap: 30px; }
+        .footer-brand img { height: 235px; margin-bottom: 16px; }
+        .footer-brand-text { flex: 1; }
+        .footer-brand-text p { font-size: 14px; color: rgba(255, 255, 255, 0.5); line-height: 1.8; word-spacing: normal; }
+        .footer-contact { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+        .footer-contact a { font-size: 13px; color: rgba(255, 255, 255, 0.5); text-decoration: none; transition: color 0.3s; word-spacing: normal; }
+        .footer-contact a:hover { color: var(--gold); }
+
+        .footer-col h5 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+            word-spacing: normal;
+        }
+
+        .footer-col ul li a:hover { color: var(--gold); }
+
+        .footer-divider {
+            max-width: 1200px; margin: 0 auto 30px; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200, 169, 110, 0.3), transparent);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.35);
+            word-spacing: normal;
+        }
+
+        .footer-policies { display: flex; gap: 16px; flex-wrap: wrap; }
+        .footer-policies a { font-size: 12px; color: rgba(255, 255, 255, 0.35); text-decoration: none; transition: color 0.3s; word-spacing: normal; }
+        .footer-policies a:hover { color: var(--gold); }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* REVEAL */
+        .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* RESPONSIVE 768px */
+                /* RESPONSIVE 1024px */
+        @media (max-width: 1024px) {
+            .breadcrumb { padding: 14px 40px; margin-top: 127px; }
+            .hero-two { padding: 60px 40px; }
+            .hero-two-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+            .identity-section { padding: 60px 40px; }
+            .pillars-section { padding: 60px 40px; }
+            .trust-section { padding: 60px 40px; }
+            .why-section { padding: 60px 40px; }
+            .footer { padding: 60px 40px 30px; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        }
+@media (max-width: 768px) {
+            .breadcrumb { padding: 14px 20px; margin-top: 140px; }
+            .hero-two { padding: 40px 16px; }
+            .hero-two-grid { grid-template-columns: 1fr; gap: 32px; }
+            .hero-two-left h1 { font-size: 1.4rem; }
+            .hero-two-left p { font-size: 12px; }
+            .hero-two-left .btn-download { display: none; }
+            .btn-download-mobile { display: inline-block; margin-top: 16px; padding: 12px 32px; background: var(--navy); color: var(--white); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; text-decoration: none; border-radius: 8px; transition: all 0.3s; }
+            .btn-download-mobile:hover { background: var(--gold); color: var(--navy); }
+            .identity-section { padding: 40px 16px; }
+            .identity-grid { grid-template-columns: 1fr; gap: 32px; }
+            .identity-image { order: -1; }
+            .identity-content h2 { font-size: 1.4rem; }
+            .identity-content p { font-size: 12px; }
+            .pillars-section { padding: 40px 16px; }
+            .pillars-grid { grid-template-columns: 1fr; }
+            .pillars-header h2 { font-size: 1.4rem; }
+            .trust-section { padding: 40px 16px; }
+            .trust-grid { grid-template-columns: repeat(2, 1fr); }
+            .trust-card .ticon { width: 42px; height: 42px; }
+            .trust-card .ticon svg { width: 42px; height: 42px; }
+            .trust-card h4 { font-size: 14px; }
+            .trust-card p { font-size: 11px; }
+            .trust-header h2 { font-size: 1.4rem; }
+            .trust-header p { font-size: 12px; }
+            .why-section { padding: 40px 16px; }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+            .why-card .icon { width: 42px; height: 42px; }
+            .why-card .icon svg { width: 42px; height: 42px; }
+            .why-card h4 { font-size: 14px; }
+            .why-card p { font-size: 11px; }
+            .why-header h2 { font-size: 1.4rem; }
+            .why-header p { font-size: 12px; }
+            .footer { padding: 18px 15px 10px; }
+            .footer-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; padding-bottom: 20px; }
+            .footer-brand { grid-column: 1 / -1; align-items: center; gap: 12px; }
+            .footer-brand img { height: 122px; margin-bottom: 0; }
+            .footer-brand-text p { font-size: 11px; line-height: 1.5; }
+            .footer-contact { margin-top: 4px; }
+            .footer-contact a { font-size: 10px; }
+            .footer-col h5 { font-size: 10px; margin-bottom: 8px; }
+            .footer-col ul li { margin-bottom: 4px; }
+            .footer-col ul li a { font-size: 11px; }
+            .footer-divider { margin: 8px 0; }
+            .footer-bottom { flex-direction: column; gap: 6px; text-align: center; padding-top: 6px; }
+            .footer-bottom p { font-size: 10px; }
+            .footer-policies a { font-size: 9px; }
+            .footer-social a { width: 30px; height: 30px; font-size: 11px; }
+        }
+
+        /* RESPONSIVE 480px */
+        @media (max-width: 480px) {
+            
+            .breadcrumb { padding: 12px 16px; margin-top: 140px; font-size: 12px; }
+            .hero-two { padding: 40px 16px; }
+            .hero-two-left h1 { font-size: 1.8rem; }
+            .identity-section { padding: 40px 16px; }
+            .pillars-section { padding: 40px 16px; }
+            .trust-section { padding: 40px 16px; }
+            .why-section { padding: 40px 16px; }
+            .footer { padding: 40px 16px 16px; }
+        }
+.lang-toggle { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; color: var(--white); text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.3s; background: transparent; cursor: pointer; white-space: nowrap; margin-left: 16px; }
+.lang-toggle:hover { border-color: var(--gold); color: var(--gold); background: rgba(200,169,110,0.1); }
+    </style>
+    <meta property="og:title" content="عن AETERNA | شركة فحص ثالث | الإمارات وسنغافورة">
+    <meta property="og:description" content="تعرف على AETERNA للفحص والخدمات الفنية - قوة سائدة في مجال الفحص الثالث والهندسة والاستشارات الفنية مع مقرها الرئيسي في الشارقة الإمارات وعمليات في سنغافورة.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aeterna-inspection.com/ar/about.html">
+    <meta property="og:site_name" content="AETERNA Inspection & Technical Services">
+    <meta property="og:image" content="https://aeterna-inspection.com/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="عن AETERNA | شركة فحص ثالث | الإمارات وسنغافورة">
+    <meta name="twitter:description" content="تعرف على AETERNA للفحص والخدمات الفنية - قوة سائدة في مجال الفحص الثالث والهندسة والاستشارات الفنية مع مقرها الرئيسي في الشارقة الإمارات وعمليات في سنغافورة.">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "عن AETERNA | شركة فحص ثالث | الإمارات وسنغافورة",
+    "description": "تعرف على AETERNA للفحص والخدمات الفنية - قوة سائدة في مجال الفحص الثالث والهندسة والاستشارات الفنية مع مقرها الرئيسي في الشارقة الإمارات وعمليات في سنغافورة.",
+    "url": "https://aeterna-inspection.com/ar/about.html",
+    "mainEntity": {
+        "@type": "Organization",
+        "name": "AETERNA Inspection & Technical Services LLC",
+        "url": "https://aeterna-inspection.com"
+    }
+}
+</script>
+    <link rel="alternate" hreflang="en" href="https://aeterna-inspection.com/pages/about.html">
+    <link rel="alternate" hreflang="ar" href="https://aeterna-inspection.com/ar/about.html">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="mailto:info@aeterna-inspection.com" class="top-bar-item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+            info@aeterna-inspection.com
+        </a>
+        <a href="tel:+971555727153" class="top-bar-item top-bar-phone">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            +971 555 727 153
+        </a>
+    </div>
+</div>
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+        <img src="../images/logo-header.svg" alt="AETERNA Inspection & Technical Services Logo">
+    </a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="index.html#projects">المشاريع</a></li>
+        <li><a href="../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">الملف التعريفي</a></li>
+        <li><a href="resources.html">الموارد</a></li>
+        <li><a href="careers.html">الوظائف</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+    </ul>
+    <a href="../pages/about.html" class="lang-toggle">EN English</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+
+<!-- MOBILE DRAWER OVERLAY -->
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="breadcrumb">
+    <div class="breadcrumb-inner">
+        <a href="index.html">الرئيسية</a>
+        <span>/</span>
+        <span class="current">من نحن</span>
+    </div>
+</div>
+
+<section class="hero-two">
+    <div class="hero-two-grid reveal">
+        <div class="hero-two-left">
+            <h1>AETERNA</h1>
+            <p>AETERNA هي شركة مقرها سنغافورة ولها مكاتب في الشارقة وأبو ظبي، الإمارات العربية المتحدة، تعمل بهدف واحد —هيمنة المشهد الهندسي والفني. نحن لا ننافس؛ بل نتفوق. مهندسونا ومفتشونا وخبراؤنا الفنون ينفذون بدقة تجبر الصناعة على إعادة تقييم معاييرها. عندما تتطلب العمليات صفر أخطاء، وصفر أعذار، وصفر مساومة، فإن AETERNA هو الاسم الوحيد الذي يهم.</p>
+        </div>
+        <div class="hero-two-right">
+            <img src="../images/About us.jpg" alt="مهندسو AETERNA يفحصون منشأة صناعية عالية القيمة" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<section class="identity-section">
+    <div class="identity-grid reveal">
+        <div class="identity-content">
+            <div class="section-badge">من نحن</div>
+            <h2>من نحن</h2>
+            <p>AETERNA هنا لوضع المعيار. في قطاع النفط والغاز، سلطتنا مطلقة، مدفوعة بخبراء يعملون بدقة وانضباط وصفر تردد. نحن لا نتكيف مع معايير الصناعة؛ بل نحدد الحدود التي يكافح الآخرون لبلوغها. يختار المشغلون AETERNA لأننا نقدم اليقين والتحكم والنتائج التي لا تتزعزع أبداً. في صناعة يحددها الأقوى فقط، يقف AETERNA كالمعيار الذي يطارده الجميع.</p>
+        </div>
+        <div class="identity-image">
+            <img src="../images/Who We Are.jpg" alt="خبير AETERNA يشرف على العمليات بالسلطة" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<section class="pillars-section">
+    <div class="pillars-header reveal">
+        <div class="section-badge">ركائزنا</div>
+        <h2>ما يحرك سلطتنا</h2>
+    </div>
+    <div class="pillars-grid">
+        <div class="pillar-card reveal">
+            <div class="picon">
+                <svg viewBox="0 0 56 56">
+                    <circle cx="28" cy="28" r="22"/>
+                    <circle cx="28" cy="28" r="8"/>
+                    <line x1="28" y1="6" x2="28" y2="16"/>
+                    <line x1="28" y1="40" x2="28" y2="50"/>
+                    <line x1="6" y1="28" x2="16" y2="28"/>
+                    <line x1="40" y1="28" x2="50" y2="28"/>
+                </svg>
+            </div>
+            <h4>المهمة</h4>
+            <p>فرض جودة وسلامة لا تقبل المساومة في كل مشروع — دون أي استثناء.</p>
+        </div>
+        <div class="pillar-card reveal">
+            <div class="picon">
+                <svg viewBox="0 0 56 56">
+                    <circle cx="28" cy="28" r="22"/>
+                    <circle cx="28" cy="28" r="8"/>
+                    <line x1="28" y1="6" x2="28" y2="16"/>
+                    <line x1="28" y1="40" x2="28" y2="50"/>
+                    <line x1="6" y1="28" x2="16" y2="28"/>
+                    <line x1="40" y1="28" x2="50" y2="28"/>
+                    <line x1="12" y1="12" x2="20" y2="20"/>
+                    <line x1="36" y1="36" x2="44" y2="44"/>
+                </svg>
+            </div>
+            <h4>الرؤية</h4>
+            <p>البقاء كنقطة المرجع دون منازع للتميز في الفحص عبر القطاعات الصناعية العالمية.</p>
+        </div>
+        <div class="pillar-card reveal">
+            <div class="picon">
+                <svg viewBox="0 0 56 56">
+                    <path d="M28 50s-18-14-18-26c0-10 9-16 18-16s18 6 18 16c0 12-18 26-18 26z"/>
+                    <polyline points="22,28 26,32 34,24"/>
+                </svg>
+            </div>
+            <h4>القيم</h4>
+            <p>الدقة. النزاهة. السلطة. هذه ليست شعارات — إنها نظام التشغيل لدينا.</p>
+        </div>
+    </div>
+</section>
+
+<section class="trust-section">
+    <div class="trust-header reveal">
+        <div class="section-badge">الثقة والتميز</div>
+        <h2>لماذا يختار قادة الصناعة AETERNA</h2>
+        <p>المواقف عالية المخاطر تتطلب أكثر من الكفاءة — تتطلب التفوق. يقدم AETERNA تنفيذاً منضباطاً وخبرة فنية نخبة وعقلية تركز على النتائج تزيل الحد من اليقين.</p>
+    </div>
+    <div class="trust-grid">
+        <div class="trust-card reveal">
+            <div class="ticon">
+                <svg viewBox="0 0 52 52">
+                    <rect x="10" y="14" width="32" height="28" rx="4"/>
+                    <rect x="16" y="6" width="20" height="12" rx="3"/>
+                    <line x1="26" y1="20" x2="26" y2="32"/>
+                    <line x1="20" y1="28" x2="32" y2="28"/>
+                </svg>
+            </div>
+            <h4>محترفون</h4>
+            <p>خبراء معتمدون يعملون بالانضباط والكفاءة الفنية.</p>
+        </div>
+        <div class="trust-card reveal">
+            <div class="ticon">
+                <svg viewBox="0 0 52 52">
+                    <path d="M26 46s-16-12-16-22c0-8 8-14 16-14s16 6 16 14c0 10-16 22-16 22z"/>
+                    <polyline points="20,26 24,30 32,22"/>
+                </svg>
+            </div>
+            <h4>موثوقون</h4>
+            <p>شراكات مبنية على الأداء، وليست الوعود.</p>
+        </div>
+        <div class="trust-card reveal">
+            <div class="ticon">
+                <svg viewBox="0 0 52 52">
+                    <circle cx="26" cy="26" r="20"/>
+                    <circle cx="26" cy="26" r="8"/>
+                    <circle cx="26" cy="26" r="3"/>
+                    <line x1="26" y1="6" x2="26" y2="14"/>
+                    <line x1="26" y1="38" x2="26" y2="46"/>
+                    <line x1="6" y1="26" x2="14" y2="26"/>
+                    <line x1="38" y1="26" x2="46" y2="26"/>
+                </svg>
+            </div>
+            <h4>ذوو خبرة</h4>
+            <p>قيادة عبر القطاعات مدعومة بعمل ميداني عالي المخاطر واسع.</p>
+        </div>
+    </div>
+</section>
+
+<section class="why-section">
+    <div class="why-header reveal">
+        <div class="section-badge">الفرق في AETERNA</div>
+        <h2>لماذا تختار AETERNA</h2>
+        <p>ست ركائز تحدد التزامنا بالتميز في الفحص ورضا العملاء.</p>
+    </div>
+    <div class="why-grid">
+        <div class="why-card reveal">
+            <div class="icon">
+                <svg viewBox="0 0 52 52">
+                    <path d="M26 4L6 14v12c0 11 8 18 20 22 12-4 20-11 20-22V14L26 4z"/>
+                    <polyline points="18,26 24,32 34,20"/>
+                </svg>
+            </div>
+            <h4>استقلالية لا تقبل المساومة</h4>
+            <p>كبديل مستقل تماماً للطرف الثالث، تقاريرنا خالية من تضارب المصالح، مما يمنحك ثقة كاملة في كل تقييم وتوصية نقدمها.</p>
+        </div>
+        <div class="why-card reveal">
+            <div class="icon">
+                <svg viewBox="0 0 52 52">
+                    <path d="M26 4l-6 12h-14l11 8-4 14 13-8 13 8-4-14 11-8h-14z"/>
+                </svg>
+            </div>
+            <h4>خبرة معتمدة</h4>
+            <p>يحمل مفتشونا شهادات معترف بها دولياً تشمل CSWIP وAWS API وPCN، مما يضمن أعلى مستوى من الكفاءة الفنية في كل مهمة.</p>
+        </div>
+        <div class="why-card reveal">
+            <div class="icon">
+                <svg viewBox="0 0 52 52">
+                    <circle cx="26" cy="26" r="20"/>
+                    <ellipse cx="26" cy="26" rx="8" ry="20"/>
+                    <line x1="6" y1="26" x2="46" y2="26"/>
+                    <line x1="26" y1="6" x2="26" y2="46"/>
+                </svg>
+            </div>
+            <h4>انتشار عالمي</h4>
+            <p>مع عمليات نشطة في أكثر من 20 دولة وشبكة من المحترفين المؤهلين، نقدم جودة فحص متسقة بغض النظر عن موقع المشروع أو تعقيده.</p>
+        </div>
+        <div class="why-card reveal">
+            <div class="icon">
+                <svg viewBox="0 0 52 52">
+                    <polygon points="28,4 8,28 18,28 16,48 44,20 32,20"/>
+                </svg>
+            </div>
+            <h4>استجابة سريعة</h4>
+            <p>نقوم بتعبئة فرق الفحص خلال 24 إلى 48 ساعة، مما يضمن الحفاظ على زخم مشاريعك الحيوية دون تأخير في التحقق من الجودة وفحوصات الامتثال.</p>
+        </div>
+        <div class="why-card reveal">
+            <div class="icon">
+                <svg viewBox="0 0 52 52">
+                    <rect x="8" y="6" width="36" height="40" rx="4"/>
+                    <line x1="16" y1="16" x2="36" y2="16"/>
+                    <line x1="16" y1="24" x2="28" y2="24"/>
+                    <polyline points="16,34 22,30 28,36 36,28"/>
+                </svg>
+            </div>
+            <h4>تقارير متقدمة</h4>
+            <p>منصة التقارير الرقمية لدينا تقدم تحديثات فحص فورية، نتائج موثقة بالصور، وتحليلات شاملة تempowered اتخاذ قرارات مستنيرة.</p>
+        </div>
+        <div class="why-card reveal">
+            <div class="icon">
+                <svg viewBox="0 0 52 52">
+                    <circle cx="26" cy="16" r="8"/>
+                    <path d="M14 40c0-8 5-14 12-14s12 6 12 14"/>
+                    <path d="M34 30l4 4-4 4"/>
+                    <path d="M18 30l-4 4 4 4"/>
+                </svg>
+            </div>
+            <h4>نهج يركز على العميل</h4>
+            <p>نبني شراكات طويلة الأمد من خلال فهم تحدياتك الفريدة، وتكييف خدماتنا مع احتياجاتك، والتفوق الدائم على التوقعات في كل تفاعل.</p>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="../images/logo.svg" alt="AETERNA Inspection & Technical Services Logo">
+            <div class="footer-brand-text">
+                <p>AETERNA — وضع المعيار في فحص النفط والغاز والسلامة والتميز الفني.</p>
+                <div class="footer-contact">
+                    <a href="mailto:info@aeterna-inspection.com">info@aeterna-inspection.com</a>
+                    <a href="contact.html">مدينة الشارقة الإعلامية، الإمارات العربية المتحدة</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h5>الخدمات</h5>
+            <ul>
+                <li><a href="services.html">فحص الطرف الثالث</a></li>
+                <li><a href="services.html">فحص اللحام</a></li>
+                <li><a href="services.html">خدمات NDT</a></li>
+                <li><a href="services.html">التحكم في جودة البناء</a></li>
+                <li><a href="services.html">سلامة خطوط الأنابيب</a></li>
+                <li><a href="services.html">الفحص البحري</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>القطاعات</h5>
+            <ul>
+                <li><a href="index.html#industries">نفط وغاز</a></li>
+                <li><a href="index.html#industries">بناء</a></li>
+                <li><a href="index.html#industries">بتروكيماويات</a></li>
+                <li><a href="index.html#industries">توليد الطاقة</a></li>
+                <li><a href="index.html#industries">بحري و_offshore</a></li>
+                <li><a href="index.html#industries">بنية تحتية</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>الشركة</h5>
+            <ul>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="index.html#quality">الجودة والشهادات</a></li>
+                <li><a href="index.html#projects">المشاريع</a></li>
+        <li><a href="../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">الملف التعريفي</a></li>
+                <li><a href="policies.html">السياسات</a></li>
+                <li><a href="careers.html">الوظائف</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 AETERNA Inspection & Technical Services LLC. جميع الحقوق محفوظة.</p>
+        <div class="footer-policies">
+            <a href="policies.html#terms">شروط الاستخدام</a>
+            <a href="policies.html#privacy">الخصوصية</a>
+            <a href="policies.html#quality">الجودة</a>
+            <a href="policies.html#hse">HSE</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+    revealElements.forEach(el => observer.observe(el));
+</script>
+
+<script src="../js/script.js"></script>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/971555727153" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" id="whatsappBtn" aria-label="Chat on WhatsApp">
+    <img src="../images/whatsapp.svg" alt="WhatsApp" width="60" height="60">
+</a>
+<div class="whatsapp-typing" id="whatsappTyping">
+    <span class="whatsapp-typing-text" id="whatsappTypingText"></span><span class="whatsapp-typing-cursor">|</span>
+</div>
+
+<style>
+.whatsapp-btn {
+    position: fixed;
+    bottom: calc(30px + 5%);
+    right: calc(30px + 5%);
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    background: #25D366;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    animation: whatsappPulse 2s infinite;
+}
+@keyframes whatsappPulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    animation: none;
+}
+.whatsapp-btn img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+.whatsapp-typing {
+    position: fixed;
+    bottom: calc(99px + 5%);
+    right: calc(30px + 5% + 29px);
+    z-index: 998;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(50%) translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transform-origin: bottom center;
+}
+.whatsapp-typing::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(0, 0, 0, 0.65);
+}
+.whatsapp-typing.visible {
+    opacity: 1;
+    transform: translateX(50%) translateY(0);
+}
+.whatsapp-typing-text {
+    color: #ffffff;
+}
+.whatsapp-typing-cursor {
+    color: #25D366;
+    animation: whatsappBlink 0.7s infinite;
+}
+@keyframes whatsappBlink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+@media (max-width: 1024px) {
+    .whatsapp-btn { bottom: calc(25px + 5%); right: calc(25px + 5%); width: 55px; height: 55px; }
+    .whatsapp-btn img { width: 35px; height: 35px; }
+    .whatsapp-typing { bottom: calc(90px + 5%); right: calc(25px + 5% + 27px); font-size: 13px; padding: 10px 18px; transform: translateX(50%) translateY(10px); }
+    .whatsapp-typing.visible { transform: translateX(50%) translateY(0); }
+}
+@media (max-width: 768px) {
+    .whatsapp-btn { bottom: calc(20px + 15%); right: calc(20px + 5%); width: 50px; height: 50px; }
+    .whatsapp-btn img { width: 27px; height: 27px; }
+    .whatsapp-typing { bottom: calc(80px + 15%); right: calc(20px + 5% + 25px); font-size: 12px; padding: 10px 16px; transform: translateX(50%) translateY(10px); }
+    .whatsapp-typing.visible { transform: translateX(50%) translateY(0); }
+}
+</style>
+
+<script>
+(function() {
+    var typingEl = document.getElementById('whatsappTypingText');
+    var bubble = document.getElementById('whatsappTyping');
+    if (!typingEl || !bubble) return;
+
+    var phrases = ['مساعدة سريعة', 'تحدث معنا', 'نحن هنا لمساعدتك'];
+    var phraseIdx = 0;
+    var charIdx = 0;
+    var isDeleting = false;
+    var typingSpeed = 100;
+
+    setTimeout(function() {
+        bubble.classList.add('visible');
+        typeWA();
+    }, 2000);
+
+    function typeWA() {
+        var current = phrases[phraseIdx];
+        if (isDeleting) {
+            typingEl.textContent = current.substring(0, charIdx - 1);
+            charIdx--;
+            typingSpeed = 50;
+        } else {
+            typingEl.textContent = current.substring(0, charIdx + 1);
+            charIdx++;
+            typingSpeed = 100;
+        }
+        if (!isDeleting && charIdx === current.length) {
+            typingSpeed = 2500;
+            isDeleting = true;
+        } else if (isDeleting && charIdx === 0) {
+            isDeleting = false;
+            phraseIdx = (phraseIdx + 1) % phrases.length;
+            typingSpeed = 500;
+        }
+        setTimeout(typeWA, typingSpeed);
+    }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,2193 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETERNA | خدمات الفحص الثالث والتحكم في الجودة | الإمارات وسنغافورة</title>
+    <meta name="description" content="توفر AETERNA خدمات فحص ثالث وتحكم في الجودة عالمية المستوى تشمل FHT والتحقق وفحص اللحام والتدقيق الفني في أكثر من 20 دولة. شريك موثوق لقادة قطاعات النفط والغاز والطاقة والبنية التحتية."
+    <link rel="canonical" href="https://aeterna-inspection.com/ar/index.html">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="فحص ثالث, خدمات QA/QC, فحص NDT, فحص اللحام, مراقبة الجودة, فحص الأنابيب, AETERNA, شركة فحص الإمارات">
+    <meta name="author" content="AETERNA Inspection & Technical Services LLC">
+    <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #1B2A4A;
+            --blue: #4A90D9;
+            --gold: #C8A96E;
+            --white: #FFFFFF;
+            --light: #F4F6F9;
+            --gray: #6B7280;
+            --dark: #0F1A2E;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            text-align: right;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(135deg, rgba(27, 42, 74, 0.92) 0%, rgba(15, 26, 46, 0.7) 50%, rgba(27, 42, 74, 0.85) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            padding: 140px 20px 0;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.2rem);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span { color: var(--gold); }
+
+        .hero p {
+            font-size: clamp(15px, 1.3vw, 18px);
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            padding: 16px 40px;
+            background: var(--gold);
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border: 2px solid var(--gold);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--gold);
+        }
+
+        .btn-secondary {
+            padding: 16px 40px;
+            background: transparent;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--white);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat h3 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--gold);
+        }
+
+        .hero-stat p {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0;
+        }
+
+        .typing-container {
+            margin-top: 14px;
+            margin-bottom: 40px;
+            min-height: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .typing-text {
+            font-size: 35px;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .typing-cursor {
+            font-size: 35px;
+            font-weight: 700;
+            color: var(--gold);
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* STATS BANNER */
+        .stats-banner {
+            padding: 100px 60px;
+            background: url('https://images.unsplash.com/photo-1749653652468-98a34f0be831?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+            position: relative;
+        }
+
+        .stats-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(27, 42, 74, 0.88);
+        }
+
+        .stats-grid {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+        }
+
+        /* SECTION HEADER */
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-header .badge {
+            display: inline-block;
+            padding: 6px 20px;
+            background: rgba(74, 144, 217, 0.1);
+            color: var(--blue);
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: clamp(15px, 1.2vw, 17px);
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* PROJECTS */
+        .projects {
+            padding: 120px 60px;
+            background: var(--white);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            display: block;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .project-card .project-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15,26,46,0.85) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-info {
+            padding: 24px;
+            position: relative;
+            background: var(--white);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .project-info .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(74, 144, 217, 0.1);
+            color: var(--blue);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .project-info h4 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .project-info p {
+            font-size: 14px;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* SERVICES */
+        .services-section { padding: 80px 60px; background: var(--light); }
+        .services-section .section-header { text-align: center; margin-bottom: 50px; }
+        .services-section .section-header h2 { font-weight: 800; color: var(--navy); margin-bottom: 12px; }
+        .services-section .section-header p { font-size: 16px; color: var(--gray); max-width: 600px; margin: 0 auto; }
+        .services-grid-home { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; perspective: 1000px; }
+        .service-tile { padding: 30px 16px; background: var(--white); border-radius: 8px; text-align: center; cursor: default; border: 1px solid rgba(0,0,0,0.04); will-change: transform; transition: transform 0.15s ease-out; }
+        .service-tile:hover { box-shadow: 0 12px 30px rgba(0,0,0,0.08); border-color: var(--blue); }
+        .service-tile .icon { width: 56px; height: 56px; margin: 0 auto 14px; display: flex; align-items: center; justify-content: center; }
+        .service-tile .icon svg { width: 48px; height: 48px; stroke: var(--blue); stroke-width: 1.5; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: all 0.3s; }
+        .service-tile:hover .icon svg { stroke: var(--navy); }
+        .service-tile h4 { font-size: 13px; font-weight: 700; color: var(--navy); line-height: 1.4; letter-spacing: 0.3px; }
+
+        /* PROCESS */
+        .process {
+            padding: 120px 60px;
+            background: var(--white);
+            transform: scale(0.9);
+            transform-origin: center top;
+            margin-top: -30px;
+            margin-bottom: -60px;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .process-grid::before {
+            content: '';
+            position: absolute;
+            top: 45px;
+            left: 15%;
+            right: 15%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), var(--blue));
+            z-index: 0;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: var(--gold);
+            font-size: 1.8rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            border: 4px solid var(--white);
+            box-shadow: 0 5px 20px rgba(27, 42, 74, 0.2);
+        }
+
+        .process-step h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            font-size: 14px;
+            color: var(--gray);
+            padding: 0 10px;
+        }
+
+        /* QUALITY */
+        .quality {
+            padding: 120px 60px;
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+        }
+        .quality::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(200,169,110,0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .quality .section-header h2 { color: var(--white); }
+        .quality .section-header p { color: rgba(255, 255, 255, 0.7); }
+        .quality .section-header .badge {
+            background: rgba(200, 169, 110, 0.15);
+            color: var(--gold);
+        }
+
+        .quality-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto 60px;
+        }
+
+        .quality-card {
+            padding: 40px 30px 36px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+            position: relative;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+        .quality-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(200,169,110,0.3), transparent);
+            transition: all 0.4s ease;
+        }
+        .quality-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(200, 169, 110, 0.15);
+            transform: translateY(-4px);
+        }
+        .quality-card:hover::after {
+            width: 80%;
+            left: 10%;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .quality-card .icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .quality-card .icon svg {
+            width: 56px;
+            height: 56px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: stroke 0.3s;
+        }
+        .quality-card:hover .icon svg { stroke: var(--blue); }
+
+        .quality-card h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .quality-card p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.55);
+            line-height: 1.7;
+        }
+
+        .quality-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .quality-cta p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.35);
+            letter-spacing: 1px;
+        }
+        .quality-cta a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .quality-cta a:hover { color: var(--blue); }
+
+        /* QUALITY DIVIDER */
+        .quality-divider {
+            width: 100%;
+            max-width: 1100px;
+            margin: 20px auto 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200, 169, 110, 0.3), transparent);
+        }
+
+        /* STANDARDS SECTION */
+        .standards-section { margin-top: 20px; }
+
+        .standards-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto 40px;
+        }
+
+        .standard-card {
+            padding: 32px 24px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: right;
+            position: relative;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+        .standard-card::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(200,169,110,0.3), transparent);
+            transition: all 0.4s ease;
+        }
+        .standard-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(200, 169, 110, 0.15);
+            transform: translateY(-4px);
+        }
+        .standard-card:hover::after {
+            width: 80%;
+            left: 10%;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .standard-card .icon {
+            width: 44px;
+            height: 44px;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .standard-card .icon svg {
+            width: 44px;
+            height: 44px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: stroke 0.3s;
+        }
+        .standard-card:hover .icon svg { stroke: var(--blue); }
+
+        .standard-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+            text-align: center;
+        }
+
+        .standard-card p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.55);
+            line-height: 1.7;
+        }
+
+        /* WHY US *//* WHY US */
+        .why-us {
+            padding: 120px 60px;
+            background: var(--dark);
+        }
+
+        .why-us .section-header h2 { color: var(--white); }
+        .why-us .section-header p { color: rgba(255, 255, 255, 0.7); }
+        .why-us .section-header .badge {
+            background: rgba(74, 144, 217, 0.15);
+            color: var(--blue);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .why-card {
+            padding: 36px 28px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.3s;
+        }
+
+        .why-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .why-card .icon {
+            font-size: 32px;
+            margin-bottom: 14px;
+        }
+
+        .why-card h4 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.7;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 120px 60px;
+            background: url('https://images.unsplash.com/photo-1753978304732-35020ea9dfc6?auto=format&fit=crop&w=1920&q=85') center/cover no-repeat;
+            position: relative;
+            text-align: center;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(27, 42, 74, 0.88);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 36px;
+        }
+
+        .cta .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+            border-color: var(--gold);
+        }
+
+        .cta .btn-primary:hover {
+            background: var(--white);
+            border-color: var(--white);
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 30px 60px 30px;
+            background: var(--navy);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+        }
+
+        .footer-brand { display: flex; align-items: flex-start; gap: 30px; }
+        .footer-brand img { height: 235px; margin-bottom: 16px; }
+        .footer-brand-text { flex: 1; }
+        .footer-brand-text p { font-size: 14px; color: rgba(255, 255, 255, 0.5); line-height: 1.8; word-spacing: normal; }
+        .footer-contact { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+        .footer-contact a { font-size: 13px; color: rgba(255, 255, 255, 0.5); text-decoration: none; transition: color 0.3s; word-spacing: normal; }
+        .footer-contact a:hover { color: var(--gold); }
+
+        .footer-col h5 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+            word-spacing: normal;
+        }
+
+        .footer-col ul li a:hover { color: var(--gold); }
+
+        .footer-divider {
+            max-width: 1200px; margin: 0 auto 30px; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200, 169, 110, 0.3), transparent);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.35);
+            word-spacing: normal;
+        }
+
+        .footer-policies { display: flex; gap: 16px; flex-wrap: wrap; }
+        .footer-policies a { font-size: 12px; color: rgba(255, 255, 255, 0.35); text-decoration: none; transition: color 0.3s; word-spacing: normal; }
+        .footer-policies a:hover { color: var(--gold); }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* BACK TO TOP */
+        .back-to-top {
+            position: fixed; bottom: 40px; right: 40px; z-index: 999;
+            width: 48px; height: 48px; border-radius: 50%;
+            background: var(--gold); color: var(--navy);
+            display: flex; align-items: center; justify-content: center;
+            text-decoration: none; box-shadow: 0 4px 20px rgba(200,169,110,0.4);
+            opacity: 0; visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+        .back-to-top.visible {
+            opacity: 1; visibility: visible;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            background: var(--white);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(200,169,110,0.5);
+        }
+        .back-to-top.visible:hover { transform: translateY(-4px); }
+
+        /* SCROLL PROGRESS */
+        .scroll-progress {
+            position: fixed; top: 0; left: 0; z-index: 1001;
+            height: 3px; width: 0%;
+            background: linear-gradient(90deg, var(--gold), var(--blue));
+            transition: width 0.1s ease;
+        }
+
+        /* PRELOADER */
+        .preloader {
+            position: fixed; inset: 0; z-index: 9999;
+            background: var(--navy);
+            display: flex; align-items: center; justify-content: center;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        .preloader.hidden {
+            opacity: 0; visibility: hidden;
+            pointer-events: none;
+        }
+        .preloader-content {
+            text-align: center;
+        }
+        .preloader-logo {
+            height: 80px;
+            margin-bottom: 30px;
+            animation: preloaderPulse 1.2s ease-in-out infinite;
+        }
+        @keyframes preloaderPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+        .preloader-bar {
+            width: 200px; height: 2px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px; overflow: hidden;
+            margin: 0 auto;
+        }
+        .preloader-bar::after {
+            content: '';
+            display: block;
+            width: 40%; height: 100%;
+            background: linear-gradient(90deg, var(--gold), var(--blue));
+            border-radius: 4px;
+            animation: preloaderSlide 1.2s ease-in-out infinite;
+        }
+        @keyframes preloaderSlide {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(350%); }
+        }
+
+        /* NOISE TEXTURE OVERLAY */
+        .noise-overlay {
+            position: fixed; inset: 0; z-index: 9997;
+            pointer-events: none;
+            opacity: 0.03;
+            mix-blend-mode: overlay;
+        }
+        .noise-overlay::after {
+            content: '';
+            position: absolute; inset: -50%;
+            width: 200%; height: 200%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            animation: noiseShift 0.5s steps(4) infinite;
+        }
+        @keyframes noiseShift {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-5%, -5%); }
+            50% { transform: translate(-10%, 5%); }
+            75% { transform: translate(5%, -10%); }
+            100% { transform: translate(0, 0); }
+        }
+
+        /* REVEAL ANIMATION */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* TEXT REVEAL */
+        .text-reveal { opacity: 0; }
+        .text-reveal.active { opacity: 1; }
+        .text-reveal .word {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .text-reveal.active .word { opacity: 1; transform: translateY(0); }
+
+        /* LANGUAGE TOGGLE */
+        .lang-toggle { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; color: var(--white); text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.3s; background: transparent; cursor: pointer; white-space: nowrap; font-family: 'Cairo', sans-serif; }
+        .lang-toggle:hover { border-color: var(--gold); color: var(--gold); background: rgba(200,169,110,0.1); }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .projects-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+            .process-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+            .process-grid::before { display: none; }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .hero { padding: 0 20px; }
+            .hero-stats { gap: 30px; }
+            .hero-stat h3 { font-size: 2rem; }
+
+            .about, .services, .industries, .process, .gallery,
+            .projects, .leadership, .testimonials, .contact {
+                padding: 80px 20px;
+            }
+
+            .services-section { padding: 60px 20px; }
+            .services-grid-home { grid-template-columns: repeat(3, 1fr); }
+            .services-grid { grid-template-columns: 1fr; }
+            .about-story { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+            .about-story-image .exp-badge { left: 10px; bottom: -15px; padding: 12px 16px; }
+            .about-story-image .exp-badge strong { font-size: 24px; }
+            .about-mvv { grid-template-columns: repeat(2, 1fr); }
+            .about-certs { grid-template-columns: repeat(2, 1fr); }
+            .tl-item { flex-direction: column !important; padding-right: 40px; padding-left: 0; }
+            .tl-item .tl-content { width: 100%; }
+            .tl-item .tl-dot { right: -4px; left: auto; }
+            .timeline-wrap::before { right: 6px; left: auto; }
+            .industries-grid { grid-template-columns: repeat(2, 1fr); }
+            .quality-cards { grid-template-columns: 1fr; }
+            .quality-card { padding: 32px 24px 29px; }
+            .quality-card .icon { width: 45px; height: 45px; }
+            .quality-card .icon svg { width: 45px; height: 45px; }
+            .quality-card h4 { font-size: 14px; }
+            .quality-card p { font-size: 11px; }
+            .standards-cards { grid-template-columns: 1fr; }
+            .standard-card { padding: 24px 18px; }
+            .standard-card .icon { width: 36px; height: 36px; }
+            .standard-card .icon svg { width: 36px; height: 36px; }
+            .standard-card h4 { font-size: 13px; }
+            .standard-card p { font-size: 11px; }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery { padding: 80px 0; }
+            .gallery-item { width: 227px; height: 227px; }
+            .projects-grid { grid-template-columns: repeat(2, 1fr); }
+            .project-info .tag { font-size: 10px; }
+            .project-info h4 { font-size: 15px; }
+            .project-info p { font-size: 13px; }
+            .testimonials-track { gap: 14px; animation: testimonial-scroll 92s linear infinite; }
+            .testimonial-card { width: 176px; padding: 14px 10px; }
+            .testimonial-card p { font-size: 10px; line-height: 1.5; }
+            .testimonial-author { gap: 6px; }
+            .testimonial-author h5 { font-size: 9px; }
+            .testimonial-author span { font-size: 8px; }
+            .testimonial-avatar { width: 20px; height: 20px; font-size: 7px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-banner { padding: 75px 45px; }
+            .stat-item h3 { font-size: 2.6rem; }
+            .stat-item p { font-size: 11px; }
+            .leadership-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+
+            .footer { padding: 18px 15px 10px; }
+            .footer-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; padding-bottom: 20px; }
+            .footer-brand { grid-column: 1 / -1; align-items: center; gap: 12px; }
+            .footer-brand img { height: 122px; margin-bottom: 0; }
+            .footer-brand-text p { font-size: 11px; line-height: 1.5; }
+            .footer-contact { margin-top: 4px; }
+            .footer-contact a { font-size: 10px; }
+            .footer-col h5 { font-size: 10px; margin-bottom: 8px; }
+            .footer-col ul li { margin-bottom: 4px; }
+            .footer-col ul li a { font-size: 11px; }
+            .footer-divider { margin: 8px 0; }
+            .footer-bottom { flex-direction: column; gap: 6px; text-align: center; padding-top: 6px; }
+            .footer-bottom p { font-size: 10px; }
+            .footer-policies a { font-size: 9px; }
+            .footer-social a { width: 30px; height: 30px; font-size: 11px; }
+            .step-number { width: 73px; height: 73px; font-size: 1.4rem; }
+            .process-step h4 { font-size: 13px; }
+            .process-step p { font-size: 12px; }
+
+            .cta { padding: 96px 48px; }
+            .cta h2 { font-size: 1.6rem; }
+            .cta p { font-size: 14px; }
+            .cta .btn-primary { padding: 13px 32px; font-size: 12px; }
+
+            .global { padding: 80px 20px; }
+            .countries-grid { grid-template-columns: repeat(2, 1fr); }
+            .noise-overlay { display: none; }
+        }
+
+        @media (max-width: 480px) {
+            .standards-cards { grid-template-columns: 1fr; gap: 16px; }
+            .standard-card { padding: 20px 14px; }
+            .standard-card .icon { width: 32px; height: 32px; }
+            .standard-card .icon svg { width: 32px; height: 32px; }
+            .standard-card h4 { font-size: 12px; }
+            .standard-card p { font-size: 10px; }
+            .hero h1 { font-size: 2rem; }
+            .hero-stats { gap: 20px; }
+            .services-grid-home { grid-template-columns: repeat(2, 1fr); }
+            .about-certs { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+
+        .gallery {
+            padding: 120px 0;
+            background: var(--light);
+            overflow: hidden;
+        }
+        .gallery-track-container {
+            width: 100%;
+            overflow: hidden;
+            direction: ltr;
+        }
+        .gallery-track {
+            display: flex;
+            gap: 20px;
+            animation: galleryScroll 150s linear infinite;
+            width: max-content;
+            direction: ltr;
+        }
+        .gallery-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes galleryScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .gallery-item {
+            flex-shrink: 0;
+            width: 298px;
+            height: 298px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .gallery-item:hover img { transform: scale(1.1); }
+
+        /* TESTIMONIALS */
+        .testimonials-scroll {
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            width: 100%;
+            padding: 10px 0;
+            direction: ltr;
+        }
+        .testimonials-track {
+            display: flex;
+            gap: 22px;
+            width: max-content;
+            animation: testimonial-scroll 60s linear infinite;
+            direction: ltr;
+        }
+        .testimonials-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes testimonial-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .testimonial-card {
+            padding: 30px 22px;
+            background: var(--light);
+            border-radius: 8px;
+            position: relative;
+            width: 300px;
+            flex-shrink: 0;
+            direction: rtl;
+        }
+        .testimonial-card::before {
+            content: '\201C';
+            font-size: 60px;
+            color: var(--gold);
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            line-height: 1;
+            opacity: 0.3;
+        }
+        .testimonial-card p {
+            font-size: 13px;
+            color: #555;
+            font-style: italic;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .testimonial-avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-weight: 800;
+            font-size: 13px;
+        }
+        .testimonial-author h5 {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--navy);
+        }
+        .testimonial-author span {
+            font-size: 11px;
+            color: var(--gray);
+        }
+    </style>
+    <meta property="og:title" content="AETERNA | خدمات الفحص الثالث والتحكم في الجودة | الإمارات وسنغافورة">
+    <meta property="og:description" content="توفر AETERNA خدمات فحص ثالث وتحكم في الجودة عالمية المستوى تشمل FHT والتحقق وفحص اللحام والتدقيق الفني في أكثر من 20 دولة. شريك موثوق لقادة قطاعات النفط والغاز والطاقة والبنية التحتية.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aeterna-inspection.com/ar/index.html">
+    <meta property="og:site_name" content="AETERNA Inspection & Technical Services">
+    <meta property="og:image" content="https://aeterna-inspection.com/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AETERNA | خدمات الفحص الثالث والتحكم في الجودة | الإمارات وسنغافورة">
+    <meta name="twitter:description" content="توفر AETERNA خدمات فحص ثالث وتحكم في الجودة عالمية المستوى تشمل FHT والتحقق وفحص اللحام والتدقيق الفني في أكثر من 20 دولة. شريك موثوق لقادة قطاعات النفط والغاز والطاقة والبنية التحتية.">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AETERNA Inspection & Technical Services LLC",
+    "url": "https://aeterna-inspection.com",
+    "logo": "https://aeterna-inspection.com/images/logo.svg",
+    "description": "توفر AETERNA خدمات فحص ثالث وتحكم في الجودة عالمية المستوى تشمل FHT والتحقق وفحص اللحام والتدقيق الفني في أكثر من 20 دولة. شريك موثوق لقادة قطاعات النفط والغاز والطاقة والبنية التحتية.",
+    "address": [
+        {
+            "@type": "PostalAddress",
+            "streetAddress": "Sharjah Media City",
+            "addressLocality": "Sharjah",
+            "addressCountry": "AE"
+        },
+        {
+            "@type": "PostalAddress",
+            "streetAddress": "Compassvale Drive, Sengkang",
+            "addressLocality": "Singapore",
+            "postalCode": "540254",
+            "addressCountry": "SG"
+        }
+    ],
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+971555727153",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Arabic"]
+    },
+    "sameAs": [],
+    "areaServed": [
+        {"@type": "Country", "name": "United Arab Emirates"},
+        {"@type": "Country", "name": "Singapore"},
+        {"@type": "Country", "name": "Saudi Arabia"},
+        {"@type": "Country", "name": "Qatar"},
+        {"@type": "Country", "name": "Kuwait"},
+        {"@type": "Country", "name": "Oman"},
+        {"@type": "Country", "name": "Bahrain"}
+    ],
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Inspection & QA/QC Services",
+        "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Third-Party Inspection"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NDT Inspection"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Welding Inspection"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "QA/QC Services"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Construction Quality Control"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Corrosion & Coating Inspection"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Expediting Services"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vendor Assessment"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "API Inspector Supply"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "COMPEX Inspector Supply"}}
+        ]
+    }
+}
+</script>
+    <link rel="alternate" hreflang="en" href="https://aeterna-inspection.com/index.html">
+    <link rel="alternate" hreflang="ar" href="https://aeterna-inspection.com/ar/index.html">
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+    <div class="preloader-content">
+        <img src="../images/logo-header.svg" alt="AETERNA" class="preloader-logo">
+        <div class="preloader-bar"></div>
+    </div>
+</div>
+
+<!-- NOISE TEXTURE -->
+<div class="noise-overlay"></div>
+
+<!-- SCROLL PROGRESS BAR -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="mailto:info@aeterna-inspection.com" class="top-bar-item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+            info@aeterna-inspection.com
+        </a>
+        <a href="tel:+971555727153" class="top-bar-item top-bar-phone">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            +971 555 727 153
+        </a>
+    </div>
+</div>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo">
+        <img src="../images/logo-header.svg" alt="AETERNA Inspection & Technical Services Logo">
+    </a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="#projects">المشاريع</a></li>
+        <li><a href="../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">الملف التعريفي</a></li>
+        <li><a href="resources.html">الموارد</a></li>
+        <li><a href="careers.html">الوظائف</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+    </ul>
+    <a href="../index.html" class="lang-toggle">EN English</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- MOBILE DRAWER OVERLAY -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <video class="hero-video" autoplay muted loop playsinline poster="../images/Who%20We%20Are.jpg">
+        <source src="../Video/Hero-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
+        <source src="../Video/Hero-desktop.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content reveal">
+        <div class="typing-container">
+            <span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
+        </div>
+        <h1>التميز الهندسي، <span>مع الفحص والتحقق</span></h1>
+        <p class="text-reveal">تقدم AETERNA خدمات الفحص الثالث وضمان الجودة والاستشارات الفنية عالية المستوى في قطاعات النفط والغاز والبناء والصناعة حول العالم.</p>
+    </div>
+</section>
+
+<!-- STATS BANNER -->
+<section class="stats-banner">
+    <div class="stats-grid reveal">
+        <div class="stat-item">
+            <h3 class="counter" data-target="100">0</h3>
+            <p>مشروع مكتمل</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="counter" data-target="30">0</h3>
+            <p>مفتش معتمد</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="counter" data-target="70">0</h3>
+            <p>عميل</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="counter" data-target="20">0</h3>
+            <p>عقد</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+    <div class="section-header reveal">
+        <div class="badge">المحفظة</div>
+        <h2 class="text-reveal">مشاريع مميزة</h2>
+        <p class="text-reveal">أبرز مهام الفحص التي قمنا بها في مختلف أنحاء العالم.</p>
+    </div>
+    <div class="projects-grid">
+        <div class="project-card reveal">
+            <img src="https://images.unsplash.com/photo-1758129840517-bb364f86313f?auto=format&fit=crop&w=600&q=85" alt="مشروع فحص حقول النفط البحرية ADNOC">
+            <div class="project-overlay"></div>
+            <div class="project-info">
+                <span class="tag">نفط وغاز</span>
+                <h4>تطوير حقول ADNOC البحرية</h4>
+                <p>فحص شامل للخطوط تحت البحر والمنشآت البحرية ومرافق المعالجة لمشروع التوسعة الكبير لشركة ADNOC.</p>
+            </div>
+        </div>
+        <div class="project-card reveal">
+            <img src="https://images.unsplash.com/photo-1764835822981-1a3ccf47c369?auto=format&fit=crop&w=600&q=85" alt="مشروع مراقبة جودة البناء SAMSUNG">
+            <div class="project-overlay"></div>
+            <div class="project-info">
+                <span class="tag">بناء</span>
+                <h4>SAMSUNG للصناعات الثقيلة</h4>
+                <p>خدمات مراقبة الجودة والفحص الثالث لمشاريع البناء الصناعي الكبيرة تشمل التحقق من المواد ومراقبة اللحام.</p>
+            </div>
+        </div>
+        <div class="project-card reveal">
+            <img src="https://images.unsplash.com/photo-1673201159772-a3b7fa2ecc5d?auto=format&fit=crop&w=600&q=85" alt="فحص سلامة خطوط الأنابيب">
+            <div class="project-overlay"></div>
+            <div class="project-info">
+                <span class="tag">خطوط أنابيب</span>
+                <h4>خط أنابيب عابر للدول</h4>
+                <p>فحص شامل لخطوط الأنابيب يشمل الاختبارات الداخلية ومراقبة اللحام والاختبار الهيدروستاتيكي لأكثر من 400 كم.</p>
+            </div>
+        </div>
+        <div class="project-card reveal">
+            <img src="https://images.unsplash.com/photo-1759763823587-c8bd07fca246?auto=format&fit=crop&w=600&q=85" alt="فحص مصفاة بتروكيماويات">
+            <div class="project-overlay"></div>
+            <div class="project-info">
+                <span class="tag">بتروكيماويات</span>
+                <h4>صيانة المصفاة</h4>
+                <p>إدارة فحص شاملة أثناء الصيانة الرئيسية لمصفاة تشمل فحص أوعية الضغط والمبادلات الحرارية بدون وقوع حوادث.</p>
+            </div>
+        </div>
+        <div class="project-card reveal">
+            <img src="https://images.unsplash.com/photo-1750074905166-4d139944b868?auto=format&fit=crop&w=600&q=85" alt="فحص تشغيل محطة طاقة">
+            <div class="project-overlay"></div>
+            <div class="project-info">
+                <span class="tag">توليد طاقة</span>
+                <h4>تشغيل محطة طاقة</h4>
+                <p>خدمات فحص ما قبل التشغيل وأثناء التشغيل لمحطة طاقة توربينية غازية تشمل محاذاة المعدات وفحص التوثيق.</p>
+            </div>
+        </div>
+        <div class="project-card reveal">
+            <img src="https://images.unsplash.com/photo-1723435732442-c0a7ca08e7e9?auto=format&fit=crop&w=600&q=85" alt="تقييم المنصات البحرية">
+            <div class="project-overlay"></div>
+            <div class="project-info">
+                <span class="tag">بحري</span>
+                <h4>تقييم المنصات البحرية</h4>
+                <p>تقييم السلامة الهيكلية وتقييم العمر المتبقي للمنصات البحرية القديمة لدعم استمرار التشغيل الآمن.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+    <a id="industries"></a>
+    <div class="section-header reveal">
+        <h2>القطاعات التي نخدمها</h2>
+    </div>
+    <div class="services-grid-home">
+        <div class="service-tile reveal">
+            <div class="icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M24 14v10l7 7"/></svg></div>
+            <h4>الفحص والتحقق</h4>
+        </div>
+        <div class="service-tile reveal">
+            <div class="icon"><svg viewBox="0 0 48 48"><path d="M12 24h24"/><path d="M24 12v24"/><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="6"/></svg></div>
+            <h4>الفحص الثالث</h4>
+        </div>
+        <div class="service-tile reveal">
+            <div class="icon"><svg viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="3"/><path d="M8 18h32"/><path d="M18 18v22"/><circle cx="14" cy="13" r="2"/></svg></div>
+            <h4>فحص الموردين</h4>
+        </div>
+        <div class="service-tile reveal">
+            <div class="icon"><svg viewBox="0 0 48 48"><rect x="6" y="20" width="36" height="22" rx="2"/><path d="M14 20V14a10 10 0 0120 0v6"/><circle cx="24" cy="32" r="3"/></svg></div>
+            <h4>فحص ما قبل الشحن</h4>
+        </div>
+        <div class="service-tile reveal">
+            <div class="icon"><svg viewBox="0 0 48 48"><path d="M14 8h20l6 10-16 22L8 18z"/><path d="M8 18h32"/><path d="M24 30v8"/></svg></div>
+            <h4>ضمان الجودة ومراقبة الجودة</h4>
+        </div>
+        <div class="service-tile reveal">
+            <div class="icon"><svg viewBox="0 0 48 48"><rect x="6" y="6" width="16" height="16" rx="2"/><rect x="26" y="6" width="16" height="16" rx="2"/><rect x="6" y="26" width="16" height="16" rx="2"/><rect x="26" y="26" width="16" height="16" rx="2"/></svg></div>
+            <h4>الاستشارات الهندسية</h4>
+        </div>
+        <div class="service-tile reveal">
+            <div class="icon"><svg viewBox="0 0 48 48"><rect x="8" y="6" width="32" height="36" rx="2"/><path d="M16 14h16"/><path d="M16 22h16"/><path d="M16 30h10"/><path d="M14 6v-4"/><path d="M34 6v-4"/></svg></div>
+            <h4>الشهادات</h4>
+        </div>
+        <div class="service-tile reveal">
+            <div class="icon"><svg viewBox="0 0 48 48"><path d="M24 6l-18 10v12c0 8 8 14 18 16 10-2 18-8 18-16V16z"/><path d="M18 24l4 4 8-8"/></svg></div>
+            <h4>التدريب</h4>
+        </div>
+        <div class="service-tile reveal">
+            <div class="icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="14" r="8"/><path d="M12 40v-6a12 12 0 0124 0v6"/><path d="M24 22v8"/><path d="M20 26h8"/></svg></div>
+            <h4>الاستشارات الفنية</h4>
+        </div>
+        <div class="service-tile reveal">
+            <div class="icon"><svg viewBox="0 0 48 48"><path d="M6 38l10-14 8 6 10-14 8 8"/><rect x="6" y="6" width="36" height="36" rx="2"/></svg></div>
+            <h4>التسريع</h4>
+        </div>
+        <div class="service-tile reveal">
+            <div class="icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="12" r="6"/><circle cx="12" cy="28" r="6"/><circle cx="36" cy="28" r="6"/><path d="M24 18v6"/><path d="M14 24l6-2"/><path d="M34 24l-6-2"/><path d="M12 34v4"/><path d="M36 34v4"/><path d="M24 34v4"/></svg></div>
+            <h4>إدارة المشاريع</h4>
+        </div>
+        <div class="service-tile reveal">
+            <div class="icon"><svg viewBox="0 0 48 48"><circle cx="20" cy="14" r="7"/><circle cx="34" cy="14" r="5"/><path d="M8 38v-4a12 12 0 0112-12h0"/><path d="M28 38v-4a6 6 0 016-6h0"/><path d="M38 38v-4a4 4 0 014-4"/></svg></div>
+            <h4>خدمات التوظيف الفني</h4>
+        </div>
+        <div class="service-tile reveal">
+            <div class="icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M24 14v10"/><path d="M18 28h12"/><path d="M14 36l4-4"/><path d="M34 36l-4-4"/></svg></div>
+            <h4>فحص NDT والاختبارات الميكانيكية</h4>
+        </div>
+        <div class="service-tile reveal">
+            <div class="icon"><svg viewBox="0 0 48 48"><path d="M14 8h20l6 10-16 22L8 18z"/><path d="M8 18h32"/><path d="M18 14l6-6 6 6"/><circle cx="24" cy="32" r="4"/></svg></div>
+            <h4>إدارة سلامة الأصول</h4>
+        </div>
+        <div class="service-tile reveal">
+            <div class="icon"><svg viewBox="0 0 48 48"><path d="M6 30h36" stroke-width="3"/><circle cx="24" cy="30" r="10"/><circle cx="24" cy="30" r="4"/><rect x="14" y="22" width="6" height="8" rx="1"/><rect x="28" y="22" width="6" height="8" rx="1"/></svg></div>
+            <h4>سلامة خطوط الأنابيب</h4>
+        </div>
+        <div class="service-tile reveal">
+            <div class="icon"><svg viewBox="0 0 48 48"><path d="M10 38l12-20 8 8 10-14" stroke-width="2.5"/><circle cx="30" cy="12" r="3"/><circle cx="38" cy="8" r="2.5"/><rect x="6" y="40" width="36" height="4" rx="2"/></svg></div>
+            <h4>فحص اللحام وعلم المعادن</h4>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+    <div class="section-header reveal">
+        <div class="badge">كيف نعمل</div>
+        <h2>عمليتنا</h2>
+        <p>منهجية مثبتة تضمن الدقة والمساءلة في كل مرحلة.</p>
+    </div>
+    <div class="process-grid">
+        <div class="process-step reveal">
+            <div class="step-number">01</div>
+            <h4>تحليل المتطلبات</h4>
+            <p>نقوم بمراجعة شاملة لمواصفات المشروع والرموز المعمول بها ومتطلبات العميل لوضع منهجية فحص مخصصة.</p>
+        </div>
+        <div class="process-step reveal">
+            <div class="step-number">02</div>
+            <h4>تعبئة الموارد</h4>
+            <p>ينشر فريقنا مفتشين معتمدين ومعدات معايرة ووثائق شاملة إلى مواقع المشاريع بكفاءة ودقة.</p>
+        </div>
+        <div class="process-step reveal">
+            <div class="step-number">03</div>
+            <h4>التنفيذ الميداني</h4>
+            <p>يقوم المفتشون بإجراء فحوصات منهجية ومراقبة الاختبارات والتحقق من الامتثال في جميع مراحل المشروع.</p>
+        </div>
+        <div class="process-step reveal">
+            <div class="step-number">04</div>
+            <h4>التقارير والإغلاق</h4>
+            <p>نقدم تقارير فحص شاملة وحزم وثائق قابلة للتتبع وتوصيات واضحة لإغلاق المشروع وتسليمه.</p>
+        </div>
+    </div>
+</section>
+
+<!-- QUALITY & CERTIFICATIONS -->
+<section class="quality" id="quality">
+    <div class="quality-divider"></div>
+
+    <div class="standards-section">
+        <div class="section-header reveal">
+            <div class="badge">الجودة والشهادات</div>
+            <h2 class="text-reveal">معايير رائدة في الصناعة</h2>
+            <p>شهاداتنا وأنظمة الجودة تضمن أن كل مشروع يلبي أعلى المعايير العالمية.</p>
+        </div>
+        <div class="standards-cards">
+            <div class="standard-card reveal">
+                <div class="icon"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><path d="M32 18v14l9 9"/></svg></div>
+                <h4>إدارة الجودة</h4>
+                <p>أنظمة إدارة الجودة المعتمدة بـ ISO 9001:2015 التي تضمن التميز المتسق والمتكرر في كل مشروع.</p>
+            </div>
+            <div class="standard-card reveal">
+                <div class="icon"><svg viewBox="0 0 64 64"><path d="M32 10l22 13v16c0 13-22 22-22 22S10 52 10 39V23z"/><path d="M24 32l6 6 10-12"/></svg></div>
+                <h4>امتثال السلامة والصحة والبيئة</h4>
+                <p>معتمدون بـ ISO 45001:2018 و ISO 14001:2015؛ نحرص على صحة وسلامة العمل والمسؤولية البيئيةالصحة والسلامة والمسؤولية البيئية.</p>
+            </div>
+            <div class="standard-card reveal">
+                <div class="icon"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><path d="M32 18v14l9 9"/></svg></div>
+                <h4>معايير API</h4>
+                <p>مؤهلون بـ API Q1 و API Q2، نلبي المتطلبات الصارمة لصناعة النفط والغاز حول العالم.</p>
+            </div>
+            <div class="standard-card reveal">
+                <div class="icon"><svg viewBox="0 0 64 64"><path d="M18 20h28v32H18z"/><path d="M32 20V10"/><path d="M24 10h16"/><path d="M26 34v10"/><path d="M38 34v10"/><path d="M26 44h12"/></svg></div>
+                <h4>شهادات الفحص غير المدمج</h4>
+                <p>مفتشون معتمدون بـ ASNT Level III و PCN و ISO 9712 في جميع أساليب الفحص الرئيسية.</p>
+            </div>
+            <div class="standard-card reveal">
+                <div class="icon"><svg viewBox="0 0 64 64"><rect x="14" y="22" width="36" height="28" rx="3"/><path d="M24 22V16a8 8 0 0116 0v6"/><circle cx="32" cy="36" r="4"/><path d="M32 40v4"/></svg></div>
+                <h4>الفحص والطلاء</h4>
+                <p>مفتشو لحام ومعايي طلاء معتمدون بـ CSWIP و AWS و NACE للتطبيقات الحرجة.</p>
+            </div>
+            <div class="standard-card reveal">
+                <div class="icon"><svg viewBox="0 0 64 64"><rect x="12" y="10" width="40" height="44" rx="4"/><path d="M22 22h20"/><path d="M22 32h20"/><path d="M22 42h12"/><path d="M20 10V6"/><path d="M44 10V6"/></svg></div>
+                <h4>المعايير العالمية</h4>
+                <p>متوافقون مع المعايير الدولية بما في ذلك ASTM و ASME و ANSI و IEC و ISO عبر جميع التخصصات.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="quality-cta reveal">
+        <p>كل شهد مستقلة التحقق. <a href="policies.html#quality">عرض سياسة الجودة â†</a></p>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+    <div class="section-header reveal">
+        <div class="badge">أعمالنا</div>
+        <h2>معرض أعمالنا</h2>
+        <p>عرض مرئي لقدراتنا في الفحص وتميزنا في المشاريع.</p>
+    </div>
+    <div class="gallery-track-container">
+        <div class="gallery-track">
+            <div class="gallery-item"><img src="../images/gallery/gallery-001.jpg" alt="صورة المعرض 1"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-002.jpg" alt="صورة المعرض 2"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-003.jpg" alt="صورة المعرض 3"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-004.jpg" alt="صورة المعرض 4"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-005.jpg" alt="صورة المعرض 5"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-006.jpg" alt="صورة المعرض 6"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-007.jpg" alt="صورة المعرض 7"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-008.jpg" alt="صورة المعرض 8"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-009.jpg" alt="صورة المعرض 9"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-010.jpg" alt="صورة المعرض 10"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-011.jpg" alt="صورة المعرض 11"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-012.jpg" alt="صورة المعرض 12"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-013.jpg" alt="صورة المعرض 13"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-014.jpg" alt="صورة المعرض 14"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-015.jpg" alt="صورة المعرض 15"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-016.jpg" alt="صورة المعرض 16"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-017.jpg" alt="صورة المعرض 17"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-018.jpg" alt="صورة المعرض 18"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-019.jpg" alt="صورة المعرض 19"></div>
+            <!-- مكرر للحلقة المستمرة -->
+            <div class="gallery-item"><img src="../images/gallery/gallery-001.jpg" alt="صورة المعرض 1"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-002.jpg" alt="صورة المعرض 2"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-003.jpg" alt="صورة المعرض 3"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-004.jpg" alt="صورة المعرض 4"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-005.jpg" alt="صورة المعرض 5"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-006.jpg" alt="صورة المعرض 6"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-007.jpg" alt="صورة المعرض 7"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-008.jpg" alt="صورة المعرض 8"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-009.jpg" alt="صورة المعرض 9"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-010.jpg" alt="صورة المعرض 10"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-011.jpg" alt="صورة المعرض 11"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-012.jpg" alt="صورة المعرض 12"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-013.jpg" alt="صورة المعرض 13"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-014.jpg" alt="صورة المعرض 14"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-015.jpg" alt="صورة المعرض 15"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-016.jpg" alt="صورة المعرض 16"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-017.jpg" alt="صورة المعرض 17"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-018.jpg" alt="صورة المعرض 18"></div>
+            <div class="gallery-item"><img src="../images/gallery/gallery-019.jpg" alt="صورة المعرض 19"></div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="global" id="global">
+    <div class="section-header reveal">
+        <div class="badge">شهادات العملاء</div>
+        <h2>ماذا يقول عملاؤنا</h2>
+        <p>موثوقون من قبل أكبر المؤسسات العالمية في مجال موثوقية الفحص والنزاهة التقنية.</p>
+    </div>
+    <div class="testimonials-scroll">
+        <div class="testimonials-track">
+            <div class="testimonial-card">
+                <p>★★★★★ "فرق الفحص البحرية من AETERNA تتجاوز التوقعات باستمرار. اكتشافهم المبكر لشذوذ الطلاء أنقذنا الملايين في الإصلاحات المحتملة."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">K</div>
+                    <div>
+                        <h5>خالد المنصوري</h5>
+                        <span>مدير QC أول، ADNOC</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>★★★★★ "أدارت AETERNA الفحص الثالث الكامل عبر مشروع EPC لمدة 28 شهراً مع الحفاظ على الامتثال الصارم لأرامكو. تقاريرهم الرقمية ألغت تأخير الأعمال الورقية."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">A</div>
+                    <div>
+                        <h5>أحمد الحربي</h5>
+                        <span>مدير عام المشاريع، Saudi Aramco</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>★★★★★ "حافظنا على AETERNA كمورد مفضل لأكثر من خمس سنوات. ينشرون مفتشين معتمدين خلال 48 ساعة بجودة متسقة عبر المناطق الجغرافية."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">L</div>
+                    <div>
+                        <h5>لورا تومسون</h5>
+                        <span>قائد المشتريات العالمي، SHELL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>★★★★★ "العمق التقني لـ AETERNA ميزهم خلال توسعة حقل الشمال. أجروا أكثر من 3,000 فحص NDT بدون أي حوادث. خبرتهم في الموجات فوق الصوتية المتقدمة لا تضاهى."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">M</div>
+                    <div>
+                        <h5>د. محمد العلي</h5>
+                        <span>السلطة الفنية، QatarEnergy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>★★★★★ "كشف تدقيق AETERNA لبرامج الجودة للمقاول عن ثغرات حرجة في إجراءات اللحام وتتبع المواد. إنهم لا يفحصون فقط بل يحسنون الأنظمة."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">E</div>
+                    <div>
+                        <h5>إيلينا فوغت</h5>
+                        <span>مديرة الجودة، Siemens Energy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>★★★★★ "في مشاريع خطوط الأنابيب العابرة للدول، اندمج مفتشو AETERNA مع الفرق في التضاريس الصعبة. ساعدتنا فحوصات اللحام في الوقت الفعلي على تحقيق الموافقة التنظيمية."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">C</div>
+                    <div>
+                        <h5>كارلوس منديز</h5>
+                        <span>نائب الرئيس للعمليات، PEMEX</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>★★★★★ "خلال صيانة المصفاة، أدارت AETERNA أكثر من 1,200 خطة فحص في غضون ستة أسابيع. أكملنا قبل الموعد المحدد بدون أي حوادث."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">S</div>
+                    <div>
+                        <h5>سارة تشن</h5>
+                        <span>مديرة HSE، TechnipFMC</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>★★★★★ "تعاملت AETERNA مع فحص الموردين عبر 23 ورشة تصنيع في أربع دول بحكم ثابت. خفض تحديد العيوب المبكر نسبة إعادة العمل بنسبة 18%."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">R</div>
+                    <div>
+                        <h5>رافي باتيل</h5>
+                        <span>رئيس QA/QC، Larsen & Toubro</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>★★★★★ "AETERNA شريكنا الموثوق لفحص المعدات الدوارة وأوعية الضغط. مفتشوهم يجمعون بين المعرفة العميقة بـ ASME وAPI وISO مع الحكم الميداني السليم."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">J</div>
+                    <div>
+                        <h5>جيمس بارك</h5>
+                        <span>مدير المشاريع، SAMSUNG Engineering</span>
+                    </div>
+                </div>
+            </div>
+            <!-- مكرر للحلقة المستمرة -->
+            <div class="testimonial-card">
+                <p>★★★★★ "فرق الفحص البحرية من AETERNA تتجاوز التوقعات باستمرار. اكتشافهم المبكر لشذوذ الطلاء أنقذنا الملايين في الإصلاحات المحتملة."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">K</div>
+                    <div>
+                        <h5>خالد المنصوري</h5>
+                        <span>مدير QC أول، ADNOC</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>★★★★★ "أدارت AETERNA الفحص الثالث الكامل عبر مشروع EPC لمدة 28 شهراً مع الحفاظ على الامتثال الصارم لأرامكو. تقاريرهم الرقمية ألغت تأخير الأعمال الورقية."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">A</div>
+                    <div>
+                        <h5>أحمد الحربي</h5>
+                        <span>مدير عام المشاريع، Saudi Aramco</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>★★★★★ "حافظنا على AETERNA كمورد مفضل لأكثر من خمس سنوات. ينشرون مفتشين معتمدين خلال 48 ساعة بجودة متسقة عبر المناطق الجغرافية."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">L</div>
+                    <div>
+                        <h5>لورا تومسون</h5>
+                        <span>قائد المشتريات العالمي، SHELL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>★★★★★ "العمق التقني لـ AETERNA ميزهم خلال توسعة حقل الشمال. أجروا أكثر من 3,000 فحص NDT بدون أي حوادث. خبرتهم في الموجات فوق الصوتية المتقدمة لا تضاهى."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">M</div>
+                    <div>
+                        <h5>د. محمد العلي</h5>
+                        <span>السلطة الفنية، QatarEnergy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>★★★★★ "كشف تدقيق AETERNA لبرامج الجودة للمقاول عن ثغرات حرجة في إجراءات اللحام وتتبع المواد. إنهم لا يفحصون فقط بل يحسنون الأنظمة."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">E</div>
+                    <div>
+                        <h5>إيلينا فوغت</h5>
+                        <span>مديرة الجودة، Siemens Energy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>★★★★★ "في مشاريع خطوط الأنابيب العابرة للدول، اندمج مفتشو AETERNA مع الفرق في التضاريس الصعبة. ساعدتنا فحوصات اللحام في الوقت الفعلي على تحقيق الموافقة التنظيمية."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">C</div>
+                    <div>
+                        <h5>كارلوس منديز</h5>
+                        <span>نائب الرئيس للعمليات، PEMEX</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>★★★★★ "خلال صيانة المصفاة، أدارت AETERNA أكثر من 1,200 خطة فحص في غضون ستة أسابيع. أكملنا قبل الموعد المحدد بدون أي حوادث."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">S</div>
+                    <div>
+                        <h5>سارة تشن</h5>
+                        <span>مديرة HSE، TechnipFMC</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>★★★★★ "تعاملت AETERNA مع فحص الموردين عبر 23 ورشة تصنيع في أربع دول بحكم ثابت. خفض تحديد العيوب المبكر نسبة إعادة العمل بنسبة 18%."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">R</div>
+                    <div>
+                        <h5>رافي باتيل</h5>
+                        <span>رئيس QA/QC، Larsen & Toubro</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>★★★★★ "AETERNA شريكنا الموثوق لفحص المعدات الدوارة وأوعية الضغط. مفتشوهم يجمعون بين المعرفة العميقة بـ ASME وAPI وISO مع الحكم الميداني السليم."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">J</div>
+                    <div>
+                        <h5>جيمس بارك</h5>
+                        <span>مدير المشاريع، SAMSUNG Engineering</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="cta-content reveal">
+        <h2>مستعد لضمان الجودة والامتثال؟</h2>
+        <p>تعاون مع AETERNA للحصول على خدمات فحص مستقلة وصارمة تقنياً تحمي أصولك وفريقك وسمعتك.</p>
+        <a href="contact.html" class="btn-primary">ابدأ مشروعك</a>
+    </div>
+</section>
+
+<!-- BACK TO TOP -->
+<a href="#home" class="back-to-top" id="backToTop" aria-label="العودة إلى الأعلى">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M18 15l-6-6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="../images/logo.svg" alt="AETERNA Inspection & Technical Services Logo">
+            <div class="footer-brand-text">
+                <p>AETERNA — وضع المعيار في فحص النفط والغاز والنزاهة والتميز التقني.</p>
+                <div class="footer-contact">
+                    <a href="mailto:info@aeterna-inspection.com">info@aeterna-inspection.com</a>
+                    <a href="contact.html">الشارقة، الإمارات العربية المتحدة</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h5>الخدمات</h5>
+            <ul>
+                <li><a href="services.html">الفحص الثالث</a></li>
+                <li><a href="services.html">فحص اللحام</a></li>
+                <li><a href="services.html">خدمات NDT</a></li>
+                <li><a href="services.html">مراقبة جودة البناء</a></li>
+                <li><a href="services.html">سلامة خطوط الأنابيب</a></li>
+                <li><a href="services.html">الفحص البحري</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>القطاعات</h5>
+            <ul>
+                <li><a href="services.html">النفط والغاز</a></li>
+                <li><a href="services.html">البناء</a></li>
+                <li><a href="services.html">البتروكيماويات</a></li>
+                <li><a href="services.html">توليد الطاقة</a></li>
+                <li><a href="services.html">البحري والبحرية</a></li>
+                <li><a href="services.html">البنية التحتية</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>الشركة</h5>
+            <ul>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="#quality">الجودة والشهادات</a></li>
+                <li><a href="#projects">المشاريع</a></li>
+                <li><a href="../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">الملف التعريفي</a></li>
+                <li><a href="policies.html">السياسات</a></li>
+                <li><a href="careers.html">الوظائف</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 AETERNA Inspection & Technical Services LLC. جميع الحقوق محفوظة.</p>
+        <div class="footer-policies">
+            <a href="policies.html#terms">شروط الاستخدام</a>
+            <a href="policies.html#privacy">الخصوصية</a>
+            <a href="policies.html#quality">الجودة</a>
+            <a href="policies.html#hse">السلامة والبيئة</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // PRELOADER
+    window.addEventListener('load', function() {
+        var preloader = document.getElementById('preloader');
+        if (preloader) {
+            setTimeout(function() {
+                preloader.classList.add('hidden');
+            }, 800);
+        }
+    });
+
+    // REVEAL ON SCROLL
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // TEXT REVEAL ON SCROLL
+    (function() {
+        var textReveals = document.querySelectorAll('.text-reveal');
+        if (!textReveals.length) return;
+        textReveals.forEach(function(el) {
+            var words = el.textContent.trim().split(' ');
+            el.innerHTML = '';
+            words.forEach(function(word, i) {
+                var span = document.createElement('span');
+                span.className = 'word';
+                span.textContent = word;
+                span.style.transitionDelay = (i * 0.04) + 's';
+                el.appendChild(span);
+                if (i < words.length - 1) {
+                    el.appendChild(document.createTextNode(' '));
+                }
+            });
+        });
+        var textObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.2 });
+        textReveals.forEach(function(el) { textObserver.observe(el); });
+    })();
+
+    // SCROLL PROGRESS
+    var progressBar = document.getElementById('scrollProgress');
+    if (progressBar) {
+        window.addEventListener('scroll', function() {
+            var scrollTop = window.scrollY;
+            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var progress = (scrollTop / docHeight) * 100;
+            progressBar.style.width = progress + '%';
+        });
+    }
+
+    // HERO PARALLAX (video)
+    var heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        window.addEventListener('scroll', function() {
+            var scrollTop = window.scrollY;
+            if (scrollTop <= window.innerHeight) {
+                var offset = scrollTop * 0.35;
+                heroVideo.style.transform = 'translateY(' + offset + 'px) scale(1.1)';
+            }
+        });
+    }
+
+    // BACK TO TOP
+    var backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+    }
+
+    // ANIMATED COUNTERS
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = +counter.getAttribute('data-target');
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current) + '+';
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target + '+';
+                    }
+                };
+
+                updateCounter();
+                counterObserver.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => counterObserver.observe(counter));
+
+    // TYPING EFFECT
+    const typingElement = document.getElementById('typingText');
+    const phrases = ['صفر فشل', 'صفر أعذار', 'صفر مساومة'];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+
+    function typeEffect() {
+        const currentPhrase = phrases[phraseIndex];
+
+        if (isDeleting) {
+            typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+            typingSpeed = 50;
+        } else {
+            typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+            typingSpeed = 100;
+        }
+
+        if (!isDeleting && charIndex === currentPhrase.length) {
+            typingSpeed = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            typingSpeed = 500;
+        }
+
+        setTimeout(typeEffect, typingSpeed);
+    }
+
+    typeEffect();
+
+    // 3D TILT CARDS
+    (function() {
+        if (window.innerWidth < 1024 || !window.matchMedia('(pointer: fine)').matches) return;
+        var tiles = document.querySelectorAll('.service-tile');
+        tiles.forEach(function(tile) {
+            tile.addEventListener('mousemove', function(e) {
+                var rect = tile.getBoundingClientRect();
+                var x = e.clientX - rect.left;
+                var y = e.clientY - rect.top;
+                var centerX = rect.width / 2;
+                var centerY = rect.height / 2;
+                var rotateX = ((y - centerY) / centerY) * -8;
+                var rotateY = ((x - centerX) / centerX) * 8;
+                tile.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) scale3d(1.02,1.02,1.02)';
+            });
+            tile.addEventListener('mouseleave', function() {
+                tile.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)';
+            });
+        });
+    })();
+</script>
+
+<script src="../js/script.js"></script>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/971555727153" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" id="whatsappBtn" aria-label="Chat on WhatsApp">
+    <img src="../images/whatsapp.svg" alt="WhatsApp" width="60" height="60">
+</a>
+<div class="whatsapp-typing" id="whatsappTyping">
+    <span class="whatsapp-typing-text" id="whatsappTypingText"></span><span class="whatsapp-typing-cursor">|</span>
+</div>
+
+<style>
+.whatsapp-btn {
+    position: fixed;
+    bottom: calc(30px + 5%);
+    right: calc(30px + 5%);
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    background: #25D366;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    animation: whatsappPulse 2s infinite;
+}
+@keyframes whatsappPulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    animation: none;
+}
+.whatsapp-btn img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+.whatsapp-typing {
+    position: fixed;
+    bottom: calc(99px + 5%);
+    right: calc(30px + 5% + 29px);
+    z-index: 998;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(50%) translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transform-origin: bottom center;
+}
+.whatsapp-typing::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(0, 0, 0, 0.65);
+}
+.whatsapp-typing.visible {
+    opacity: 1;
+    transform: translateX(50%) translateY(0);
+}
+.whatsapp-typing-text {
+    color: #ffffff;
+}
+.whatsapp-typing-cursor {
+    color: #25D366;
+    animation: whatsappBlink 0.7s infinite;
+}
+@keyframes whatsappBlink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+@media (max-width: 1024px) {
+    .whatsapp-btn { bottom: calc(25px + 5%); right: calc(25px + 5%); width: 55px; height: 55px; }
+    .whatsapp-btn img { width: 35px; height: 35px; }
+    .whatsapp-typing { bottom: calc(90px + 5%); right: calc(25px + 5% + 27px); font-size: 13px; padding: 10px 18px; transform: translateX(50%) translateY(10px); }
+    .whatsapp-typing.visible { transform: translateX(50%) translateY(0); }
+}
+@media (max-width: 768px) {
+    .whatsapp-btn { bottom: calc(20px + 15%); right: calc(20px + 5%); width: 50px; height: 50px; }
+    .whatsapp-btn img { width: 27px; height: 27px; }
+    .whatsapp-typing { bottom: calc(80px + 15%); right: calc(20px + 5% + 25px); font-size: 12px; padding: 10px 16px; transform: translateX(50%) translateY(10px); }
+    .whatsapp-typing.visible { transform: translateX(50%) translateY(0); }
+}
+</style>
+
+<script>
+(function() {
+    var typingEl = document.getElementById('whatsappTypingText');
+    var bubble = document.getElementById('whatsappTyping');
+    if (!typingEl || !bubble) return;
+
+    var phrases = ['مساعدة سريعة', 'تحدث معنا', 'نحن هنا لمساعدتك'];
+    var phraseIdx = 0;
+    var charIdx = 0;
+    var isDeleting = false;
+    var typingSpeed = 100;
+
+    setTimeout(function() {
+        bubble.classList.add('visible');
+        typeWA();
+    }, 2000);
+
+    function typeWA() {
+        var current = phrases[phraseIdx];
+        if (isDeleting) {
+            typingEl.textContent = current.substring(0, charIdx - 1);
+            charIdx--;
+            typingSpeed = 50;
+        } else {
+            typingEl.textContent = current.substring(0, charIdx + 1);
+            charIdx++;
+            typingSpeed = 100;
+        }
+        if (!isDeleting && charIdx === current.length) {
+            typingSpeed = 2500;
+            isDeleting = true;
+        } else if (isDeleting && charIdx === 0) {
+            isDeleting = false;
+            phraseIdx = (phraseIdx + 1) % phrases.length;
+            typingSpeed = 500;
+        }
+        setTimeout(typeWA, typingSpeed);
+    }
+})();
+</script>
+
+</body>
+</html>

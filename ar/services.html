@@ -1,0 +1,1889 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدماتنا | فحص وتحقق وQA/QC | AETERNA</title>
+    <meta name="description" content="اكتشف خدمات الفحص الشاملة من AETERNA: التحقق الثالث, FHT, فحص اللحام, مراقبة جودة البناء, فحص التآكل والطلاء, التعجيل, تقييم الموردين, وتوريد مفتشي API وCOMPEX."
+    <link rel="canonical" href="https://aeterna-inspection.com/ar/services.html">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #0A1628;
+            --surface: #0C1020;
+            --surface-2: #141A2E;
+            --navy: #1B2A4A;
+            --blue: #4A90D9;
+            --blue-light: #6BA3E8;
+            --gold: #C8A96E;
+            --gold-light: #E0C98A;
+            --gold-dark: #A8894E;
+            --text: #F8FAFC;
+            --text-muted: #8B95A8;
+            --text-dim: #5A6478;
+            --glass: rgba(255,255,255,0.03);
+            --glass-border: rgba(255,255,255,0.06);
+            --glass-hover: rgba(255,255,255,0.05);
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Cairo', sans-serif; color: var(--text); line-height: 1.6;
+            overflow: hidden; background: var(--bg); height: 100vh;
+            direction: rtl; text-align: right;
+        }
+
+        /* DYNAMIC BACKGROUND */
+        .dynamic-bg {
+            position: fixed; inset: 0; z-index: 0; transition: all 1.2s cubic-bezier(0.4,0,0.2,1);
+        }
+        .dynamic-bg .gradient-orb {
+            position: absolute; border-radius: 50%; filter: blur(120px);
+            transition: all 1.5s cubic-bezier(0.4,0,0.2,1);
+        }
+        .dynamic-bg .orb-1 {
+            width: 600px; height: 600px; top: -200px; left: -200px;
+            background: radial-gradient(circle, rgba(200,169,110,0.08) 0%, transparent 70%);
+        }
+        .dynamic-bg .orb-2 {
+            width: 500px; height: 500px; bottom: -150px; right: -100px;
+            background: radial-gradient(circle, rgba(74,144,217,0.06) 0%, transparent 70%);
+        }
+        .dynamic-bg .orb-3 {
+            width: 400px; height: 400px; top: 50%; left: 50%; transform: translate(-50%,-50%);
+            background: radial-gradient(circle, rgba(200,169,110,0.04) 0%, transparent 70%);
+        }
+        .dynamic-bg .mesh-line {
+            position: absolute; background: linear-gradient(90deg, transparent, rgba(200,169,110,0.03), transparent);
+            height: 1px; width: 100%; animation: meshSweep 20s linear infinite;
+        }
+        .dynamic-bg .mesh-line:nth-child(4) { top: 30%; animation-delay: 0s; }
+        .dynamic-bg .mesh-line:nth-child(5) { top: 60%; animation-delay: -7s; }
+        .dynamic-bg .mesh-line:nth-child(6) { top: 80%; animation-delay: -14s; }
+        @keyframes meshSweep { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+        .dynamic-bg::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(10,22,40,0.3) 0%, rgba(10,22,40,0.8) 100%);
+            pointer-events: none;
+        }
+
+        /* NOISE TEXTURE */
+        .noise {
+            position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.015;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-repeat: repeat; background-size: 256px;
+        }
+
+        /* SPLIT LAYOUT */
+        .split-layout {
+            position: relative; z-index: 2; display: flex; height: 100vh; padding-top: 100px;
+        }
+
+        /* LEFT PANEL — SERVICE DIRECTORY */
+        .left-panel {
+            flex: 0 0 520px; min-width: 520px; height: 100%; position: sticky; top: 100px;
+            display: flex; flex-direction: column; padding: 24px 76px 24px 12px;
+            border-left: 1px solid rgba(255,255,255,0.03); margin-top: 0px;
+        }
+        .left-header {
+            margin-bottom: 16px; padding-bottom: 14px; padding-right: 20px;
+        }
+        .left-header .eyebrow {
+            font-size: 10px; font-weight: 700; color: var(--gold); text-transform: uppercase;
+            letter-spacing: 3px; margin-bottom: 8px;
+        }
+        .left-header h2 {
+            font-family: 'Cairo', sans-serif; font-size: 20px; font-weight: 600;
+            color: var(--text); line-height: 1.3;
+        }
+        .service-list {
+            flex: 1; overflow-y: auto; overflow-x: hidden; display: flex; flex-direction: column; gap: 4px;
+            scrollbar-width: none;
+        }
+        .service-list::-webkit-scrollbar { display: none; }
+        .service-item {
+            display: flex; align-items: center; gap: 10px; padding: 8px 20px 8px 12px;
+            border-radius: 12px; cursor: pointer; transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+            position: relative; overflow: hidden; border: 1px solid transparent;
+        }
+        .service-item::before {
+            content: ''; position: absolute; inset: 0; border-radius: 12px;
+            background: linear-gradient(135deg, rgba(200,169,110,0.06) 0%, transparent 100%);
+            opacity: 0; transition: opacity 0.4s;
+        }
+        .service-item:hover { transform: translateX(-4px); border-color: rgba(255,255,255,0.04); }
+        .service-item:hover::before { opacity: 1; }
+        .service-item.active {
+            background: rgba(200,169,110,0.04); border-color: rgba(200,169,110,0.12);
+            transform: translateX(-6px);
+        }
+        .service-item.active::before { opacity: 1; }
+        .service-item .item-icon {
+            width: 30px; height: 30px; border-radius: 8px; display: flex;
+            align-items: center; justify-content: center; transition: all 0.3s;
+            background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04);
+        }
+        .service-item.active .item-icon {
+            background: rgba(200,169,110,0.08); border-color: rgba(200,169,110,0.15);
+        }
+        .service-item .item-icon svg { width: 16px; height: 16px; opacity: 0.5; transition: opacity 0.3s; }
+        .service-item.active .item-icon svg { opacity: 1; }
+        .service-item .item-icon { display: none; }
+        .service-item .item-text {
+            flex: 1; min-width: 0;
+        }
+        .service-item .item-title {
+            font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.4);
+            line-height: 1.4; transition: color 0.3s; white-space: nowrap;
+        }
+        .service-item.active .item-title { color: var(--text); }
+        .service-item:hover .item-title { color: rgba(255,255,255,0.8); }
+        .service-item .item-arrow {
+            opacity: 0; transform: translateX(8px); transition: all 0.3s;
+            color: var(--gold); font-size: 14px;
+        }
+        .service-item.active .item-arrow { opacity: 1; transform: translateX(0); }
+
+        /* RIGHT PANEL — IMMERSIVE CONTENT */
+        .right-panel {
+            flex: 1; min-width: 0; height: 100%; overflow-y: auto; padding: 0;
+            scrollbar-width: thin; scrollbar-color: rgba(200,169,110,0.15) transparent;
+        }
+        .right-panel::-webkit-scrollbar { width: 3px; }
+        .right-panel::-webkit-scrollbar-thumb { background: rgba(200,169,110,0.15); border-radius: 3px; }
+
+        /* CONTENT WRAPPER */
+        .content-wrapper {
+            min-height: 100%; padding: 48px 60px 80px;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .content-wrapper.transitioning {
+            opacity: 0; transform: translateY(12px);
+        }
+
+        /* SERVICE HERO */
+        .service-hero {
+            position: relative; padding: 80px 0 64px; text-align: center;
+            overflow: hidden; margin-bottom: 48px; min-height: 520px;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        }
+        .service-hero-bg {
+            position: absolute; inset: 0;
+            background-size: cover; background-position: center; background-repeat: no-repeat;
+            opacity: 0; transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1);
+            pointer-events: none; z-index: 0;
+        }
+        .service-hero-bg.active { opacity: 1; }
+        .service-hero-bg::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(12,16,32,0.55) 0%, rgba(12,16,32,0.85) 100%);
+        }
+        .service-hero > :not(.service-hero-bg) { position: relative; z-index: 1; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px;
+            background: rgba(200,169,110,0.06); border: 1px solid rgba(200,169,110,0.12);
+            border-radius: 100px; margin-bottom: 28px;
+        }
+        .hero-badge .badge-dot {
+            width: 6px; height: 6px; border-radius: 50%; background: var(--gold);
+            animation: badgePulse 2s ease-in-out infinite;
+        }
+        @keyframes badgePulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .hero-badge span {
+            font-size: 10px; font-weight: 700; color: var(--gold); text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .hero-icon-container {
+            width: 160px; height: 160px; margin: 0 auto 36px; position: relative;
+        }
+        .hero-icon-ring {
+            position: absolute; inset: 0; border-radius: 50%;
+            border: 1px solid rgba(200,169,110,0.08);
+            animation: ringRotate 20s linear infinite;
+        }
+        .hero-icon-ring::before {
+            content: ''; position: absolute; top: -3px; left: 50%; width: 6px; height: 6px;
+            border-radius: 50%; background: var(--gold); transform: translateX(-50%);
+        }
+        @keyframes ringRotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .hero-icon-ring-2 {
+            position: absolute; inset: 12px; border-radius: 50%;
+            border: 1px dashed rgba(200,169,110,0.05);
+            animation: ringRotate 15s linear infinite reverse;
+        }
+        .hero-icon-glow {
+            position: absolute; inset: -40px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(200,169,110,0.08) 0%, transparent 70%);
+            animation: glowPulse 4s ease-in-out infinite;
+        }
+        @keyframes glowPulse { 0%,100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.1); opacity: 1; } }
+        .hero-icon-main {
+            position: absolute; inset: 24px; display: flex; align-items: center; justify-content: center;
+            background: rgba(200,169,110,0.04); border: 1px solid rgba(200,169,110,0.1);
+            border-radius: 50%; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        }
+        .hero-icon-main svg { width: 48px; height: 48px; }
+        .service-hero h1 {
+            font-family: 'Cairo', sans-serif; font-size: 40px; font-weight: 800;
+            color: var(--text); line-height: 1.15; margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--text) 0%, rgba(255,255,255,0.7) 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .service-hero .hero-desc {
+            font-size: 18px; color: var(--text-muted); line-height: 1.8;
+            max-width: 640px; margin: 0 auto;
+        }
+
+        /* GLASS SECTION */
+        .glass-section {
+            background: var(--glass); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+            border: 1px solid var(--glass-border); border-radius: 20px; padding: 40px;
+            margin-bottom: 24px; position: relative; overflow: hidden;
+            transition: border-color 0.4s;
+        }
+        .glass-section:hover { border-color: rgba(255,255,255,0.08); }
+        .glass-section::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200,169,110,0.15), transparent);
+        }
+        .section-header {
+            display: flex; align-items: center; gap: 14px; margin-bottom: 28px;
+        }
+        .section-icon {
+            width: 40px; height: 40px; border-radius: 10px; display: flex;
+            align-items: center; justify-content: center;
+            background: rgba(200,169,110,0.06); border: 1px solid rgba(200,169,110,0.1);
+        }
+        .section-icon svg { width: 18px; height: 18px; }
+        .section-header h3 {
+            font-size: 16px; font-weight: 700; color: var(--text); letter-spacing: -0.3px;
+        }
+        .section-header .section-tag {
+            margin-right: auto; font-size: 10px; font-weight: 700; color: var(--gold);
+            text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;
+        }
+
+        /* CAPABILITIES GRID */
+        .capabilities-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+        }
+        .capability-card {
+            padding: 28px; border-radius: 14px; position: relative; overflow: hidden;
+            background: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.04);
+            transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+        }
+        .capability-card::after {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+            opacity: 0; transition: opacity 0.4s;
+        }
+        .capability-card:hover {
+            border-color: rgba(200,169,110,0.15); transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+        }
+        .capability-card:hover::after { opacity: 1; }
+        .capability-card .cap-num {
+            font-size: 32px; font-weight: 900; color: rgba(200,169,110,0.08);
+            font-variant-numeric: tabular-nums; margin-bottom: 12px; line-height: 1;
+        }
+        .capability-card h4 {
+            font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px;
+        }
+        .capability-card p {
+            font-size: 15px; color: var(--text-muted); line-height: 1.7;
+        }
+        .capability-card.conv { border-right: 2px solid rgba(74,144,217,0.3); }
+        .capability-card.adv { border-right: 2px solid rgba(200,169,110,0.3); }
+        .cap-cat {
+            display: inline-block; font-size: 9px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1.5px; padding: 3px 8px; border-radius: 4px; margin-bottom: 10px;
+        }
+        .conv .cap-cat { background: rgba(74,144,217,0.12); color: #6BA3E0; }
+        .adv .cap-cat { background: rgba(200,169,110,0.12); color: var(--gold); }
+
+        /* INDUSTRY STRIP */
+        .industry-strip {
+            display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px;
+            scrollbar-width: none;
+        }
+        .industry-strip::-webkit-scrollbar { display: none; }
+        .industry-pill {
+            display: flex; align-items: center; gap: 10px; padding: 14px 24px;
+            background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 100px; white-space: nowrap; flex-shrink: 0;
+            transition: all 0.3s; cursor: default;
+        }
+        .industry-pill:hover {
+            border-color: rgba(200,169,110,0.2); background: rgba(200,169,110,0.04);
+        }
+        .industry-pill svg { width: 16px; height: 16px; opacity: 0.6; }
+        .industry-pill span { font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.7); }
+
+        /* METRICS ROW */
+        .metrics-row {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+        }
+        .metric-card {
+            text-align: center; padding: 32px 16px; border-radius: 14px;
+            background: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.04);
+            position: relative; overflow: hidden;
+        }
+        .metric-card::before {
+            content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0.3;
+        }
+        .metric-value {
+            font-size: 40px; font-weight: 900; color: var(--gold); line-height: 1;
+            font-variant-numeric: tabular-nums; margin-bottom: 8px;
+            background: linear-gradient(180deg, var(--gold-light), var(--gold-dark));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .metric-label {
+            font-size: 13px; font-weight: 600; color: var(--text-dim);
+            text-transform: uppercase; letter-spacing: 1.5px;
+        }
+
+        /* OUTCOMES */
+        .outcomes-list {
+            display: flex; flex-direction: column; gap: 12px;
+        }
+        .outcome-item {
+            display: flex; align-items: flex-start; gap: 16px; padding: 20px 24px;
+            border-radius: 12px; background: rgba(255,255,255,0.015);
+            border: 1px solid rgba(255,255,255,0.03); transition: all 0.3s;
+        }
+        .outcome-item:hover {
+            border-color: rgba(200,169,110,0.1); transform: translateX(-4px);
+        }
+        .outcome-check {
+            width: 28px; height: 28px; border-radius: 8px; display: flex;
+            align-items: center; justify-content: center; flex-shrink: 0;
+            background: rgba(200,169,110,0.08); border: 1px solid rgba(200,169,110,0.15);
+        }
+        .outcome-check svg { width: 14px; height: 14px; }
+        .outcome-text h4 {
+            font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 4px;
+        }
+        .outcome-text p {
+            font-size: 15px; color: var(--text-muted); line-height: 1.6;
+        }
+
+        /* TESTIMONIAL */
+        .testimonial-card {
+            padding: 40px; border-radius: 16px; position: relative;
+            background: linear-gradient(135deg, rgba(200,169,110,0.04) 0%, rgba(74,144,217,0.02) 100%);
+            border: 1px solid rgba(200,169,110,0.08);
+        }
+        .testimonial-card .quote-mark {
+            font-family: 'Cairo', sans-serif; font-size: 72px; font-weight: 900; color: rgba(200,169,110,0.12);
+            line-height: 1; margin-bottom: -20px;
+        }
+        .testimonial-card blockquote {
+            font-size: 18px; font-style: italic; color: rgba(255,255,255,0.8); line-height: 1.8;
+            margin-bottom: 24px;
+        }
+        .testimonial-author {
+            display: flex; align-items: center; gap: 16px;
+        }
+        .testimonial-avatar {
+            width: 48px; height: 48px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center;
+            background: rgba(200,169,110,0.08); border: 1px solid rgba(200,169,110,0.15);
+            font-size: 18px; font-weight: 700; color: var(--gold);
+        }
+        .testimonial-info .name { font-size: 16px; font-weight: 700; color: var(--text); }
+        .testimonial-info .role { font-size: 14px; color: var(--text-muted); }
+        .testimonial-stars {
+            margin-right: auto; display: flex; gap: 2px;
+        }
+        .testimonial-stars svg { width: 14px; height: 14px; color: var(--gold); }
+
+        /* PARTNERS */
+        .partners-row {
+            display: flex; align-items: center; justify-content: center; gap: 40px;
+            padding: 20px 0;
+        }
+        .partner-logo {
+            font-size: 13px; font-weight: 700; color: var(--text-dim);
+            letter-spacing: 2px; text-transform: uppercase; opacity: 0.4;
+            transition: opacity 0.3s;
+        }
+        .partner-logo:hover { opacity: 0.8; }
+
+        /* PROJECT PORTFOLIO */
+        .portfolio-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+        }
+        .portfolio-card {
+            padding: 28px; border-radius: 14px; position: relative; overflow: hidden;
+            background: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.04);
+            transition: all 0.4s;
+        }
+        .portfolio-card:hover {
+            border-color: rgba(200,169,110,0.12); transform: translateY(-2px);
+        }
+        .portfolio-card .port-tag {
+            font-size: 10px; font-weight: 700; color: var(--gold); text-transform: uppercase;
+            letter-spacing: 1.5px; margin-bottom: 12px;
+        }
+        .portfolio-card h4 {
+            font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px;
+        }
+        .portfolio-card p {
+            font-size: 15px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;
+        }
+        .portfolio-card .port-metric {
+            display: inline-block; padding: 6px 14px; border-radius: 6px;
+            background: rgba(200,169,110,0.06); border: 1px solid rgba(200,169,110,0.1);
+            font-size: 14px; font-weight: 700; color: var(--gold);
+        }
+
+        /* STANDARDS ROW */
+        .standards-grid {
+            display: flex; flex-wrap: wrap; gap: 10px;
+        }
+        .standard-chip {
+            padding: 10px 20px; border-radius: 8px;
+            background: rgba(74,144,217,0.05); border: 1px solid rgba(74,144,217,0.12);
+            font-size: 14px; font-weight: 600; color: var(--blue-light);
+            letter-spacing: 0.3px; transition: all 0.3s;
+        }
+        .standard-chip:hover {
+            background: rgba(74,144,217,0.08); border-color: rgba(74,144,217,0.2);
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            text-align: center; padding: 60px 0 0;
+        }
+        .cta-section h3 {
+            font-family: 'Cairo', sans-serif; font-size: 25px; font-weight: 800;
+            color: var(--text); margin-bottom: 12px;
+        }
+        .cta-section p {
+            font-size: 14px; color: var(--text-muted); margin-bottom: 32px;
+        }
+        .cta-buttons { display: flex; gap: 16px; justify-content: center; }
+        .cta-btn {
+            display: inline-flex; align-items: center; gap: 10px; padding: 16px 36px;
+            text-decoration: none; font-weight: 700; font-size: 13px; border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.4,0,0.2,1); text-transform: uppercase;
+            letter-spacing: 1px; border: none; cursor: pointer;
+        }
+        .cta-btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--bg); box-shadow: 0 4px 24px rgba(200,169,110,0.2);
+        }
+        .cta-btn-primary:hover {
+            transform: translateY(-3px); box-shadow: 0 8px 40px rgba(200,169,110,0.3);
+        }
+        .cta-btn-secondary {
+            background: transparent; color: var(--text);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .cta-btn-secondary:hover {
+            border-color: rgba(200,169,110,0.3); background: rgba(200,169,110,0.04);
+        }
+        .cta-btn .arrow { transition: transform 0.3s; }
+        .cta-btn:hover .arrow { transform: translateX(-4px); }
+
+        /* FOOTER */
+        .footer {
+            padding: 30px 60px 30px;
+            background: var(--navy);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+        }
+
+        .footer-brand { display: flex; align-items: flex-start; gap: 30px; }
+        .footer-brand img { height: 235px; margin-bottom: 16px; }
+        .footer-brand-text { flex: 1; }
+        .footer-brand-text p { font-size: 14px; color: rgba(255, 255, 255, 0.5); line-height: 1.8; word-spacing: normal; }
+        .footer-contact { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+        .footer-contact a { font-size: 13px; color: rgba(255, 255, 255, 0.5); text-decoration: none; transition: color 0.3s; word-spacing: normal; }
+        .footer-contact a:hover { color: var(--gold); }
+
+        .footer-col h5 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+            word-spacing: normal;
+        }
+
+        .footer-col ul li a:hover { color: var(--gold); }
+
+        .footer-divider {
+            max-width: 1200px; margin: 0 auto 30px; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200, 169, 110, 0.3), transparent);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.35);
+            word-spacing: normal;
+        }
+
+        .footer-policies { display: flex; gap: 16px; flex-wrap: wrap; }
+        .footer-policies a { font-size: 12px; color: rgba(255, 255, 255, 0.35); text-decoration: none; transition: color 0.3s; word-spacing: normal; }
+        .footer-policies a:hover { color: var(--gold); }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* NATIVE MOBILE DROPDOWN NAV (RTL Adaptations) */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 100px;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(12, 16, 32, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 12px 16px;
+        }
+        .service-dropdown-container {
+            position: relative;
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        .service-dropdown-trigger {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 14px 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            color: var(--text);
+            font-family: 'Cairo', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: right;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .service-dropdown-trigger:active, .service-dropdown-trigger.open {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(200, 169, 110, 0.3);
+        }
+        .service-dropdown-trigger .arrow-icon {
+            width: 16px;
+            height: 16px;
+            stroke: var(--gold);
+            transition: transform 0.3s ease;
+        }
+        .service-dropdown-trigger.open .arrow-icon {
+            transform: rotate(180deg);
+        }
+        .service-dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            right: 0;
+            background: rgba(12, 16, 32, 0.98);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 8px;
+            z-index: 110;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(255, 255, 255, 0.05);
+            max-height: 380px;
+            overflow-y: auto;
+            transform: translateY(-10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.25s;
+            scrollbar-width: thin;
+        }
+        .service-dropdown-menu.show {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+        .service-dropdown-item {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 12px 16px;
+            background: transparent;
+            border: none;
+            border-radius: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            font-family: 'Cairo', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            text-align: right;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            gap: 12px;
+        }
+        .service-dropdown-item:hover {
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text);
+        }
+        .service-dropdown-item.active {
+            background: rgba(200, 169, 110, 0.08);
+            border: 1px solid rgba(200, 169, 110, 0.15);
+            color: var(--gold);
+            font-weight: 600;
+        }
+        .service-dropdown-item-num {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--text-dim);
+            font-variant-numeric: tabular-nums;
+        }
+        .service-dropdown-item.active .service-dropdown-item-num {
+            color: var(--gold-light);
+        }
+
+        /* FLOATING PARTICLES */
+        .floating-particles { position: fixed; inset: 0; z-index: 1; pointer-events: none; }
+        .fp-dot {
+            position: absolute; width: 2px; height: 2px; border-radius: 50%;
+            background: rgba(200,169,110,0.15); animation: fpFloat linear infinite;
+        }
+        @keyframes fpFloat {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) scale(1); opacity: 0; }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1200px) {
+            .left-panel { flex: 0 0 386px; min-width: 386px; }
+            .content-wrapper { padding: 36px 40px 60px; }
+        }
+        /* Responsive certifications */
+        @media (max-width: 1024px) {
+            .certifications-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        }
+        @media (max-width: 768px) {
+            .certifications-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+            .cert-card { padding: 12px 10px; }
+            .cert-card .cert-icon { width: 36px; height: 36px; }
+            .cert-card .cert-icon svg { width: 18px; height: 18px; }
+            .cert-card h4 { font-size: 11px; margin-bottom: 4px; }
+            .cert-card p { font-size: 10px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+            .cert-card .cert-badge { font-size: 9px; padding: 2px 6px; margin-top: 8px; }
+        }
+        @media (max-width: 480px) {
+            .certifications-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+            .cert-card { padding: 10px 8px; }
+            .cert-card .cert-icon { width: 32px; height: 32px; }
+            .cert-card .cert-icon svg { width: 16px; height: 16px; }
+            .cert-card h4 { font-size: 10px; margin-bottom: 3px; }
+            .cert-card p { font-size: 9px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+            .cert-card .cert-badge { font-size: 8px; padding: 2px 5px; margin-top: 6px; }
+        }
+        @media (max-width: 1024px) {
+            .left-panel { display: none !important; }
+            .mobile-nav { display: block; }
+            .split-layout { flex-direction: column; padding-top: 150px; }
+            .right-panel { height: calc(100vh - 150px); }
+            .content-wrapper { padding: 32px 28px 60px; }
+            .service-hero h1 { font-size: 29px; }
+            .capabilities-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .metrics-row { grid-template-columns: 1fr 1fr; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .glass-section { padding: 28px; }
+        }
+        @media (max-width: 768px) {
+            .nav-logo img { height: 60px; }
+            .nav-links {
+                display: none; position: fixed; top: 0; left: 0;
+                width: 80%; max-width: 320px; height: 100vh; z-index: 1100;
+                background: linear-gradient(180deg, #0F1A2E 0%, #1B2A4A 100%);
+                flex-direction: column; padding: 100px 24px 32px; gap: 8px;
+                transform: translateX(-100%); transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+                border-right: 3px solid var(--gold);
+            }
+            .nav-links.open { display: flex; transform: translateX(0); }
+            .nav-toggle { display: flex; }
+            .mobile-nav { top: 130px; z-index: 1050; }
+            .split-layout { padding-top: 200px; }
+            .right-panel { height: calc(100vh - 200px); }
+            .content-wrapper { padding: 24px 16px 48px; }
+            .service-hero { padding: 40px 0 32px; }
+            .service-hero h1 { font-size: 23px; }
+            .hero-desc { font-size: 14px; }
+            .glass-section { padding: 20px; border-radius: 14px; }
+            .metrics-row { grid-template-columns: 1fr; }
+            .metric-value { font-size: 32px; }
+            .cta-buttons { flex-direction: column; }
+            .cta-btn { width: 100%; justify-content: center; }
+            .capabilities-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+            .capability-card { padding: 16px 14px; }
+            .capability-card .cap-num { font-size: 26px; margin-bottom: 8px; }
+            .capability-card h4 { font-size: 14px; margin-bottom: 6px; }
+            .capability-card p { font-size: 11px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+            .service-dropdown-menu { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 6px; max-height: 420px; }
+            .service-dropdown-item { font-size: 11px; padding: 10px 10px; gap: 6px; }
+            .service-dropdown-item-num { font-size: 9px; }
+            .footer { padding: 18px 15px 10px; }
+            .footer-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; padding-bottom: 20px; }
+            .footer-brand { grid-column: 1 / -1; align-items: center; gap: 12px; }
+            .footer-brand img { height: 122px; margin-bottom: 0; }
+            .footer-brand-text p { font-size: 11px; line-height: 1.5; }
+            .footer-contact { margin-top: 4px; }
+            .footer-contact a { font-size: 10px; }
+            .footer-col h5 { font-size: 10px; margin-bottom: 8px; }
+            .footer-col ul li { margin-bottom: 4px; }
+            .footer-col ul li a { font-size: 11px; }
+            .footer-divider { margin: 8px 0; }
+            .footer-bottom { flex-direction: column; gap: 6px; text-align: center; padding-top: 6px; }
+            .footer-bottom p { font-size: 10px; }
+            .footer-policies a { font-size: 9px; }
+            .footer-social a { width: 30px; height: 30px; font-size: 11px; }
+            .testimonial-card { padding: 24px 20px; }
+            .testimonial-card .quote-mark { font-size: 48px; margin-bottom: -12px; }
+            .testimonial-card blockquote { font-size: 14px; line-height: 1.6; margin-bottom: 16px; }
+            .testimonial-avatar { width: 40px; height: 40px; font-size: 16px; }
+            .testimonial-info .name { font-size: 14px; }
+            .testimonial-info .role { font-size: 12px; }
+        }
+        @media (max-width: 480px) {
+            .mobile-nav { top: 130px; }
+            .split-layout { padding-top: 200px; }
+            .right-panel { height: calc(100vh - 200px); }
+            .mobile-nav-btn { padding: 8px 10px; font-size: 11px; }
+
+            .service-dropdown-menu { grid-template-columns: 1fr 1fr; max-height: 360px; gap: 4px; }
+            .service-hero h1 { font-size: 20px; }
+            .hero-icon-container { width: 120px; height: 120px; }
+            .hero-icon-main svg { width: 36px; height: 36px; }
+            .capabilities-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+            .capability-card { padding: 14px 12px; }
+            .capability-card .cap-num { font-size: 22px; margin-bottom: 7px; }
+            .capability-card h4 { font-size: 12px; margin-bottom: 5px; }
+            .capability-card p { font-size: 10px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+            .testimonial-card { padding: 20px 16px; }
+            .testimonial-card .quote-mark { font-size: 40px; margin-bottom: -10px; }
+            .testimonial-card blockquote { font-size: 13px; line-height: 1.5; margin-bottom: 12px; }
+            .testimonial-avatar { width: 36px; height: 36px; font-size: 14px; }
+            .testimonial-info .name { font-size: 13px; }
+            .testimonial-info .role { font-size: 11px; }
+        }
+.lang-toggle { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; color: var(--white); text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.3s; background: transparent; cursor: pointer; white-space: nowrap; }
+.lang-toggle:hover { border-color: var(--gold); color: var(--gold); background: rgba(200,169,110,0.1); }
+    /* CERTIFICATIONS GRID */
+        .certifications-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+        }
+        .cert-card {
+            padding: 28px; border-radius: 14px; position: relative; overflow: hidden;
+            background: rgba(255,255,255,0.015); border: 1px solid rgba(255,255,255,0.04);
+            transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+        }
+        .cert-card::after {
+            content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+            opacity: 0; transition: opacity 0.4s;
+        }
+        .cert-card:hover {
+            border-color: rgba(200,169,110,0.15); transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+        }
+        .cert-card:hover::after { opacity: 1; }
+        .cert-card .cert-icon {
+            width: 48px; height: 48px; border-radius: 12px; display: flex;
+            align-items: center; justify-content: center; margin-bottom: 16px;
+            background: rgba(200,169,110,0.08); border: 1px solid rgba(200,169,110,0.15);
+        }
+        .cert-card .cert-icon svg { width: 24px; height: 24px; }
+        .cert-card h4 {
+            font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px;
+        }
+        .cert-card p {
+            font-size: 14px; color: var(--text-muted); line-height: 1.6;
+        }
+        .cert-card .cert-badge {
+            display: inline-block; padding: 4px 10px; border-radius: 4px;
+            background: rgba(74,144,217,0.08); border: 1px solid rgba(74,144,217,0.15);
+            font-size: 11px; font-weight: 600; color: var(--blue-light);
+            margin-top: 12px; letter-spacing: 0.5px;
+        }
+    </style>
+    <meta property="og:title" content="خدماتنا | فحص وتحقق وQA/QC | AETERNA">
+    <meta property="og:description" content="اكتشف خدمات الفحص الشاملة من AETERNA: التحقق الثالث, FHT, فحص اللحام, مراقبة جودة البناء, فحص التآكل والطلاء, التعجيل, تقييم الموردين, وتوريد مفتشي API وCOMPEX.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aeterna-inspection.com/ar/services.html">
+    <meta property="og:site_name" content="AETERNA Inspection & Technical Services">
+    <meta property="og:image" content="https://aeterna-inspection.com/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="خدماتنا | فحص وتحقق وQA/QC | AETERNA">
+    <meta name="twitter:description" content="اكتشف خدمات الفحص الشاملة من AETERNA: التحقق الثالث, FHT, فحص اللحام, مراقبة جودة البناء, فحص التآكل والطلاء, التعجيل, تقييم الموردين, وتوريد مفتشي API وCOMPEX.">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "خدماتنا | فحص وتحقق وQA/QC | AETERNA",
+    "description": "اكتشف خدمات الفحص الشاملة من AETERNA: التحقق الثالث, FHT, فحص اللحام, مراقبة جودة البناء, فحص التآكل والطلاء, التعجيل, تقييم الموردين, وتوريد مفتشي API وCOMPEX.",
+    "url": "https://aeterna-inspection.com/ar/services.html",
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "AETERNA Inspection & Technical Services",
+        "url": "https://aeterna-inspection.com"
+    },
+    "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aeterna-inspection.com"},
+            {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://aeterna-inspection.com/ar/services.html"}
+        ]
+    }
+}
+</script>
+    <link rel="alternate" hreflang="en" href="https://aeterna-inspection.com/pages/services.html">
+    <link rel="alternate" hreflang="ar" href="https://aeterna-inspection.com/ar/services.html">
+</head>
+<body>
+
+<!-- DYNAMIC BACKGROUND -->
+<div class="dynamic-bg" id="dynamicBg">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="mesh-line"></div>
+    <div class="mesh-line"></div>
+    <div class="mesh-line"></div>
+</div>
+
+<!-- NOISE TEXTURE -->
+<div class="noise"></div>
+
+<!-- FLOATING PARTICLES -->
+<div class="floating-particles" id="floatingParticles"></div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <a href="mailto:info@aeterna-inspection.com" class="top-bar-item">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+            info@aeterna-inspection.com
+        </a>
+        <a href="tel:+971555727153" class="top-bar-item top-bar-phone">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            +971 555 727 153
+        </a>
+    </div>
+</div>
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+        <img src="../images/logo-header.svg" alt="AETERNA Inspection & Technical Services Logo">
+    </a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="index.html#projects">المشاريع</a></li>
+        <li><a href="../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">الملف التعريفي</a></li>
+        <li><a href="resources.html">الموارد</a></li>
+        <li><a href="careers.html">الوظائف</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+    </ul>
+    <a href="../pages/services.html" class="lang-toggle">EN English</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+
+<!-- MOBILE DRAWER OVERLAY -->
+<div class="nav-overlay" id="navOverlay"></div>
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+    <div class="service-dropdown-container">
+        <button class="service-dropdown-trigger" id="serviceDropdownTrigger">
+            <span id="selectedServiceLabel">اختر الخدمة</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </button>
+        <div class="service-dropdown-menu" id="serviceDropdownMenu"></div>
+    </div>
+</div>
+
+<!-- SPLIT LAYOUT -->
+<div class="split-layout">
+    <!-- LEFT PANEL  SERVICE DIRECTORY -->
+    <aside class="left-panel">
+        <div class="left-header">
+        </div>
+        <div class="service-list" id="serviceList"></div>
+    </aside>
+
+    <!-- RIGHT PANEL — IMMERSIVE CONTENT -->
+    <main class="right-panel" id="rightPanel">
+        <div class="content-wrapper" id="contentWrapper"></div>
+    </main>
+</div>
+
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="../images/logo.svg" alt="AETERNA Inspection & Technical Services Logo">
+            <div class="footer-brand-text">
+                <p>AETERNA تضع المعيار العالمي في التفتيش على النفط والغاز، سلامة الأصول، والتميز التقني.</p>
+                <div class="footer-contact">
+                    <a href="mailto:info@aeterna-inspection.com">info@aeterna-inspection.com</a>
+                    <a href="contact.html">الشارقة، مدينة الشارقة للإعلام، الإمارات</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h5>الخدمات</h5>
+            <ul>
+                <li><a href="services.html">تفتيش طرف ثالث</a></li>
+                <li><a href="services.html">تفتيش اللحام</a></li>
+                <li><a href="services.html">خدمات NDT</a></li>
+                <li><a href="services.html">مراقبة جودة الإنشاءات</a></li>
+                <li><a href="services.html">سلامة خطوط الأنابيب</a></li>
+                <li><a href="services.html">التفتيش البحري</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>القطاعات</h5>
+            <ul>
+                <li><a href="index.html#industries">النفط والغاز</a></li>
+                <li><a href="index.html#industries">الإنشاءات</a></li>
+                <li><a href="index.html#industries">البتروكيماويات</a></li>
+                <li><a href="index.html#industries">توليد الطاقة</a></li>
+                <li><a href="index.html#industries">البحري والبحرية</a></li>
+                <li><a href="index.html#industries">البنية التحتية</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>الشركة</h5>
+            <ul>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="index.html#quality">الجودة والشهادات</a></li>
+                <li><a href="index.html#projects">المشاريع</a></li>
+        <li><a href="../files/AETERNA%20Profile.pdf" download="AETERNA Profile.pdf">الملف التعريفي</a></li>
+                <li><a href="policies.html">السياسات</a></li>
+                <li><a href="careers.html">الوظائف</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 AETERNA Inspection & Technical Services LLC. جميع الحقوق محفوظة.</p>
+        <div class="footer-policies">
+            <a href="policies.html#terms">شروط الاستخدام</a>
+            <a href="policies.html#privacy">الخصوصية</a>
+            <a href="policies.html#quality">الجودة</a>
+            <a href="policies.html#hse">HSE</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+const services = [
+
+    {
+        id:2, number:'02', short:'TPI',
+        title:'خدمات التفتيش',
+        tagline:'تميز في التحقق المستقل',
+        bgGradient:'radial-gradient(ellipse at 30% 20%, rgba(200,169,110,0.08) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><circle cx="44" cy="44" r="28"/><path d="M64 64l20 20" stroke-width="2.5"/><path d="M34 44l7 7 13-13" stroke-width="2"/></svg>`,
+        heroBg:'../images/services/Inspection & Verification.jpg',
+        description:'يعد التحقق المستقل العمود الفقري للجودة. تقدم AETERNA تفتيش طرف ثالث ومراقبة الموردين وخدمات التحقق عبر سلسلة التوريد بأكملها.',
+        capabilities:[
+            {title:'تفتيش الموردين',desc:'فحص مستقل للمواد والمعدات والمكونات التي يوريدها الموردون مقابل متطلبات أمر الشراء.'},
+            {title:'تفتيش المشاغل',desc:'تفتيش في الموقع في مشاغل التصنيع والتجميع يشمل اللحام والتجميع والتفقد الأبعادي.'},
+            {title:'اختبار القبول في المصنع (FAT)',desc:'الشهادة والتحقق من اختبارات القبول في المصنع للمعدات الدوارة وأوعية الضغط والصمامات.'},
+            {title:'اختبار القبول في الموقع (SAT)',desc:'اختبار القبول في الموقع بعد التثبيت للتحقق من أداء المعدات والسلامة والوظائف.'},
+            {title:'مراقبة التصنيع',desc:'مراقبة مستمرة لتطور التصنيع وأنشطة ضبط الجودة وتتبع المواد وجدول التسليم.'}
+        ],
+        industries:['النفط والغاز','البتروكيماويات','توليد الطاقة','الإنشاءات','البحري والبحرية','البنية التحتية'],
+            metrics:[{value:'100',suffix:'+',label:'مشروع مكتمل'},{value:'30',suffix:'+',label:'مفتش معتمد'},{value:'70',suffix:'+',label:'عميل'},{value:'20',suffix:'+',label:'عقد'}],
+        outcomes:[
+            {title:'صفر مخالفات',desc:' تحقيق صفر تقارير عدم المطابقة أثناء المراجعات النهائية.'},
+            {title:'الثقة التنظيمية',desc:'حزم توثيق الامتثال الكامل التي تلبي متطلبات الجهات التنظيمية من المحاولة الأولى.'},
+            {title:'تخفيف المخاطر',desc:'الكشف المبكر عن عيوب المواد ومنع إعادة العمل المكلفة.'}
+        ],
+        projects:[
+            {tag:'النفط والغاز',title:'ضبط جودة توسيع المصفاة',desc:'مراجعة وتوثيق أكثر من 15,000 تقرير مواد.',metric:'15,000+ تقرير'},
+            {tag:'البتروكيماويات',title:'تحديث المصنع',desc:'تقديم فحص طرف ثالث لشراء المعدات عبر 8 حزم عمل.',metric:'قيمة 400 مليون دولار'}
+        ],
+        standards:['ISO 17020','API Standards','ASME Codes','EN Standards'],
+        testimonial:{quote:'أعطى التحقق المستقل من AETERNA لمجلس إدارتنا ثقة كاملة في جودة كل مكون.',name:'أحمد الراشد',role:'نائب رئيس الهندسة، شركة النفط الوطنية'},
+            certifications:[
+            {title:'ISO 17020',desc:'اعتماد جسم التفتيش - متطلبات الكفاءة لأجسام التفتيش.'},
+            {title:'API Monogram',desc:'برنامج الجودة - ضمان جودة التصنيع وفقاً لمواصفات API.'},
+            {title:'ASME Codes',desc:'كود المراجل وأوعية الضغط - معايير التصميم والتصنيع.'}
+    ],
+cta:'طلب تفتيش'
+    },
+    {
+        id:4, number:'04', short:'فحص اللحام',
+        title:'تفتيش اللحام وعلم المعادن',
+        tagline:'تميز جودة اللحام',
+        bgGradient:'radial-gradient(ellipse at 40% 60%, rgba(200,169,110,0.06) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><path d="M20 70l30-50 10 10 15-20" stroke-width="2"/><circle cx="55" cy="35" r="4" fill="var(--gold)" stroke="none"/><rect x="10" y="75" width="60" height="6" rx="3"/></svg>`,
+        heroBg:'../images/services/Welding Inspection & Metallurgy.jpg',
+        description:'تفتيش اللحام يضمن السلامة الهيكلية لكل مشروع. يضمن مفتشو AETERNA المعتمدون أن كل لحام يفي بأعلى المعايير.',
+        capabilities:[
+            {title:'تأهيل WPS/PQR',desc:'تطوير ومراجعة وتأهيل مواصفات إجراءات اللحام وسجلات تأهيل الإجراءات.'},
+            {title:'اختبار أداء اللحامين',desc:'إدارة وشهادة اختبارات تأهيل اللحامين وفقاً لمعايير ASME IX وAPI 1104.'},
+            {title:'فحص اللحام أثناء العملية',desc:'مراقبة التسخين المبدئي ودرجات الحرارة بين الطبقات في الوقت الفعلي.'},
+            {title:'التحليل المعدني',desc:'فحص البنية المجهرية ورسم خريطة الصلابة وتقييم التآكل.'}
+        ],
+        industries:['النفط والغاز','البتروكيماويات','توليد الطاقة','الإنشاءات','البحري والبحرية','البنية التحتية'],
+            metrics:[{value:'100',suffix:'+',label:'مشروع مكتمل'},{value:'30',suffix:'+',label:'مفتش معتمد'},{value:'70',suffix:'+',label:'عميل'},{value:'20',suffix:'+',label:'عقد'}],
+        outcomes:[
+            {title:'منع العيوب',desc:'التقاط عيوب اللحام أثناء الإنتاج ومنع الإصلاحات المكلفة.'},
+            {title:'ضمان الجودة',desc:'ضمان تلبية كل لحام للcodes المعمول بها ومواصفات المشروع.'},
+            {title:'التحقق من الأداء',desc:'تأكيد كفاءة اللحامين من خلال اختبار تأهيل صارم.'}
+        ],
+        projects:[
+            {tag:'خطوط الأنابيب',title:'خط أنابيب عبر البلاد',desc:'فحص لحام كامل الوقت لمشروع خط أنابيب بطول 350 كم.',metric:'12,000+ لحام'},
+            {tag:'الإنشاءات',title:'مبنى عالي الارتفاع',desc:'برنامج فحص لحام لمبنى فولاذي هيكلي يبلغ ارتفاعه 45 طابقاً.',metric:'99.5% قبول'}
+        ],
+        standards:['CSWIP 3.1/3.2','AWS CWI','ASME IX','API 1104'],
+        testimonial:{quote:'AETERNA\'s welding inspectors caught a critical WPS deviation that would have resulted in rejectable welds.',name:'محمد الفارسي',role:'مدير الإنشاءات، سامسونغ C&T'},
+            certifications:[
+            {title:'CSWIP 3.1/3.2',desc:'شهادة مفتتش اللحام - تأهيل أفراد فحص اللحام.'},
+            {title:'AWS CWI',desc:'مفتتش لحام معتمد - شهادة الجمعية الأمريكية للحام.'},
+            {title:'ASME IX',desc:'تأهيل اللحام - تأهيل إجراءات اللحام وأداء اللحامين.'}
+    ],
+cta:'احصل على عرض سعر'
+    },
+    {
+        id:5, number:'05', short:'مراقبة الجودة',
+        title:'مراقبة جودة الإنشاءات',
+        tagline:'إشراف على جودة البناء',
+        bgGradient:'radial-gradient(ellipse at 60% 40%, rgba(74,144,217,0.06) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><rect x="20" y="45" width="60" height="40" rx="2"/><path d="M20 45l30-25 30 25"/><rect x="38" y="55" width="24" height="30" rx="1"/></svg>`,
+        heroBg:'../images/services/Construction Quality Control.jpg',
+        description:'ندير مراقبة الجودة في مشاريع الإنشاءات - نقطة. من منشآت البتروكيماويات إلى الأبراج الشاهقة.',
+        capabilities:[
+            {title:'تطوير وإدارة ITP',desc:'خطط فحص واختبار شاملة متوافقة مع مواصفات المشروع والمعايير.'},
+            {title:'التحقق من المواد والتتبع',desc:'التحقق الكامل من التعقب من الاستلام مروراً بالتركيب.'},
+            {title:'مسوحات التحكم الأبعادي',desc:'التحقق الأبعادي الدقيق من تركيبات الهياكل والأنابيب والمعدات.'},
+            {title:'الإنجاز الميكانيكي',desc:'حزم توثيق الإنجاز الميكانيكي وقبل التشغيل المنهجية.'}
+        ],
+        industries:['النفط والغاز','البتروكيماويات','توليد الطاقة','الإنشاءات','البحري والبحرية','البنية التحتية'],
+            metrics:[{value:'100',suffix:'+',label:'مشروع مكتمل'},{value:'30',suffix:'+',label:'مفتش معتمد'},{value:'70',suffix:'+',label:'عميل'},{value:'20',suffix:'+',label:'عقد'}],
+        outcomes:[
+            {title:'صفر حوادث السلامة',desc:'الحفاظ على سجلات سلامة خالية من العيوب عبر مشاريع الإنشاءات الكبرى.'},
+            {title:'الالتزام بالجدول الزمني',desc:'منع إعادة العمل والتأخيرات من خلال مراقبة الجودة الاستباقية.'},
+            {title:'التسليم السلس',desc:'حزم توثيق الإنجاز الميكانيكي الكاملة للانتقال السلس.'}
+        ],
+        projects:[
+            {tag:'البتروكيماويات',title:'برنامج ضبط جودة شامل',desc:'إدارة برنامج ضبط جودة كامل لمجمع بتروكيماويات بقيمة 2.8 مليار دولار.',metric:'قيمة 2.8 مليار دولار'},
+            {tag:'البنية التحتية',title:'بناء جسر',desc:'ضبط جودة لبناء جسر رئيسي يشمل فحص الأساسات والأعمدة.',metric:'100% امتثال'}
+        ],
+        standards:['ISO 9001','ACI Standards','ASTM','BS/EN Standards'],
+        testimonial:{quote:'كانت إدارة QC عبر 12 حزمة عمل لمجمع البتروكيماويات الخاص بنا تحديًا هائلاً.',name:'جيمس تشين',role:'مدير مشروع، بكتل'},
+            certifications:[
+            {title:'ISO 9001',desc:'نظام إدارة الجودة - إطار لعمليات إدارة الجودة.'},
+            {title:'ACI Standards',desc:'المعاهد الأمريكية للخرسانة - معايير بناء الخرسانة.'},
+            {title:'ASTM',desc:'الجمعية الأمريكية لاختبار المواد - معايير اختبار المواد.'}
+    ],
+cta:'ناقش مشروعك'
+    },
+    {
+        id:7, number:'07', short:'تدقيق الجودة',
+        title:'تدقيق وتوثيق QA/QC',
+        tagline:'أنظمة إدارة الجودة',
+        bgGradient:'radial-gradient(ellipse at 30% 70%, rgba(74,144,217,0.06) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><rect x="20" y="15" width="60" height="70" rx="4"/><line x1="32" y1="35" x2="68" y2="35"/><line x1="32" y1="47" x2="68" y2="47"/><line x1="32" y1="59" x2="56" y2="59"/><path d="M38 78l8 8 16-16"/></svg>`,
+        heroBg:'../images/services/QAQC Auditing & Documentation.jpg',
+        description:'نحن نتملك تدقيق وتوثيق QA/QC. يبني خبراؤنا ويراجعون ويدققون ITPs وخرائط اللحام وتتبع المواد وNCRs وفقًا لمعايير ISO.',
+        capabilities:[
+            {title:'تدقيق أنظمة الإدارة ISO',desc:'تدقيق داخلي وخارجي وفقاً لمعايير ISO 9001 وISO 14001 وISO 45001.'},
+            {title:'تطوير ITP',desc:'إنشاء خطط فحص واختبار شاملة مصممة حسب متطلبات المشروع.'},
+            {title:'تدقيق جودة الموردين',desc:'تقييم شامل لقدرات الموردين وأنظمة الجودة وعمليات التصنيع.'},
+            {title:'إدارة NCR وتحليل الأسباب الجذرية',desc:'تقرير منهجي عن عدم المطابقة وتحليل الأسباب الجذرية.'}
+        ],
+        industries:['النفط والغاز','البتروكيماويات','توليد الطاقة','الإنشاءات','البحري والبحرية','البنية التحتية'],
+            metrics:[{value:'100',suffix:'+',label:'مشروع مكتمل'},{value:'30',suffix:'+',label:'مفتش معتمد'},{value:'70',suffix:'+',label:'عميل'},{value:'20',suffix:'+',label:'عقد'}],
+        outcomes:[
+            {title:'الشهادة من المحاولة الأولى',desc:'الحصول على شهادة ISO من المحاولة الأولى.'},
+            {title:'التحسين المستمر',desc:'دفع التحسينات المستمرة للجودة من خلال التدقيق المنهجي.'},
+            {title:'موثوقية سلسلة التوريد',desc:'ضمان جودة الموردين من خلال التقييم الشامل.'}
+        ],
+        projects:[
+            {tag:'EPC',title:'شهادة المقاولين',desc:'مراجعة استعداد قبل التصديق لمقاول EPC رئيسي.',metric:'المحاولة الأولى'},
+            {tag:'التصنيع',title:'برنامج تدقيق الموردين',desc:'برنامج تدقيق جودة مستمر يغطي أكثر من 200 مورد.',metric:'200+ مورد'}
+        ],
+        standards:['ISO 9001:2015','ISO 14001','ISO 45001','API Q1/Q2'],
+        testimonial:{quote:'AETERNA\'s audit team identified 12 critical gaps in our quality system.',name:'روبرت ويليامز',role:'مدير الجودة، شركة فلور'},
+            certifications:[
+            {title:'ISO 9001:2015',desc:'نظام إدارة الجودة - متطلبات أنظمة إدارة الجودة.'},
+            {title:'ISO 14001',desc:'إدارة البيئة - إطار المسؤولية البيئية.'},
+            {title:'ISO 45001',desc:'الصحة والسلامة المهنية - معيار إدارة سلامة مكان العمل.'}
+    ],
+cta:'حسّن الجودة'
+    },
+    {
+        id:9, number:'09', short:'PME',
+        title:'خدمات التعجيل',
+        tagline:'تنسيق متعدد المواقع والتسليم',
+        bgGradient:'radial-gradient(ellipse at 40% 30%, rgba(74,144,217,0.07) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><circle cx="50" cy="25" r="10"/><circle cx="25" cy="70" r="10"/><circle cx="75" cy="70" r="10"/><line x1="40" y1="30" x2="35" y2="63"/><line x1="60" y1="30" x2="65" y2="63"/><line x1="35" y1="70" x2="65" y2="70"/></svg>`,
+        heroBg:'../images/services/Project management and expediting.jpg',
+        description:'ننسق مشاريع متعددة المواقع حتى لا تضطر إلى ذلك. إدارة الجدول، تخصيص الموارد، مراقبة الموردين.',
+        capabilities:[
+            {title:'التنسيق متعدد المواقع',desc:'تنسيق سلس عبر مشاغل التصنيع ومواقع الإنشاء والموردين المتعددة.'},
+            {title:'إدارة الجدول الزمني والموارد',desc:'جدول متقدم وتخصيص الموارد وإدارة المسار الحاسم.'},
+            {title:'مراقبة الموردين وFAT',desc:'مراقبة المصنع واختبار الشهادة في منشآت الموردين حول العالم.'},
+            {title:'تقرير التقدم والتعجيل',desc:'تتبع التقدم في الوقت الفعلي مع التوثيق الصوري.'}
+        ],
+        industries:['النفط والغاز','البتروكيماويات','توليد الطاقة','الإنشاءات','البحري والبحرية','البنية التحتية'],
+            metrics:[{value:'100',suffix:'+',label:'مشروع مكتمل'},{value:'30',suffix:'+',label:'مفتش معتمد'},{value:'70',suffix:'+',label:'عميل'},{value:'20',suffix:'+',label:'عقد'}],
+        outcomes:[
+            {title:'التسليم في الموعد',desc:'ضمان التسليم في الوقت المحدد بنسبة 98%.'},
+            {title:'التحكم في التكاليف',desc:'منع تجاوزات التكلفة من خلال إدارة الجدول الزمني الفعالة.'},
+            {title:'ضمان الجودة',desc:'التحقق من معالم الجودة في منشآت الموردين قبل الشحن.'}
+        ],
+        projects:[
+            {tag:'EPC',title:'التعجيل عبر الحدود',desc:'تنسيق الفحص عبر 4 دول لمشروع EPC بقيمة 500 مليون دولار.',metric:'2,000+ صنف'},
+            {tag:'النفط والغاز',title:'منصة بحرية',desc:'تنسيق متعدد المواقع لتصنيع منصة بحرية عبر 3 مشاغل.',metric:'98% في الوقت المحدد'}
+        ],
+        standards:['PMI/PMBOK','ISO 10006','API Specifications','EN 10204'],
+        testimonial:{quote:'AETERNA\'s expediting team ensured all 2,000+ items arrived on-site.',name:'لي مين-جون',role:'مدير المشاريع، هندسة هيونداي'},
+            certifications:[
+            {title:'PMI/PMBOK',desc:'دليل إدارة المشاريع - معايير إدارة المشاريع.'},
+            {title:'ISO 10006',desc:'إدارة الجودة في المشاريع - إرشادات إدارة الجودة.'},
+            {title:'EN 10204',desc:'وثائق فحص المنتجات المعدنية - أنواع شهادات المواد.'}
+    ],
+cta:'ابدأ التعجيل'
+    },
+    {
+        id:14, number:'14', short:'التآكل والطلاء',
+        title:'تفتيش التآكل والطلاء',
+        tagline:'إدارة الطلاء الواقي والتآكل تحت العزل (CUI)',
+        bgGradient:'radial-gradient(ellipse at 30% 50%, rgba(200,169,110,0.06) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><path d="M20 50c0-16.6 13.4-30 30-30s30 13.4 30 30-13.4 30-30 30" stroke-width="2"/><path d="M50 20v60" stroke-dasharray="3 4"/><path d="M35 50c0-8.3 6.7-15 15-15s15 6.7 15 15" fill="none"/><rect x="20" y="55" width="60" height="35" rx="3"/><path d="M20 70h60" stroke-width="1"/></svg>`,
+        heroBg:'../images/services/Corrosion & Coating Inspection.jpg',
+        description:'نحن نمنع التآكل قبل أن يبدأ. من التآكل تحت العزل (CUI) إلى فشل الطلاء، يحدد مفتشونا المعتمدون من NACE المشكلات قبل أن تصبح كارثية. مسح CUI بالتيار الدوامي النبضي، واختبار التصاق الطلاء، ومسوحات الحماية الكاثودية — نغطي جميع آليات التآكل. أصولك محمية مع AETERNA.',
+        capabilities:[
+            {title:'التآكل تحت العزل (CUI)',desc:'اكتشاف وتقييم التآكل تحت العزل من خلال إزالة العزل والفحص البصري ومسح UT وتقنيات التيارات الدوامية النبضية للأنابيب والأوعية المعزولة.'},
+            {title:'تفتيش الطلاء الواقي',desc:'تفتيش معتمد من NACE لأنظمة الطلاء الواقي يشمل التحقق من تجهيز السطح والمراقبة البيئية وسُمك الطلاء الرطب/الجاف واختبار الالتصاق.'},
+            {title:'مسح الحماية الكاثودية',desc:'مسوحات شاملة لنظام الحماية الكاثودية تشمل قياسات الجهد وتشخيص المحولات واختبار التداخل وتقييم أداء أسرّة الأنود وفقاً لمعايير NACE.'},
+            {title:'تقييم الطلاء',desc:'تقييم حالة أنظمة الطلاء والدهانات الحالية يشمل سحب الالتصاق وقياس DFT واختبار العيوب وتحليل الأعطال.'}
+        ],
+        industries:['النفط والغاز','البتروكيماويات','توليد الطاقة','البحري والبحرية','البنية التحتية','المياه ومعالجة المياه'],
+            metrics:[{value:'500',suffix:'+',label:'مسح CUI'},{value:'25',suffix:'+',label:'مفتش NACE'},{value:'15K',suffix:'+',label:'كم أنابيب مطلية'},{value:'99',suffix:'%',label:'امتثال الطلاء'}],
+        outcomes:[
+            {title:'تقليل مخاطر التآكل',desc:'تقليل الأعطال المتعلقة بالتأكل بنسبة 80% من خلال برامج فحص الطلاء المنهجي وإدارة الحماية الكاثودية.'},
+            {title:'تمديد عمر الأصول',desc:'حماية الأصول من التآكل البيئي والتشغيلي مما يمدد العمر التشغيلي بمقدار 10-15 عاماً.'},
+            {title:'الامتثال التنظيمي',desc:'ضمان الامتثال لمعايير NACE وISO والأنظمة البيئية لإدارة التآكل ومعايير الطلاء.'}
+        ],
+        projects:[
+            {tag:'التكرير',title:'برنامج فحص CUI',desc:'برنامج فحص شامل للتأكل تحت العزل يغطي 15 كم من الأنابيب المعزولة باستخدام التيارات الدوامية النبضية وإزالة العزل المستهدفة.',metric:'15 كم تم فحصها'},
+            {tag:'بحري',title:'تقييم الطلاء والحماية الكاثودية',desc:'تقييم الطلاء الواقي ونظام الحماية الكاثودية لمنصة بحرية والهياكل تحت الماء.',metric:'منصة واحدة'}
+        ],
+        standards:['NACE SP0198','NACE SP0173','NACE SP0169','ISO 12944','SSPC-PA2','API RP571'],
+                        certifications:[
+            {title:'NACE SP0198',desc:'التحكم في التآكل تحت العزل - إرشادات الحماية والتفتيش.'},
+            {title:'NACE SP0169',desc:'الحماية الكاثودية - معايير الحماية الكاثودية للأنابيب.'},
+            {title:'ISO 12944',desc:'الطلاءات الواقية - حماية الهياكل الفولاذية من التآكل.'}
+    ],
+        testimonial:{quote:'AETERNA\'s CUI detection programme saved us from a major corrosion failure. Their pulsed eddy current screening identified hidden corrosion that conventional methods would have missed until it was too late.',name:'م. خالد العتيبي',role:'مدير التفتيش، سابك'},
+        cta:'قيّم مخاطر التآكل'
+    },
+    {
+        id:15, number:'15', short:'الصيانة الدورية',
+        title:'تفتيش الإغلاق والصيانة الدورية',
+        tagline:'تميز الصيانة المخططة',
+        bgGradient:'radial-gradient(ellipse at 60% 30%, rgba(200,169,110,0.06) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><circle cx="50" cy="50" r="35" stroke-dasharray="4 4"/><path d="M50 20v30l20 20" stroke-width="2.5"/><rect x="35" y="55" width="30" height="10" rx="2"/><path d="M25 70h50M35 80h30"/></svg>`,
+        heroBg:'../images/services/Shutdown & Turnaround Inspection.jpg',
+        description:'فترات الإغلاق عالية الضغط وعالية المخاطر. نحن نتعامل معها. النطاق قبل الإغلاق، التفتيش أثناء الخدمة، تنفيذ الإغلاق، التحقق من بدء التشغيل - تتكامل فرقنا مع فرقك وتقدم. دعمنا أكثر من 200 إغلاق عبر المصافي ومصانع البتروكيماويات ومحطات الطاقة. النطاق مكتمل في الموعد المحدد، في كل مرة. إذا كنت تخطط لإغلاق، لا تخطط له بدوننا.',
+        capabilities:[
+            {title:'الفحص قبل الإغلاق',desc:'فحوصات تخطيط قبل الصيانة الدورية لتحديد متطلبات الفحص وإعطاء الأولوية لفتحات المعدات الحرجة وتطوير حزم عمل فحص تفصيلية.'},
+            {title:'فحص الصيانة الدورية',desc:'تنفيذ فحص شامل للصيانة الدورية يشمل دخول الأوعية ومسح UT وMPI وDPI وRT وقياس السُمك منسق مع جداول الإغلاق.'},
+            {title:'دعم التشغيل الأولي',desc:'خدمات فحص قبل التشغيل تشمل التحقق من المعدات وإغلاق قائمة الملاحظات وشهادة اختبار الضغط وفحص سلامة النظام قبل بدء التشغيل.'},
+            {title:'فحص بدء التشغيل',desc:'فحص بدء التشغيل بعد الصيانة يراقب حالة المعدات أثناء التشغيل الأولي ويتحقق من إعادة التجميع والمحاذاة الصحيحة.'}
+        ],
+        industries:['النفط والغاز','البتروكيماويات','توليد الطاقة','التكرير','الأسمدة','البنية التحتية'],
+            metrics:[{value:'200',suffix:'+',label:'إغلاق مدعوم'},{value:'50',suffix:'+',label:'مفتش منشور'},{value:'98',suffix:'%',label:'تسليم في الموعد'},{value:'0',suffix:'',label:'حوادث وقت ضائع'}],
+        outcomes:[
+            {title:'تحسين الإغلاق',desc:'تقليل مدة الصيانة الدورية بنسبة 20% من خلال تخطيط الفحص الفعال واستراتيجيات تحسين الموارد.'},
+            {title:'إتمام النطاق',desc:'إتمام 100% من نطاق الفحص المحدد ضمن فترات الإغلاق المخططة وإلغاء الامتدادات غير المخطط لها.'},
+            {title:'سلامة موثقة',desc:'حزم توثيق فحص كاملة تُسلم في الجدول الزمني مما يتيح إعادة التشغيل الأولي السلس والتوقيع التنظيمي.'}
+        ],
+        projects:[
+            {tag:'التكرير',title:'فحص صيانة دورية رئيسي',desc:'تقديم 35 مفتãƒƒã‚·ãƒ¥ لصيانة دورية لمصفاة تبلغ 45 يوماً تغطي أكثر من 500 فحص معدات تشمل أوعية ومبادلات وأنابيب وأجهزة تفريغ.',metric:'500+ فحص'},
+            {tag:'البتروكيماويات',title:'إغلاق المصنع',desc:'نطاق فحص شامل لإغلاق مصنع بتروكيماويات لمدة 30 يوماً مع أكثر من 250 وعاء ضغط و1,500 دارة أنابيب.',metric:'1,750+ صنف'}
+        ],
+        standards:['API 510','API 570','API 653','ASME Section VIII','ASME B31.3','NBIC'],
+            certifications:[
+                        {title:'API 510',desc:'فحص أوعية الضغط - الصلاحية للخدمة.'},
+            {title:'API 570',desc:'فحص الأنابيب - سلامة أنابيب المعالجة.'},
+            {title:'ASME B31.3',desc:'كود أنابيب المعالجة - تصميم وتصنيع الأنابيب الصناعية.'}
+    ],
+        testimonial:{quote:'AETERNA\'s turnaround inspection team delivered exceptional results during our refinery shutdown. Their pre-shutdown scoping and execution efficiency helped us complete the turnaround two days ahead of schedule.',name:'م. فيصل الحربي',role:'مدير الإغلاق، أرامكو السعودية'},
+        cta:'خطط لإغلاقك'
+    }
+    ,
+    {
+        id:16, number:'16', short:'VAS', menuTitle:'تقييم الموردين',
+        title:'تقييم الموردين',
+        tagline:'ضمان جودة الموردين والامتثال',
+        bgGradient:'radial-gradient(ellipse at 30% 20%, rgba(200,169,110,0.08) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><path d="M50 15 L85 35 L85 65 L50 85 L15 65 L15 35 Z"/><path d="M50 30 L70 42 L70 58 L50 70 L30 58 L30 42 Z" stroke-width="2"/><circle cx="50" cy="50" r="6" fill="var(--gold)" stroke="none"/></svg>`,
+        heroBg:'../images/services/Supply of API Inspectors.jpg',
+        description:'تقييم شامل للموردين يضمن الامتثال للمعايير الدولية وجودة المنتجات والخدمات المقدمة.',
+        capabilities:[
+            {title:'تقييم الموردين',desc:'تقييم شامل لقدرات الموردين والامتثال للمعايير.'},
+            {title:'مراجعة التوثيق',desc:'فحص وثائق الجودة والشهادات والمواصفات الفنية.'},
+            {title:'مراقبة الإنتاج',desc:'مراقبة عملية الإنتاج لضمان الامتثال للمعايير.'},
+            {title:'تقييم المخاطر',desc:'تحديد وتقييم مخاطر الجودة والامتثال.'}
+        ],
+        industries:['النفط والغاز','البتروكيماويات','توليد الطاقة','الإنشاءات','البحري والبحرية','البنية التحتية'],
+        metrics:[{value:'200',suffix:'+',label:'مورد تم تقييمه'},{value:'50',suffix:'+',label:'عميل'}],
+        outcomes:[
+            {title:'ضمان الجودة',desc:'ضمان امتثال الموردين للمعايير الدولية.'},
+            {title:'تقليل المخاطر',desc:'تحديد ومعالجة مخاطر الجودة مسبقاً.'},
+            {title:'تحسين الأداء',desc:'تحسين أداء الموردين من خلال التقييم المستمر.'}
+        ],
+        projects:[
+            {tag:'نفط وغاز',title:'تقييم موردين المصفاة',desc:'تقييم 50+ مورد لمصفاة نفط جديدة.',metric:'50+ مورد'},
+            {tag:'البتروكيماويات',title:'برنامج تقييم الموردين',desc:'تقييم شامل لموردي البتروكيماويات.',metric:'100% امتثال'}
+        ],
+        standards:['ISO 9001','ISO 14001','ISO 45001','API Q1','API Q2'],
+        testimonial:{quote:'تقييمات AETERNA للموردين حسنت من جودة مكوناتنا بنسبة 40%.',name:'م. أحمد الشامسي',role:'مدير المشتريات، أدنوك'},
+        certifications:[
+            {title:'ISO 9001',desc:'نظام إدارة الجودة - معايير الجودة الدولية.'},
+            {title:'API Q1/Q2',desc:'معايير الجودة الخاصة بالنفط والغاز.'}
+        ],
+        cta:'احصل على تقييم المورد'
+    },
+    {
+        id:17, number:'17', short:'API',
+        title:'توريد مفتشي API',
+        tagline:'مفتشو API معتمدون وذوو خبرة',
+        bgGradient:'radial-gradient(ellipse at 70% 30%, rgba(74,144,217,0.08) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><circle cx="50" cy="50" r="30"/><path d="M30 50c0-11 9-20 20-20s20 9 20 20-9 20-20 20"/><circle cx="50" cy="50" r="5" fill="var(--gold)" stroke="none"/></svg>`,
+        heroBg:'../images/services/Vendor Assessment.jpg',
+        description:'توريد مفتشين معتمدين من API ذوي خبرة واسعة في فحص معدات الضغط والأنابيب والخزانات.',
+        capabilities:[
+            {title:'تفتيش API 510',desc:'فحص معدات الضغط وفقاً لمعيار API 510.'},
+            {title:'تفتيش API 570',desc:'فحص خطوط الأنابيب وفقاً لمعيار API 570.'},
+            {title:'تفتيش API 653',desc:'فحص خزانات التخزين وفقاً لمعيار API 653.'},
+            {title:'تفتيش API 580/581',desc:'تقييم المخاطر المبني على الفحص وفقاً لمعايير API.'}
+        ],
+        industries:['النفط والغاز','البتروكيماويات','توليد الطاقة','الإنشاءات','البحري والبحرية','البنية التحتية'],
+        metrics:[{value:'30',suffix:'+',label:'مفتش API'},{value:'100',suffix:'+',label:'مشروع'}],
+        outcomes:[
+            {title:'خبرة متخصصة',desc:'مفتشون معتمدون بخبرة تزيد عن 10 سنوات.'},
+            {title:'سرعة التوظيف',desc:'توريد مفتشين خلال 48-72 ساعة.'},
+            {title:'توثيق شامل',desc:'تقارير فحص شاملة ومفصلة.'}
+        ],
+        projects:[
+            {tag:'نفط وغاز',title:'تفتيش خط أنابيب رئيسي',desc:'توريد 8 مفتشين API لتفتيش خط أنابيب بطول 200 كم.',metric:'8 مفتشين'},
+            {tag:'البتروكيماويات',title:'تفتيش معدات مصفاة',desc:'توريد مفتشين API لفحص معدات مصفاة جديدة.',metric:'100+ معدة'}
+        ],
+        standards:['API 510','API 570','API 653','API 580','API 581'],
+        testimonial:{quote:'موردو المفتشين من AETERNA وفروا لنا أفضل الخبراء في الوقت المطلوب.',name:'م. خالد الراشدي',role:'مدير المشاريع، بتروchemical'},
+        certifications:[
+            {title:'API 510',desc:'مفتش معدات ضغط معتمد'},
+            {title:'API 570',desc:'مفتش أنابيب معتمد'},
+            {title:'API 653',desc:'مفتش خزانات معتمد'}
+        ],
+        cta:'احصل على مفتش API'
+    },
+    {
+        id:18, number:'18', short:'CPX',
+        title:'توريد مفتشي COMPEX',
+        tagline:'خبراء السلامة في المناطق الخطرة',
+        bgGradient:'radial-gradient(ellipse at 30% 70%, rgba(200,169,110,0.08) 0%, transparent 60%)',
+        icon:`<svg viewBox="0 0 100 100" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><rect x="30" y="20" width="40" height="60" rx="5"/><path d="M40 50h20M50 40v20"/><circle cx="50" cy="50" r="15"/></svg>`,
+        heroBg:'../images/services/Supply of COMPEX Inspectors.jpg',
+        description:'توريد خبراء COMPEX المعتمدين للمناطق الخطرة والمناطق العذراء من الانفجار.',
+        capabilities:[
+            {title:'تفتيش COMPEX E&I',desc:'فحص الكهرباء والأجهزة في المناطق الخطرة.'},
+            {title:'تقييم المخاطر',desc:'تحديد وتقييم مخاطر الانفجار في المناطق العذراء.'},
+            {title:'تدريب السلامة',desc:'تدريب العاملين على معايير السلامة في المناطق الخطرة.'},
+            {title:'مراجعة التصميم',desc:'مراجعة تصميم المعدات للمناطق الخطرة.'}
+        ],
+        industries:['النفط والغاز','البتروكيماويات','توليد الطاقة','المناجم','التعدين'],
+        metrics:[{value:'20',suffix:'+',label:'مفتش COMPEX'},{value:'80',suffix:'+',label:'مشروع'}],
+        outcomes:[
+            {title:'سلامة مضمونة',desc:'ضمان الامتثال لمعايير ATEX وIECEx.'},
+            {title:'خبرة متخصصة',desc:'مفتشون معتمدون بخبرة واسعة.'},
+            {title:'توثيق شامل',desc:'تقارير تقييم شاملة ومفصلة.'}
+        ],
+        projects:[
+            {tag:'نفط وغاز',title:'تقييم منطقة خطرة',desc:'تقييم 5 مناطق خطرة لمنشأة نفطية.',metric:'5 مناطق'},
+            {tag:'البتروكيماويات',title:'تدريب السلامة',desc:'تدريب 200 عامل على معايير COMPEX.',metric:'200 عامل'}
+        ],
+        standards:['COMPEX Ex01-Ex04','IECEx CoPC','ATEX Directive'],
+        testimonial:{quote:'خبراء COMPEX من AETERNA وفروا السلامة التامة لمنشأتنا.',name:'م. سعيد المعمري',role:'مدير السلامة، شركة نفطية'},
+        certifications:[
+            {title:'COMPEX Ex01-Ex04',desc:'شهادة المناطق الخطرة'},
+            {title:'IECEx CoPC',desc:'شهادة الكفاءة الدولية'},
+            {title:'ATEX Directive',desc:'التوجيه الأوروبي للمناطق الخطرة'}
+        ],
+        cta:'احصل على مفتش COMPEX'
+    }
+];
+
+// DOM Elements
+const serviceList = document.getElementById('serviceList');
+const serviceDropdownTrigger = document.getElementById('serviceDropdownTrigger');
+const serviceDropdownMenu = document.getElementById('serviceDropdownMenu');
+const selectedServiceLabel = document.getElementById('selectedServiceLabel');
+const contentWrapper = document.getElementById('contentWrapper');
+const dynamicBg = document.getElementById('dynamicBg');
+const rightPanel = document.getElementById('rightPanel');
+let currentIndex = 0;
+
+// Build left nav
+services.forEach((s, i) => {
+    const item = document.createElement('div');
+    item.className = 'service-item' + (i === 0 ? ' active' : '');
+    item.dataset.index = i;
+    item.innerHTML = `
+        <div class="item-icon">${s.icon}</div>
+        <div class="item-text"><div class="item-title">${s.title}</div></div>
+        <span class="item-arrow">&larr;</span>
+    `;
+    item.addEventListener('click', () => selectService(i));
+    serviceList.appendChild(item);
+});
+
+// Build mobile nav
+services.forEach((s, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'mobile-nav-btn' + (i === 0 ? ' active' : '');
+    btn.textContent = s.short;
+    btn.addEventListener('click', () => selectService(i));
+    serviceDropdownMenu.appendChild(btn);
+});
+
+// Toggle dropdown
+if (serviceDropdownTrigger) {
+    serviceDropdownTrigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = serviceDropdownTrigger.classList.contains('open');
+        if (isOpen) {
+            closeDropdown();
+        } else {
+            openDropdown();
+        }
+    });
+}
+
+function openDropdown() {
+    serviceDropdownTrigger.classList.add('open');
+    serviceDropdownMenu.classList.add('show');
+}
+
+function closeDropdown() {
+    serviceDropdownTrigger.classList.remove('open');
+    serviceDropdownMenu.classList.remove('show');
+}
+
+// Close dropdown on tap outside
+document.addEventListener('click', () => {
+    closeDropdown();
+});
+
+// Select service
+function selectService(index) {
+    if (index === currentIndex) return;
+    currentIndex = index;
+
+    // Close mobile dropdown if open
+    if (typeof closeDropdown === 'function') closeDropdown();
+
+    // Update dropdown label
+    const label = document.getElementById('selectedServiceLabel');
+    if (label && services[index]) label.textContent = services[index].title;
+
+    // Update left nav
+    document.querySelectorAll('.service-item').forEach((el, i) => {
+        el.classList.toggle('active', i === index);
+    });
+
+    // Update mobile nav
+    document.querySelectorAll('.mobile-nav-btn').forEach((el, i) => {
+        el.classList.toggle('active', i === index);
+    });
+
+    // Transition content
+    contentWrapper.classList.add('transitioning');
+
+    // Update background
+    const s = services[index];
+    const orbs = dynamicBg.querySelectorAll('.gradient-orb');
+    orbs[0].style.background = s.bgGradient;
+
+    setTimeout(() => {
+        renderService(index);
+        contentWrapper.classList.remove('transitioning');
+        rightPanel.scrollTop = 0;
+        animateMetrics();
+    }, 400);
+}
+
+// Render service
+function renderService(index) {
+    const s = services[index];
+
+    const capabilityCards = s.capabilities.map((c, i) => `
+        <div class="capability-card${i < 7 && s.id === 3 ? ' conv' : i >= 7 && s.id === 3 ? ' adv' : ''}">
+            ${c.cat ? `<div class="cap-cat">${c.cat}</div>` : ''}
+            <div class="cap-num">${String(i + 1).padStart(2, '0')}</div>
+            <h4>${c.title}</h4>
+            <p>${c.desc}</p>
+        </div>
+    `).join('');
+
+    const industryPills = s.industries.map(ind => `
+        <div class="industry-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M5 13l4 4L19 7"/></svg>
+            <span>${ind}</span>
+        </div>
+    `).join('');
+
+    const metricCards = s.metrics.map(m => `
+        <div class="metric-card">
+            <div class="metric-value" data-target="${m.value}" data-suffix="${m.suffix}">0${m.suffix}</div>
+            <div class="metric-label">${m.label}</div>
+        </div>
+    `).join('');
+
+    const outcomeItems = s.outcomes.map(o => `
+        <div class="outcome-item">
+            <div class="outcome-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div class="outcome-text">
+                <h4>${o.title}</h4>
+                <p>${o.desc}</p>
+            </div>
+        </div>
+    `).join('');
+
+    const projectCards = s.projects.map(p => `
+        <div class="portfolio-card">
+            <div class="port-tag">${p.tag}</div>
+            <h4>${p.title}</h4>
+            <p>${p.desc}</p>
+            <span class="port-metric">${p.metric}</span>
+        </div>
+    `).join('');
+
+    const standardChips = s.standards.map(st => `
+        <div class="standard-chip">${st}</div>
+    `).join('');
+
+    contentWrapper.innerHTML = `
+        <!-- SERVICE HERO -->
+        <div class="service-hero">
+            ${s.heroBg ? `<div class="service-hero-bg active" style="background-image:url('${s.heroBg}')"></div>` : ''}
+            <div class="hero-icon-container">
+                <div class="hero-icon-ring"></div>
+                <div class="hero-icon-ring-2"></div>
+                <div class="hero-icon-glow"></div>
+                <div class="hero-icon-main">${s.icon}</div>
+            </div>
+            <h1>${s.title}</h1>
+            <p class="hero-desc">${s.description}</p>
+        </div>
+
+        <!-- CAPABILITIES -->
+        <div class="glass-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                </div>
+                <h3>القدرات الأساسية</h3>
+                <span class="section-tag">حلول</span>
+            </div>
+            <div class="capabilities-grid">${capabilityCards}</div>
+        </div>
+
+        <!-- INDUSTRIES -->
+        <div class="glass-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                </div>
+                <h3>القطاعات التي نخدمها</h3>
+                <span class="section-tag">قطاعات</span>
+            </div>
+            <div class="industry-strip">${industryPills}</div>
+        </div>
+
+        <!-- METRICS -->
+        <div class="glass-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                </div>
+                <h3>مؤشرات الأداء</h3>
+                <span class="section-tag">نتائج</span>
+            </div>
+            <div class="metrics-row">${metricCards}</div>
+        </div>
+
+        <!-- OUTCOMES -->
+        <div class="glass-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                </div>
+                <h3>نتائج الأعمال</h3>
+                <span class="section-tag">تأثير</span>
+            </div>
+            <div class="outcomes-list">${outcomeItems}</div>
+        </div>
+
+        <!-- PROJECTS -->
+        <div class="glass-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                </div>
+                <h3>محفظة المشاريع</h3>
+                <span class="section-tag">مميز</span>
+            </div>
+            <div class="portfolio-grid">${projectCards}</div>
+        </div>
+
+        <!-- TESTIMONIAL -->
+        <div class="glass-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                </div>
+                <h3>شهادة عميل</h3>
+                <span class="section-tag">رأي</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-mark">"</div>
+                <blockquote>${s.testimonial.quote}</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">${s.testimonial.name.charAt(0)}</div>
+                    <div class="testimonial-info">
+                        <div class="name">${s.testimonial.name}</div>
+                        <div class="role">${s.testimonial.role}</div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- QUALITY & CERTIFICATIONS -->
+        ${s.certifications && s.certifications.length > 0 ? `
+        <div class="glass-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <h3>الجودة والشهادات</h3>
+                <span class="section-tag">المعايير</span>
+            </div>
+            <div class="certifications-grid">
+                ${s.certifications.map(c => `
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                    </div>
+                    <h4>${c.title}</h4>
+                    <p>${c.desc}</p>
+                </div>
+                `).join('')}
+            </div>
+        </div>
+        ` : ''}
+
+        <!-- STANDARDS -->
+        <div class="glass-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                </div>
+                <h3>المعايير الفنية</h3>
+                <span class="section-tag">امتثال</span>
+            </div>
+            <div class="standards-grid">${standardChips}</div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h3>هل أنت مستعد للبدء؟</h3>
+            <p>اتصل بفريقنا لمناقشة كيف يمكن لـ ${s.title.toLowerCase()} أن تفيد مشروعك.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta-btn cta-btn-primary">${s.cta}<span class="arrow">&rarr;</span></a>
+                <a href="tel:+971555727153" class="cta-btn cta-btn-secondary">اتصل بـ +971 555 727 153</a>
+            </div>
+        </div>
+    `;
+}
+
+// Animate metrics
+function animateMetrics() {
+    document.querySelectorAll('.metric-value[data-target]').forEach(el => {
+        const target = parseFloat(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const isDecimal = String(target).includes('.');
+        const duration = 1000;
+        const start = performance.now();
+        function tick(now) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 4);
+            const current = isDecimal ? (eased * target).toFixed(1) : Math.floor(eased * target);
+            el.textContent = current + suffix;
+            if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+    });
+}
+
+// Floating particles
+(function() {
+    const container = document.getElementById('floatingParticles');
+    for (let i = 0; i < 30; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'fp-dot';
+        const size = Math.random() * 2 + 1;
+        dot.style.cssText = `
+            width: ${size}px; height: ${size}px;
+            left: ${Math.random() * 100}%;
+            animation-duration: ${Math.random() * 25 + 15}s;
+            animation-delay: ${Math.random() * 20}s;
+        `;
+        container.appendChild(dot);
+    }
+})();
+
+// Init
+renderService(0);
+setTimeout(animateMetrics, 500);
+</script>
+<script src="../js/script.js"></script>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/971555727153" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" id="whatsappBtn" aria-label="Chat on WhatsApp">
+    <img src="../images/whatsapp.svg" alt="WhatsApp" width="60" height="60">
+</a>
+<div class="whatsapp-typing" id="whatsappTyping">
+    <span class="whatsapp-typing-text" id="whatsappTypingText"></span><span class="whatsapp-typing-cursor">|</span>
+</div>
+
+<style>
+.whatsapp-btn {
+    position: fixed;
+    bottom: calc(30px + 5%);
+    right: calc(30px + 5%);
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    background: #25D366;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    animation: whatsappPulse 2s infinite;
+}
+@keyframes whatsappPulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    animation: none;
+}
+.whatsapp-btn img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+.whatsapp-typing {
+    position: fixed;
+    bottom: calc(99px + 5%);
+    right: calc(30px + 5% + 29px);
+    z-index: 998;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(50%) translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transform-origin: bottom center;
+}
+.whatsapp-typing::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(0, 0, 0, 0.65);
+}
+.whatsapp-typing.visible {
+    opacity: 1;
+    transform: translateX(50%) translateY(0);
+}
+.whatsapp-typing-text {
+    color: #ffffff;
+}
+.whatsapp-typing-cursor {
+    color: #25D366;
+    animation: whatsappBlink 0.7s infinite;
+}
+@keyframes whatsappBlink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+@media (max-width: 1024px) {
+    .whatsapp-btn { bottom: calc(25px + 5%); right: calc(25px + 5%); width: 55px; height: 55px; }
+    .whatsapp-btn img { width: 35px; height: 35px; }
+    .whatsapp-typing { bottom: calc(90px + 5%); right: calc(25px + 5% + 27px); font-size: 13px; padding: 10px 18px; transform: translateX(50%) translateY(10px); }
+    .whatsapp-typing.visible { transform: translateX(50%) translateY(0); }
+}
+@media (max-width: 768px) {
+    .whatsapp-btn { bottom: calc(20px + 15%); right: calc(20px + 5%); width: 50px; height: 50px; }
+    .whatsapp-btn img { width: 27px; height: 27px; }
+    .whatsapp-typing { bottom: calc(80px + 15%); right: calc(20px + 5% + 25px); font-size: 12px; padding: 10px 16px; transform: translateX(50%) translateY(10px); }
+    .whatsapp-typing.visible { transform: translateX(50%) translateY(0); }
+}
+</style>
+
+<script>
+(function() {
+    var typingEl = document.getElementById('whatsappTypingText');
+    var bubble = document.getElementById('whatsappTyping');
+    if (!typingEl || !bubble) return;
+
+    var phrases = ['مساعدة سريعة', 'تحدث معنا', 'نحن هنا لمساعدتك'];
+    var phraseIdx = 0;
+    var charIdx = 0;
+    var isDeleting = false;
+    var typingSpeed = 100;
+
+    setTimeout(function() {
+        bubble.classList.add('visible');
+        typeWA();
+    }, 2000);
+
+    function typeWA() {
+        var current = phrases[phraseIdx];
+        if (isDeleting) {
+            typingEl.textContent = current.substring(0, charIdx - 1);
+            charIdx--;
+            typingSpeed = 50;
+        } else {
+            typingEl.textContent = current.substring(0, charIdx + 1);
+            charIdx++;
+            typingSpeed = 100;
+        }
+        if (!isDeleting && charIdx === current.length) {
+            typingSpeed = 2500;
+            isDeleting = true;
+        } else if (isDeleting && charIdx === 0) {
+            isDeleting = false;
+            phraseIdx = (phraseIdx + 1) % phrases.length;
+            typingSpeed = 500;
+        }
+        setTimeout(typeWA, typingSpeed);
+    }
+})();
+</script>
+</body>
+</html>
